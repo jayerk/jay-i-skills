@@ -303,3 +303,15 @@ The total output should be comprehensive but not padded. The Chief of Staff
 section is the most important — it should be written as something a board member
 could read in under 5 minutes and act on. The Integration Note in step 5 of the
 synthesis is the single highest-priority output of the entire analysis.
+
+---
+
+## Pre-Delivery Review Checklist
+
+Before sharing output with the board or any stakeholder, the human reviewer confirms each item:
+
+- [ ] Facts and figures verified against source data provided
+- [ ] No PMI certification, exam, or standards content generated — any such references flagged and replaced with approved PMI-sourced language
+- [ ] Content reviewed for bias, exclusionary language, and DE&I alignment — confirmed clear
+- [ ] Output reflects Buffalo specifically, not a generic PMI chapter template
+- [ ] AI-assisted draft noted in internal audit log
