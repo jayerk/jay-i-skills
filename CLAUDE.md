@@ -159,6 +159,8 @@ This is intentional. Do not:
 | `recognition-draft` | Awards, LinkedIn shoutouts, thank-you messages | Planned |
 | `sponsor-proposal` | Tiered sponsorship packages for WNY businesses | Planned |
 | `budget-review` | Narrative analysis of chapter budget vs. actuals | Planned |
+| `site-audit` | External public website crawl — flags stale content, PII, PMI cert content, DE&I issues; produces dated audit log | Implemented |
+| `internal-audit` | Internal content audit — board docs, communications, unpublished materials | Planned |
 
 ### Personal
 
