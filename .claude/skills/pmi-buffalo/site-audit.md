@@ -173,13 +173,35 @@ Pages that could not be retrieved, with URL and error type.
 
 ### Section 4 — Summary Recommendations
 
-Provide exactly 3–5 prioritized recommendations for the site owner, written
-as actions a volunteer could execute:
+#### 4A — Site-Only Actions
+
+Provide exactly 3–5 prioritized recommendations based solely on what this
+audit found. These are self-contained — a volunteer can act on them without
+any other context. Sequence by impact and urgency, not by issue category.
 
 1. **[Recommendation title]** — [2–3 sentences: what to fix, why it matters,
    suggested owner or next step]
 
-Sequence recommendations by impact and urgency, not by issue category.
+#### 4B — Strategic Benchmarking Linkage
+
+Review the site audit findings for signals that connect to chapter-level
+strategy. If a `strategic-benchmark` analysis exists or is available, cross-
+reference it here. If not, note which findings warrant input from that skill
+before the board acts.
+
+For each strategic linkage identified:
+
+```
+Site finding: [what the audit found — e.g., "Events page shows low activity, 3 of 5 events are past-dated with no new ones listed"]
+Strategic question: [what this raises at the chapter level — e.g., "Is low event volume a content problem or a programming problem? Benchmark data would clarify."]
+Recommended handoff: [run strategic-benchmark / cross-reference existing benchmark / flag for board discussion]
+```
+
+If no strategic linkages are apparent, write: "No cross-references to
+strategic benchmark identified in this audit cycle."
+
+This section is intentionally not a full strategic analysis — it is a bridge.
+The `strategic-benchmark` skill owns that work.
 
 ---
 
