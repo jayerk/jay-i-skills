@@ -145,7 +145,7 @@ This is intentional. Do not:
 
 | Skill | Purpose | Status |
 |---|---|---|
-| `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 3-agent (Data Analyst, Strategist, Devil's Advocate) + Chief of Staff synthesis | Implemented |
+| `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 5-agent (Data Analyst, Strategist, Devil's Advocate, Community Advocate, People Connector) + Chief of Staff synthesis | Implemented |
 | `board-report` | Draft monthly/quarterly board update | Planned |
 | `meeting-minutes` | Extract decisions & action items from board notes | Planned |
 | `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | Planned |
