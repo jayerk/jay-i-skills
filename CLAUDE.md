@@ -1,153 +1,182 @@
-# CLAUDE.md — PMI Buffalo Claude Skills
+# CLAUDE.md — Jay's Claude Skills Repository
 
 This file provides guidance for AI assistants (Claude) working in this repository.
 
 ## Repository Overview
 
-**Purpose**: This repository hosts custom Claude Code skills for the PMI Buffalo chapter (Project Management Institute — Buffalo, NY). Skills are reusable prompt templates that trigger Claude to follow specialized workflows when performing chapter-related tasks.
+**Purpose**: This repository hosts custom Claude Code skills organized into distinct, isolated contexts. Each context has its own persona, tone, and skill set. Contexts do **not** share skills — even for similar tasks, each context gets its own version tuned to that persona.
 
-**Audience**: Chapter leadership, volunteers, and AI assistants helping to automate or enhance PMI Buffalo operations.
+**Contexts**:
+
+| Context | Directory | Persona Summary |
+|---|---|---|
+| PMI Buffalo | `.claude/skills/pmi-buffalo/` | PMI Western NY chapter — professional, volunteer-aware, community-minded |
+| Personal | `.claude/skills/personal/` | Personal life assistant — direct, casual, opinionated, low-friction |
+| Work | `.claude/skills/work/` | Day-job professional — polished, precise, audience-aware |
+
+---
+
+## Repository Structure
+
+```
+pmi-buffalo-claude-skills/
+├── CLAUDE.md                              # This file
+├── README.md                              # Human-facing project overview
+└── .claude/
+    └── skills/
+        ├── pmi-buffalo/
+        │   ├── _persona.md                # PMI Buffalo voice & identity
+        │   ├── strategic-benchmark.md
+        │   └── ...
+        ├── personal/
+        │   ├── _persona.md                # Personal assistant voice & identity
+        │   └── ...
+        └── work/
+            ├── _persona.md                # Work/professional voice & identity
+            └── ...
+```
+
+### The `_persona.md` File
+
+Every context directory contains a `_persona.md`. This file defines:
+- Who Claude is in this context
+- Voice and tone guidelines
+- Hard boundaries (what Claude must NOT do in this context)
+- Recurring use cases and artifacts
+
+**Always read `_persona.md` before executing any skill in a context.** The persona is the foundation — individual skills build on top of it.
+
+---
 
 ## What Are Claude Code Skills?
 
-Skills are markdown files stored in `.claude/skills/`. Each skill defines:
-- A **trigger condition** — when Claude should activate the skill
-- A **system prompt** — instructions Claude follows when the skill is active
-- A **description** — what the skill does and how to invoke it
+Skills are markdown files that define specialized Claude workflows. Each skill:
+- Has a **trigger condition** — when Claude activates the skill
+- Has **instructions** — what Claude does when active
+- Inherits the **persona** of its context directory
 
-Skills are invoked via slash commands (e.g., `/strategic-benchmark`) or triggered automatically when Claude detects matching context.
+Skills are invoked via slash commands (e.g., `/strategic-benchmark`) or trigger automatically when Claude detects matching context.
 
 ### Skill File Format
 
 ```markdown
 # skill-name
 
-[Short description of what this skill does and when to use it]
+[One-sentence description of what this skill does]
 
 TRIGGER when: [conditions that activate this skill]
-DO NOT TRIGGER when: [conditions that should NOT activate this skill]
+DO NOT TRIGGER when: [conditions that must NOT activate this skill]
 
 ## Instructions
 
-[Step-by-step instructions Claude follows when this skill is active]
+[Step-by-step instructions Claude follows. Actionable, not descriptive.]
 ```
 
-Place each skill file at `.claude/skills/<skill-name>.md`.
+---
 
-## Repository Structure
+## Core Principle: Distinct Personalities, No Crossover
 
-```
-pmi-buffalo-claude-skills/
-├── CLAUDE.md                     # This file — AI assistant guidance
-├── README.md                     # Human-facing project overview
-└── .claude/
-    └── skills/                   # One .md file per skill
-        ├── strategic-benchmark.md
-        ├── meeting-minutes.md
-        └── ...
-```
+**Skills are not shared between contexts.** If a similar task exists in two contexts (e.g., meeting minutes for PMI Buffalo and meeting notes at work), each context gets its own skill written to that persona. A PMI Buffalo meeting minutes skill produces a formal board-ready document. A work meeting notes skill produces a concise internal summary. Same task category — completely different outputs.
+
+This is intentional. Do not:
+- Generalize a skill to work across contexts
+- Reuse a skill file from one context in another
+- Blur the voice of one persona into another
+
+---
 
 ## Development Workflow
 
 ### Creating a New Skill
 
-1. Create a new branch: `git checkout -b feature/skill-<name>`
-2. Add a skill file at `.claude/skills/<skill-name>.md`
-3. Follow the skill file format above exactly
-4. Test the skill locally in Claude Code by invoking `/<skill-name>`
-5. Commit with a descriptive message:
-   ```
-   git commit -m "Add <skill-name> skill: <one-line description>"
-   ```
-6. Push and open a pull request targeting `main`
+1. Identify the correct context (pmi-buffalo, personal, or work)
+2. Read that context's `_persona.md` before writing
+3. Create a branch: `git checkout -b feature/skill-<context>-<name>`
+4. Add the skill at `.claude/skills/<context>/<skill-name>.md`
+5. Follow the skill file format exactly
+6. Test in Claude Code by invoking `/<skill-name>`
+7. Commit: `git commit -m "Add <context>/<skill-name>: <one-line description>"`
+8. Push and open a PR targeting `main`
 
-### Updating an Existing Skill
+### Adding a New Context
 
-- Edit the skill file directly
-- Increment specificity in trigger conditions if the skill is firing incorrectly
-- Commit with: `git commit -m "Update <skill-name>: <what changed and why>"`
+1. Create `.claude/skills/<context-name>/`
+2. Write `_persona.md` first — define voice, tone, boundaries, and use cases before writing any skills
+3. Update the context table in this file
+4. Add skill recommendations to the backlog below
 
-### Branch Naming Conventions
+### Branch Naming
 
 | Purpose | Pattern |
 |---|---|
-| New skill | `feature/skill-<name>` |
-| Bug fix | `fix/skill-<name>` |
-| Documentation | `docs/<description>` |
-| Claude-initiated work | `claude/<short-description>-<session-id>` |
+| New skill | `feature/skill-<context>-<name>` |
+| New context | `feature/context-<name>` |
+| Persona update | `update/persona-<context>` |
+| Bug fix | `fix/<context>-<skill-name>` |
+| Claude-initiated | `claude/<short-description>-<session-id>` |
 
 ### Commit Message Conventions
 
-- Use imperative mood: "Add", "Update", "Fix", "Remove"
-- Reference the skill name in the message
-- Keep subject line under 72 characters
-- Example: `Add meeting-minutes skill: extract action items from transcripts`
+- Imperative mood: "Add", "Update", "Fix", "Remove"
+- Format: `<verb> <context>/<skill-name>: <what and why>`
+- Example: `Add pmi-buffalo/meeting-minutes: extract action items from board notes`
 
-## Key Conventions for AI Assistants
+---
 
-1. **Never edit skill trigger conditions without understanding the intent.** Triggers are precise by design. If a skill fires when it shouldn't, tighten the DO NOT TRIGGER clause rather than weakening the trigger.
+## Conventions for AI Assistants
 
-2. **Skill instructions must be actionable, not descriptive.** Write "Extract all action items and list them with owners" not "This skill handles action items."
+1. **Read `_persona.md` before any skill work.** Voice and boundaries are non-negotiable per context.
 
-3. **One skill per file, one file per concern.** Do not combine unrelated workflows into a single skill.
+2. **Triggers must be precise.** If a skill fires incorrectly, tighten the DO NOT TRIGGER clause — don't weaken the trigger.
 
-4. **Skills are PMI Buffalo-specific.** Keep chapter names, templates, and report formats aligned with PMI Buffalo's actual processes. Avoid generic PMI boilerplate unless it matches how Buffalo operates.
+3. **Instructions are actionable, not descriptive.** Write "List all action items with owner and due date" — not "This skill handles action items."
 
-5. **Test before committing.** Invoke the skill in Claude Code and verify the output matches the intended workflow before pushing.
+4. **Never cross context boundaries.** If asked to do a PMI Buffalo task while in a personal context, stop and clarify which context applies.
 
-6. **Keep CLAUDE.md current.** When adding a new skill, update the "Recommended Skills" section below to mark it as implemented.
+5. **One skill, one purpose.** Do not combine unrelated workflows.
 
-## Existing Skills
+6. **Keep CLAUDE.md current.** When adding a skill, mark it in the backlog below.
 
-| Skill | File | Status |
+---
+
+## Skill Backlog
+
+### PMI Buffalo
+
+| Skill | Purpose | Status |
 |---|---|---|
-| Strategic Benchmark | `.claude/skills/strategic-benchmark.md` | Planned |
+| `strategic-benchmark` | Compare chapter metrics vs. peer chapters | Planned |
+| `board-report` | Draft monthly/quarterly board update | Planned |
+| `meeting-minutes` | Extract decisions & action items from board notes | Planned |
+| `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | Planned |
+| `email-draft` | Draft member-facing chapter communications | Planned |
+| `newsletter-section` | Write event recaps, spotlights, announcements | Planned |
+| `event-plan` | Produce checklist-driven event/PDU activity plan | Planned |
+| `pdu-tracker` | Structure PDU activity descriptions for PMI reporting | Planned |
+| `speaker-outreach` | Draft speaker invitation emails | Planned |
+| `membership-analysis` | Narrative around membership trends and actions | Planned |
+| `volunteer-brief` | Role-specific onboarding brief for new volunteers | Planned |
+| `recognition-draft` | Awards, LinkedIn shoutouts, thank-you messages | Planned |
+| `sponsor-proposal` | Tiered sponsorship packages for WNY businesses | Planned |
+| `budget-review` | Narrative analysis of chapter budget vs. actuals | Planned |
 
-## Recommended Skills for PMI Buffalo
+### Personal
 
-The following skills are recommended based on common chapter operational needs. Skills marked **Planned** are in the backlog; **In Progress** are being developed.
-
-### Governance & Reporting
-
-| Skill | Trigger | Value |
+| Skill | Purpose | Status |
 |---|---|---|
-| `strategic-benchmark` | Comparing chapter metrics against peer chapters | Pulls structured data from chapter reports and surfaces gaps vs. benchmarks across membership, events, financials, and volunteer hours |
-| `board-report` | Drafting monthly/quarterly board updates | Generates a structured board report from bullet-point inputs covering membership, programs, finance, and volunteers |
-| `annual-report-draft` | Compiling end-of-year chapter summary | Aggregates metrics and narratives into the PMI annual report format |
+| `decision-matrix` | Structure a personal decision with pros/cons/criteria | Planned |
+| `research-brief` | Summarize research on a purchase, topic, or option | Planned |
+| `weekly-review` | Guided weekly personal review and planning session | Planned |
+| `trip-plan` | Build a practical travel itinerary from requirements | Planned |
+| `budget-snapshot` | Summarize personal finances and flag issues | Planned |
 
-### Meetings & Communication
+### Work
 
-| Skill | Trigger | Value |
+| Skill | Purpose | Status |
 |---|---|---|
-| `meeting-minutes` | Processing meeting transcripts or notes | Extracts decisions, action items (with owners and due dates), and open issues from raw notes |
-| `email-draft` | Drafting chapter communications | Produces member-facing emails in PMI Buffalo's tone — professional, concise, and community-oriented |
-| `newsletter-section` | Writing content for the chapter newsletter | Formats event recaps, member spotlights, and announcements to newsletter standards |
-
-### Events & Programs
-
-| Skill | Trigger | Value |
-|---|---|---|
-| `event-plan` | Planning a chapter event or PDU activity | Produces a checklist-driven event plan covering logistics, promotion, speaker coordination, and post-event follow-up |
-| `pdu-tracker` | Logging or auditing PDU submissions | Helps members and leaders structure PDU activity descriptions to meet PMI reporting requirements |
-| `speaker-outreach` | Drafting outreach to potential speakers | Generates personalized speaker invitation emails aligned with chapter program themes |
-
-### Membership & Volunteers
-
-| Skill | Trigger | Value |
-|---|---|---|
-| `membership-analysis` | Analyzing membership growth, churn, or demographics | Structures a narrative around raw membership data to surface trends and recommended actions |
-| `volunteer-brief` | Onboarding a new chapter volunteer | Produces a role-specific volunteer orientation brief with responsibilities, contacts, and key dates |
-| `recognition-draft` | Writing volunteer or member recognition content | Drafts award descriptions, LinkedIn shoutouts, or thank-you messages for chapter contributors |
-
-### Finance & Sponsorship
-
-| Skill | Trigger | Value |
-|---|---|---|
-| `budget-review` | Reviewing chapter budget vs. actuals | Structures a narrative analysis of budget variance with recommended adjustments |
-| `sponsor-proposal` | Creating sponsorship packages or outreach | Drafts tiered sponsorship proposals tailored to local Buffalo/WNY business interests |
-
-## Getting Help
-
-- Claude Code documentation: `/help` in Claude Code
-- PMI Buffalo leadership contact: see internal chapter directory
-- Skill bugs or improvements: open an issue or PR in this repository
+| `status-update` | Draft a concise project or work status update | Planned |
+| `meeting-notes` | Produce internal meeting summary with next steps | Planned |
+| `email-draft` | Draft professional workplace emails | Planned |
+| `self-assessment` | Write performance self-assessment narratives | Planned |
+| `exec-summary` | Condense a document into an executive summary | Planned |
+| `slide-outline` | Structure a presentation from talking points | Planned |
