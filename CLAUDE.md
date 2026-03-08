@@ -13,6 +13,7 @@ This file provides guidance for AI assistants (Claude) working in this repositor
 | PMI Buffalo | `.claude/skills/pmi-buffalo/` | PMI Western NY chapter — professional, volunteer-aware, community-minded |
 | Personal | `.claude/skills/personal/` | Personal life assistant — direct, casual, opinionated, low-friction |
 | Work | `.claude/skills/work/` | Day-job professional — polished, precise, audience-aware |
+| Soup Feast | `.claude/skills/soup-feast/` | Annual soup competition organizer — warm, fun, operationally sharp, budget-conscious |
 
 ---
 
@@ -31,8 +32,12 @@ pmi-buffalo-claude-skills/
         ├── personal/
         │   ├── _persona.md                # Personal assistant voice & identity
         │   └── ...
-        └── work/
-            ├── _persona.md                # Work/professional voice & identity
+        ├── work/
+        │   ├── _persona.md                # Work/professional voice & identity
+        │   └── ...
+        └── soup-feast/
+            ├── _persona.md                # Soup Feast organizer voice & identity
+            ├── scope-review.md
             └── ...
 ```
 
@@ -161,6 +166,17 @@ This is intentional. Do not:
 | `budget-review` | Narrative analysis of chapter budget vs. actuals | Planned |
 | `site-audit` | External public website crawl — flags stale content, PII, PMI cert content, DE&I issues; produces dated audit log | Implemented |
 | `internal-audit` | Internal content audit — board docs, communications, unpublished materials | Planned |
+
+### Soup Feast
+
+| Skill | Purpose | Status |
+|---|---|---|
+| `scope-review` | 4-agent review (Budget Hawk, Experience Purist, Dream Builder, Scope Manager) of any feature or decision | Implemented |
+| `campaign-draft` | Write drip campaign messages in the Soup Feast voice | Planned |
+| `site-refresh` | Annual checklist for resetting the app for a new year | Planned |
+| `day-of-runbook` | Step-by-step game day operations guide | Planned |
+| `post-event-wrap` | Archive results, send cook summaries, retrospective | Planned |
+| `soup-curation` | Add/refine soup ideas for the idea generator | Planned |
 
 ### Personal
 
