@@ -41,6 +41,9 @@ These were open questions — now locked in:
 | 4 | **SMS provider** | Twilio. ~$5 total for 100 guests x 6 messages. $1.15/mo for the number. Worth it. |
 | 5 | **Tasting notes privacy** | Default to private. Cooks receive a comprehensive anonymized summary (aggregate rating, flavor tag breakdown, all comments) at end of night. |
 | 6 | **Leaderboard spoilers** | Show live top 5 during voting. Full results held for the admin-triggered reveal. |
+| 7 | **Voting UX** | Guided tasting companion — not a wall of 25 soups. Card-based exploration with multiple browse modes (by table, by vibe, surprise me). Vote only after tasting 5+ soups. |
+| 8 | **Post-vote flow** | After ballot submission, redirect to tasting notes page for soups the guest tried. Nudge notes for soups that need love. |
+| 9 | **Save the Date timing** | September 2026. Sets the anchor early. App must be testable before this goes out. |
 
 ---
 
@@ -134,14 +137,14 @@ Two modes, available to anyone:
 
 **Drip Campaign Timeline** (default template, fully editable by admin):
 
-| Timing | Message | Channel |
-|---|---|---|
-| 6 weeks out | **Save the Date** — "The Great Soup Feast returns. Mark your calendar." | Email + Postcard |
-| 4 weeks out | **Soup Sign-Up Opens** — "Think you've got what it takes? Register your soup." | Email + SMS |
-| 2 weeks out | **The Lineup Teaser** — "25 soups confirmed. Here's a sneak peek at what's brewing." | Email + SMS |
-| 1 week out | **Final Call** — "RSVP now. Voting goes live at the event." | Email + SMS |
-| Day of | **Game Day** — "It's here. Scan, taste, vote." + voting link | SMS |
-| Day after | **Results Are In** — "And the winner is... [link to reveal page]" | Email + SMS |
+| Timing | Target Date | Message | Channel |
+|---|---|---|---|
+| ~10 weeks out | **Mid-September 2026** | **Save the Date** — "The Great Soup Feast returns November 21. Mark your calendar." | Email + Postcard |
+| 6 weeks out | **Oct 10** | **Soup Sign-Up Opens** — "Think you've got what it takes? Register your soup." | Email + SMS |
+| 3 weeks out | **Oct 31** | **The Lineup Teaser** — "25 soups confirmed. Here's a sneak peek at what's brewing." | Email + SMS |
+| 1 week out | **Nov 14** | **Final Call** — "RSVP now. Voting goes live at the event." | Email + SMS |
+| Day of | **Nov 21** | **Game Day** — "It's here. Scan, taste, vote." + voting link | SMS |
+| Day after | **Nov 22** | **Results Are In** — "And the winner is... [link to reveal page]" | Email + SMS |
 
 **Campaign Manager (admin):**
 - Each message: template with merge fields (`{{guest_name}}`, `{{event_date}}`, `{{rsvp_link}}`, `{{vote_link}}`)
@@ -152,23 +155,82 @@ Two modes, available to anyone:
 
 ---
 
-### 4.4 Day-of Voting
+### 4.4 Day-of Experience: Guided Tasting + Voting
 
-**Flow:**
+The app is a **tasting companion that ends in a vote** — not a ballot box with 25 items dumped on you.
+
+**Entry:**
 1. Guest scans QR code at the event OR opens their link from the SMS
-2. Mobile-first voting page — no app install, no login, no friction
-3. Sees all 25 soups: crockpot number, name, cook name, dietary tags
-4. Ranks their **top 5** by dragging or tapping to add to ranking
-5. Submits → fun confirmation ("Your taste buds have spoken!")
-6. One ballot per unique token. Can update until admin closes voting.
+2. Mobile-first — no app install, no login, no friction
+3. Lands on the **Tasting Home** screen (not a voting page)
 
-**Voting UX:**
-- Big, tappable soup cards optimized for phone screens
-- Drag-to-rank OR tap-to-add-to-ranking (both interaction styles)
-- Clear "your current ranking" section (sticky footer or sidebar)
-- Dietary filter toggles: show only vegan, GF, etc.
-- "I haven't tried this one yet" toggle per soup (optional — helps admin understand tasting coverage)
-- Confirmation screen with option to revise before final submit
+**Tasting Home — "How do you want to explore?"**
+
+Three browse modes, always switchable:
+
+| Mode | How It Works |
+|---|---|
+| **By Table** | Shows soups in crockpot number order — follows the natural walking path through the venue. Cards appear 3-4 at a time. "You're near Table 2 — here's what's there." |
+| **By Vibe** | Filter by what sounds good: "Comfort," "Adventurous," "Light & Fresh," "Spicy," "Vegan/Plant-Based." Shows matching soups as a focused list. |
+| **Surprise Me** | One soup card at a time, random order. Swipe to see the next one. Low-commitment discovery. |
+
+**Soup Cards:**
+- Big, tappable, phone-optimized
+- Shows: crockpot number, soup name, cook name, short description, dietary tags
+- Two actions per card:
+  - **"Tried it"** — marks the soup as tasted. Optionally opens a quick tasting note (1-5 ladles + flavor tags + 140-char note). Tasting note is skippable.
+  - **"Skip for now"** — moves on, keeps the soup in the untasted queue
+
+**Tasting Progress:**
+- Persistent progress bar at top: "You've tried 7 of 25 soups"
+- Subtle encouragement at milestones: "Halfway there!" at 12-13
+
+**Discovery Nudges (the recommendation engine):**
+
+Context-aware suggestions that appear naturally during the tasting journey:
+
+| Trigger | Nudge |
+|---|---|
+| Guest has tried 5-8 soups | "You've been going heavy on comfort soups — Soup #19 (West African Peanut Stew) is a crowd favorite you haven't hit yet." |
+| Dietary pattern match | "You liked 3 vegan soups — Soup #22 is the only vegan entry you haven't tried." |
+| Popularity gap | "Soup #4 only has 6 votes so far — could be a hidden gem worth tasting." |
+| Table proximity (if table info available) | "You're near Table 3 — Soups #9 and #11 are right there." |
+| Guest hasn't tried a top-performing soup | "Soup #14 is in the current top 5 and you haven't tasted it yet." |
+
+Nudges are non-intrusive — they appear as banner cards between soup cards, not as popups. Dismissible. Max 1 nudge per 3 soups viewed.
+
+**Implementation notes for nudges:**
+- Nudge logic runs client-side using the guest's tasted/untasted list + live vote counts from the leaderboard API
+- "By table" proximity nudges use the crockpot number ordering — no GPS needed
+- Dietary pattern matching compares the guest's tasted soups' dietary tags to untasted soups
+- Popularity data comes from the same real-time feed as the leaderboard
+
+**Vote Gate — "Ready to vote?"**
+
+- Sticky button appears at the bottom after the guest has marked **5+ soups as tried**
+- Before 5 soups: button is visible but grayed out — "Try at least 5 soups before voting"
+- Tapping opens the **Ranking Screen**:
+  - Shows ONLY the soups the guest has tried (not all 25)
+  - Pre-sorted by the guest's tasting note ratings (if they left any — highest-rated first)
+  - Guest drags to reorder OR taps to add to their top 5 ranking
+  - Clear "Your Top 5" section (sticky footer)
+  - Can still browse and add more soups — "Tried another one?" link returns to tasting mode
+- Submit ballot → fun confirmation: "Your taste buds have spoken!"
+- One ballot per unique token. Can update until admin closes voting.
+
+**Post-Vote Redirect:**
+
+After ballot submission, the experience doesn't dead-end:
+
+1. **Confirmation screen** with animation and their ranking summary
+2. **"Leave tasting notes?"** CTA — links to a focused tasting notes page showing:
+   - Their ranked soups first (with any existing notes pre-populated)
+   - Then other soups they tried but didn't rank
+   - Quick-tap interface: ladles + flavor tags + optional text
+3. **"These soups could use some love"** section at the bottom — highlights soups with the fewest tasting notes so far. Encourages coverage.
+4. **Leaderboard link** — "See how the race is shaping up" → `/leaderboard`
+
+This flow converts the dead-end "thanks for voting" moment into continued engagement.
 
 **Ranked Choice Voting (RCV) — Instant Runoff:**
 - Round 1: Count all #1 votes. If any soup has >50% of first-place votes → winner.
@@ -352,11 +414,20 @@ Event
   │     ├── soup_id (nullable, FK → Soup if is_cook)
   │     └── created_at
   │
+  ├── TastingLog[]
+  │     ├── id
+  │     ├── guest_id
+  │     ├── soup_id
+  │     ├── event_id
+  │     ├── tried_at (timestamp)
+  │     └── browse_mode (by_table / by_vibe / surprise_me — how they found it)
+  │
   ├── Ballots[]
   │     ├── id
   │     ├── guest_id
   │     ├── event_id
   │     ├── rankings[] (ordered array of soup_ids — position = rank)
+  │     ├── soups_tried_count (snapshot at vote time)
   │     ├── submitted_at
   │     └── updated_at
   │
@@ -475,7 +546,9 @@ PUBLIC PAGES
 /rsvp                          → Shared RSVP page (from postcard QR — guest enters name)
 /signup                        → Cook soup registration form
 /ideas                         → Soup idea generator (spin the wheel + prompt mode)
-/vote/:token                   → Voting page (mobile-first, ranked choice)
+/taste/:token                  → Tasting home (guided browse: by table, by vibe, surprise me)
+/taste/:token/vote             → Ranking screen (only soups marked as tried)
+/taste/:token/notes            → Post-vote tasting notes page
 /leaderboard                   → Live leaderboard (phone mode — scrollable)
 /leaderboard?mode=tv           → Live leaderboard (TV/projector — full-screen, auto-rotating)
 /results                       → Results reveal (hidden until admin triggers)
@@ -550,22 +623,25 @@ The `redistributed` map in each round is what powers the Sankey diagram — it s
 
 ## 10. Build Order
 
-Recommended sequence — each phase is deployable independently:
+Accelerated sequence — save-the-date goes out in September, app must be testable before that. Event date: **November 21, 2026**.
 
-| Phase | What | Why First |
-|---|---|---|
-| **1** | Data model + DB schema + admin auth | Foundation. Nothing works without data. |
-| **2** | Admin dashboard: event setup, soup roster, guest list | You need the planning tools weeks before the event. |
-| **3** | Soup sign-up + idea generator | Open registration early. Gets cooks excited. |
-| **4** | Invite system: QR code export, RSVP pages, Canva content | Send save-the-dates 6 weeks out. |
-| **5** | Campaign manager + Resend/Twilio integration | Drip messages need to be scheduled. |
-| **6** | Budget tracker + day-of checklist | Admin quality-of-life before the event. |
-| **7** | Voting system + RCV engine | Core game-day feature. Test heavily. |
-| **8** | Live leaderboard (TV + phone modes) | Game-day display. Depends on voting data. |
-| **9** | Results reveal + Sankey diagram + awards | Post-event ceremony. Build after voting is solid. |
-| **10** | Tasting notes | Experimental. Build last. Layer onto existing soup cards. |
-| **11** | Archive section | Backfill years 1 & 2. Can happen anytime. |
-| **12** | Shareable result cards | Nice-to-have. Post-event social sharing. |
+| Phase | What | Target | Why This Order |
+|---|---|---|---|
+| **1** | Data model + DB schema + admin auth | **ASAP** | Foundation. Nothing works without data. |
+| **2** | Admin dashboard: event setup, soup roster, guest list | **ASAP** | Jay needs planning tools immediately. |
+| **3** | Invite system: QR code export, RSVP pages, Canva content | **Before Sept** | Save-the-date postcard goes out mid-September. QR code and RSVP page must work. |
+| **4** | Soup sign-up + idea generator | **Sept–Oct** | Open registration after save-the-date lands. Gets cooks excited. |
+| **5** | Campaign manager + Resend/Twilio integration | **Oct** | Drip messages start 6 weeks out (Oct 10). |
+| **6** | Guided tasting experience + recommendation engine | **Oct–Nov** | Core game-day feature. The new card-based tasting companion with browse modes and discovery nudges. Test heavily. |
+| **7** | Voting system (ranking screen + RCV engine) | **Oct–Nov** | Integrated into tasting flow. Vote gate at 5+ soups tried. Post-vote redirect to tasting notes. |
+| **8** | Live leaderboard (TV + phone modes) | **Nov** | Game-day display. Depends on voting data. Also feeds the recommendation nudges. |
+| **9** | Tasting notes (post-vote flow) | **Nov** | Layered onto voting. Post-vote redirect drives engagement here. |
+| **10** | Results reveal + Sankey diagram + awards | **Nov** | Post-event ceremony. Build after voting is solid. |
+| **11** | Budget tracker + day-of checklist | **Anytime** | Admin quality-of-life. Not blocking. |
+| **12** | Archive section | **Anytime** | Backfill years 1 & 2. Can happen anytime. |
+| **13** | Shareable result cards | **Post-event** | Nice-to-have. Post-event social sharing. |
+
+**Critical path:** Phases 1–3 must be done before mid-September (save-the-date). Phases 6–7 must be tested by early November.
 
 ---
 
