@@ -1,1 +1,1 @@
-# pmi-buffalo-claude-skills
+# jay-i-skills

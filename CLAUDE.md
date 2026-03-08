@@ -19,7 +19,7 @@ This file provides guidance for AI assistants (Claude) working in this repositor
 ## Repository Structure
 
 ```
-pmi-buffalo-claude-skills/
+jay-i-skills/
 ├── CLAUDE.md                              # This file
 ├── README.md                              # Human-facing project overview
 └── .claude/
@@ -30,6 +30,7 @@ pmi-buffalo-claude-skills/
         │   └── ...
         ├── personal/
         │   ├── _persona.md                # Personal assistant voice & identity
+        │   ├── soup-feast/                # Soup Feast app design & process docs
         │   └── ...
         └── work/
             ├── _persona.md                # Work/professional voice & identity
