@@ -24,6 +24,7 @@ jay-i-skills/
 ├── README.md                              # Human-facing project overview
 └── .claude/
     └── skills/
+        ├── repo-brief.md            # Meta-skill: session briefs from BACKLOG.md
         ├── pmi-buffalo/
         │   ├── _persona.md                # PMI Buffalo voice & identity
         │   ├── strategic-benchmark.md
@@ -141,6 +142,12 @@ This is intentional. Do not:
 ---
 
 ## Skill Backlog
+
+### Meta (cross-context)
+
+| Skill | Purpose | Status |
+|---|---|---|
+| `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task — teaches, not just executes | Implemented |
 
 ### PMI Buffalo
 
