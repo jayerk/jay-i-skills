@@ -63,7 +63,7 @@ New files that define the system's identity and purpose. These unblock everythin
 
 | # | Priority | Status | Title | Description |
 |---|----------|--------|-------|-------------|
-| 11 | P0 | `todo` | Create `PROJECT.md` | Vision, identity, what I'm building, design principles, upstream influences (GSD, Superpowers, PM Skills). Defines the "why" of this repo — a personal operating system for a product design and delivery leader. |
+| 11 | P0 | `done` | Create `PROJECT.md` | Vision, identity, what I'm building, design principles, upstream influences (GSD, Superpowers, PM Skills). Defines the "why" of this repo — a personal operating system for a product design and delivery leader. |
 | 12 | P0 | `todo` | Create `REQUIREMENTS.md` | What this system needs to do — functional requirements for the repo as a product. Covers: skill invocation, persona isolation, downstream repo support, knowledge capture, framework reuse, private/public separation. |
 | 13 | P0 | `todo` | Create `STATE.md` | Current position, active threads, recent decisions, parking lot. Living document updated each session — captures what's in-flight, what was just decided, and what's deferred. |
 | 14 | P0 | `todo` | Upgrade `README.md` | Full repo overview: philosophy (systems thinker, iterative builder, craft-first), structure walkthrough, usage guide (how to use skills, frameworks, templates, knowledge), upstream influences, relationship to private repo. Currently minimal — needs to be the entry point for anyone encountering this repo. |
