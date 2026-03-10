@@ -141,6 +141,50 @@ This is intentional. Do not:
 
 ---
 
+## How Downstream Repos Reference These Skills
+
+Jay's project repositories (e.g., `soup-feast`) do **not** duplicate skills or personas. Instead, each downstream repo's `CLAUDE.md` includes a **pointer** back to `jay-i-skills` — telling Claude where to find the persona, skills, and design docs that govern behavior in that repo.
+
+### Why This Pattern Exists
+
+- **Single source of truth** — persona and skill definitions live in one place. Updating a persona here updates behavior everywhere.
+- **No drift** — downstream repos don't maintain their own copy of voice, tone, or skill logic that can go stale.
+- **Context stays clean** — the downstream CLAUDE.md handles repo-specific concerns (tech stack, architecture, local conventions). The skills repo handles persona and workflow.
+
+### What Every Downstream CLAUDE.md Must Include
+
+When a project repo needs to reference jay-i-skills, its `CLAUDE.md` must include three things:
+
+1. **Skills repo location** — the absolute path to the local clone of `jay-i-skills` so Claude can find and read files.
+2. **Context and persona pointer** — which context directory applies (e.g., `personal`, `pmi-buffalo`, `work`) and an explicit instruction to read `_persona.md` before any skill work.
+3. **Relevant skill and design doc paths** — specific paths to skill files or design docs in `jay-i-skills` that apply to this repo. Don't point at the entire skills repo — be precise about what's relevant.
+
+### Example: soup-feast
+
+The `soup-feast` repo is a personal project (The Great Soup Feast ranked-choice voting app). Its `CLAUDE.md` would include a section like this:
+
+```markdown
+## Skills & Persona (jay-i-skills)
+
+This project uses skills and persona definitions from Jay's central skills repo.
+
+- **Skills repo path**: `C:\Users\jrvan\Documents\Claude\repos\jay-i-skills`
+- **Context**: `personal` — read `.claude/skills/personal/_persona.md` before any skill work.
+- **Design docs**:
+  - `.claude/skills/personal/soup-feast/soup-feast-app-design.md` — app design and UX decisions
+  - `.claude/skills/personal/soup-feast/soup-feast-process-flow.md` — voting and event process flow
+
+Do NOT duplicate persona or skill content in this repo. If a skill needs updating, update it in jay-i-skills.
+```
+
+### Rules
+
+- Downstream repos must **never** copy-paste persona or skill content locally. Always point back.
+- If a downstream repo needs a new skill, create it in `jay-i-skills` under the correct context — not in the downstream repo.
+- The downstream `CLAUDE.md` owns repo-specific concerns: tech stack, architecture decisions, local dev setup, contribution guidelines. The skills repo owns persona and workflow.
+
+---
+
 ## Skill Backlog
 
 ### Meta (cross-context)
@@ -148,6 +192,7 @@ This is intentional. Do not:
 | Skill | Purpose | Status |
 |---|---|---|
 | `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task — teaches, not just executes | Implemented |
+| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section (skills repo path, context, persona, relevant design docs) pre-filled — prevents drift by making setup correct from the start | Planned |
 
 ### PMI Buffalo
 
