@@ -189,49 +189,55 @@ Do NOT duplicate persona or skill content in this repo. If a skill needs updatin
 
 ### Meta (cross-context)
 
-| Skill | Purpose | Status |
-|---|---|---|
-| `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task — teaches, not just executes | Implemented |
-| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section (skills repo path, context, persona, relevant design docs) pre-filled — prevents drift by making setup correct from the start | Planned |
+| Skill | Purpose | Priority | AC | Status |
+|---|---|---|---|---|
+| `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task — teaches, not just executes | P0 | Given a BACKLOG.md in any repo, produces a focused session brief for the next prioritized task | Implemented |
+| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section (skills repo path, context, persona, relevant design docs) pre-filled — prevents drift by making setup correct from the start | P1 | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Planned |
 
 ### PMI Buffalo
 
-| Skill | Purpose | Status |
-|---|---|---|
-| `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 5-agent (Data Analyst, Strategist, Devil's Advocate, Community Advocate, People Connector) + Chief of Staff synthesis | Implemented |
-| `board-report` | Draft monthly/quarterly board update | Planned |
-| `meeting-minutes` | Extract decisions & action items from board notes | Planned |
-| `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | Planned |
-| `email-draft` | Draft member-facing chapter communications | Planned |
-| `newsletter-section` | Write event recaps, spotlights, announcements | Planned |
-| `event-plan` | Produce checklist-driven event/PDU activity plan | Planned |
-| `pdu-tracker` | Structure PDU activity descriptions for PMI reporting | Planned |
-| `speaker-outreach` | Draft speaker invitation emails | Planned |
-| `membership-analysis` | Narrative around membership trends and actions | Planned |
-| `volunteer-brief` | Role-specific onboarding brief for new volunteers | Planned |
-| `recognition-draft` | Awards, LinkedIn shoutouts, thank-you messages | Planned |
-| `sponsor-proposal` | Tiered sponsorship packages for WNY businesses | Planned |
-| `budget-review` | Narrative analysis of chapter budget vs. actuals | Planned |
-| `site-audit` | External public website crawl — flags stale content, PII, PMI cert content, DE&I issues; produces dated audit log | Implemented |
-| `internal-audit` | Internal content audit — board docs, communications, unpublished materials | Planned |
+| Skill | Purpose | Priority | AC | Status |
+|---|---|---|---|---|
+| `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 5-agent (Data Analyst, Strategist, Devil's Advocate, Community Advocate, People Connector) + Chief of Staff synthesis | P1 | Given a chapter name or dataset, produces multi-perspective benchmark report with synthesis | Implemented |
+| `board-report` | Draft monthly/quarterly board update | P1 | Given recent chapter activity, produces board-ready monthly or quarterly update | Planned |
+| `meeting-minutes` | Extract decisions & action items from board notes | P1 | Given raw board meeting notes, produces decisions and action items with owners and due dates | Planned |
+| `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | P2 | Given full-year chapter data, produces PMI Global-formatted annual summary | Planned |
+| `email-draft` | Draft member-facing chapter communications | P1 | Given topic and audience, produces member-facing chapter email in PMI Buffalo voice | Planned |
+| `newsletter-section` | Write event recaps, spotlights, announcements | P2 | Given event or spotlight topic, produces newsletter-ready section | Planned |
+| `event-plan` | Produce checklist-driven event/PDU activity plan | P1 | Given event concept, produces checklist-driven plan with PDU structure and timeline | Planned |
+| `pdu-tracker` | Structure PDU activity descriptions for PMI reporting | P2 | Given activity details, produces PMI-formatted PDU descriptions | Planned |
+| `speaker-outreach` | Draft speaker invitation emails | P2 | Given speaker name and topic, produces personalized invitation email | Planned |
+| `membership-analysis` | Narrative around membership trends and actions | P1 | Given membership data, produces trend narrative with recommended actions | Planned |
+| `volunteer-brief` | Role-specific onboarding brief for new volunteers | P1 | Given role name, produces onboarding brief for new volunteers | Planned |
+| `volunteer-of-the-quarter` | Run the volunteer-of-the-quarter selection and recognition process | P1 | Given nomination period, produces selection summary and recognition artifacts | Planned |
+| `recognition-draft` | Awards, LinkedIn shoutouts, thank-you messages | P2 | Given volunteer or member name and contribution, produces recognition content | Planned |
+| `sponsor-proposal` | Tiered sponsorship packages for WNY businesses | P2 | Given target business profile, produces tiered sponsorship package | Planned |
+| `budget-review` | Narrative analysis of chapter budget vs. actuals | P2 | Given budget vs. actuals data, produces narrative analysis with flags | Planned |
+| `site-audit` | External public website crawl — flags stale content, PII, PMI cert content, DE&I issues; produces dated audit log | P1 | Given chapter URL, produces dated audit log of content issues | Implemented |
+| `internal-audit` | Internal content audit — board docs, communications, unpublished materials | P2 | Given board doc set, produces content audit with flags and recommendations | Planned |
+| `help-desk-emails` | Draft responses to incoming chapter help desk emails | P1 | Given help desk email, produces on-brand response in PMI Buffalo voice | Planned |
 
 ### Personal
 
-| Skill | Purpose | Status |
-|---|---|---|
-| `decision-matrix` | Structure a personal decision with pros/cons/criteria | Planned |
-| `research-brief` | Summarize research on a purchase, topic, or option | Planned |
-| `weekly-review` | Guided weekly personal review and planning session | Planned |
-| `trip-plan` | Build a practical travel itinerary from requirements | Planned |
-| `budget-snapshot` | Summarize personal finances and flag issues | Planned |
+| Skill | Purpose | Priority | AC | Status |
+|---|---|---|---|---|
+| `decision-matrix` | Structure a personal decision with pros/cons/criteria | P2 | Given a decision with options, produces weighted criteria matrix with recommendation | Planned |
+| `research-brief` | Summarize research on a purchase, topic, or option | P1 | Given a topic or purchase, produces structured summary with sources | Planned |
+| `weekly-review` | Guided weekly personal review and planning session with reMarkable delivery | P1 | Given week's activity, produces guided review with next-week priorities and sends to reMarkable | Planned |
+| `trip-plan` | Build a practical travel itinerary from requirements | P2 | Given destination and constraints, produces day-by-day itinerary | Planned |
+| `remarkable-food-digest` | Pull food content from email into magazine-format reMarkable document, scheduled daily or weekly | P1 | Given food email inbox, produces magazine-format reMarkable document | Planned |
+| `work-summarizer` | Structured daily/weekly digest of work activity | P1 | Given daily or weekly work activity, produces structured digest with highlights and next steps | Planned |
+| `remarkable-extract` | Extract and process content from reMarkable documents — scope TBD | P2 | TBD — to be decomposed in Claude Chat | Planned |
 
 ### Work
 
-| Skill | Purpose | Status |
-|---|---|---|
-| `status-update` | Draft a concise project or work status update | Planned |
-| `meeting-notes` | Produce internal meeting summary with next steps | Planned |
-| `email-draft` | Draft professional workplace emails | Planned |
-| `self-assessment` | Write performance self-assessment narratives | Planned |
-| `exec-summary` | Condense a document into an executive summary | Planned |
-| `slide-outline` | Structure a presentation from talking points | Planned |
+| Skill | Purpose | Priority | AC | Status |
+|---|---|---|---|---|
+| `status-update` | Draft a concise project or work status update | P1 | Given project context, produces concise status update with risks and next steps | Planned |
+| `email-draft` | Draft professional workplace emails | P1 | Given topic and audience, produces professional email draft | Planned |
+| `self-assessment` | Write performance self-assessment narratives | P1 | Given accomplishments and review period, produces performance narrative | Planned |
+| `exec-summary` | Condense a document into an executive summary | P1 | Given source document, produces one-page executive summary | Planned |
+| `slide-outline` | Structure a presentation from talking points | P2 | Given talking points and audience, produces structured slide deck outline | Planned |
+| `planning-and-execution` | Planning and execution skill family — covers OKRs, decision briefs, stakeholder maps, portfolio reviews, value stream assessments, playbook authoring, business cases, and retro facilitation. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |
+| `customer-market-research` | Customer and market research artifacts — competitive analysis, market sizing, customer discovery synthesis. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |
+| `value-management` | Value management artifacts — value stream optimization, benefit realization, outcome tracking. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |

@@ -41,6 +41,7 @@ and the referenced context to produce a focused working session brief.
 | 5 | P1 | `todo` | Add skill validation conventions section to CLAUDE.md | [CLAUDE.md](CLAUDE.md) |
 | 6 | P1 | `todo` | Implement first 3 `work/` skills as employer-agnostic PM craft | [work/_persona.md](.claude/skills/work/_persona.md) |
 | 6b | P1 | `todo` | Create `repo-init` meta skill — generate downstream CLAUDE.md with pointer section pre-filled | [CLAUDE.md](CLAUDE.md) |
+| 6c | P1 | `todo` | Create soup-feast CLAUDE.md with pointer section per downstream repo pattern | [CLAUDE.md](CLAUDE.md) |
 | 7 | P2 | `todo` | Create `docs/decisions/` with ADR-001 (context isolation) + ADR-002 (employer-agnostic work context) | [CLAUDE.md](CLAUDE.md) |
 | 8 | P2 | `todo` | Create `docs/quality.md` — skill quality grading table | [CLAUDE.md](CLAUDE.md) |
 
