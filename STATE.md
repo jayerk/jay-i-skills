@@ -7,16 +7,17 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** 0 complete. Phase 1 — Core Documents Review (P0) is next.
-**Focus:** Aligning CLAUDE.md and BACKLOG.md to the v1 vision.
+**Phase:** 0 and 1 complete. Phase 2 — Knowledge Base Review (P1) is next.
+**Focus:** Validating knowledge files against Jay's full profile.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
 - REQUIREMENTS.md — 30 testable requirements across 8 capability areas
 - STATE.md — this file
-- BACKLOG.md — phased plan with 36 items across 6 phases
-- CLAUDE.md — skill format, context isolation, downstream repo pattern (v0, pre-upgrade)
+- BACKLOG.md — phased plan with milestones and dependency tracking
+- CLAUDE.md — v1: thinking style, 8 work modes, session workflow, full system reference
 - README.md — full repo overview with philosophy, structure, usage guide
+- SKILL-CATALOG.md — full skill inventory extracted from CLAUDE.md
 - 3 personas — work, pmi-buffalo, personal (all have `_persona.md`)
 - 8 work-mode skills — all have SKILL.md files (not yet reviewed)
 - 4 frameworks — discovery, strategy, prioritization, execution (not yet reviewed)
@@ -27,9 +28,10 @@ to understand where things stand right now.
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template
 - Personal skills — soup-feast app design + process flow
 
-**What's next (Phase 1):**
-- CLAUDE.md v1 upgrade (#15) — rewrite to cover thinking style, 8 work modes, session workflow
-- BACKLOG.md restructure (#16) — transform from flat list to phased evolution plan
+**What's next (Phase 2):**
+- #17 — Review `knowledge/principles.md`
+- #18 — Review `knowledge/vocabulary.md`
+- #19 — Review `knowledge/references.md`
 
 ---
 
@@ -37,8 +39,9 @@ to understand where things stand right now.
 
 | Thread | Status | Next Step |
 |--------|--------|-----------|
-| Phase 0 foundation docs | Complete. #11–#14 all done. | Move to Phase 1 |
-| Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | No further action |
+| Phase 0 foundation docs | Complete. #11–#14 all done. | — |
+| Phase 1 core documents | Complete. #15–#16 done. | Move to Phase 2 |
+| Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
 
 ---
 
@@ -46,6 +49,8 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-10 | CLAUDE.md v1 shipped — covers thinking style, 8 work modes, session workflow, full system reference. Skill backlogs extracted to `.claude/SKILL-CATALOG.md` | Completes Phase 1 |
+| 2026-03-10 | BACKLOG.md restructured — phased plan with milestones, dependency tracking, review guidelines. Original items archived to Completed section | Completes Phase 1 |
 | 2026-03-10 | Original backlog #1–#8 reconciled: #1,#2 done; #3,#4,#5 folded into #15; #6 superseded by #20–#27; #6b,#6c kept; #7 covered by #10; #8 deferred to FUT-01 | Cleans up pre-v1 items against phased plan |
 | 2026-03-10 | README.md upgraded — full repo overview with philosophy, structure, usage, influences | Completes Phase 0 foundation documents |
 | 2026-03-10 | REQUIREMENTS.md covers 8 capability areas with 30 v1 requirements | Needed testable criteria before reviewing existing content |
