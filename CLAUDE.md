@@ -1,18 +1,243 @@
-# CLAUDE.md — Jay's Claude Skills Repository
+# CLAUDE.md — How Claude Works With Jay
 
-This file provides guidance for AI assistants (Claude) working in this repository.
+This file tells Claude how to operate in this repository. Read this first,
+then PROJECT.md for identity and vision, then STATE.md for current position.
 
-## Repository Overview
+---
 
-**Purpose**: This repository hosts custom Claude Code skills organized into distinct, isolated contexts. Each context has its own persona, tone, and skill set. Contexts do **not** share skills — even for similar tasks, each context gets its own version tuned to that persona.
+## Who Jay Is
 
-**Contexts**:
+Product design and delivery leader. Transformation Enablement team at a large
+regulated bank. Highest-ranking IC, positioning for people leadership.
 
-| Context | Directory | Persona Summary |
-|---|---|---|
+**Thinking style:** Systems thinker. Sees structures, feedback loops, and leverage
+points before tasks. Iterative builder — ships v1, uses it, improves it.
+Craft-first — internal tools deserve the same care as external products.
+Show-don't-tell — a working demo beats a deck explaining the concept.
+
+**Superpower:** Encoding expertise into reusable systems — scoring rubrics,
+assessment dimensions, maturity models, health dashboards. The artifact does
+the communicating.
+
+**Watch for:** Jay's instinct to always start something new can dilute focus.
+When relevant, help him prioritize follow-through over fresh starts.
+
+**Full profile:** See `PROJECT.md` for design principles and `.claude/knowledge/principles.md`
+for the 10 core beliefs that guide decisions.
+
+---
+
+## Jay's 8 Work Modes
+
+Each mode has a SKILL.md in `.claude/skills/work/<skill-name>/`. Load the
+relevant skill when the work mode activates.
+
+| Mode | Skill | What It Covers |
+|------|-------|----------------|
+| Product strategy & vision | `product-strategy` | Strategic positioning, roadmaps, market analysis |
+| Internal tooling | `internal-tooling` | HTML/React SPAs, dashboards, scoring tools |
+| Executive storytelling | `executive-storytelling` | Translating depth to brevity for leadership audiences |
+| PRD writing | `prd-writing` | Problem → outcome → scope → requirements → AC |
+| Coaching frameworks | `coaching-frameworks` | Rubrics, maturity models, assessment templates, facilitation |
+| Community content | `community-content` | Internal platform content and thought leadership |
+| Gap analysis & prioritization | `gap-analysis` | Current vs. target state, backlog prioritization |
+| Stakeholder navigation | `stakeholder-navigation` | Influence mapping, alignment building, resistance patterns |
+
+---
+
+## Three Contexts, Three Voices
+
+Skills are organized into contexts. Each has a `_persona.md` that defines voice,
+tone, and boundaries. **Always read `_persona.md` before executing any skill.**
+
+| Context | Directory | Persona |
+|---------|-----------|---------|
+| Work | `.claude/skills/work/` | Senior product coach — polished, precise, audience-aware, employer-agnostic |
 | PMI Buffalo | `.claude/skills/pmi-buffalo/` | PMI Western NY chapter — professional, volunteer-aware, community-minded |
 | Personal | `.claude/skills/personal/` | Personal life assistant — direct, casual, opinionated, low-friction |
-| Work | `.claude/skills/work/` | Day-job professional — polished, precise, audience-aware |
+
+**Contexts never cross.** Same task category, completely different outputs.
+A PMI Buffalo meeting minutes skill produces a board-ready document. A work
+meeting notes skill produces a concise internal summary. Do not generalize
+skills across contexts or blur one persona into another.
+
+---
+
+## Session Workflow
+
+### Starting a Session
+
+1. Read this file (CLAUDE.md)
+2. Read `PROJECT.md` — vision, identity, design principles
+3. Read `STATE.md` — current position, active threads, recent decisions
+4. If working from the backlog, run `/repo-brief` to get a focused session brief
+
+### During a Session
+
+- Load the relevant `_persona.md` before any skill work
+- Load the relevant SKILL.md when a work mode activates
+- Reference frameworks when the work calls for structured methodology
+- Use vocabulary from `.claude/knowledge/vocabulary.md` — Jay's domain language
+- Update `STATE.md` at the end of the session with decisions made and threads moved
+
+### Key Domain Language
+
+Jay uses specific vocabulary. Get these right:
+
+- **Balanced Breakthrough** — Run/Improve/Transform allocation model
+- **Team Topologies** — stream-aligned, platform, enabling, complicated subsystem
+- **Lifecycle stages** — product maturity stages that determine strategy
+- **Harvey balls** — visual maturity indicators (empty → full circle)
+- **Gearing ratio** — leverage multiplier for enablement work
+- **Opportunity Solution Tree** — Teresa Torres' discovery framework
+
+Full glossary: `.claude/knowledge/vocabulary.md`
+
+---
+
+## What's Available
+
+### Skills
+
+Three types of skills in this repo:
+
+1. **Work-mode skills** — 8 SKILL.md files under `.claude/skills/work/`, one per work mode
+2. **Context skills** — PMI Buffalo and personal skills under their respective directories
+3. **Meta skills** — cross-context tools like `repo-brief`
+
+Full catalog with planned skills: `.claude/SKILL-CATALOG.md`
+
+### Frameworks
+
+Four reusable methodology walkthroughs. Context-neutral, persona-independent.
+Skills reference these when structured thinking is needed.
+
+| Framework | Path | When to Use |
+|-----------|------|-------------|
+| Discovery | `frameworks/discovery/FRAMEWORK.md` | Understanding users, mapping opportunities, testing assumptions |
+| Strategy | `frameworks/strategy/FRAMEWORK.md` | Diagnosing situations, setting direction, making coherent choices |
+| Prioritization | `frameworks/prioritization/FRAMEWORK.md` | Scoring options, allocating effort (Run/Improve/Transform) |
+| Execution | `frameworks/execution/FRAMEWORK.md` | Discuss → Plan → Execute → Verify |
+
+### Knowledge
+
+| File | What It Contains |
+|------|-----------------|
+| `knowledge/principles.md` | 10 core beliefs with "in practice" guidance |
+| `knowledge/vocabulary.md` | Domain terms and definitions |
+| `knowledge/references.md` | Influences mapped to what Jay took from each |
+
+### Templates
+
+| Template | Path | Purpose |
+|----------|------|---------|
+| Plan | `templates/PLAN-TEMPLATE.md` | Initiative planning |
+| Phase | `templates/PHASE-TEMPLATE.md` | Wave-based execution |
+| Context | `templates/CONTEXT-TEMPLATE.md` | Scope and stakeholder capture |
+| Summary | `templates/SUMMARY-TEMPLATE.md` | Completion narratives |
+
+---
+
+## Skill File Format
+
+Two formats coexist. Use the format that matches the directory structure.
+
+### Standalone Skills (pmi-buffalo, personal, meta)
+
+```markdown
+# skill-name
+
+[One-sentence description]
+
+TRIGGER when: [conditions]
+DO NOT TRIGGER when: [exclusions]
+
+## Instructions
+
+[Step-by-step. Actionable, not descriptive.]
+```
+
+### Work-Mode Skills (Superpowers format)
+
+YAML frontmatter with `name` and `description`, followed by substantive
+instructions. Each skill lives in its own directory as `SKILL.md`.
+
+```markdown
+---
+name: skill-name
+description: When to trigger this skill
+---
+
+[Detailed instructions, methodology references, quality checks]
+```
+
+---
+
+## Conventions
+
+### For All Claude Work
+
+1. **Read `_persona.md` before any skill work.** Non-negotiable.
+2. **Instructions are actionable, not descriptive.** "List all action items with owner and due date" — not "This skill handles action items."
+3. **Triggers must be precise.** If a skill fires incorrectly, tighten DO NOT TRIGGER — don't weaken the trigger.
+4. **Never cross context boundaries.** If asked to do a PMI Buffalo task in a work context, stop and clarify.
+5. **One skill, one purpose.** Don't combine unrelated workflows.
+6. **Simplify relentlessly.** Jay understands depth. Your job is to help translate it into executive-ready language. If it needs a decoder ring, compress it until a VP can act on it in 30 seconds.
+
+### Development Workflow
+
+**Creating a new skill:**
+1. Identify the correct context
+2. Read that context's `_persona.md`
+3. Create a branch (see naming below)
+4. Add the skill file
+5. Test via slash command
+6. Commit, push, open PR to `main`
+
+**Branch naming:**
+
+| Purpose | Pattern |
+|---------|---------|
+| New skill | `feature/skill-<context>-<name>` |
+| New context | `feature/context-<name>` |
+| Persona update | `update/persona-<context>` |
+| Bug fix | `fix/<context>-<skill-name>` |
+| Claude-initiated | `claude/<short-description>-<session-id>` |
+
+**Commit messages:** Imperative mood. Format: `<verb> <context>/<skill-name>: <what and why>`
+
+---
+
+## Downstream Repo Pattern
+
+Project repos don't duplicate skills or personas. Each downstream repo's
+`CLAUDE.md` includes a pointer back to this repo.
+
+### What Every Downstream CLAUDE.md Must Include
+
+1. **Skills repo location** — absolute path to the local clone of `jay-i-skills`
+2. **Context and persona pointer** — which context applies, instruction to read `_persona.md`
+3. **Relevant skill and design doc paths** — specific files, not the whole repo
+
+### Example: soup-feast
+
+```markdown
+## Skills & Persona (jay-i-skills)
+
+- **Skills repo path**: `C:\Users\jrvan\Documents\Claude\repos\jay-i-skills`
+- **Context**: `personal` — read `.claude/skills/personal/_persona.md` before any skill work.
+- **Design docs**:
+  - `.claude/skills/personal/soup-feast/soup-feast-app-design.md`
+  - `.claude/skills/personal/soup-feast/soup-feast-process-flow.md`
+
+Do NOT duplicate persona or skill content in this repo.
+```
+
+### Rules
+
+- Downstream repos **never** copy persona or skill content. Always point back.
+- New skills go in `jay-i-skills`, not the downstream repo.
+- Downstream `CLAUDE.md` owns repo-specific concerns (tech stack, architecture, local dev). This repo owns persona and workflow.
 
 ---
 
@@ -20,224 +245,22 @@ This file provides guidance for AI assistants (Claude) working in this repositor
 
 ```
 jay-i-skills/
-├── CLAUDE.md                              # This file
-├── README.md                              # Human-facing project overview
+├── PROJECT.md              # Vision, identity, design principles
+├── REQUIREMENTS.md         # Testable requirements (30 across 8 areas)
+├── STATE.md                # Current position, active threads, decisions
+├── BACKLOG.md              # Phased work plan
+├── CLAUDE.md               # This file
+├── README.md               # Human-facing repo overview
 └── .claude/
-    └── skills/
-        ├── repo-brief.md            # Meta-skill: session briefs from BACKLOG.md
-        ├── pmi-buffalo/
-        │   ├── _persona.md                # PMI Buffalo voice & identity
-        │   ├── strategic-benchmark.md
-        │   └── ...
-        ├── personal/
-        │   ├── _persona.md                # Personal assistant voice & identity
-        │   ├── soup-feast/                # Soup Feast app design & process docs
-        │   └── ...
-        └── work/
-            ├── _persona.md                # Work/professional voice & identity
-            └── ...
+    ├── commands/           # Slash commands (/repo-brief)
+    ├── SKILL-CATALOG.md    # Full skill inventory (implemented + planned)
+    ├── skills/
+    │   ├── repo-brief.md   # Meta-skill: session briefs from BACKLOG.md
+    │   ├── work/           # 8 work-mode skills + _persona.md
+    │   ├── pmi-buffalo/    # Chapter skills + _persona.md
+    │   └── personal/       # Personal skills + _persona.md
+    ├── frameworks/         # 4 methodology walkthroughs
+    ├── knowledge/          # Principles, vocabulary, references
+    ├── templates/          # 4 document starting points
+    └── private-template/   # Scaffold for private companion repo
 ```
-
-### The `_persona.md` File
-
-Every context directory contains a `_persona.md`. This file defines:
-- Who Claude is in this context
-- Voice and tone guidelines
-- Hard boundaries (what Claude must NOT do in this context)
-- Recurring use cases and artifacts
-
-**Always read `_persona.md` before executing any skill in a context.** The persona is the foundation — individual skills build on top of it.
-
----
-
-## What Are Claude Code Skills?
-
-Skills are markdown files that define specialized Claude workflows. Each skill:
-- Has a **trigger condition** — when Claude activates the skill
-- Has **instructions** — what Claude does when active
-- Inherits the **persona** of its context directory
-
-Skills are invoked via slash commands (e.g., `/strategic-benchmark`) or trigger automatically when Claude detects matching context.
-
-### Skill File Format
-
-```markdown
-# skill-name
-
-[One-sentence description of what this skill does]
-
-TRIGGER when: [conditions that activate this skill]
-DO NOT TRIGGER when: [conditions that must NOT activate this skill]
-
-## Instructions
-
-[Step-by-step instructions Claude follows. Actionable, not descriptive.]
-```
-
----
-
-## Core Principle: Distinct Personalities, No Crossover
-
-**Skills are not shared between contexts.** If a similar task exists in two contexts (e.g., meeting minutes for PMI Buffalo and meeting notes at work), each context gets its own skill written to that persona. A PMI Buffalo meeting minutes skill produces a formal board-ready document. A work meeting notes skill produces a concise internal summary. Same task category — completely different outputs.
-
-This is intentional. Do not:
-- Generalize a skill to work across contexts
-- Reuse a skill file from one context in another
-- Blur the voice of one persona into another
-
----
-
-## Development Workflow
-
-### Creating a New Skill
-
-1. Identify the correct context (pmi-buffalo, personal, or work)
-2. Read that context's `_persona.md` before writing
-3. Create a branch: `git checkout -b feature/skill-<context>-<name>`
-4. Add the skill at `.claude/skills/<context>/<skill-name>.md`
-5. Follow the skill file format exactly
-6. Test in Claude Code by invoking `/<skill-name>`
-7. Commit: `git commit -m "Add <context>/<skill-name>: <one-line description>"`
-8. Push and open a PR targeting `main`
-
-### Adding a New Context
-
-1. Create `.claude/skills/<context-name>/`
-2. Write `_persona.md` first — define voice, tone, boundaries, and use cases before writing any skills
-3. Update the context table in this file
-4. Add skill recommendations to the backlog below
-
-### Branch Naming
-
-| Purpose | Pattern |
-|---|---|
-| New skill | `feature/skill-<context>-<name>` |
-| New context | `feature/context-<name>` |
-| Persona update | `update/persona-<context>` |
-| Bug fix | `fix/<context>-<skill-name>` |
-| Claude-initiated | `claude/<short-description>-<session-id>` |
-
-### Commit Message Conventions
-
-- Imperative mood: "Add", "Update", "Fix", "Remove"
-- Format: `<verb> <context>/<skill-name>: <what and why>`
-- Example: `Add pmi-buffalo/meeting-minutes: extract action items from board notes`
-
----
-
-## Conventions for AI Assistants
-
-1. **Read `_persona.md` before any skill work.** Voice and boundaries are non-negotiable per context.
-
-2. **Triggers must be precise.** If a skill fires incorrectly, tighten the DO NOT TRIGGER clause — don't weaken the trigger.
-
-3. **Instructions are actionable, not descriptive.** Write "List all action items with owner and due date" — not "This skill handles action items."
-
-4. **Never cross context boundaries.** If asked to do a PMI Buffalo task while in a personal context, stop and clarify which context applies.
-
-5. **One skill, one purpose.** Do not combine unrelated workflows.
-
-6. **Keep CLAUDE.md current.** When adding a skill, mark it in the backlog below.
-
----
-
-## How Downstream Repos Reference These Skills
-
-Jay's project repositories (e.g., `soup-feast`) do **not** duplicate skills or personas. Instead, each downstream repo's `CLAUDE.md` includes a **pointer** back to `jay-i-skills` — telling Claude where to find the persona, skills, and design docs that govern behavior in that repo.
-
-### Why This Pattern Exists
-
-- **Single source of truth** — persona and skill definitions live in one place. Updating a persona here updates behavior everywhere.
-- **No drift** — downstream repos don't maintain their own copy of voice, tone, or skill logic that can go stale.
-- **Context stays clean** — the downstream CLAUDE.md handles repo-specific concerns (tech stack, architecture, local conventions). The skills repo handles persona and workflow.
-
-### What Every Downstream CLAUDE.md Must Include
-
-When a project repo needs to reference jay-i-skills, its `CLAUDE.md` must include three things:
-
-1. **Skills repo location** — the absolute path to the local clone of `jay-i-skills` so Claude can find and read files.
-2. **Context and persona pointer** — which context directory applies (e.g., `personal`, `pmi-buffalo`, `work`) and an explicit instruction to read `_persona.md` before any skill work.
-3. **Relevant skill and design doc paths** — specific paths to skill files or design docs in `jay-i-skills` that apply to this repo. Don't point at the entire skills repo — be precise about what's relevant.
-
-### Example: soup-feast
-
-The `soup-feast` repo is a personal project (The Great Soup Feast ranked-choice voting app). Its `CLAUDE.md` would include a section like this:
-
-```markdown
-## Skills & Persona (jay-i-skills)
-
-This project uses skills and persona definitions from Jay's central skills repo.
-
-- **Skills repo path**: `C:\Users\jrvan\Documents\Claude\repos\jay-i-skills`
-- **Context**: `personal` — read `.claude/skills/personal/_persona.md` before any skill work.
-- **Design docs**:
-  - `.claude/skills/personal/soup-feast/soup-feast-app-design.md` — app design and UX decisions
-  - `.claude/skills/personal/soup-feast/soup-feast-process-flow.md` — voting and event process flow
-
-Do NOT duplicate persona or skill content in this repo. If a skill needs updating, update it in jay-i-skills.
-```
-
-### Rules
-
-- Downstream repos must **never** copy-paste persona or skill content locally. Always point back.
-- If a downstream repo needs a new skill, create it in `jay-i-skills` under the correct context — not in the downstream repo.
-- The downstream `CLAUDE.md` owns repo-specific concerns: tech stack, architecture decisions, local dev setup, contribution guidelines. The skills repo owns persona and workflow.
-
----
-
-## Skill Backlog
-
-### Meta (cross-context)
-
-| Skill | Purpose | Priority | AC | Status |
-|---|---|---|---|---|
-| `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task — teaches, not just executes | P0 | Given a BACKLOG.md in any repo, produces a focused session brief for the next prioritized task | Implemented |
-| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section (skills repo path, context, persona, relevant design docs) pre-filled — prevents drift by making setup correct from the start | P1 | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Planned |
-
-### PMI Buffalo
-
-| Skill | Purpose | Priority | AC | Status |
-|---|---|---|---|---|
-| `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 5-agent (Data Analyst, Strategist, Devil's Advocate, Community Advocate, People Connector) + Chief of Staff synthesis | P1 | Given a chapter name or dataset, produces multi-perspective benchmark report with synthesis | Implemented |
-| `board-report` | Draft monthly/quarterly board update | P1 | Given recent chapter activity, produces board-ready monthly or quarterly update | Planned |
-| `meeting-minutes` | Extract decisions & action items from board notes | P1 | Given raw board meeting notes, produces decisions and action items with owners and due dates | Planned |
-| `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | P2 | Given full-year chapter data, produces PMI Global-formatted annual summary | Planned |
-| `email-draft` | Draft member-facing chapter communications | P1 | Given topic and audience, produces member-facing chapter email in PMI Buffalo voice | Planned |
-| `newsletter-section` | Write event recaps, spotlights, announcements | P2 | Given event or spotlight topic, produces newsletter-ready section | Planned |
-| `event-plan` | Produce checklist-driven event/PDU activity plan | P1 | Given event concept, produces checklist-driven plan with PDU structure and timeline | Planned |
-| `pdu-tracker` | Structure PDU activity descriptions for PMI reporting | P2 | Given activity details, produces PMI-formatted PDU descriptions | Planned |
-| `speaker-outreach` | Draft speaker invitation emails | P2 | Given speaker name and topic, produces personalized invitation email | Planned |
-| `membership-analysis` | Narrative around membership trends and actions | P1 | Given membership data, produces trend narrative with recommended actions | Planned |
-| `volunteer-brief` | Role-specific onboarding brief for new volunteers | P1 | Given role name, produces onboarding brief for new volunteers | Planned |
-| `volunteer-of-the-quarter` | Run the volunteer-of-the-quarter selection and recognition process | P1 | Given nomination period, produces selection summary and recognition artifacts | Planned |
-| `recognition-draft` | Awards, LinkedIn shoutouts, thank-you messages | P2 | Given volunteer or member name and contribution, produces recognition content | Planned |
-| `sponsor-proposal` | Tiered sponsorship packages for WNY businesses | P2 | Given target business profile, produces tiered sponsorship package | Planned |
-| `budget-review` | Narrative analysis of chapter budget vs. actuals | P2 | Given budget vs. actuals data, produces narrative analysis with flags | Planned |
-| `site-audit` | External public website crawl — flags stale content, PII, PMI cert content, DE&I issues; produces dated audit log | P1 | Given chapter URL, produces dated audit log of content issues | Implemented |
-| `internal-audit` | Internal content audit — board docs, communications, unpublished materials | P2 | Given board doc set, produces content audit with flags and recommendations | Planned |
-| `help-desk-emails` | Draft responses to incoming chapter help desk emails | P1 | Given help desk email, produces on-brand response in PMI Buffalo voice | Planned |
-
-### Personal
-
-| Skill | Purpose | Priority | AC | Status |
-|---|---|---|---|---|
-| `decision-matrix` | Structure a personal decision with pros/cons/criteria | P2 | Given a decision with options, produces weighted criteria matrix with recommendation | Planned |
-| `research-brief` | Summarize research on a purchase, topic, or option | P1 | Given a topic or purchase, produces structured summary with sources | Planned |
-| `weekly-review` | Guided weekly personal review and planning session with reMarkable delivery | P1 | Given week's activity, produces guided review with next-week priorities and sends to reMarkable | Planned |
-| `trip-plan` | Build a practical travel itinerary from requirements | P2 | Given destination and constraints, produces day-by-day itinerary | Planned |
-| `remarkable-food-digest` | Pull food content from email into magazine-format reMarkable document, scheduled daily or weekly | P1 | Given food email inbox, produces magazine-format reMarkable document | Planned |
-| `work-summarizer` | Structured daily/weekly digest of work activity | P1 | Given daily or weekly work activity, produces structured digest with highlights and next steps | Planned |
-| `remarkable-extract` | Extract and process content from reMarkable documents — scope TBD | P2 | TBD — to be decomposed in Claude Chat | Planned |
-
-### Work
-
-| Skill | Purpose | Priority | AC | Status |
-|---|---|---|---|---|
-| `status-update` | Draft a concise project or work status update | P1 | Given project context, produces concise status update with risks and next steps | Planned |
-| `email-draft` | Draft professional workplace emails | P1 | Given topic and audience, produces professional email draft | Planned |
-| `self-assessment` | Write performance self-assessment narratives | P1 | Given accomplishments and review period, produces performance narrative | Planned |
-| `exec-summary` | Condense a document into an executive summary | P1 | Given source document, produces one-page executive summary | Planned |
-| `slide-outline` | Structure a presentation from talking points | P2 | Given talking points and audience, produces structured slide deck outline | Planned |
-| `planning-and-execution` | Planning and execution skill family — covers OKRs, decision briefs, stakeholder maps, portfolio reviews, value stream assessments, playbook authoring, business cases, and retro facilitation. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |
-| `customer-market-research` | Customer and market research artifacts — competitive analysis, market sizing, customer discovery synthesis. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |
-| `value-management` | Value management artifacts — value stream optimization, benefit realization, outcome tracking. To be decomposed into individual skills. | P2 | TBD — to be decomposed in Claude Chat | Planned |
