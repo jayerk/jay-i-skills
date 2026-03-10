@@ -32,18 +32,18 @@ and the referenced context to produce a focused working session brief.
 
 ## Active Backlog (Original)
 
-| # | Priority | Status | Title | Ref |
-|---|----------|--------|-------|-----|
-| 1 | P0 | `in-progress` | Audit `work/_persona.md` — remove any employer names | [work/_persona.md](.claude/skills/work/_persona.md) |
-| 2 | P1 | `in-progress` | Add cross-repo linking pattern section to CLAUDE.md | [CLAUDE.md](CLAUDE.md) |
-| 3 | P1 | `todo` | Add Priority + AC columns to all skill backlog tables in CLAUDE.md | [CLAUDE.md](CLAUDE.md) |
-| 4 | P1 | `todo` | Add personal skill backlog entries: `remarkable-food-digest` + `work-summarizer` | [CLAUDE.md](CLAUDE.md) |
-| 5 | P1 | `todo` | Add skill validation conventions section to CLAUDE.md | [CLAUDE.md](CLAUDE.md) |
-| 6 | P1 | `todo` | Implement first 3 `work/` skills as employer-agnostic PM craft | [work/_persona.md](.claude/skills/work/_persona.md) |
-| 6b | P1 | `todo` | Create `repo-init` meta skill — generate downstream CLAUDE.md with pointer section pre-filled | [CLAUDE.md](CLAUDE.md) |
-| 6c | P1 | `todo` | Create soup-feast CLAUDE.md with pointer section per downstream repo pattern | [CLAUDE.md](CLAUDE.md) |
-| 7 | P2 | `todo` | Create `docs/decisions/` with ADR-001 (context isolation) + ADR-002 (employer-agnostic work context) | [CLAUDE.md](CLAUDE.md) |
-| 8 | P2 | `todo` | Create `docs/quality.md` — skill quality grading table | [CLAUDE.md](CLAUDE.md) |
+| # | Priority | Status | Title | Ref | Disposition |
+|---|----------|--------|-------|-----|-------------|
+| 1 | P0 | `done` | Audit `work/_persona.md` — remove any employer names | [work/_persona.md](.claude/skills/work/_persona.md) | Already clean — persona says "Do NOT name or assume a specific employer" |
+| 2 | P1 | `done` | Add cross-repo linking pattern section to CLAUDE.md | [CLAUDE.md](CLAUDE.md) | Downstream pointer pattern fully documented (CLAUDE.md lines 144–184) |
+| 3 | P1 | `done` | Add Priority + AC columns to all skill backlog tables in CLAUDE.md | [CLAUDE.md](CLAUDE.md) | Folded into #15 (CLAUDE.md v1 rewrite) |
+| 4 | P1 | `done` | Add personal skill backlog entries: `remarkable-food-digest` + `work-summarizer` | [CLAUDE.md](CLAUDE.md) | Folded into #15 (CLAUDE.md v1 rewrite) — entries already in backlog tables |
+| 5 | P1 | `done` | Add skill validation conventions section to CLAUDE.md | [CLAUDE.md](CLAUDE.md) | Folded into #15 (CLAUDE.md v1 rewrite) |
+| 6 | P1 | `done` | Implement first 3 `work/` skills as employer-agnostic PM craft | [work/_persona.md](.claude/skills/work/_persona.md) | Superseded — all 8 work skills have SKILL.md files, reviewed individually in #20–#27 |
+| 6b | P1 | `todo` | Create `repo-init` meta skill — generate downstream CLAUDE.md with pointer section pre-filled | [CLAUDE.md](CLAUDE.md) | Kept — not covered by v1 phases |
+| 6c | P1 | `todo` | Create soup-feast CLAUDE.md with pointer section per downstream repo pattern | [CLAUDE.md](CLAUDE.md) | Kept — not covered by v1 phases |
+| 7 | P2 | `done` | Create `docs/decisions/` with ADR-001 (context isolation) + ADR-002 (employer-agnostic work context) | [CLAUDE.md](CLAUDE.md) | Covered by hold item #10 — revisit when private repo exists |
+| 8 | P2 | `done` | Create `docs/quality.md` — skill quality grading table | [CLAUDE.md](CLAUDE.md) | Deferred to FUT-01 — revisit after Phase 3 skills review |
 
 ---
 

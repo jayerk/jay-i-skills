@@ -38,7 +38,7 @@ to understand where things stand right now.
 | Thread | Status | Next Step |
 |--------|--------|-----------|
 | Phase 0 foundation docs | Complete. #11–#14 all done. | Move to Phase 1 |
-| Original backlog items #1, #2 | Marked `in-progress` from before v1 buildout began | Need to reconcile — either fold into v1 phases or close as superseded |
+| Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | No further action |
 
 ---
 
@@ -46,6 +46,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-10 | Original backlog #1–#8 reconciled: #1,#2 done; #3,#4,#5 folded into #15; #6 superseded by #20–#27; #6b,#6c kept; #7 covered by #10; #8 deferred to FUT-01 | Cleans up pre-v1 items against phased plan |
 | 2026-03-10 | README.md upgraded — full repo overview with philosophy, structure, usage, influences | Completes Phase 0 foundation documents |
 | 2026-03-10 | REQUIREMENTS.md covers 8 capability areas with 30 v1 requirements | Needed testable criteria before reviewing existing content |
 | 2026-03-10 | PROJECT.md defines 6 design principles including "Public How / Private What" | Establishes the two-repo pattern as a core architectural decision |
