@@ -121,7 +121,7 @@ If any of these are missing, go back to the appropriate framework before proceed
 
    Not every sync applies to every wave. Match the cadence to the complexity — a simple internal tool may only need an engineering check, while a regulated product needs all four.
 
-4. **Handle blockers:**
+5. **Handle blockers:**
    - If blocked by a dependency: escalate or find an alternative path
    - If blocked by ambiguity: go back to Discuss (Phase 1) for the specific question
    - If blocked by complexity: break the task into smaller tasks
