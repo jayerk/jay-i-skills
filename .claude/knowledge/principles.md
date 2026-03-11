@@ -49,6 +49,8 @@ Product discovery isn't a phase — it's a continuous practice. Every week shoul
 
 **In practice:** Embed discovery into the cadence, not the roadmap. Weekly customer touchpoints, regular assumption reviews, and a living Opportunity Solution Tree that connects outcomes to opportunities to solutions. If the tree isn't updated weekly, discovery has stopped — regardless of what the roadmap says.
 
+Discovery is also how you pressure-test system boundaries. The stable artifacts from systems mapping — journeys, personas, service maps — stay current because discovery keeps validating them against real customer and employee experiences. When discovery reveals that a boundary no longer holds, that's a signal to revise the system map, not just the backlog.
+
 ### 10. Transformation Is Infrastructure Work
 Changing how an organization does product work requires building infrastructure — tools, frameworks, training, assessment systems — not just publishing guidelines. You change behavior by changing the environment.
 
