@@ -200,6 +200,105 @@ Fleshes out the "how" for each sub-practice. Each item produces all 4 How-To dim
 | 66 | `todo` | Universal adoption path | What getting started looks like → what good looks like at 6 months → what embedded looks like. Applies across all sub-practices. Not a change management plan — a pragmatic on-ramp. |
 | 67 | `todo` | Sub-practice–to–repo map | Quick reference: for each sub-practice, the framework, primary skill, and knowledge file to load when the score is low. |
 
+#### Wave 5 — Internal Artifact Inventory
+
+Copilot-assisted validation of each Level 3 (Established) standard against existing internal artifacts (Confluence, SharePoint, Teams wikis). One prompt per standard. Purpose: inventory what already exists before creating anything new. Results feed into a heat map of coverage (what exists) x confidence (how complete the search was).
+
+**Pillar 1 — Customer-Centered Product Design**
+
+*Sub-practice 1: Customer & Market Insights*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 68 | `todo` | Team talks to customers on a regular schedule (e.g., 2-3 interviews/month) | Guides, cadence definitions, or playbooks for customer research scheduling |
+| 69 | `todo` | Insights are stored somewhere the team can find them | Research repositories, insight databases, tagged knowledge bases |
+| 70 | `todo` | Usability testing happens before launch | Usability testing standards, checklists, or launch-gate requirements |
+| 71 | `todo` | Prototypes get user feedback before the team commits to building | Prototype review processes, concept testing guides, design review gates |
+
+*Sub-practice 2: Segmentation & Personas*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 72 | `todo` | Segments are based on what customers need or how they behave, not just who they are | Segment definitions, segmentation models, behavioral segmentation docs |
+| 73 | `todo` | Personas get reviewed at least yearly | Persona documents, persona review cadence, persona governance |
+| 74 | `todo` | Team references specific segments when making feature decisions | Planning templates that include segment fields, decision logs referencing segments |
+
+*Sub-practice 3: Customer & Employee Journeys*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 75 | `todo` | Journey maps exist for key flows and get updated when things change | Journey map artifacts, journey mapping standards, update cadence docs |
+| 76 | `todo` | Known pain points are in the backlog with journey context | Backlog tagging standards, journey-to-backlog linking processes |
+| 77 | `todo` | A design system is in place and teams actually use it | Design system docs, component libraries, adoption tracking |
+
+**Pillar 2 — Measurable Economic Value**
+
+*Sub-practice 4: Product Economic Insights*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 78 | `todo` | Team knows the key economic KPIs and reviews them monthly | KPI definitions, metric review cadences, dashboard standards |
+| 79 | `todo` | Unit economics are documented (cost to serve, value per transaction) | Unit economics models, cost-to-serve analyses, economic model templates |
+| 80 | `todo` | Leading indicators sit alongside lagging ones | Dashboard standards that require leading indicators, metric framework docs |
+| 81 | `todo` | Team can state the north star metric and explain why it matters | North star metric definitions, product strategy docs naming primary KPI |
+
+*Sub-practice 5: Value-Based Sequencing*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 82 | `todo` | Team scores items on value, risk, and effort before sequencing | Scoring frameworks, prioritization templates, planning process docs |
+| 83 | `todo` | Each item has a short value hypothesis | Value hypothesis templates, backlog item templates with hypothesis field |
+| 84 | `todo` | Backlog is ranked — no ties | Backlog management standards, prioritization process docs |
+| 85 | `todo` | Before committing, team checks readiness (people, dependencies, WIP) | Readiness checklists, sprint/wave commitment criteria, capacity planning docs |
+| 86 | `todo` | Trade-offs are documented when items are deprioritized | Trade-off documentation standards, decision logs, "not doing" records |
+
+*Sub-practice 6: Value Guardrails & Realization*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 87 | `todo` | Guardrails for CX, reliability, and capacity are defined and on a dashboard | SLA/SLO definitions, CX guardrail docs, reliability targets, capacity dashboards |
+| 88 | `todo` | R/I/T allocation targets are set and reviewed quarterly | Run/Improve/Transform allocation docs, capacity planning templates, quarterly review materials |
+| 89 | `todo` | Kill criteria are real — at least one initiative has been stopped because a trigger was hit | Kill criteria templates, initiative review processes, stop/pivot decision records |
+| 90 | `todo` | Post-launch, team checks whether the value hypothesis played out | Benefits realization processes, post-launch review templates, value tracking docs |
+
+**Pillar 3 — Enduring Lifecycle**
+
+*Sub-practice 7: Measurable Outcomes*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 91 | `todo` | Vision says what value the product delivers to specific customers and you could check whether it's true | Product vision documents, vision templates, strategy docs with falsifiable outcomes |
+| 92 | `todo` | KPIs have targets and get reviewed monthly | KPI target-setting processes, monthly review templates, metric governance docs |
+| 93 | `todo` | Planning connects what the team builds to what they expect to achieve | Planning templates with outcome fields, OKR-to-backlog linking processes |
+| 94 | `todo` | Both leading and lagging indicators are tracked | Dashboard standards requiring both indicator types, measurement framework docs |
+
+*Sub-practice 8: Strategy & Roadmap*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 95 | `todo` | Roadmap organized by time horizons (Now/Next/Later) with outcomes, not just features | Roadmap templates, roadmap standards, planning process docs |
+| 96 | `todo` | OKRs align to strategic themes with measurable key results | OKR templates, OKR process guides, strategic theme definitions |
+| 97 | `todo` | Roadmap reviewed and updated quarterly | Roadmap review cadence docs, quarterly planning processes |
+| 98 | `todo` | Team can explain how their work connects to strategy | Strategy communication templates, team alignment processes |
+
+*Sub-practice 9: Adaptive Delivery Plans*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 99 | `todo` | Defined intake process with evaluation criteria for new work | Intake forms, request evaluation criteria, triage process docs |
+| 100 | `todo` | Backlog gets refined regularly | Refinement cadence standards, backlog hygiene guides |
+| 101 | `todo` | Delivery runs in waves or sprints with a predictable cadence | Sprint/wave planning docs, delivery cadence standards |
+| 102 | `todo` | Risk register exists and gets reviewed at checkpoints | Risk register templates, risk management processes, checkpoint review docs |
+| 103 | `todo` | Team monitors whether pace is sustainable | Capacity planning docs, velocity tracking standards, burnout/sustainability monitoring |
+
+*Sub-practice 10: Routines for Activation*
+
+| # | Status | Standard | Search Focus |
+|---|--------|---------|-------------|
+| 104 | `todo` | Regular routines with clear purpose: refinement, roadmap review, stakeholder updates, retros | Meeting standards, routine calendar templates, meeting governance docs |
+| 105 | `todo` | Launch has a checklist — support, training, ops, and compliance are engaged before go-live | Launch checklists, release readiness templates, go-live process docs |
+| 106 | `todo` | Cross-functional syncs happen at key milestones | Cross-functional coordination processes, milestone review templates |
+
 ---
 
 ## Standalone Items
