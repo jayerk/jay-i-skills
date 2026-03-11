@@ -30,7 +30,7 @@
 
 | Term | Definition |
 |------|-----------|
-| **Balanced Breakthrough** | A prioritization framework that allocates investment across Run (keep the lights on), Improve (incremental gains), and Transform (step-change bets). Allocation ratios shift by lifecycle stage — a Grow product invests differently than a Manage product. Prevents both stagnation and overreach. |
+| **Balanced Breakthrough** | A prioritization framework that allocates investment across Run (keep the lights on), Improve (incremental gains), and Transform (step-change bets). Allocation ratios shift by lifecycle stage — a Growth product invests differently than a Maturity product. Prevents both stagnation and overreach. |
 | **Run / Improve / Transform** | The three investment categories within Balanced Breakthrough. Run = operational maintenance. Improve = incremental enhancements. Transform = breakthrough bets that change the trajectory. Every initiative should be labeled, and totals should match the intended allocation. |
 | **Harvey Balls** | Visual indicators (empty, quarter, half, three-quarter, full circles) used to show maturity, capability, or completion levels in assessment matrices. Quick visual comparison across dimensions. |
 | **Gearing Ratio** | The ratio of effort invested to value produced. Used to evaluate efficiency of initiatives — high gearing means small effort, large impact. |
