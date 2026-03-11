@@ -107,7 +107,7 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 **Milestone:** `knowledge/product-standards.md` is a complete guidebook — 10 sub-practices across 3 pillars, each documented across 9 structural dimensions (4 Standard, 4 How-To, 1 Dependencies).
 **Depends on:** Phase 4 (frameworks define Product Standard Alignment sections that this document codifies).
 
-Each sub-practice requires 2 items: (a) Standard layer (Purpose & Value, Principles, Success Criteria with harvey ball maturity rubric, Governance); (b) How-To layer (Execution Guidance, Applicability, Measurement, Adoption Path). Cross-cutting items follow.
+Structured in 4 waves. Wave 1 (harvey ball rubrics) ships first as the on-ramp — teams self-assess immediately, then deeper content lands with context.
 
 Jay's refinements baked into every item:
 - **Execution** → "Execution Guidance" — min viable how-to with framework pointers, not an implementation manual
@@ -122,50 +122,83 @@ Jay's refinements baked into every item:
 |---|--------|-------|-------------|
 | 39 | `done` | Product standards skeleton | 3-pillar structure, 10 sub-practices, 9 structural dimensions, product definition. Placeholders for all sub-practices. |
 
-#### Pillar 1 — Customer-Centered Product Design
+#### Wave 1 — Harvey Ball Rubrics (the on-ramp)
+
+The entry point for teams. Each item produces the 5-level maturity table (○ → ●) with observable behaviors and evidence for every sub-practice in that pillar. Teams self-assess from day one. Deeper content (Waves 2–3) builds on these rubrics.
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 40 | `todo` | Sub-practice 1: Customer & Market Insights — Standard layer | Purpose & Value, Principles, Success Criteria (5-level harvey ball rubric from ad-hoc to continuous signal monitoring), Governance. Key references: Torres, Cagan, Hall, Fitzpatrick, Portigal. Bullet points: research insights & observability, proactive monitoring of signals, iterative prototyping, usability testing & feedback. |
-| 41 | `todo` | Sub-practice 1: Customer & Market Insights — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md), Applicability (by lifecycle + product type), Measurement (leading: discovery cadence adherence; lagging: decision quality from research), Adoption Path. |
-| 42 | `todo` | Sub-practice 2: Segmentation & Personas — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no segments to evolving cross-functional model), Governance. Key references: Torres, Hall, Kalbach, Rachitsky. Bullet points: enduring behavioral/needs/value-based profiles, consistent personalized engagement across channels. |
-| 43 | `todo` | Sub-practice 2: Segmentation & Personas — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2), Applicability, Measurement, Adoption Path. |
-| 44 | `todo` | Sub-practice 3: Customer & Employee Journeys — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no mapping to journey-driven product strategy), Governance. Key references: Kalbach, Torres, Hall. Bullet points: continuously map enduring journeys, maintain centralized accessible design system. |
-| 45 | `todo` | Sub-practice 3: Customer & Employee Journeys — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2-3), Applicability, Measurement, Adoption Path. |
+| 40 | `todo` | Pillar 1 rubrics: Customer-Centered Product Design | 5-level harvey ball rubrics for all 3 sub-practices: Customer & Market Insights (ad-hoc signals → continuous monitoring), Segmentation & Personas (no segments → evolving cross-functional model), Customer & Employee Journeys (no mapping → journey-driven strategy). Observable behaviors + evidence at each level. |
+| 41 | `todo` | Pillar 2 rubrics: Measurable Economic Value | 5-level harvey ball rubrics for all 3 sub-practices: Product Economic Insights (no economic model → growth loops modeled), Value-Based Sequencing ("everything is P1" → closed-loop calibration), Value Guardrails & Realization (no guardrails → self-governing teams). Observable behaviors + evidence at each level. |
+| 42 | `todo` | Pillar 3 rubrics: Enduring Lifecycle | 5-level harvey ball rubrics for all 4 sub-practices: Measurable Outcomes (no vision → outcome-driven culture), Strategy & Roadmap (feature-list → living strategy), Adaptive Delivery Plans (no cadence → lifecycle-adapted delivery), Routines for Activation (no routines → self-governing cadences). Observable behaviors + evidence at each level. |
 
-#### Pillar 2 — Measurable Economic Value
+#### Wave 2 — Standard Layers (Purpose & Value, Principles, Governance)
 
-| # | Status | Title | Description |
-|---|--------|-------|-------------|
-| 46 | `todo` | Sub-practice 4: Product Economic Insights — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no economic model to growth loops modeled), Governance. Key references: Perri, Reinertsen, Croll & Yoskovitz, Balfour. Bullet points: key economic KPI observability, leading indicators of product performance. |
-| 47 | `todo` | Sub-practice 4: Product Economic Insights — How-To layer | Execution Guidance (pointers to strategy + prioritization frameworks), Applicability, Measurement (leading + lagging per refinement), Adoption Path. |
-| 48 | `todo` | Sub-practice 5: Value-Based Sequencing — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from "everything is P1" to closed-loop calibration), Governance. Key references: Reinertsen, Cutler, Perri. Bullet points: D/F/V scoring, flow-readiness work breakdown, documented trade-offs. |
-| 49 | `todo` | Sub-practice 5: Value-Based Sequencing — How-To layer | Execution Guidance (pointers to prioritization/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 50 | `todo` | Sub-practice 6: Value Guardrails & Realization — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no guardrails to self-governing teams), Governance. Key references: Torres, Gothelf, Reinertsen. Bullet points: CX/reliability/capacity guardrails, stop/pivot/kill criteria + R/I/T allocation, benefits forecasting + value hypothesis standards. |
-| 51 | `todo` | Sub-practice 6: Value Guardrails & Realization — How-To layer | Execution Guidance (pointers to prioritization + strategy frameworks), Applicability, Measurement (leading: are teams applying guardrails? lagging: are guardrails preventing drift?), Adoption Path. |
+Fleshes out the "what" for each sub-practice. Success Criteria rubric already done in Wave 1 — these items add Purpose & Value, Principles, and Governance around it.
 
-#### Pillar 3 — Enduring Lifecycle
+**Pillar 1 — Customer-Centered Product Design**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 52 | `todo` | Sub-practice 7: Measurable Outcomes — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no vision to outcome-driven culture), Governance. Key references: Cagan, Gothelf, Wodtke. Bullet points: vision for customer value, KPIs for ongoing performance monitoring. |
-| 53 | `todo` | Sub-practice 7: Measurable Outcomes — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 54 | `todo` | Sub-practice 8: Strategy & Roadmap — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from feature-list roadmap to strategy as living practice), Governance. Key references: Cagan, Rumelt, Helmer. Bullet points: multi-year roadmap artifact, OKRs to align teams. |
-| 55 | `todo` | Sub-practice 8: Strategy & Roadmap — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 56 | `todo` | Sub-practice 9: Adaptive Delivery Plans — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no cadence to lifecycle-adapted delivery), Governance. Framed as "Execution Guidance" — thin, teams adapt to context. Key references: Vacanti, Reinertsen, Forsgren & Humble, Poppendieck. Bullet points: structured intake, refined backlog, proactive risk management, sustainable pace. |
-| 57 | `todo` | Sub-practice 9: Adaptive Delivery Plans — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 58 | `todo` | Sub-practice 10: Routines for Activation — Standard layer | Purpose & Value, Principles, Success Criteria (5-level rubric from no routines to self-governing cadences), Governance. Key references: Perri, Vacanti, Forsgren & Humble. Bullet points: refinement/adjustment routines, communication/transparency, cross-functional touchpoints, launch enablement. |
-| 59 | `todo` | Sub-practice 10: Routines for Activation — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md Phase 3-4), Applicability, Measurement, Adoption Path. |
+| 43 | `todo` | Sub-practice 1: Customer & Market Insights — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Cagan, Hall, Fitzpatrick, Portigal. Scope: research insights & observability, proactive signal monitoring, iterative prototyping, usability testing & feedback. |
+| 44 | `todo` | Sub-practice 2: Segmentation & Personas — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Hall, Kalbach, Rachitsky. Scope: enduring behavioral/needs/value-based profiles, consistent personalized engagement across channels. |
+| 45 | `todo` | Sub-practice 3: Customer & Employee Journeys — Standard layer | Purpose & Value, Principles, Governance. Key references: Kalbach, Torres, Hall. Scope: continuously map enduring journeys, maintain centralized accessible design system. |
 
-#### Cross-Cutting
+**Pillar 2 — Measurable Economic Value**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 60 | `todo` | Dependencies map | Prerequisite and companion relationships between all 10 sub-practices. E.g., Value-Based Sequencing requires Product Economic Insights. Prevents cherry-picking that produces incoherent adoption. Includes dependency diagram and recommended adoption sequencing. |
-| 61 | `todo` | Applicability master matrices | Target maturity by lifecycle stage (Concept/Launch/Growth/Maturity/Sunset) AND product type (customer-facing, internal platform, regulatory) for all 10 sub-practices. Structured so teams quickly find their row. |
-| 62 | `todo` | Scorecard template | Assessment template: Sub-Practice / Current / Target / Gap / Harvey Ball / Priority Action. Include lifecycle stage and product type context fields. |
-| 63 | `todo` | Universal adoption path | What getting started looks like → what good looks like at 6 months → what embedded looks like. Applies across all sub-practices. Not a change management plan — a pragmatic on-ramp. |
-| 64 | `todo` | Sub-practice–to–repo map | Quick reference: for each sub-practice, the framework, primary skill, and knowledge file to load when the score is low. |
+| 46 | `todo` | Sub-practice 4: Product Economic Insights — Standard layer | Purpose & Value, Principles, Governance. Key references: Perri, Reinertsen, Croll & Yoskovitz, Balfour. Scope: key economic KPI observability, leading indicators of product performance. |
+| 47 | `todo` | Sub-practice 5: Value-Based Sequencing — Standard layer | Purpose & Value, Principles, Governance. Key references: Reinertsen, Cutler, Perri. Scope: D/F/V scoring, flow-readiness work breakdown, documented trade-offs. |
+| 48 | `todo` | Sub-practice 6: Value Guardrails & Realization — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Gothelf, Reinertsen. Scope: CX/reliability/capacity guardrails, stop/pivot/kill criteria + R/I/T allocation, benefits forecasting + value hypothesis standards. |
+
+**Pillar 3 — Enduring Lifecycle**
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 49 | `todo` | Sub-practice 7: Measurable Outcomes — Standard layer | Purpose & Value, Principles, Governance. Key references: Cagan, Gothelf, Wodtke. Scope: vision for customer value, KPIs for ongoing performance monitoring. |
+| 50 | `todo` | Sub-practice 8: Strategy & Roadmap — Standard layer | Purpose & Value, Principles, Governance. Key references: Cagan, Rumelt, Helmer. Scope: multi-year roadmap artifact, OKRs to align teams. |
+| 51 | `todo` | Sub-practice 9: Adaptive Delivery Plans — Standard layer | Purpose & Value, Principles, Governance. Framed thin — teams adapt to context. Key references: Vacanti, Reinertsen, Forsgren & Humble, Poppendieck. Scope: structured intake, refined backlog, proactive risk management, sustainable pace. |
+| 52 | `todo` | Sub-practice 10: Routines for Activation — Standard layer | Purpose & Value, Principles, Governance. Key references: Perri, Vacanti, Forsgren & Humble. Scope: refinement/adjustment routines, communication/transparency, cross-functional touchpoints, launch enablement. |
+
+#### Wave 3 — How-To Layers (Execution Guidance, Applicability, Measurement, Adoption Path)
+
+Fleshes out the "how" for each sub-practice. Each item produces all 4 How-To dimensions.
+
+**Pillar 1 — Customer-Centered Product Design**
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 53 | `todo` | Sub-practice 1: Customer & Market Insights — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md), Applicability (by lifecycle + product type), Measurement (leading: discovery cadence adherence; lagging: decision quality from research), Adoption Path. |
+| 54 | `todo` | Sub-practice 2: Segmentation & Personas — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2), Applicability, Measurement, Adoption Path. |
+| 55 | `todo` | Sub-practice 3: Customer & Employee Journeys — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2-3), Applicability, Measurement, Adoption Path. |
+
+**Pillar 2 — Measurable Economic Value**
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 56 | `todo` | Sub-practice 4: Product Economic Insights — How-To layer | Execution Guidance (pointers to strategy + prioritization frameworks), Applicability, Measurement (leading + lagging per refinement), Adoption Path. |
+| 57 | `todo` | Sub-practice 5: Value-Based Sequencing — How-To layer | Execution Guidance (pointers to prioritization/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
+| 58 | `todo` | Sub-practice 6: Value Guardrails & Realization — How-To layer | Execution Guidance (pointers to prioritization + strategy frameworks), Applicability, Measurement (leading: are teams applying guardrails? lagging: are guardrails preventing drift?), Adoption Path. |
+
+**Pillar 3 — Enduring Lifecycle**
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 59 | `todo` | Sub-practice 7: Measurable Outcomes — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
+| 60 | `todo` | Sub-practice 8: Strategy & Roadmap — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
+| 61 | `todo` | Sub-practice 9: Adaptive Delivery Plans — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
+| 62 | `todo` | Sub-practice 10: Routines for Activation — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md Phase 3-4), Applicability, Measurement, Adoption Path. |
+
+#### Wave 4 — Cross-Cutting
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 63 | `todo` | Dependencies map | Prerequisite and companion relationships between all 10 sub-practices. E.g., Value-Based Sequencing requires Product Economic Insights. Prevents cherry-picking that produces incoherent adoption. Includes dependency diagram and recommended adoption sequencing. |
+| 64 | `todo` | Applicability master matrices | Target maturity by lifecycle stage (Concept/Launch/Growth/Maturity/Sunset) AND product type (customer-facing, internal platform, regulatory) for all 10 sub-practices. Structured so teams quickly find their row. |
+| 65 | `todo` | Scorecard template | Assessment template: Sub-Practice / Current / Target / Gap / Harvey Ball / Priority Action. Include lifecycle stage and product type context fields. |
+| 66 | `todo` | Universal adoption path | What getting started looks like → what good looks like at 6 months → what embedded looks like. Applies across all sub-practices. Not a change management plan — a pragmatic on-ramp. |
+| 67 | `todo` | Sub-practice–to–repo map | Quick reference: for each sub-practice, the framework, primary skill, and knowledge file to load when the score is low. |
 
 ---
 
