@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A structured workflow for making investment and sequencing decisions — what to do first, what to defer, and what to cut. Combines weighted scoring with Balanced Breakthrough allocation to produce defensible, transparent prioritization that can withstand executive scrutiny.
+A structured workflow for making investment and sequencing decisions — what to do first, what to defer, and what to cut. Combines weighted scoring with Balanced Breakthrough allocation to produce defensible, transparent prioritization that can withstand executive scrutiny. Informed by Don Reinertsen's Cost of Delay economics (sequencing by economic impact, not opinion) and Melissa Perri's outcome-focused prioritization (*Escaping the Build Trap*).
 
 ## When to Use
 
@@ -11,6 +11,13 @@ A structured workflow for making investment and sequencing decisions — what to
 - Making build vs. buy vs. defer decisions
 - Quarterly planning and resource allocation
 - Resolving competing priorities between stakeholders
+
+## When NOT to Use
+
+- **No strategy exists** — if direction isn't set, do strategy first (`frameworks/strategy/FRAMEWORK.md`). Prioritizing without strategy produces a ranked list of random things.
+- **Single obvious choice** — if there's clearly one thing to do and no trade-off to make, just do it
+- **Stakeholder conflict disguised as prioritization** — if the real problem is organizational alignment, use `skills/stakeholder-navigation/SKILL.md` before scoring
+- **Items aren't comparable** — if the list mixes strategic initiatives with bug fixes with compliance mandates, separate them first. Prioritize within categories, not across them.
 
 ## Inputs
 
@@ -26,18 +33,20 @@ A structured workflow for making investment and sequencing decisions — what to
 **Goal:** Establish the factors that determine priority — before scoring anything.
 
 **Steps:**
-1. **Select scoring dimensions** — choose 4-6 criteria relevant to your context:
+1. **Select scoring dimensions** — choose 4-6 criteria relevant to your context. These map to Balanced Breakthrough's D/F/V lenses (Desirability, Feasibility, Viability):
 
-   | Criterion | When to Use | What It Measures |
-   |-----------|-------------|-----------------|
-   | **Strategic alignment** | Always | How directly this supports the stated strategy |
-   | **User impact** | Always | Number and severity of users affected |
-   | **Revenue/cost impact** | When quantifiable | Financial value or cost savings |
-   | **Effort** | Always | Investment required (inverse: lower effort = higher score) |
-   | **Risk of inaction** | For maintenance/compliance | Consequences of not doing this |
-   | **Dependencies enabled** | For platform/infrastructure work | How much other work this unblocks |
-   | **Time sensitivity** | For deadline-driven work | Urgency driven by external timeline |
-   | **Learning value** | For discovery/innovation work | How much we learn by doing this |
+   | Criterion | D/F/V Lens | When to Use | What It Measures |
+   |-----------|-----------|-------------|-----------------|
+   | **Strategic alignment** | Viability | Always | How directly this supports the stated strategy |
+   | **User impact** | Desirability | Always | Number and severity of users affected |
+   | **Revenue/cost impact** | Viability | When quantifiable | Financial value or cost savings |
+   | **Effort** | Feasibility | Always | Investment required (inverse: lower effort = higher score) |
+   | **Risk of inaction** | Viability | For maintenance/compliance | Consequences of not doing this |
+   | **Dependencies enabled** | Feasibility | For platform/infrastructure work | How much other work this unblocks |
+   | **Time sensitivity** | Viability | For deadline-driven work | Urgency driven by external timeline |
+   | **Learning value** | Desirability | For discovery/innovation work | How much we learn by doing this |
+
+   Ensure your selected criteria cover all three lenses. A set that's all Viability with no Desirability produces a financially sound list that ignores users.
 
 2. **Assign weights** — not all criteria matter equally. Use a simple weighting:
    - **High (3x):** The criteria that most matter for this decision
@@ -108,9 +117,9 @@ A structured workflow for making investment and sequencing decisions — what to
 
    | Lifecycle Stage | Run | Improve | Transform |
    |----------------|-----|---------|-----------|
-   | **Grow** | 20-30% | 20-30% | 40-50% |
-   | **Mature** | 30-40% | 30-40% | 20-30% |
-   | **Manage** | 50-60% | 20-30% | 10-20% |
+   | **Launch** | 10-20% | 20-30% | 50-60% |
+   | **Growth** | 20-30% | 20-30% | 40-50% |
+   | **Maturity** | 30-40% | 30-40% | 20-30% |
    | **Sunset** | 60-70% | 10-20% | 10-20% (migration) |
 
 3. **Map scored items to categories** — apply the force-ranked list within each category. Top items in each category get funded first.
@@ -208,6 +217,17 @@ A structured workflow for making investment and sequencing decisions — what to
 - Trigger for ad-hoc review: [Conditions]
 ```
 
+## Vocabulary Cross-References
+
+Key terms used in this framework — see `knowledge/vocabulary.md` for full definitions:
+
+- **Balanced Breakthrough** — D/F/V for prioritization (what to do), R/I/T for capitalization (how to categorize). Allocation ratios shift by lifecycle stage.
+- **Desirability / Feasibility / Viability** — the three prioritization lenses. Every opportunity should be evaluated across all three.
+- **Run / Improve / Transform** — the three capitalization categories. Describes investment type, not priority.
+- **Force-Rank** — strict priority order with no ties. Uses strategic alignment as tiebreaker.
+- **Gearing Ratio** — effort-to-value ratio. High gearing = small effort, large impact.
+- **Cost of Delay** — the economic impact of not delivering something now (Reinertsen). Makes prioritization about economics, not opinions.
+
 ## Quality Checklist
 
 - [ ] Criteria defined and weighted before scoring begins
@@ -238,8 +258,8 @@ enable data-informed teams to observe and optimize the impact of a product.
 | Practice | Framework Coverage | Where |
 |----------|-------------------|-------|
 | **Product Economic Insights** | Moderate | Phase 1 (revenue/cost impact criterion) |
-| — Key economic KPI observability | Phase 1 scoring dimension (revenue/cost) | Gap: assumes KPI exists, doesn't create it |
-| — Leading indicators | Not explicitly covered | Gap: scoring is point-in-time, not ongoing |
+| — Key economic KPI observability | Phase 1 scoring dimension (revenue/cost) | Note: KPI creation lives in Strategy (north star metric), not Prioritization |
+| — Leading indicators | Phase 5 (value realization tracking closes the loop) | Note: ongoing monitoring lives in Discovery (Continuous Signals) |
 | **Value-Based Sequencing** | Strong — core purpose of this framework | |
 | — Prioritization (value, risk, effort) | Phase 1 (criteria), Phase 2 (scoring) | |
 | — Work breakdown with flow readiness | Phase 2 step 5 (WIP, dependency, and skill readiness check) | |
