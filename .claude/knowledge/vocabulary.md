@@ -74,20 +74,23 @@ Generic concepts. The work persona may extend these with organization-specific t
 | **Solution Train** | Coordinates multiple ARTs to build large, complex solutions. Owns solution-level epics and OKRs. Maps to a Product Segment in Team Topologies terms. |
 | **Agile Release Train (ART)** | A long-lived team of agile teams (typically 50–125 people) that plans, commits, and executes together around a value stream. Owns ART-level OKRs. Contains stream-aligned, platform, enabling, and complicated subsystem teams. |
 | **Team** | The delivery unit. Supports both kanban and scrum, with a preference for scrum when planning rigor is needed. Team types follow Team Topologies: stream-aligned (primary), platform, enabling, complicated subsystem. |
-| **Initiative** | Portfolio-level work item. The largest unit of strategic investment, spanning multiple solutions or ARTs. |
-| **Portfolio Epic** | Portfolio-level work item. A strategic initiative requiring a Lean Business Case. Managed on the portfolio kanban. Spans multiple solutions or ARTs. |
-| **Solution Epic** | Solution-level work item. A large body of work that spans multiple PIs or teams within a solution train. Breaks down from portfolio epics or originates within a solution. |
-| **Feature** | ART-level work item. A service or capability that fulfills a stakeholder need. Sized to fit within a single PI. |
-| **Story** | Team-level work item. A small, user-valued increment of functionality. Peer to Task, Spike, Test, and Bug. |
-| **Task** | Team-level work item. A discrete piece of technical or operational work. Peer to Story, Spike, Test, and Bug. |
-| **Spike** | Team-level work item. A timeboxed investigation to reduce uncertainty — research, prototype, or feasibility proof. Peer to Story, Task, Test, and Bug. |
-| **Test** | Team-level work item. Validates acceptance criteria or system behavior. Can be manual or automated. Peer to Story, Task, Spike, and Bug. |
-| **Bug** | Team-level work item. A defect in existing functionality. Tracked separately to maintain visibility into quality trends. Peer to Story, Task, Spike, and Test. |
-| **Sub-Task** | Breakdown of any team-level work item (Story, Task, Spike, Test, or Bug) into smaller implementation steps. |
+| **Opportunity** | Demand-side work item representing a potential investment or need. Tracked at Portfolio, Solution, and ART levels (not team). May turn into Portfolio Epics. Opportunities should not convert directly to lower-level items — that bypasses economic governance. |
+| **Initiative** | Portfolio-level work item. The largest unit of strategic investment, spanning multiple solutions or ARTs. Duration: 2–5 years with 2+ year roadmap visibility. Decomposes into one-to-many Portfolio Epics. |
+| **Portfolio Epic** | Portfolio-level work item. A strategic initiative requiring a Lean Business Case. Managed on the portfolio kanban. Spans multiple solutions or ARTs. Duration: 1–2 years. Has at most one parent Initiative (may have cross-links for dependency). Decomposes into zero-to-many Solution Epics. |
+| **Solution Epic** | Solution-level work item. A large body of work that spans multiple PIs or teams within a solution train. Breaks down from portfolio epics or originates within a solution. Duration: 1–4 quarters. Has at most one parent Portfolio Epic. Decomposes into zero-to-many Features. May be related to or blocked by Risks, Issues, and Decisions. |
+| **Feature** | ART-level work item. A service or capability that fulfills a stakeholder need. Sized to fit within a single PI. Duration: ~1 quarter. Has at most one parent Solution Epic. Decomposes into one-to-many team-level items (Story, Task, Spike, Bug). May be related to or blocked by Risks, Issues, and Decisions. |
+| **Story** | Team-level work item. A small, user-valued increment of functionality. ~2 week iteration cadence. Has at most one parent Feature. Decomposes into zero-to-many Sub-Tasks. Peer to Task, Spike, Test, and Bug. |
+| **Task** | Team-level work item. A discrete piece of technical or operational work. ~2 week iteration cadence. Has at most one parent Feature. Decomposes into zero-to-many Sub-Tasks. Peer to Story, Spike, Test, and Bug. |
+| **Spike** | Team-level work item. A timeboxed investigation to reduce uncertainty — research, prototype, or feasibility proof. ~2 week iteration cadence. Has at most one parent Feature. Decomposes into zero-to-many Sub-Tasks. Peer to Story, Task, Test, and Bug. |
+| **Test** | Team-level work item. Validates acceptance criteria or system behavior. Can be manual or automated. ~2 week iteration cadence. Has at most one parent Feature. Decomposes into zero-to-many Sub-Tasks. Peer to Story, Task, Spike, and Bug. |
+| **Bug** | Team-level work item. A defect in existing functionality. Tracked separately to maintain visibility into quality trends. ~2 week iteration cadence. Has at most one parent Feature. Decomposes into zero-to-many Sub-Tasks. Peer to Story, Task, Spike, and Test. |
+| **Sub-Task** | Breakdown of any team-level work item (Story, Task, Spike, Test, or Bug) into smaller implementation steps. Duration: ~2 weeks. Can leverage checklists. |
+
+**Note:** Parentage is optional at every level. A Story does not need a Feature. A Feature does not need a Solution Epic. A Solution Epic does not need a Portfolio Epic. Items can exist independently — the hierarchy describes decomposition paths, not mandatory structure.
 | **Enabler** | Work that builds infrastructure or technical foundation. Exists at every level — epic, feature, story. Without enablers, teams accumulate technical debt. |
-| **Risk** | A potential future problem that could impact delivery. Used for external dependencies or anything that could cause material change to the plan. Tracked and mitigated proactively. |
-| **Issue** | An active problem impacting delivery now. Distinguished from risk (which is future-facing). Requires resolution, not just tracking. |
-| **Decision** | A recorded choice with context and rationale. Captured alongside risks and issues to maintain a clear decision trail. |
+| **Risk** | A potential future problem that could impact delivery. Used for external dependencies or anything that could cause material change to the plan. Tracked and mitigated proactively. May relate to or block Solution Epics and Features. |
+| **Issue** | An active problem impacting delivery now. Distinguished from risk (which is future-facing). Requires resolution, not just tracking. May relate to or block Solution Epics and Features. |
+| **Decision** | A recorded choice with context and rationale. Captured alongside risks and issues to maintain a clear decision trail. May relate to or block Solution Epics and Features. |
 | **Dependency** | A relationship between two bodies of work where one blocks or constrains the other. Internal dependencies link work items directly. External dependencies or material plan risks are tracked as risks or issues. |
 
 ### Ceremonies (at Business Unit, Solution, and ART levels)
