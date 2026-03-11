@@ -67,11 +67,24 @@ Generic concepts. The work persona may extend these with organization-specific t
 | Term | Definition |
 |------|-----------|
 | **Program Increment (PI)** | A timebox (typically 8–12 weeks) during which teams plan, execute, and deliver value together. Creates a shared cadence across multiple teams. The planning event aligns teams on objectives, dependencies, and risks. |
+| **PI Objectives** | The business and technical goals a team commits to during PI planning. Committed objectives are high-confidence. Uncommitted (stretch) objectives are aspirational. The contract between teams and stakeholders for the increment. |
 | **Agile Release Train (ART)** | A long-lived team of agile teams that plans, commits, and executes together. Typically 50–125 people organized around a value stream. The organizational unit that makes cross-team coordination predictable. |
+| **Solution Train** | Coordinates multiple ARTs and suppliers to build large, complex solutions. Adds a layer of alignment above the ART when the solution scope exceeds what one train can deliver. |
 | **Value Stream** | The sequence of steps — from concept to cash — that delivers value to a customer. Organizing around value streams (rather than projects or functions) reduces handoffs and improves flow. |
 | **Iteration** | A short, fixed timebox (typically 2 weeks) for planning, building, and demonstrating working increments. The heartbeat of agile delivery. |
+| **Innovation and Planning (IP) Iteration** | A dedicated iteration at the end of each PI for innovation, continuing education, PI planning prep, and technical debt reduction. The slack that makes sustained pace possible. Not a buffer for unfinished work. |
 | **System Demo** | A regular demonstration of the integrated work from all teams on the ART. Proves the system works end-to-end, not just team-by-team. The real integration test. |
 | **Inspect and Adapt** | A structured retrospective at the end of each PI that combines quantitative review (metrics), qualitative review (what happened), and problem-solving (what to change). The mechanism for continuous improvement at scale. |
+| **Epic** | A large initiative that spans multiple PIs or teams. Requires a Lean Business Case to justify investment. Managed on the portfolio kanban. The unit of strategic investment. |
+| **Feature** | A service or capability that fulfills a stakeholder need. Sized to fit within a single PI. The primary unit of planning and delivery for an ART. |
+| **Enabler** | Work that builds the architectural runway, infrastructure, or technical foundation needed to support future features. Enablers exist at every level — epic, feature, story. Without them, teams accumulate technical debt. |
+| **WSJF (Weighted Shortest Job First)** | A prioritization method that divides Cost of Delay (user/business value + time criticality + risk reduction) by job size. Higher WSJF = do first. The economic framework for sequencing work. |
+| **Lean Portfolio Management (LPM)** | Applying lean and systems thinking to strategy, investment funding, and governance. Replaces annual project-based budgeting with continuous, value-stream-based funding. Operates through portfolio vision, lean budgets, and portfolio kanban. |
+| **Portfolio Kanban** | A visual system for managing the flow of epics from ideation through analysis, implementation, and completion. Makes WIP visible, limits overload, and creates a pull-based system for strategic initiatives. |
+| **Lean Budget Guardrails** | Financial boundaries that define how much each value stream or ART can spend without additional approval. Empowers decentralized decision-making while maintaining fiduciary control. |
+| **Architectural Runway** | The existing technical infrastructure and architecture that enables near-term features without excessive redesign. Intentionally built ahead of need by enabler work. When the runway runs out, feature delivery stalls. |
+| **Flow Metrics** | Measures of delivery health: flow distribution (what types of work), flow velocity (how much), flow time (how fast), flow load (how much WIP), flow efficiency (active vs. wait time). The quantitative view of how well value moves through the system. |
+| **Cost of Delay** | The economic impact of not delivering something now. Combines user-business value, time criticality, and risk reduction/opportunity enablement. The numerator in WSJF. Makes prioritization discussions about economics, not opinions. |
 
 ## Execution
 
