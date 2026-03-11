@@ -22,7 +22,7 @@ to understand where things stand right now.
 - 8 work-mode skills — all reviewed, validated, cross-referenced
 - 4 frameworks — discovery, strategy, prioritization, execution (all reviewed)
 - 4 templates — plan, phase, context, summary (all reviewed)
-- 3 knowledge files — principles, vocabulary, references (all reviewed)
+- 4 knowledge files — principles, vocabulary, references, behaviors-mindsets (all reviewed)
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
 - 1 slash command — `/repo-brief`
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template, community-content
