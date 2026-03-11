@@ -9,6 +9,10 @@ description: "Gap analysis and backlog prioritization — capability assessments
 
 This skill covers the analytical work of assessing gaps between current and desired state, mapping opportunities, and prioritizing backlogs using structured frameworks. The core principle: prioritization is a first-class discipline, not a gut-feel exercise. Every prioritization decision should be defensible with explicit criteria and transparent scoring.
 
+For the full prioritization methodology, use `frameworks/prioritization/FRAMEWORK.md`. For what good looks like, see `knowledge/references.md` → "When you need to sequence value and manage trade-offs."
+
+Uses **Balanced Breakthrough** (Run/Improve/Transform), **Force-Rank**, **WSJF**, **Cost of Delay**, and **Harvey Balls** from `knowledge/vocabulary.md`.
+
 ## When to Use This Skill
 
 - Assessing capability gaps across a product portfolio
@@ -18,12 +22,19 @@ This skill covers the analytical work of assessing gaps between current and desi
 - Evaluating build vs. buy vs. partner decisions
 - Creating a prioritized investment thesis for a portfolio
 
+## When NOT to Use This Skill
+
+- **Building the assessment framework** — if you need to design the rubric, maturity model, or scoring dimensions, use `coaching-frameworks`. This skill *applies* frameworks; that skill *builds* them.
+- **Setting strategic direction** — if you're defining vision, guiding policy, or strategic themes, use `product-strategy`. Gap analysis informs strategy but doesn't set it.
+- **Presenting results to leadership** — if the output is a deck or memo for executives, use `executive-storytelling` to frame the narrative. This skill produces the analysis; that skill communicates it.
+- **Writing requirements** — if you've prioritized and now need to define what to build, use `prd-writing`.
+
 ## Quality Bar
 
 - **Criteria are explicit** — the factors driving prioritization are named, weighted, and visible. No black-box decisions.
 - **Scoring is consistent** — the same criteria produce the same score regardless of who's scoring. Rubric definitions are clear enough to calibrate.
 - **Visualization aids comparison** — matrices, harvey balls, heat maps, and ranked lists make relative priority visible at a glance.
-- **Balanced Breakthrough is applied** — investment allocation explicitly balances incremental (keep running) with breakthrough (step change). The ratio is a conscious decision, not an accident.
+- **Balanced Breakthrough is applied** — investment allocation explicitly balances Run (maintain), Improve (incremental), and Transform (step change). The ratio is a conscious decision, not an accident. Opportunities are evaluated on Desirability, Feasibility, and Viability.
 - **Assumptions are flagged** — where data is incomplete, the analysis calls it out rather than hiding uncertainty behind false precision.
 
 ## Process
@@ -38,7 +49,7 @@ This skill covers the analytical work of assessing gaps between current and desi
 For each item being assessed:
 - **Maturity level** — where is it today? Use harvey balls or a 1-5 scale with defined levels.
 - **Health indicators** — what signals tell us how this is performing? (Usage, satisfaction, incidents, cost)
-- **Lifecycle stage** — is this in Grow, Mature, Manage, or Sunset?
+- **Lifecycle stage** — is this in Concept, Launch, Growth, Maturity, or Sunset?
 - **Dependencies** — what does this depend on, and what depends on it?
 
 ### Step 3: Define the Desired State
@@ -71,9 +82,9 @@ Allocate investment across categories:
 | **Transform** | Breakthrough investments in new capabilities | 20-40% |
 
 The right ratio depends on lifecycle stage:
-- **Grow:** Heavier on Transform (40%+)
-- **Mature:** Balanced across all three
-- **Manage:** Heavier on Run (50%+)
+- **Concept/Launch:** Heavier on Transform (40%+)
+- **Growth:** Balanced across all three
+- **Maturity:** Heavier on Run (50%+)
 - **Sunset:** Primarily Run with migration investment
 
 ### Step 6: Produce the Output
@@ -137,4 +148,4 @@ The gap analysis should produce:
 - **False precision** — scoring to two decimal places when the inputs are estimates. Precision shouldn't exceed the accuracy of the data.
 - **Static analysis** — doing a gap analysis once and treating it as permanent. Revisit quarterly at minimum.
 - **Everything is high priority** — if everything is urgent, nothing is. Force-rank, don't tier everything into "high."
-- **Ignoring lifecycle stage** — applying the same investment ratio to Grow and Sunset products. The right allocation depends on where you are.
+- **Ignoring lifecycle stage** — applying the same investment ratio to Growth and Sunset products. The right allocation depends on where you are.
