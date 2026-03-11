@@ -169,26 +169,26 @@ Fleshes out the "how" for each sub-practice. Each item produces all 4 How-To dim
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 53 | `todo` | Sub-practice 1: Customer & Market Insights — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md), Applicability (by lifecycle + product type), Measurement (leading: discovery cadence adherence; lagging: decision quality from research), Adoption Path. |
-| 54 | `todo` | Sub-practice 2: Segmentation & Personas — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2), Applicability, Measurement, Adoption Path. |
-| 55 | `todo` | Sub-practice 3: Customer & Employee Journeys — How-To layer | Execution Guidance (pointers to discovery/FRAMEWORK.md Phase 2-3), Applicability, Measurement, Adoption Path. |
+| 53 | `done` | Sub-practice 1: Customer & Market Insights — How-To layer | All 4 dimensions. Execution Guidance references discovery/FRAMEWORK.md. Includes methods-to-questions table. |
+| 54 | `done` | Sub-practice 2: Segmentation & Personas — How-To layer | All 4 dimensions. Execution Guidance references discovery/FRAMEWORK.md Phase 2. Includes segment quality check. |
+| 55 | `done` | Sub-practice 3: Customer & Employee Journeys — How-To layer | All 4 dimensions. Execution Guidance references discovery/FRAMEWORK.md Phase 2-3. Includes journey map structure. |
 
 **Pillar 2 — Measurable Economic Value**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 56 | `todo` | Sub-practice 4: Product Economic Insights — How-To layer | Execution Guidance (pointers to strategy + prioritization frameworks), Applicability, Measurement (leading + lagging per refinement), Adoption Path. |
-| 57 | `todo` | Sub-practice 5: Value-Based Sequencing — How-To layer | Execution Guidance (pointers to prioritization/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 58 | `todo` | Sub-practice 6: Value Guardrails & Realization — How-To layer | Execution Guidance (pointers to prioritization + strategy frameworks), Applicability, Measurement (leading: are teams applying guardrails? lagging: are guardrails preventing drift?), Adoption Path. |
+| 56 | `done` | Sub-practice 4: Product Economic Insights — How-To layer | All 4 dimensions. References strategy + prioritization frameworks. Includes economic model components table. |
+| 57 | `done` | Sub-practice 5: Value-Based Sequencing — How-To layer | All 4 dimensions. References prioritization/FRAMEWORK.md (D/F/V scoring + R/I/T allocation). Includes scoring approach table. |
+| 58 | `done` | Sub-practice 6: Value Guardrails & Realization — How-To layer | All 4 dimensions. References prioritization (R/I/T allocation) + strategy frameworks. Includes kill criteria template and R/I/T allocation guidance. |
 
 **Pillar 3 — Enduring Lifecycle**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 59 | `todo` | Sub-practice 7: Measurable Outcomes — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 60 | `todo` | Sub-practice 8: Strategy & Roadmap — How-To layer | Execution Guidance (pointers to strategy/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 61 | `todo` | Sub-practice 9: Adaptive Delivery Plans — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md), Applicability, Measurement, Adoption Path. |
-| 62 | `todo` | Sub-practice 10: Routines for Activation — How-To layer | Execution Guidance (pointers to execution/FRAMEWORK.md Phase 3-4), Applicability, Measurement, Adoption Path. |
+| 59 | `done` | Sub-practice 7: Measurable Outcomes — How-To layer | All 4 dimensions. References strategy/FRAMEWORK.md + discovery/FRAMEWORK.md (OST). Includes KPI structure template. |
+| 60 | `done` | Sub-practice 8: Strategy & Roadmap — How-To layer | All 4 dimensions. References strategy/FRAMEWORK.md. Includes roadmap item template and OKR quality check. |
+| 61 | `done` | Sub-practice 9: Adaptive Delivery Plans — How-To layer | All 4 dimensions. References execution/FRAMEWORK.md. Includes intake evaluation criteria and risk register structure. |
+| 62 | `done` | Sub-practice 10: Routines for Activation — How-To layer | All 4 dimensions. References execution/FRAMEWORK.md Phase 3-4. Includes routine calendar and launch enablement tier templates. |
 
 #### Wave 4 — Cross-Cutting
 
