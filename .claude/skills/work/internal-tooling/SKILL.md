@@ -9,6 +9,8 @@ description: "Building internal tools — HTML/React single-page apps, interacti
 
 This skill covers building working software for internal use — interactive tools, dashboards, assessment interfaces, and visual demos. These are not throwaway prototypes; they're production-quality artifacts that encode expertise and operationalize frameworks. A self-running demo is worth more than a slide explaining the concept.
 
+This is where the vocabulary terms **Working Demo**, **Self-Running Artifact**, **Encode Expertise**, and **Operationalize** come to life. See `knowledge/vocabulary.md` for definitions.
+
 ## When to Use This Skill
 
 - Building an HTML/React single-page app for internal use
@@ -17,6 +19,13 @@ This skill covers building working software for internal use — interactive too
 - Creating a working demo to communicate a concept
 - Turning a framework into an interactive tool (e.g., a maturity assessment into a scored web app)
 - Building a prototype to validate an approach before requesting engineering resources
+
+## When NOT to Use This Skill
+
+- **Production backend services** — if it needs a server, database, or deployment pipeline from the start, it's an engineering project, not an internal tool.
+- **External-facing products** — tools built with this skill are for internal use. Customer-facing software has different quality, accessibility, and compliance requirements.
+- **Engineering handoff from day one** — if the plan is to hand the codebase to an engineering team immediately, start with their stack and conventions, not this skill's conventions.
+- **Content or document creation** — if the output is a document, deck, or assessment narrative, use the relevant content skill instead.
 
 ## Quality Bar
 
@@ -43,7 +52,7 @@ This skill covers building working software for internal use — interactive too
 ### Step 3: Choose the Stack
 For most internal tools:
 - **Single-file HTML** — for simple tools, assessments, calculators. No build step. Open in a browser.
-- **React SPA** — for more complex tools with state management, multiple views, or data persistence. Create React App or Vite.
+- **React SPA** — for more complex tools with state management, multiple views, or data persistence. Vite.
 - **Tailwind CSS** — utility-first styling for consistent, clean interfaces.
 - **Local storage** — for persistence when a backend isn't justified.
 - **CSV/JSON export** — for tools that produce data others need to use elsewhere.
@@ -104,3 +113,7 @@ The output of this skill is working code — an HTML file or React app that can 
 - **Over-engineering** — reaching for a database, authentication, or deployment pipeline when localStorage and a single HTML file would work.
 - **Invisible expertise** — building a tool that collects data but doesn't apply the framework. The tool should score, assess, recommend — not just record.
 - **Ugly internals** — treating "internal" as permission to skip visual quality. Internal tools need to earn adoption through craftsmanship.
+
+## Downstream Repos
+
+Tools built from this skill live in their own repositories, not in jay-i-skills. Each tool repo gets a `CLAUDE.md` that points back to this skills repo for persona and skill context. See the "Downstream Repo Pattern" section of the root `CLAUDE.md` for the required format.

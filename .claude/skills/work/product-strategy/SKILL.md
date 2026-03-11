@@ -124,6 +124,11 @@ The default Now / Next / Later structure from the strategy framework applies at 
 - Run (maintain operations, stability, compliance): X%
 - Improve (incremental improvements to existing capabilities): Y%
 - Transform (breakthrough investments aligned to strategic themes): Z%
+
+## Opportunity Evaluation
+| Initiative | Desirability | Feasibility | Viability | R/I/T |
+|-----------|-------------|-------------|-----------|-------|
+| [Initiative] | [H/M/L] | [H/M/L] | [H/M/L] | [Run/Improve/Transform] |
 ```
 
 **Note:** Adjust time windows to match the level. A portfolio roadmap's "Now" might be 0–6 months. A team roadmap's "Now" might be this PI.
