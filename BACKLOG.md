@@ -77,17 +77,17 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 | 26 | `done` | Review `gap-analysis/SKILL.md` | Added prioritization framework and references.md cross-references. Fixed D/F/V vs R/I/T in quality bar. Removed WSJF (confuses people in this context). Fixed lifecycle stages throughout. Added When NOT to Use section. |
 | 27 | `done` | Review `stakeholder-navigation/SKILL.md` | Added vocabulary callout (Stakeholder Map, Engagement Sequence, Breadcrumb Trails, Resistance Patterns). Added When NOT to Use section. Added executive-storytelling handoff. Kept strategy connection per Jay's feedback. |
 
-### Phase 4 — Frameworks Review (P1)
+### Phase 4 — Frameworks Review (P1) ✓
 
 **Milestone:** All 4 frameworks validated as real step-by-step walkthroughs against PM Skills depth.
 **Depends on:** Phase 2 (references inform methodology validation).
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 28 | `todo` | Review `discovery/FRAMEWORK.md` | Frame → Engage → Build Opportunity Solution Tree → Test. Teresa Torres' continuous discovery operationalized. |
-| 29 | `todo` | Review `strategy/FRAMEWORK.md` | Diagnose → Policy → Actions → Stress-Test. Rumelt's kernel operationalized. |
-| 30 | `todo` | Review `execution/FRAMEWORK.md` | Discuss → Plan → Execute → Verify. GSD alignment. State management practical, not aspirational. |
-| 31 | `todo` | Review `prioritization/FRAMEWORK.md` | Criteria → Score → Balanced Breakthrough → Validate. Run/Improve/Transform with lifecycle-stage allocation. |
+| 28 | `done` | Review `discovery/FRAMEWORK.md` | Two-pass: closed 3 product standard gaps (personas, journey mapping, signal monitoring), then reviewed for depth. Added When NOT to Use, Portigal interview craft, Hall research method selection, actionable Phase 4 with success criteria, output format template, vocabulary cross-references. |
+| 29 | `done` | Review `strategy/FRAMEWORK.md` | Two-pass: closed 3 product standard gaps (OKR translation, north star metric, multi-year horizon), then reviewed for depth. Added When NOT to Use, Helmer 7 Powers for sustainable advantage, S/M/W scoring guidance, vocabulary cross-references. Fixed lifecycle stages to 5-stage model. |
+| 30 | `done` | Review `execution/FRAMEWORK.md` | Two-pass: closed 4 product standard gaps (intake handoff, cross-functional sync, launch enablement, risk register), then reviewed for depth. Added When NOT to Use, Reinertsen/Vacanti flow references, Definition of Ready, flow health monitoring, vocabulary cross-references. |
+| 31 | `done` | Review `prioritization/FRAMEWORK.md` | Two-pass: closed 4 product standard gaps (value hypotheses, kill criteria, flow readiness, value tracking), then reviewed for depth. Added When NOT to Use, Reinertsen/Perri author credits, D/F/V lens mapping, vocabulary cross-references. Fixed lifecycle stages to 5-stage model. |
 
 ### Phase 5 — Templates & Private Template Review (P2)
 

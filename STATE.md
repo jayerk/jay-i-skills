@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** Phase 3 — Skills Review (P1) complete. Phase 4 — Frameworks Review is next.
-**Focus:** Validating 4 frameworks as real step-by-step walkthroughs.
+**Phase:** Phase 4 — Frameworks Review (P1) complete. Phase 5 — Templates & Private Template Review is next.
+**Focus:** Validating templates as usable-as-is documents aligned with framework workflows.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -20,7 +20,7 @@ to understand where things stand right now.
 - SKILL-CATALOG.md — full skill inventory extracted from CLAUDE.md
 - 3 personas — work, pmi-buffalo, personal (all have `_persona.md`)
 - 8 work-mode skills — all reviewed, validated, cross-referenced
-- 4 frameworks — discovery, strategy, prioritization, execution (not yet reviewed)
+- 4 frameworks — discovery, strategy, prioritization, execution (all reviewed)
 - 4 templates — plan, phase, context, summary (not yet reviewed)
 - 3 knowledge files — principles, vocabulary, references (all reviewed)
 - Private-template scaffold — 4-file starter for companion repo
@@ -28,11 +28,12 @@ to understand where things stand right now.
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template, community-content
 - Personal skills — soup-feast app design + process flow
 
-**What's next (Phase 4):**
-- #28 — Review `discovery/FRAMEWORK.md`
-- #29 — Review `strategy/FRAMEWORK.md`
-- #30 — Review `execution/FRAMEWORK.md`
-- #31 — Review `prioritization/FRAMEWORK.md`
+**What's next (Phase 5):**
+- #32 — Review `PLAN-TEMPLATE.md`
+- #33 — Review `PHASE-TEMPLATE.md`
+- #34 — Review `CONTEXT-TEMPLATE.md`
+- #35 — Review `SUMMARY-TEMPLATE.md`
+- #36 — Review `private-template/` scaffold
 
 ---
 
@@ -43,7 +44,8 @@ to understand where things stand right now.
 | Phase 0 foundation docs | Complete. #11–#14 all done. | — |
 | Phase 1 core documents | Complete. #15–#16 done. | — |
 | Phase 2 knowledge base review | Complete. #17–#19 done. | — |
-| Phase 3 skills review | Complete. #20–#27 all done. | Move to Phase 4 |
+| Phase 3 skills review | Complete. #20–#27 all done. | — |
+| Phase 4 frameworks review | Complete. #28–#31 all done. | Move to Phase 5 |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
 
 ---
@@ -52,6 +54,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-11 | Phase 4 Frameworks Review complete. All 4 frameworks reviewed against PM Skills walkthrough depth. Two-pass approach: first closed 14 product standard alignment gaps (personas, journey mapping, signal monitoring, OKR translation, north star metric, multi-year horizon, value hypotheses, kill criteria, flow readiness, value tracking, intake handoff, cross-functional sync, launch enablement, risk register). Then reviewed each framework: added When NOT to Use sections, vocabulary cross-references, author attributions, output format templates, fixed lifecycle stages to 5-stage model, made steps imperative. Discovery: added Portigal interview craft, Hall research method selection, actionable Phase 4. Strategy: added Helmer 7 Powers, S/M/W scoring guidance. Execution: added flow health monitoring, Definition of Ready. Prioritization: added D/F/V lens mapping, Cost of Delay reference. | Completes #28–#31, completes Phase 4 |
 | 2026-03-11 | Phase 3 Skills Review complete. All 8 work-mode skills reviewed: added vocabulary callouts, When NOT to Use sections, cross-references between skills, framework pointers. Fixed Balanced Breakthrough (D/F/V prioritization vs R/I/T capitalization) across all skills. Fixed lifecycle stages to 5-stage model. community-content split into work and pmi-buffalo contexts. Added organizational strategy playbook (A-D phases) to product-strategy. Added work hierarchy grain tables. | Completes #20–#27, completes Phase 3 |
 | 2026-03-11 | references.md restructured as situation-based practice index. Merged vetted canon (26 authors, priority weights) with GSD/Superpowers/PM Skills. 11 practice sections, systems/org design section, author quick-reference. Phase 2 complete. | Completes #19, completes Phase 2 |
 | 2026-03-10 | CLAUDE.md v1 shipped — covers thinking style, 8 work modes, session workflow, full system reference. Skill backlogs extracted to `.claude/SKILL-CATALOG.md` | Completes Phase 1 |
