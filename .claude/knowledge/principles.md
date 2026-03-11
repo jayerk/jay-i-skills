@@ -5,7 +5,7 @@
 ### 1. Products Are Systems, Not Feature Lists
 A product is a system of interconnected capabilities, teams, users, and constraints. Changing one part affects others. Good product work starts by understanding the system, not by listing what to build.
 
-**In practice:** Before scoping any initiative, map the system — who's affected, what depends on what, where the feedback loops are. A feature that looks simple in isolation may be complex in context.
+**In practice:** Systems mapping is the first diagnostic move, not an optional step. Before scoping any initiative, identify the actors, dependencies, and feedback loops. Before debugging a team problem, sketch the system they operate in. A feature that looks simple in isolation may be complex in context — and the system view reveals that complexity before you commit to a plan.
 
 ### 2. Show, Don't Tell
 A working demo communicates more effectively than any document. Visual artifacts — interactive prototypes, scored rubrics, health dashboards — create shared understanding faster than written arguments.
@@ -40,12 +40,12 @@ Most product teams have too many good ideas and not enough rigorous prioritizati
 ### 8. Context Over Control
 Empowered teams need context, not directives. Product leaders provide the strategic context — the vision, the constraints, the success criteria — and trust teams to find the best solution.
 
-**In practice:** When setting direction, define the outcome and the boundaries, then get out of the way. If you have to dictate the solution, you've failed at providing context.
+**In practice:** As an enablement leader, your job is to give teams the strategic context, the frameworks, and the assessment tools — then let them own the solution. Don't coach by prescribing answers; coach by sharpening the team's ability to find their own. If you're dictating solutions, you've become a bottleneck instead of a multiplier.
 
 ### 9. Discovery Never Stops
 Product discovery isn't a phase — it's a continuous practice. Every week should include some amount of customer interaction, assumption testing, and opportunity mapping.
 
-**In practice:** Embed discovery into the cadence, not the roadmap. Weekly customer touchpoints, regular assumption reviews, and continuous opportunity assessment.
+**In practice:** Embed discovery into the cadence, not the roadmap. Weekly customer touchpoints, regular assumption reviews, and a living Opportunity Solution Tree that connects outcomes to opportunities to solutions. If the tree isn't updated weekly, discovery has stopped — regardless of what the roadmap says.
 
 ### 10. Transformation Is Infrastructure Work
 Changing how an organization does product work requires building infrastructure — tools, frameworks, training, assessment systems — not just publishing guidelines. You change behavior by changing the environment.
