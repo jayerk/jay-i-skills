@@ -36,6 +36,7 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 | `budget-review` | Narrative analysis of chapter budget vs. actuals | Given budget vs. actuals data, produces narrative analysis with flags | Planned |
 | `internal-audit` | Internal content audit — board docs, communications, unpublished materials | Given board doc set, produces content audit with flags and recommendations | Planned |
 | `help-desk-emails` | Draft responses to incoming chapter help desk emails | Given help desk email, produces on-brand response in PMI Buffalo voice | Planned |
+| `community-content` | Chapter event content — talks, workshops, presentations, engagement strategies | Given event topic and format, produces talk outline, article, or workshop design in PMI Buffalo voice | Implemented |
 
 ## Personal
 

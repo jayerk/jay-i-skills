@@ -1,135 +1,138 @@
 ---
 name: community-content
-description: "Community content creation — talks, articles, workshop designs, and engagement strategies for the PMI Buffalo chapter and broader PM community. Use this skill when creating content for community audiences."
+description: "Internal platform content and thought leadership — community of practice posts, enablement content, internal conference talks, and practitioner-facing writing for a work audience. Use this skill when creating content that builds product practice awareness inside the organization."
 ---
 
-# Community Content
+# Community Content (Work Context)
 
 ## Overview
 
-This skill covers creating content for the PM community — conference talks, chapter presentations, articles, workshop designs, and engagement strategies. The primary venue is the PMI Buffalo chapter, but the approach applies to any practitioner community. The core principle: community content should give people something they can use Monday morning, not just something to think about.
+This skill covers creating content for internal audiences — community of practice posts, enablement articles, internal conference talks, lunch-and-learn presentations, and practitioner-facing thought leadership. The core principle: internal content should raise the bar on product practice by making good patterns visible and accessible. Give people something they can use, not just something to read.
+
+This is an expression of **Transformation Enablement** — building awareness and capability at scale through content, not just tools and frameworks.
 
 ## When to Use This Skill
 
-- Designing a talk for PMI Buffalo or a similar chapter event
-- Writing an article for a PM audience
-- Building a workshop with hands-on exercises
-- Creating a presentation on a PM framework or practice
-- Developing a community engagement strategy
+- Writing a community of practice post on a product practice topic
+- Designing an internal conference talk or lunch-and-learn
+- Creating enablement content (guides, how-tos, practice primers)
+- Writing thought leadership for an internal audience (practitioners, leaders, coaches)
+- Building a case study or success narrative for internal sharing
+- Creating onboarding content for new product team members
+
+## When NOT to Use This Skill
+
+- **PMI Buffalo chapter content** — chapter talks, articles, and community engagement use the PMI Buffalo context at `.claude/skills/pmi-buffalo/community-content/`. Contexts never cross.
+- **Executive presentations** — if the audience is senior leadership and the output is a deck or memo with a specific ask, use `executive-storytelling`.
+- **PRDs and requirements** — if the output is a requirements document, use `prd-writing`.
+- **Coaching artifacts** — if the output is a scored rubric, maturity model, or assessment framework, use `coaching-frameworks`. This skill might *describe* a framework; that skill *builds* it.
 
 ## Quality Bar
 
-- **Actionable** — every talk or article includes at least one tool, template, or technique the audience can apply immediately. "Here's a framework you can use" not "here's why frameworks matter."
-- **Practitioner voice** — speak from experience, not theory. "When I tried this at my organization..." carries more weight than "research suggests..."
-- **Appropriate depth** — community audiences are practitioners, not academics. Go deep enough to be useful, not so deep you lose the room.
-- **Visual and interactive** — use working demos, live assessments, and group exercises over lecture. Show, don't tell applies to talks too.
-- **Respectful of time** — a 45-minute talk should feel like 30 minutes. Cut ruthlessly. If it doesn't advance the audience's ability to do something, cut it.
+- **Actionable** — every piece of content includes at least one practice, pattern, or technique the reader can apply. "Here's how to run a better discovery interview" not "discovery is important."
+- **Practitioner voice** — speak from experience in the domain, not from theory. Ground examples in enterprise product work and regulated environments.
+- **Appropriate for the audience** — internal practitioners need depth. Don't dumb it down. But don't assume everyone has the same vocabulary — define terms on first use or point to `knowledge/vocabulary.md`.
+- **Employer-agnostic** — per the work persona, do not name or assume a specific employer. Frame everything in terms of the domain (enterprise product, regulated environments).
+- **Respects the reader's time** — if it can be said in 500 words, don't write 1500. Lead with the insight, support with evidence.
 
 ## Process
 
-### Step 1: Define the Talk/Article
+### Step 1: Define the Content Purpose
 
 | Question | Why It Matters |
 |----------|---------------|
-| What's the one takeaway? | If the audience remembers one thing, what should it be? |
-| Who's in the room? | PMs, PMOs, scrum masters, managers? This shapes language and examples. |
-| What can they do Monday morning? | The actionable element that makes this worth attending. |
-| What's the format? | Talk (30/45/60 min), workshop (90/120 min), article (800-1500 words), lightning talk (10 min). |
+| What practice are you elevating? | Ties to a specific product practice from `knowledge/references.md`. |
+| Who's the audience? | Product managers, coaches, delivery leads, leadership? Shapes depth and framing. |
+| What should they do differently after reading? | The actionable element. |
+| What's the format? | Post (500-1000 words), talk (30/45/60 min), guide (1-3 pages), case study (1 page). |
 
-### Step 2: Build the Narrative Arc
+### Step 2: Connect to the Practice Standard
 
-**Hook → Problem → Framework → Demo → Takeaway**
+Before writing, check `knowledge/references.md` for the relevant practice section. Know what good looks like according to the authors who define the standard. The content should advance people toward that standard, not just share opinions.
 
-1. **Hook (2 min)** — A relatable story or provocative question. "How many of you have a product roadmap that's actually a feature list?"
-2. **Problem (5 min)** — The pain the audience recognizes. Make them nod.
-3. **Framework (10-15 min)** — The structured approach to solving the problem. This is the meat.
-4. **Demo (10-15 min)** — Show the framework in action. Working tool, live assessment, real example. Not a slide describing what it would look like.
-5. **Takeaway (5 min)** — The one thing to do differently. A template, a tool, a question to ask.
+### Step 3: Structure the Content
 
-### Step 3: Design Interactive Elements
+**For written content (posts, guides, articles):**
 
-For talks:
-- **Live polling** — "On a scale of 1-5, how mature is your team's discovery practice?"
-- **Table exercises** — "Apply this rubric to your own product. You have 5 minutes."
-- **Show of hands** — low-friction engagement that builds connection
+1. **The insight** — lead with what the reader should know or do differently. BLUF.
+2. **The context** — why this matters in enterprise product work. Ground it.
+3. **The practice** — the specific pattern, technique, or approach. Be concrete.
+4. **The example** — a worked example or case study showing the practice applied.
+5. **The action** — what to try first. One clear next step.
 
-For workshops:
-- **Hands-on exercise** — participants apply the framework to their own context
-- **Pair discussion** — share results with a neighbor, identify patterns
-- **Group debrief** — surface common challenges and adaptations
+**For talks and presentations:**
 
-### Step 4: Build the Artifacts
-- **Slide deck** — clean, visual, one idea per slide. Follow executive-storytelling quality bar.
-- **Handout** — the framework on a single page, printable. The thing they take home.
-- **Working tool** — if the framework can be interactive, build it. (See internal-tooling skill.)
-- **Follow-up resource** — link to the template, the tool, or a deeper article.
+1. **Hook** — A relatable problem or question.
+2. **Problem** — The pain the audience recognizes in their own work.
+3. **Practice** — The structured approach. This is the meat.
+4. **Demo** — Show the practice in action. Working tool, live example, real artifact.
+5. **Takeaway** — The one thing to do differently.
 
-### Step 5: Practice and Refine
-- Talk through the narrative out loud — does the flow feel natural?
-- Time it — ruthlessly cut anything that doesn't serve the one takeaway
-- Test the interactive elements — do they work in the time allotted?
-- Prepare for Q&A — what are the three most likely objections or questions?
+For visual conventions in talks, follow the quality bar from `executive-storytelling` — one idea per slide, data not adjectives, narrative arc.
+
+### Step 4: Review Against the Standard
+
+- Does the content advance a specific product practice?
+- Is the actionable element clear and concrete?
+- Would a senior practitioner find this credible? Would a newer practitioner find it useful?
+- Is it employer-agnostic?
+- Does it connect to the vocabulary and frameworks in this repo?
 
 ## Output Formats
 
-### Talk Outline
+### Practice Post
+
+```markdown
+# [Headline — specific and actionable]
+
+**TL;DR:** [One sentence: what to do differently and why]
+
+## The Insight
+[2-3 paragraphs: what the reader should know]
+
+## In Practice
+[The specific pattern or technique, with a worked example]
+
+## Try This
+[One concrete action the reader can take this week]
+
+## Go Deeper
+[Pointers to references, frameworks, or tools]
+```
+
+### Internal Talk Outline
+
 ```markdown
 # [Talk Title]
 
 ## Meta
-- **Event:** [Chapter/conference name]
+- **Event:** [Internal conference / lunch-and-learn / CoP session]
 - **Duration:** [Minutes]
-- **Audience:** [Who's in the room]
+- **Audience:** [Product managers / coaches / delivery leads]
 - **One takeaway:** [The single thing they should remember]
 
 ## Narrative Arc
 
 ### Hook (2 min)
-[Story or question]
+[Relatable problem or question]
 
 ### Problem (5 min)
-[The pain they recognize]
+[The practice gap the audience recognizes]
 
-### Framework (15 min)
-[The structured approach — steps, dimensions, model]
+### Practice (15 min)
+[The structured approach — steps, patterns, model]
 
 ### Demo (10 min)
 [Live demonstration — tool, assessment, worked example]
 
 ### Takeaway (5 min)
-[The one thing to do differently + handout/resource]
-
-## Interactive Elements
-- [Element 1]: [Description and timing]
-- [Element 2]: [Description and timing]
-
-## Handout
-[One-page summary of the framework for attendees to take home]
-```
-
-### Article Structure
-```markdown
-# [Headline — specific and actionable]
-
-**Lede:** [2-sentence hook that captures the problem]
-
-## The Problem
-[3-4 paragraphs establishing the pain point]
-
-## The Framework
-[The approach, with visual or example]
-
-## In Practice
-[A real-world application with results]
-
-## Try This
-[Specific action the reader can take]
+[The one thing to do differently + resource link]
 ```
 
 ## Anti-Patterns
 
 - **Theory without practice** — presenting concepts without showing how to apply them. Always include a "try this" element.
-- **Humble-brag talks** — "Let me tell you about my amazing team." Community wants tools, not testimonials.
-- **Slide reading** — putting paragraphs on slides and reading them. Slides are visual aids, not scripts.
-- **Death by framework** — presenting 5 frameworks in 45 minutes. Pick one, go deep, make it usable.
-- **No follow-up** — presenting a great framework with no way for attendees to access it afterward. Always provide a take-home artifact.
+- **Consultant voice** — writing like an external advisor, not a peer practitioner. Internal content earns trust through shared context.
+- **Framework tourism** — name-dropping five frameworks in one post without going deep on any of them. Pick one, make it usable.
+- **No follow-up** — sharing a great practice with no way for the reader to go deeper. Always link to resources, tools, or frameworks.
+- **Context bleed** — using PMI Buffalo examples or chapter framing in work content. These are different audiences with different needs.
