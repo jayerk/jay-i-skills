@@ -89,18 +89,18 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 | 30 | `done` | Review `execution/FRAMEWORK.md` | Two-pass: closed 4 product standard gaps (intake handoff, cross-functional sync, launch enablement, risk register), then reviewed for depth. Added When NOT to Use, Reinertsen/Vacanti flow references, Definition of Ready, flow health monitoring, vocabulary cross-references. |
 | 31 | `done` | Review `prioritization/FRAMEWORK.md` | Two-pass: closed 4 product standard gaps (value hypotheses, kill criteria, flow readiness, value tracking), then reviewed for depth. Added When NOT to Use, Reinertsen/Perri author credits, D/F/V lens mapping, vocabulary cross-references. Fixed lifecycle stages to 5-stage model. |
 
-### Phase 5 — Templates & Private Template Review (P2)
+### Phase 5 — Templates & Private Template Review (P2) ✓
 
 **Milestone:** Templates usable as-is. Private-template scaffold produces a functional companion repo.
 **Depends on:** Phase 4 (templates must align with framework workflows).
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 32 | `todo` | Review `PLAN-TEMPLATE.md` | GSD patterns. Supports execution/FRAMEWORK.md workflow. Usable as-is. |
-| 33 | `todo` | Review `PHASE-TEMPLATE.md` | GSD patterns. Wave-based execution with entry/exit criteria. |
-| 34 | `todo` | Review `CONTEXT-TEMPLATE.md` | GSD patterns. Scope, stakeholders, technical context, decisions, assumptions. |
-| 35 | `todo` | Review `SUMMARY-TEMPLATE.md` | GSD patterns. Completion narratives with outcomes, lessons, follow-ups. |
-| 36 | `todo` | Review `private-template/` scaffold | 4-file scaffold usable as starting point. Two-repo separation clearly explained. |
+| 32 | `done` | Review `PLAN-TEMPLATE.md` | Benchmarked against Amazon PRFAQ and RFC patterns. Added Problem section, strategic theme/value hypothesis/kill criteria fields, Current→Target State, Stakeholders table. Success Metrics now connects to value hypothesis. |
+| 33 | `done` | Review `PHASE-TEMPLATE.md` | Added strategic context reference, Active Risks carry-forward from parent plan, Team/Capacity table. Fixed non-standard status markers. |
+| 34 | `done` | Review `CONTEXT-TEMPLATE.md` | Added Problem and Strategic Context section (problem, theme, why now), Success Criteria, Timeline/Milestones table. Follows RFC pattern of leading with "why." |
+| 35 | `done` | Review `SUMMARY-TEMPLATE.md` | Added Problem Recap, Value Hypothesis Check (confirmed/disproven with evidence), Investment section (planned vs actual). Closes the loop to Prioritization Phase 5. |
+| 36 | `done` | Review `private-template/` scaffold | Added CLAUDE.md scaffold (required by downstream repo pattern), .gitignore, archive/ directory stubs. Created VETTING-PROMPTS.md with 6 Copilot prompts for internal vetting. |
 
 ---
 
@@ -113,6 +113,7 @@ Items not part of the phased buildout but still tracked.
 | 6b | P1 | `todo` | Create `repo-init` meta skill | Generate downstream CLAUDE.md with pointer section pre-filled |
 | 6c | P1 | `todo` | Create soup-feast CLAUDE.md | Downstream pointer section per the pattern documented in CLAUDE.md |
 | 37 | P2 | `todo` | Create team & leadership behaviors/mindsets reference | Markdown file defining team behaviors and mindsets + leadership behaviors and mindsets. Lives in private repo (sensitive org context). Add to private-template scaffold as a placeholder. |
+| 38 | P2 | `todo` | Template branding and consistency pass | Establish consistent visual branding across all templates: header format, metadata fields, section naming conventions, table formatting, status markers. Ensures templates feel like a unified system, not independent documents. |
 
 ---
 
