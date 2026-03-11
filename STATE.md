@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** 0 and 1 complete. Phase 2 — Knowledge Base Review (P1) is next.
-**Focus:** Validating knowledge files against Jay's full profile.
+**Phase:** Phase 2 — Knowledge Base Review (P1) complete. Phase 3 — Skills Review is next.
+**Focus:** Validating 8 work-mode skills against Superpowers format.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -28,10 +28,15 @@ to understand where things stand right now.
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template
 - Personal skills — soup-feast app design + process flow
 
-**What's next (Phase 2):**
-- #17 — Review `knowledge/principles.md`
-- #18 — Review `knowledge/vocabulary.md`
-- #19 — Review `knowledge/references.md`
+**What's next (Phase 3):**
+- #20 — Review `product-strategy/SKILL.md`
+- #21 — Review `internal-tooling/SKILL.md`
+- #22 — Review `executive-storytelling/SKILL.md`
+- #23 — Review `prd-writing/SKILL.md`
+- #24 — Review `coaching-frameworks/SKILL.md`
+- #25 — Review `community-content/SKILL.md`
+- #26 — Review `gap-analysis/SKILL.md`
+- #27 — Review `stakeholder-navigation/SKILL.md`
 
 ---
 
@@ -40,7 +45,8 @@ to understand where things stand right now.
 | Thread | Status | Next Step |
 |--------|--------|-----------|
 | Phase 0 foundation docs | Complete. #11–#14 all done. | — |
-| Phase 1 core documents | Complete. #15–#16 done. | Move to Phase 2 |
+| Phase 1 core documents | Complete. #15–#16 done. | — |
+| Phase 2 knowledge base review | Complete. #17–#19 done. | Move to Phase 3 |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
 
 ---
@@ -49,6 +55,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-11 | references.md restructured as situation-based practice index. Merged vetted canon (26 authors, priority weights) with GSD/Superpowers/PM Skills. 11 practice sections, systems/org design section, author quick-reference. Phase 2 complete. | Completes #19, completes Phase 2 |
 | 2026-03-10 | CLAUDE.md v1 shipped — covers thinking style, 8 work modes, session workflow, full system reference. Skill backlogs extracted to `.claude/SKILL-CATALOG.md` | Completes Phase 1 |
 | 2026-03-10 | BACKLOG.md restructured — phased plan with milestones, dependency tracking, review guidelines. Original items archived to Completed section | Completes Phase 1 |
 | 2026-03-10 | Original backlog #1–#8 reconciled: #1,#2 done; #3,#4,#5 folded into #15; #6 superseded by #20–#27; #6b,#6c kept; #7 covered by #10; #8 deferred to FUT-01 | Cleans up pre-v1 items against phased plan |

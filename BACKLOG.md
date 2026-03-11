@@ -59,7 +59,7 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 |---|--------|-------|-------------|
 | 17 | `done` | Review `knowledge/principles.md` | Validated 10 principles against full profile. Added "In practice" sections to all. Strengthened #1 (systems/boundaries), #6 (teams as product), #9 (discovery ↔ system boundaries). |
 | 18 | `done` | Review `knowledge/vocabulary.md` | Validated and restructured. Added interaction modes, updated lifecycle stages (Concept→Launch→Growth→Maturity→Sunset), split Epic into Portfolio/Solution, restructured Agile at Scale into three subsections (Org Levels, Ceremonies, Governance), added Definition of Ready, removed HiPPO/Feature Factory/IP Iteration/Architectural Runway. |
-| 19 | `todo` | Review `knowledge/references.md` | Validate: Teresa Torres, Marty Cagan, Team Topologies, GSD, Superpowers, PM Skills, Rumelt, Reinertsen. Ensure format supports looking up the right framework for the right situation. |
+| 19 | `done` | Review `knowledge/references.md` | Restructured as situation-based practice index. Merged vetted canon (26 authors with priority weights) with existing GSD/Superpowers/PM Skills. 11 practice sections define "what good looks like." Architecture influences (GSD, Superpowers) separated from product practices. PM Skills positioned as foundational across all practices. Systems & org design section for non-canon influences (Team Topologies, Meadows, Bowers, Larson). |
 
 ### Phase 3 — Skills Review (P1)
 
