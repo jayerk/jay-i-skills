@@ -9,6 +9,8 @@ description: "Coaching and assessment frameworks — maturity models, scoring ru
 
 This skill covers the design and creation of structured assessment and coaching tools — maturity models, scoring rubrics, capability assessments, development plans, and evaluation frameworks. The core principle: subjective evaluation becomes useful when you make the criteria explicit, the scoring consistent, and the guidance actionable. Good frameworks turn individual expertise into organizational capability.
 
+This is core **Encode Expertise** territory — embedding methodology into reusable systems. Uses **Scoring Rubric**, **Assessment Dimensions**, **Maturity Model**, and **Harvey Balls** from `knowledge/vocabulary.md`. When a framework needs to become an interactive tool (scored web app, dashboard), hand off to `internal-tooling`.
+
 ## When to Use This Skill
 
 - Building a maturity model for a capability or team
@@ -17,6 +19,13 @@ This skill covers the design and creation of structured assessment and coaching 
 - Building a capability assessment with harvey ball visualization
 - Creating evaluation criteria for initiatives, products, or practices
 - Designing a coaching conversation structure
+
+## When NOT to Use This Skill
+
+- **Gap analysis** — if you're comparing current vs. target state for a specific product or capability, use `gap-analysis`. This skill builds the *framework* for assessment; gap-analysis *applies* it.
+- **PRDs and requirements** — if the output is a requirements document, use `prd-writing`.
+- **Executive presentations** — if you're presenting assessment results to leadership, use `executive-storytelling` to frame the narrative.
+- **Building the interactive tool** — if the framework exists and now needs to become a web app, use `internal-tooling`.
 
 ## Quality Bar
 
@@ -35,7 +44,9 @@ This skill covers the design and creation of structured assessment and coaching 
 - How often will it be administered? (One-time, quarterly, annually)
 
 ### Step 2: Identify Dimensions
-Select 5-8 dimensions that collectively describe the thing being assessed. Good dimension design:
+Select 5-8 dimensions that collectively describe the thing being assessed. For team or leadership assessments, start with the behavioral catalog in `knowledge/behaviors-mindsets.md` — it provides 16 team behaviors across 4 categories and 16 leadership behaviors across 5 categories, all written as observable actions. Select the dimensions most relevant to the assessment context rather than using all of them.
+
+Good dimension design:
 
 | Principle | Example |
 |-----------|---------|
@@ -57,7 +68,7 @@ For each dimension, define 4-5 levels with clear criteria:
 
 ### Step 4: Build the Scoring Rubric
 For each dimension at each level, write:
-- **Observable behaviors** — what someone at this level actually does
+- **Observable behaviors** — what someone at this level actually does (see `knowledge/behaviors-mindsets.md` for reference behaviors and their anti-patterns)
 - **Evidence** — what artifacts or outcomes demonstrate this level
 - **Growth actions** — specific steps to move from this level to the next
 
@@ -118,4 +129,4 @@ The assessment should produce:
 - **Dimension bloat** — more than 8 dimensions makes the assessment unwieldy and the results unfocused. Be ruthless about what matters.
 - **Score inflation** — if most assessments land at 4-5, the rubric isn't calibrated. An "Established" (3) should represent genuinely good practice.
 - **Assessment without action** — scoring without providing clear, specific growth guidance. The value is in what happens after the assessment, not the score itself.
-- **One-size-fits-all** — applying the same maturity model to teams at different lifecycle stages (Grow vs. Manage). Context matters.
+- **One-size-fits-all** — applying the same maturity model to teams at different lifecycle stages (Growth vs. Maturity). Context matters.

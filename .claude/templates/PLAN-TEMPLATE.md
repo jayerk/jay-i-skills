@@ -3,14 +3,31 @@
 > Created: [Date]
 > Author: [Name]
 > Status: Draft | In Review | Approved | Executing | Complete
+> Produces: Execution artifact for `frameworks/execution/FRAMEWORK.md` Phase 2
+> Consumes: Prioritization output, PRD or requirements, strategic context
+
+## TL;DR
+
+[2-3 sentences a VP can act on in 30 seconds. State the problem, the approach, and the expected outcome. Write this last — after the plan is complete.]
+
+## Problem
+
+[What problem does this initiative solve? State it from the user's perspective — who has the problem, what the impact is, and how they cope today. This is not a solution description. If you can't articulate the problem clearly, the plan isn't ready.]
 
 ## Goal
 
-[One paragraph: what this plan accomplishes and why it matters. Connect to strategic context.]
+[One paragraph: what this plan accomplishes and why it matters. Connect to strategic context — which strategic theme does this support and why was it prioritized now?]
+
+**Strategic theme:** [Name of theme from strategy document]
+**Value hypothesis:** [From prioritization — the testable claim about what value this delivers]
+**Kill criteria:** [From prioritization — the conditions under which we stop or pivot]
 
 ## Architecture
 
 [How this initiative is structured — key components, data flows, integration points. For software, include the tech stack. For organizational work, include the operating model.]
+
+**Current state:** [What exists today — the baseline this plan changes]
+**Target state:** [What will exist after execution — the end-state this plan produces]
 
 ## Scope
 
@@ -68,11 +85,27 @@
 |------|-----------|--------|-----------|
 | [Risk] | [H/M/L] | [H/M/L] | [What we'll do] |
 
+## Pre-Mortem
+
+> "It's [target completion date] and this initiative failed. Why?"
+
+- [Failure mode 1] — [How likely] — [What we'd see early if this is happening]
+- [Failure mode 2] — [How likely] — [What we'd see early if this is happening]
+- [Failure mode 3] — [How likely] — [What we'd see early if this is happening]
+
+[If you can't think of ways this could fail, you haven't thought hard enough. This inverts the framing from the Risks table — risks are things that might go wrong externally; pre-mortem surfaces ways *we* might get this wrong.]
+
 ## Success Metrics
 
-| Metric | Target | How Measured |
-|--------|--------|-------------|
-| [Metric] | [Target value] | [Data source and method] |
+| Metric | Target | How Measured | Validates |
+|--------|--------|-------------|-----------|
+| [Metric] | [Target value] | [Data source and method] | [Which part of the value hypothesis this proves] |
+
+## Stakeholders
+
+| Stakeholder | Role | What They Need |
+|-------------|------|---------------|
+| [Name/Title] | [Sponsor/Approver/Informed] | [What they care about from this plan] |
 
 ## Notes
 

@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A structured workflow for developing product strategy — from environmental analysis through strategic positioning to investment allocation. Produces a strategy document that can guide product decisions for 6-12 months. Based on Rumelt's "Good Strategy Bad Strategy" kernel (diagnosis, guiding policy, coherent action), adapted for internal product leadership.
+A structured workflow for developing product strategy — from environmental analysis through strategic positioning to investment allocation. Produces a strategy document that can guide product decisions for 6-12 months. Based on Rumelt's "Good Strategy Bad Strategy" kernel (diagnosis, guiding policy, coherent action), with sustainable advantage framing from Hamilton Helmer (7 Powers) and product vision discipline from Marty Cagan (INSPIRED). Adapted for internal product leadership.
 
 ## When to Use
 
@@ -11,6 +11,13 @@ A structured workflow for developing product strategy — from environmental ana
 - Responding to a significant change in business context (reorg, new mandate, competitive shift)
 - Annual or semi-annual strategic planning cycle
 - When the team is building features without a clear strategic rationale
+
+## When NOT to Use
+
+- **Tactical execution decisions** — if direction is clear and you need to break work into tasks, use `frameworks/execution/FRAMEWORK.md`
+- **Discovery-stage problems** — if you don't yet understand the user problem, do discovery first (`frameworks/discovery/FRAMEWORK.md`). Strategy without discovery insight is guesswork.
+- **Prioritizing a known backlog** — if the strategy exists and you need to sequence work, use `frameworks/prioritization/FRAMEWORK.md`
+- **Stakeholder alignment** — if the strategy is set but not yet socialized, use `skills/stakeholder-navigation/SKILL.md`
 
 ## Inputs
 
@@ -26,22 +33,23 @@ A structured workflow for developing product strategy — from environmental ana
 **Goal:** Understand the current reality clearly enough to identify the strategic challenge.
 
 **Steps:**
-1. **Assess current state**
-   - What does the product/capability do today?
-   - What lifecycle stage is it in? (Grow / Mature / Manage / Sunset)
-   - What's the current maturity across key dimensions? (Use harvey balls)
-   - What team structure supports it? (Stream-aligned, platform, enabling)
+1. **Assess current state** — document the product's position along four dimensions:
+   - **Scope:** What does the product/capability do today? What are its boundaries?
+   - **Lifecycle stage:** Where is it? (Concept → Launch → Growth → Maturity → Sunset)
+   - **Maturity:** Score key dimensions using harvey balls. Where are the largest gaps?
+   - **Team structure:** What team type supports it? (Stream-aligned, platform, enabling)
+   - **Team health:** What behaviors are present or absent? Use `knowledge/behaviors-mindsets.md` to assess team and leadership behaviors. Gaps here often explain delivery problems better than missing features.
 
-2. **Map the environment**
-   - What business pressures are shaping this space? (Regulatory, competitive, organizational)
-   - What technology trends matter? (AI, cloud, automation, integration)
-   - What peer organizations or competitors do well that we don't?
-   - What internal dependencies or constraints exist?
+2. **Map the environment** — scan four dimensions of external and internal context:
+   - **Business pressures:** Regulatory changes, competitive dynamics, organizational shifts
+   - **Technology trends:** AI, cloud, automation, integration — which ones create opportunity or threat?
+   - **Peer landscape:** What do peer organizations or competitors do well that we don't?
+   - **Internal constraints:** Dependencies, budget, team capacity, political dynamics
 
-3. **Identify the crux**
-   - What is the single most important challenge or opportunity?
-   - Rumelt's test: if you solve this one thing, does everything else become easier?
-   - State the crux in one sentence: "The fundamental challenge is..."
+3. **Identify the crux** — distill the diagnosis into the single most important challenge or opportunity:
+   - Apply Rumelt's test: if you solve this one thing, does everything else become easier?
+   - State it in one sentence: "The fundamental challenge is..."
+   - If you can't get to one sentence, you haven't found the crux — keep diagnosing
 
 **Output:** Diagnostic summary with identified crux.
 
@@ -56,16 +64,18 @@ A structured workflow for developing product strategy — from environmental ana
    - What if we changed the model? (Pivot)
    - What if we partnered instead of built? (Leverage)
 
-2. **Evaluate options against criteria:**
+2. **Evaluate options against criteria** — score each option as Strong / Moderate / Weak for each criterion:
 
    | Criterion | Weight | Option A | Option B | Option C |
    |-----------|--------|----------|----------|----------|
-   | Addresses the crux | High | | | |
-   | Feasible given constraints | High | | | |
-   | Sustainable advantage | Medium | | | |
-   | Time to impact | Medium | | | |
-   | Risk profile | Medium | | | |
-   | Team capability fit | Low | | | |
+   | Addresses the crux | High | S / M / W | S / M / W | S / M / W |
+   | Feasible given constraints | High | S / M / W | S / M / W | S / M / W |
+   | Sustainable advantage | Medium | S / M / W | S / M / W | S / M / W |
+   | Time to impact | Medium | S / M / W | S / M / W | S / M / W |
+   | Risk profile | Medium | S / M / W | S / M / W | S / M / W |
+   | Team capability fit | Low | S / M / W | S / M / W | S / M / W |
+
+   For "Sustainable advantage" — consider whether the option creates a defensible position (Hamilton Helmer's 7 Powers: scale economies, network effects, switching costs, counter-positioning, cornered resource, process power, branding). Internal products rarely need all seven, but ask: "If another team copied this, would it still work better for us?"
 
 3. **Select the guiding policy** — the chosen approach, stated clearly:
    - "We will [approach] because [rationale], which means we will [implication] and we will not [exclusion]."
@@ -95,13 +105,27 @@ A structured workflow for developing product strategy — from environmental ana
    - **Now (0-3 months):** Concrete initiatives with clear owners and deliverables
    - **Next (3-6 months):** Planned initiatives with defined scope
    - **Later (6-12 months):** Directional commitments based on strategic themes
+   - **Vision (1-3 years):** Aspirational end-state — where does this product/capability need to be? Keep this to 2-3 bullet points. It's a compass, not a plan. Revisit annually.
 
-4. **Define success metrics** for each strategic theme:
+4. **Identify the north star metric** — the single economic or outcome KPI that best represents the product's primary value driver. This is the metric that, if it moves in the right direction, means the strategy is working. Examples:
+   - "Time to first portfolio review" (efficiency)
+   - "% of teams using standardized scoring" (adoption)
+   - "Cost per assessment cycle" (cost reduction)
+
+   All theme-level metrics should connect back to this north star.
+
+5. **Define success metrics** for each strategic theme:
    - Leading indicators (early signals of progress)
    - Lagging indicators (outcome measures)
    - Guardrail metrics (things that shouldn't get worse)
 
-**Output:** Strategic roadmap with themes, allocation, and metrics.
+6. **Translate to OKRs (optional)** — When the audience expects OKR format, translate each strategic theme into an Objective + 2-3 Key Results:
+   - **Objective:** Qualitative, aspirational, tied to the theme
+   - **Key Results:** Measurable, time-bound, tied to the metrics defined above
+
+   This is a formatting step, not a strategy step. The substance comes from the themes and metrics. Not every team uses OKRs yet — use this when it helps alignment, skip when it adds overhead.
+
+**Output:** Strategic roadmap with themes, allocation, north star metric, and success metrics (optionally formatted as OKRs).
 
 ### Phase 4: Stress-Test the Strategy
 
@@ -117,7 +141,7 @@ A structured workflow for developing product strategy — from environmental ana
 2. **Check for coherence:**
    - Do the actions reinforce each other or create tension?
    - Does the investment allocation match the stated priorities?
-   - Can the existing team structure execute this strategy?
+   - Can the existing team structure execute this strategy? Check team behaviors against `knowledge/behaviors-mindsets.md` — a strategy requiring strong discovery practice will fail if the team doesn't "talk to users regularly."
    - Does this strategy survive contact with the regulatory environment?
 
 3. **Validate with stakeholders** (see `skills/stakeholder-navigation/SKILL.md`):
@@ -136,7 +160,7 @@ A structured workflow for developing product strategy — from environmental ana
 **Crux:** [One sentence: the fundamental challenge or opportunity]
 
 **Current State:**
-- Lifecycle stage: [Grow/Mature/Manage/Sunset]
+- Lifecycle stage: [Concept/Launch/Growth/Maturity/Sunset]
 - Team structure: [Stream-aligned/Platform/Enabling]
 - Key maturity gaps: [Dimensions with largest gaps]
 
@@ -146,12 +170,16 @@ A structured workflow for developing product strategy — from environmental ana
 ## Guiding Policy
 [We will X because Y, which means we will Z and we will not W]
 
+## North Star Metric
+**[Metric name]:** [Definition and current baseline → target]
+
 ## Strategic Themes
 
 ### Theme 1: [Name]
 - **Objective:** [What this achieves]
 - **Key initiatives:** [What we'll do]
 - **Success metrics:** [How we'll know it's working]
+- **OKR (optional):** O: [Objective] / KR1: [Key Result] / KR2: [Key Result]
 
 ### Theme 2: [Name]
 ...
@@ -173,6 +201,10 @@ A structured workflow for developing product strategy — from environmental ana
 ### Later (6-12 months)
 - [Direction]: [Strategic theme it supports]
 
+### Vision (1-3 years)
+- [Aspirational end-state bullet 1]
+- [Aspirational end-state bullet 2]
+
 ## Risks and Mitigations
 | Risk | Likelihood | Impact | Mitigation |
 |------|-----------|--------|-----------|
@@ -182,6 +214,18 @@ A structured workflow for developing product strategy — from environmental ana
 [Explicit exclusions and rationale]
 ```
 
+## Vocabulary Cross-References
+
+Key terms used in this framework — see `knowledge/vocabulary.md` for full definitions:
+
+- **Crux** — the single most important challenge or opportunity. Rumelt's test: solve this and everything else gets easier.
+- **Guiding Policy** — the chosen strategic approach. Not a goal — a method for dealing with the crux.
+- **Coherent Actions** — initiatives that reinforce each other and execute the guiding policy.
+- **Strategic Themes** — 3-5 areas of focused investment that together execute strategy.
+- **Guardrails** — what you explicitly are NOT doing. The negative space that defines strategy.
+- **Balanced Breakthrough** — D/F/V for prioritization, R/I/T for capitalization. Allocation ratios shift by lifecycle stage.
+- **Harvey Balls** — visual maturity indicators used in current state assessment.
+
 ## Quality Checklist
 
 - [ ] Crux is identified — one clear strategic challenge
@@ -189,7 +233,10 @@ A structured workflow for developing product strategy — from environmental ana
 - [ ] Guiding policy excludes things (says "no" to something)
 - [ ] Actions are coherent — they reinforce each other
 - [ ] Balanced Breakthrough allocation is explicit
+- [ ] North star metric identified and connected to theme metrics
 - [ ] Success metrics include leading and lagging indicators
+- [ ] OKRs provided when audience expects that format
+- [ ] Roadmap includes 1-3 year vision horizon
 - [ ] Risks are identified with mitigations
 - [ ] Strategy has been red-teamed
 
@@ -199,3 +246,33 @@ A structured workflow for developing product strategy — from environmental ana
 - **Everything is a priority** — if the strategy has 10 themes, nothing is prioritized. Maximum 5 strategic themes.
 - **Analysis paralysis** — spending months on diagnosis without committing to a direction. Set a timebox for each phase.
 - **Ignoring constraints** — strategies that ignore regulatory, team capacity, or budget constraints aren't strategies — they're wishes.
+- **Strategy without diagnosis** — jumping to themes and roadmap without identifying the crux. If the diagnosis is weak, the strategy will be scattered.
+- **Confusing lifecycle stages** — treating a Maturity-stage product like it's in Growth leads to over-investment in Transform. Match the allocation to the stage.
+
+## Product Standard Alignment
+
+This framework serves **Pillar 3: Enduring Lifecycle** (practices 1-2) and
+**Pillar 2: Measurable Economic Value** (practice 1).
+
+| Practice | Framework Coverage | Where |
+|----------|-------------------|-------|
+| **Enduring Lifecycle** | | |
+| 1. Measurable Outcomes | Strong | Phase 3 (success metrics — leading, lagging, guardrail) |
+| — Vision for customer value | Phase 1 (current state, crux identification) | |
+| — KPIs for performance monitoring | Phase 3 (metrics per strategic theme) | |
+| 2. Strategy & Roadmap | Strong — core purpose of this framework | |
+| — Roadmap artifact (multi-year) | Phase 3 (Now/Next/Later/Vision horizons, 0-36 months) | |
+| — OKRs to align teams | Phase 3 step 6 (optional OKR translation from themes) | |
+| **Measurable Economic Value** | | |
+| 1. Product Economic Insights | Strong | Phase 1 (lifecycle stage, maturity assessment) |
+| — Key economic KPI observability | Phase 3 step 4 (north star metric tied to primary value driver) | |
+| — Leading indicators | Phase 3 (leading indicators per theme) | |
+
+### Previously Identified Gaps — Now Closed
+
+1. **OKR format** — ~~Themes with metrics but no OKR structure.~~ Closed: Phase 3 step 6
+   adds optional OKR translation when the audience expects that format.
+2. **Economic KPI focus** — ~~Metrics not anchored to primary value driver.~~ Closed: Phase 3
+   step 4 adds north star metric identification before theme-level metrics.
+3. **Multi-year horizon** — ~~Roadmap only covers 0-12 months.~~ Closed: Vision horizon
+   (1-3 years) added to roadmap step and output template.

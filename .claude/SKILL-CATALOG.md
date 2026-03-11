@@ -10,7 +10,7 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 | Skill | Purpose | AC | Status |
 |---|---|---|---|
 | `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task | Given a BACKLOG.md in any repo, produces a focused session brief for the next prioritized task | Implemented |
-| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section pre-filled | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Planned |
+| `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section pre-filled | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Implemented |
 
 ## PMI Buffalo
 
@@ -36,6 +36,7 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 | `budget-review` | Narrative analysis of chapter budget vs. actuals | Given budget vs. actuals data, produces narrative analysis with flags | Planned |
 | `internal-audit` | Internal content audit — board docs, communications, unpublished materials | Given board doc set, produces content audit with flags and recommendations | Planned |
 | `help-desk-emails` | Draft responses to incoming chapter help desk emails | Given help desk email, produces on-brand response in PMI Buffalo voice | Planned |
+| `community-content` | Chapter event content — talks, workshops, presentations, engagement strategies | Given event topic and format, produces talk outline, article, or workshop design in PMI Buffalo voice | Implemented |
 
 ## Personal
 

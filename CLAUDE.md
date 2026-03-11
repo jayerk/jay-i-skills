@@ -126,6 +126,7 @@ Skills reference these when structured thinking is needed.
 | `knowledge/principles.md` | 10 core beliefs with "in practice" guidance |
 | `knowledge/vocabulary.md` | Domain terms and definitions |
 | `knowledge/references.md` | Influences mapped to what Jay took from each |
+| `knowledge/behaviors-mindsets.md` | Team and leadership behaviors + mindsets for coaching and assessment |
 
 ### Templates
 

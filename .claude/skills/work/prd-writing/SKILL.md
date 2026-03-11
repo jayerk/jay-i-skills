@@ -9,6 +9,8 @@ description: "Product requirements documents and specifications — PRDs, featur
 
 This skill covers the creation of product requirements documents — the artifacts that bridge strategy and execution. A good PRD is not a feature list; it's a communication tool that gives an empowered team the context they need to build the right thing. It defines the outcome, the constraints, and the acceptance criteria, then trusts the team to find the best solution.
 
+PRDs should be informed by discovery work. If assumptions haven't been tested, start with `frameworks/discovery/FRAMEWORK.md` before writing requirements. For the strategic context that shapes the PRD, see `product-strategy`.
+
 ## When to Use This Skill
 
 - Writing a PRD for a new product or feature
@@ -17,13 +19,32 @@ This skill covers the creation of product requirements documents — the artifac
 - Creating acceptance criteria for a user story or epic
 - Writing technical specifications that engineering teams will implement
 
+## When NOT to Use This Skill
+
+- **Strategy and vision work** — if you're defining where a product is going, use `product-strategy`. PRDs define what to build once direction is set.
+- **Executive presentations** — if the audience is leadership and the output is a deck or memo, use `executive-storytelling`.
+- **Gap analysis and prioritization** — if you're comparing current vs. target state or prioritizing a backlog, use `gap-analysis`. PRDs come after prioritization.
+- **Coaching artifacts** — if you're building a rubric, assessment, or facilitation guide, use `coaching-frameworks`.
+
+## Work Hierarchy Grain
+
+PRDs scale with the work hierarchy. Match the detail level to the item:
+
+| Level | PRD Style |
+|-------|-----------|
+| Portfolio Epic | Lean Business Case — problem, outcome, rough scope, investment ask |
+| Solution Epic | Problem, outcome, scope boundaries, high-level requirements |
+| Feature | Full PRD — user stories, acceptance criteria, edge cases, non-functional requirements |
+| Story | Acceptance criteria and context only — the PRD is the parent Feature's PRD |
+
 ## Quality Bar
 
 - **Outcome-focused** — the PRD defines the problem and desired outcome before discussing solutions. Teams need the "why" to make good implementation decisions.
 - **Specific enough to estimate** — engineering should be able to read the PRD and produce a rough estimate without a follow-up meeting.
 - **Flexible enough to empower** — define what success looks like, not how to achieve it. Unless there are genuine constraints (regulatory, technical, integration), leave implementation to the team.
-- **Testable** — every requirement has clear acceptance criteria. If you can't test it, you haven't defined it.
+- **Testable** — every requirement has clear **Acceptance Criteria**. If you can't test it, you haven't defined it. See `knowledge/vocabulary.md` for the definition.
 - **Scoped** — explicitly states what's in v1, what's deferred, and what's explicitly out of scope.
+- **Ready** — meets the **Definition of Ready** before a team pulls it into a sprint. Requirements are understood, scoped, and unblocked.
 
 ## Process
 

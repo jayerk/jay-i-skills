@@ -3,6 +3,16 @@
 > Completed: [Date]
 > Duration: [Start → End]
 > Author: [Name]
+> Produces: Completion narrative for `frameworks/execution/FRAMEWORK.md` Phase 4 (Verify)
+> Feeds into: `frameworks/prioritization/FRAMEWORK.md` Phase 5 (Value Realization)
+
+## TL;DR
+
+[2-3 sentences: what we set out to do, what happened, and the recommendation. Write this last.]
+
+## Problem Recap
+
+[Restate the original problem from the context document. This gives readers the "before" picture so they can assess whether the outcome actually addressed it.]
 
 ## What Was Accomplished
 
@@ -20,11 +30,27 @@
 |----------|---------|--------|-----------|
 | [What was decided] | [Why it needed deciding] | [What was chosen] | [Why this option] |
 
+## Value Hypothesis Check
+
+**Original hypothesis:** [From the plan — what value did we expect to deliver?]
+**Result:** Confirmed | Partially confirmed | Disproven
+**Evidence:** [What data or observations support this assessment?]
+**Implication:** [What does this mean for future prioritization? Feed back into prioritization scoring calibration.]
+
 ## Metrics and Outcomes
 
 | Metric | Target | Actual | Notes |
 |--------|--------|--------|-------|
 | [What was measured] | [What we aimed for] | [What we achieved] | [Context if needed] |
+
+## Investment
+
+| | Planned | Actual | Variance |
+|---|---------|--------|----------|
+| Duration | [Weeks/days] | [Weeks/days] | [Over/under/on target] |
+| Effort | [Person-days or hours] | [Person-days or hours] | [Over/under/on target] |
+
+[Brief note on why actual differed from planned, if significant.]
 
 ## What Worked Well
 
@@ -39,12 +65,12 @@
 ## Carry-Forward Items
 
 ### For Next Phase/Initiative
-- [ ] [Item that needs attention next]
-- [ ] [Item that needs attention next]
+- [ ] [Item] — **Owner:** [Who] — **By:** [Date]
+- [ ] [Item] — **Owner:** [Who] — **By:** [Date]
 
 ### For Parking Lot (STATE.md)
-- [ ] [Idea or concern to revisit later]
-- [ ] [Idea or concern to revisit later]
+- [ ] [Idea or concern to revisit later] — **Revisit when:** [Trigger or date]
+- [ ] [Idea or concern to revisit later] — **Revisit when:** [Trigger or date]
 
 ### For Knowledge Base Updates
 - [ ] [New vocabulary term to add]

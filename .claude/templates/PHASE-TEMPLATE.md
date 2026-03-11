@@ -4,10 +4,13 @@
 > Status: Not Started | In Progress | Complete
 > Started: [Date]
 > Completed: [Date]
+> Produces: Phase-level execution artifact for `frameworks/execution/FRAMEWORK.md` Phase 3
 
 ## Objective
 
 [What this phase accomplishes — one paragraph. How it advances the overall plan.]
+
+**Strategic context:** [Which strategic theme and value hypothesis this phase serves — reference the parent plan]
 
 ## Entry Criteria
 
@@ -28,6 +31,16 @@
 - [Constraint 1]
 - [Constraint 2]
 
+### Active Risks (from parent plan)
+| Risk | Status | Mitigation for This Phase |
+|------|--------|--------------------------|
+| [Risk from parent plan's risk register] | [Open/Monitoring] | [What this phase does about it] |
+
+### Team / Capacity
+| Person / Agent | Role in This Phase | Availability |
+|---------------|-------------------|-------------|
+| [Who] | [What they're doing] | [Full-time / Part-time / On-call] |
+
 ## Tasks
 
 ### Wave 1 — [Theme: e.g., "Foundation"]
@@ -44,7 +57,7 @@
   3. [Step 3]
 - **Done when:** [Observable criteria]
 - **Verify:** [How to confirm correctness]
-- **Status:** [ ] Not started / [~] In progress / [x] Complete
+- **Status:** Not started | In progress | Complete
 
 #### Task [N].2: [Task Name]
 - **Description:** [What to do]
@@ -56,7 +69,7 @@
   2. [Step 2]
 - **Done when:** [Observable criteria]
 - **Verify:** [How to confirm correctness]
-- **Status:** [ ] Not started / [~] In progress / [x] Complete
+- **Status:** Not started | In progress | Complete
 
 ### Wave 2 — [Theme: e.g., "Integration"]
 > Depends on Wave 1 completion.
@@ -69,7 +82,7 @@
   2. [Step 2]
 - **Done when:** [Observable criteria]
 - **Verify:** [How to confirm correctness]
-- **Status:** [ ] Not started / [~] In progress / [x] Complete
+- **Status:** Not started | In progress | Complete
 
 ### Wave 3 — [Theme: e.g., "Polish and Verify"]
 > Depends on Wave 2 completion.
@@ -101,5 +114,5 @@
 | | | |
 
 ### Carry-Forward Items
-- [Item that needs attention in the next phase]
-- [Item discovered during execution that wasn't in the original plan]
+- [Item that needs attention in the next phase] — **Owner:** [Who] — **By:** [Date]
+- [Item discovered during execution] — **Owner:** [Who] — **By:** [Date]

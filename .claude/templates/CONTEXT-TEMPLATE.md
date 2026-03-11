@@ -3,6 +3,28 @@
 > Created: [Date]
 > Purpose: Capture implementation decisions and constraints before planning begins.
 > Related plan: [Link to plan document]
+> Produces: Pre-planning context for `frameworks/execution/FRAMEWORK.md` Phase 1 (Discuss)
+> Consumes: Discovery insights, strategy direction, prioritization output
+
+## TL;DR
+
+[2-3 sentences: the problem, who it affects, and what we're proposing to do about it. Write this last.]
+
+## Problem and Strategic Context
+
+**Problem:** [What problem does this initiative address? State it from the user's perspective — who is affected, what the impact is, and how they cope today.]
+
+**Strategic theme:** [Which strategy thread this serves — reference the guiding policy]
+
+**Why now:** [What makes this the right time? Trigger event, strategic priority, dependency unblocked, or escalating cost of delay.]
+
+## Success Criteria
+
+[What does "done well" look like? Define 2-3 measurable outcomes that would make this initiative a success. These should connect to the value hypothesis from prioritization.]
+
+- [ ] [Criterion 1 — measurable, time-bound]
+- [ ] [Criterion 2 — measurable, time-bound]
+- [ ] [Criterion 3 — measurable, time-bound]
 
 ## Scope and Boundaries
 
@@ -75,6 +97,12 @@
 - [ ] [Question 1]
 - [ ] [Question 2]
 - [ ] [Question 3]
+
+## Timeline
+
+| Milestone | Target Date | Dependencies |
+|-----------|------------|-------------|
+| [Key milestone] | [Date] | [What must happen first] |
 
 ## References
 
