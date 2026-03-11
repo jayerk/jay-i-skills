@@ -140,26 +140,26 @@ Fleshes out the "what" for each sub-practice. Success Criteria rubric already do
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 43 | `todo` | Sub-practice 1: Customer & Market Insights — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Cagan, Hall, Fitzpatrick, Portigal. Scope: research insights & observability, proactive signal monitoring, iterative prototyping, usability testing & feedback. |
-| 44 | `todo` | Sub-practice 2: Segmentation & Personas — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Hall, Kalbach, Rachitsky. Scope: enduring behavioral/needs/value-based profiles, consistent personalized engagement across channels. |
-| 45 | `todo` | Sub-practice 3: Customer & Employee Journeys — Standard layer | Purpose & Value, Principles, Governance. Key references: Kalbach, Torres, Hall. Scope: continuously map enduring journeys, maintain centralized accessible design system. |
+| 43 | `done` | Sub-practice 1: Customer & Market Insights — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Torres, Cagan, Hall, Fitzpatrick, Portigal. |
+| 44 | `done` | Sub-practice 2: Segmentation & Personas — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Torres, Hall, Kalbach, Rachitsky. |
+| 45 | `done` | Sub-practice 3: Customer & Employee Journeys — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Kalbach, Torres, Hall. |
 
 **Pillar 2 — Measurable Economic Value**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 46 | `todo` | Sub-practice 4: Product Economic Insights — Standard layer | Purpose & Value, Principles, Governance. Key references: Perri, Reinertsen, Croll & Yoskovitz, Balfour. Scope: key economic KPI observability, leading indicators of product performance. |
-| 47 | `todo` | Sub-practice 5: Value-Based Sequencing — Standard layer | Purpose & Value, Principles, Governance. Key references: Reinertsen, Cutler, Perri. Scope: D/F/V scoring, flow-readiness work breakdown, documented trade-offs. |
-| 48 | `todo` | Sub-practice 6: Value Guardrails & Realization — Standard layer | Purpose & Value, Principles, Governance. Key references: Torres, Gothelf, Reinertsen. Scope: CX/reliability/capacity guardrails, stop/pivot/kill criteria + R/I/T allocation, benefits forecasting + value hypothesis standards. |
+| 46 | `done` | Sub-practice 4: Product Economic Insights — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Perri, Reinertsen, Croll & Yoskovitz, Balfour. |
+| 47 | `done` | Sub-practice 5: Value-Based Sequencing — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Reinertsen, Cutler, Perri. |
+| 48 | `done` | Sub-practice 6: Value Guardrails & Realization — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Torres, Gothelf, Reinertsen. |
 
 **Pillar 3 — Enduring Lifecycle**
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 49 | `todo` | Sub-practice 7: Measurable Outcomes — Standard layer | Purpose & Value, Principles, Governance. Key references: Cagan, Gothelf, Wodtke. Scope: vision for customer value, KPIs for ongoing performance monitoring. |
-| 50 | `todo` | Sub-practice 8: Strategy & Roadmap — Standard layer | Purpose & Value, Principles, Governance. Key references: Cagan, Rumelt, Helmer. Scope: multi-year roadmap artifact, OKRs to align teams. |
-| 51 | `todo` | Sub-practice 9: Adaptive Delivery Plans — Standard layer | Purpose & Value, Principles, Governance. Framed thin — teams adapt to context. Key references: Vacanti, Reinertsen, Forsgren & Humble, Poppendieck. Scope: structured intake, refined backlog, proactive risk management, sustainable pace. |
-| 52 | `todo` | Sub-practice 10: Routines for Activation — Standard layer | Purpose & Value, Principles, Governance. Key references: Perri, Vacanti, Forsgren & Humble. Scope: refinement/adjustment routines, communication/transparency, cross-functional touchpoints, launch enablement. |
+| 49 | `done` | Sub-practice 7: Measurable Outcomes — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Cagan, Gothelf, Wodtke. |
+| 50 | `done` | Sub-practice 8: Strategy & Roadmap — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Cagan, Rumelt, Helmer. |
+| 51 | `done` | Sub-practice 9: Adaptive Delivery Plans — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Vacanti, Reinertsen, Forsgren & Humble, Poppendieck. |
+| 52 | `done` | Sub-practice 10: Routines for Activation — Standard layer | Purpose & Value, Principles (5), Governance. Key references: Perri, Vacanti, Forsgren & Humble. |
 
 #### Wave 3 — How-To Layers (Execution Guidance, Applicability, Measurement, Adoption Path)
 
