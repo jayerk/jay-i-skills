@@ -61,21 +61,21 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 | 18 | `done` | Review `knowledge/vocabulary.md` | Validated and restructured. Added interaction modes, updated lifecycle stages (Concept→Launch→Growth→Maturity→Sunset), split Epic into Portfolio/Solution, restructured Agile at Scale into three subsections (Org Levels, Ceremonies, Governance), added Definition of Ready, removed HiPPO/Feature Factory/IP Iteration/Architectural Runway. |
 | 19 | `done` | Review `knowledge/references.md` | Restructured as situation-based practice index. Merged vetted canon (26 authors with priority weights) with existing GSD/Superpowers/PM Skills. 11 practice sections define "what good looks like." Architecture influences (GSD, Superpowers) separated from product practices. PM Skills positioned as foundational across all practices. Systems & org design section for non-canon influences (Team Topologies, Meadows, Bowers, Larson). |
 
-### Phase 3 — Skills Review (P1)
+### Phase 3 — Skills Review (P1) ✓
 
 **Milestone:** All 8 work-mode skills validated against Superpowers format — YAML frontmatter, substantive instructions, framework references.
 **Depends on:** Phase 2 (vocabulary and principles inform what skills should reference).
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 20 | `todo` | Review `product-strategy/SKILL.md` | Strategic positioning, vision docs, roadmapping, market analysis. Reference strategy/FRAMEWORK.md. |
-| 21 | `todo` | Review `internal-tooling/SKILL.md` | Working demos, self-running artifacts, dashboards, scoring tools. Jay's "show don't tell" mode. |
-| 22 | `todo` | Review `executive-storytelling/SKILL.md` | Depth to brevity, slide structure, narrative arc, data visualization. |
-| 23 | `todo` | Review `prd-writing/SKILL.md` | Problem → outcome → scope → requirements → AC. Reference execution/FRAMEWORK.md. |
-| 24 | `todo` | Review `coaching-frameworks/SKILL.md` | Rubrics, maturity models, assessment templates, facilitation. Jay's "encode expertise" mode. |
-| 25 | `todo` | Review `community-content/SKILL.md` | Work-context version — internal platform content, NOT pmi-buffalo persona. Clarify scope boundary. |
-| 26 | `todo` | Review `gap-analysis/SKILL.md` | Current vs. target state, gap identification, prioritized recommendations. Reference prioritization/FRAMEWORK.md. |
-| 27 | `todo` | Review `stakeholder-navigation/SKILL.md` | Influence mapping, stakeholder classification, engagement sequencing, resistance patterns. |
+| 20 | `done` | Review `product-strategy/SKILL.md` | Added organizational strategy playbook (A-D phases, employer-agnostic). Added Roadmap Grain table. Fixed Balanced Breakthrough to show D/F/V prioritization + R/I/T capitalization. Added When NOT to Use, anti-patterns, vocabulary callout. Pointer to strategy/FRAMEWORK.md instead of duplicated process. |
+| 21 | `done` | Review `internal-tooling/SKILL.md` | Added vocabulary connection (Working Demo, Self-Running Artifact, Encode Expertise, Operationalize). Added When NOT to Use section. Fixed React SPA stack: CRA → Vite. Added Downstream Repos section. |
+| 22 | `done` | Review `executive-storytelling/SKILL.md` | Added vocabulary callout (Depth to Brevity, BLUF, Narrative Arc). Added When NOT to Use section. Added stakeholder-navigation cross-reference in Step 1. |
+| 23 | `done` | Review `prd-writing/SKILL.md` | Added discovery framework and product-strategy cross-references. Added When NOT to Use section. Added Work Hierarchy Grain table (Portfolio Epic → Story). Added vocabulary connection (AC, Definition of Ready). |
+| 24 | `done` | Review `coaching-frameworks/SKILL.md` | Added vocabulary callout (Encode Expertise, Scoring Rubric, Assessment Dimensions, Maturity Model, Harvey Balls). Added When NOT to Use with internal-tooling handoff. Fixed lifecycle: "Grow vs. Manage" → "Growth vs. Maturity." |
+| 25 | `done` | Review `community-content/SKILL.md` | Complete rewrite: changed from PMI Buffalo chapter content to internal platform content and thought leadership. Added Transformation Enablement connection, employer-agnostic quality bar, context bleed anti-pattern. Original PMI Buffalo content moved to `pmi-buffalo/community-content/SKILL.md`. |
+| 26 | `done` | Review `gap-analysis/SKILL.md` | Added prioritization framework and references.md cross-references. Fixed D/F/V vs R/I/T in quality bar. Removed WSJF (confuses people in this context). Fixed lifecycle stages throughout. Added When NOT to Use section. |
+| 27 | `done` | Review `stakeholder-navigation/SKILL.md` | Added vocabulary callout (Stakeholder Map, Engagement Sequence, Breadcrumb Trails, Resistance Patterns). Added When NOT to Use section. Added executive-storytelling handoff. Kept strategy connection per Jay's feedback. |
 
 ### Phase 4 — Frameworks Review (P1)
 
