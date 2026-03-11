@@ -60,6 +60,19 @@
 | **Behavioral Evidence** | What people actually do, as opposed to what they say they would do. The gold standard for discovery insights. Interview data is a starting point; observed behavior is proof. |
 | **Context Engineering** | The practice of structuring information so that AI assistants have the right context to be effective. Document architecture, state management, and vocabulary alignment. |
 
+## Agile at Scale
+
+Generic concepts. The work persona may extend these with organization-specific terminology, ceremonies, and adaptations.
+
+| Term | Definition |
+|------|-----------|
+| **Program Increment (PI)** | A timebox (typically 8–12 weeks) during which teams plan, execute, and deliver value together. Creates a shared cadence across multiple teams. The planning event aligns teams on objectives, dependencies, and risks. |
+| **Agile Release Train (ART)** | A long-lived team of agile teams that plans, commits, and executes together. Typically 50–125 people organized around a value stream. The organizational unit that makes cross-team coordination predictable. |
+| **Value Stream** | The sequence of steps — from concept to cash — that delivers value to a customer. Organizing around value streams (rather than projects or functions) reduces handoffs and improves flow. |
+| **Iteration** | A short, fixed timebox (typically 2 weeks) for planning, building, and demonstrating working increments. The heartbeat of agile delivery. |
+| **System Demo** | A regular demonstration of the integrated work from all teams on the ART. Proves the system works end-to-end, not just team-by-team. The real integration test. |
+| **Inspect and Adapt** | A structured retrospective at the end of each PI that combines quantitative review (metrics), qualitative review (what happened), and problem-solving (what to change). The mechanism for continuous improvement at scale. |
+
 ## Execution
 
 | Term | Definition |
