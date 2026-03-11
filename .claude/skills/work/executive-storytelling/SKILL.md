@@ -9,6 +9,8 @@ description: "Executive presentations and storytelling — narrative arcs, deck 
 
 This skill covers communication to executive audiences — presentations, strategic memos, status narratives, and persuasive documents. The core principle: executives don't need more information, they need better framing. Every executive artifact follows a narrative arc: situation, tension, resolution.
 
+This is the **Depth to Brevity** skill — translating deep analysis into executive-ready language. Uses **BLUF** (Bottom Line Up Front) and **Narrative Arc** (Situation → Tension → Resolution) as core patterns. See `knowledge/vocabulary.md` for definitions.
+
 ## When to Use This Skill
 
 - Building a presentation for senior leadership
@@ -17,6 +19,13 @@ This skill covers communication to executive audiences — presentations, strate
 - Communicating program status in a way that drives action
 - Translating technical or operational complexity into executive language
 - Building a business case for investment
+
+## When NOT to Use This Skill
+
+- **Routine status updates** — a weekly status email doesn't need narrative arc engineering. Use `status-update` when available, or write it directly.
+- **PRDs and requirements** — if the output is a requirements document, use `prd-writing`. Strategy informs the story, requirements are a different artifact.
+- **Content writing** — blog posts, community content, and thought leadership have different audiences and formats. Use `community-content`.
+- **Stakeholder influence work** — if the task is mapping stakeholders and building an engagement strategy, use `stakeholder-navigation`. This skill takes over when you're building the artifact to present.
 
 ## Quality Bar
 
@@ -33,6 +42,8 @@ This skill covers communication to executive audiences — presentations, strate
 - Who is the audience? (C-suite, VP, cross-functional leaders)
 - What do they already know? What do they care about?
 - What's the one thing they should remember after this meeting?
+
+If a stakeholder map exists (from `stakeholder-navigation`), use it here — audience positions, concerns, and motivations directly shape the narrative.
 
 ### Step 2: Build the Narrative Arc
 
