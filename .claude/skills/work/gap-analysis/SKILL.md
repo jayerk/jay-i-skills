@@ -11,7 +11,7 @@ This skill covers the analytical work of assessing gaps between current and desi
 
 For the full prioritization methodology, use `frameworks/prioritization/FRAMEWORK.md`. For what good looks like, see `knowledge/references.md` → "When you need to sequence value and manage trade-offs."
 
-Uses **Balanced Breakthrough** (Run/Improve/Transform), **Force-Rank**, **WSJF**, **Cost of Delay**, and **Harvey Balls** from `knowledge/vocabulary.md`.
+Uses **Balanced Breakthrough**, **Force-Rank**, **Cost of Delay**, and **Harvey Balls** from `knowledge/vocabulary.md`.
 
 ## When to Use This Skill
 
@@ -34,7 +34,7 @@ Uses **Balanced Breakthrough** (Run/Improve/Transform), **Force-Rank**, **WSJF**
 - **Criteria are explicit** — the factors driving prioritization are named, weighted, and visible. No black-box decisions.
 - **Scoring is consistent** — the same criteria produce the same score regardless of who's scoring. Rubric definitions are clear enough to calibrate.
 - **Visualization aids comparison** — matrices, harvey balls, heat maps, and ranked lists make relative priority visible at a glance.
-- **Balanced Breakthrough is applied** — investment allocation explicitly balances Run (maintain), Improve (incremental), and Transform (step change). The ratio is a conscious decision, not an accident. Opportunities are evaluated on Desirability, Feasibility, and Viability.
+- **Balanced Breakthrough is applied** — opportunities are prioritized on **Desirability** (do users/the business want this?), **Feasibility** (can we build it?), and **Viability** (is it sustainable?). Investments are then classified as Run, Improve, or Transform to describe the capitalization type. D/F/V drives prioritization; R/I/T describes the investment.
 - **Assumptions are flagged** — where data is incomplete, the analysis calls it out rather than hiding uncertainty behind false precision.
 
 ## Process
