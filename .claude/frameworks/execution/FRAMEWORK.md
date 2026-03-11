@@ -2,7 +2,7 @@
 
 ## Purpose
 
-A structured workflow for translating strategy and requirements into delivered, validated outcomes. Covers the cycle from planning through delivery through verification. Draws from GSD's phased planning model, adapted for product leadership work (not just software delivery).
+A structured workflow for translating strategy and requirements into delivered, validated outcomes. Covers the cycle from planning through delivery through verification. Draws from GSD's phased planning model (discuss → plan → execute → verify), with flow principles from Don Reinertsen (batch size, WIP limits) and Daniel Vacanti (lead time, throughput). Adapted for product leadership work (not just software delivery).
 
 ## When to Use
 
@@ -11,6 +11,13 @@ A structured workflow for translating strategy and requirements into delivered, 
 - Running a delivery cycle on a defined initiative
 - Recovering a stalled project that needs structure
 - Coordinating work across multiple teams or workstreams
+
+## When NOT to Use
+
+- **Problem is undefined** — if you're not sure what to build, do discovery first (`frameworks/discovery/FRAMEWORK.md`)
+- **Direction is unclear** — if there's no strategic rationale for the work, set strategy first (`frameworks/strategy/FRAMEWORK.md`)
+- **Priorities aren't set** — if you have competing demands and no ranked list, prioritize first (`frameworks/prioritization/FRAMEWORK.md`)
+- **One-off quick tasks** — if the work is a single task under 4 hours with no dependencies, just do it. This framework is for coordinated, multi-task execution.
 
 ## Inputs
 
@@ -73,11 +80,12 @@ If any of these are missing, go back to the appropriate framework before proceed
    - Be completable in 1-2 weeks
    - Have clear entry and exit criteria
 
-2. **Break phases into tasks** — each task should:
+2. **Break phases into tasks** — each task should meet the Definition of Ready before it enters a wave:
    - Be completable in 2-4 hours (not days)
    - Have a clear definition of done
    - Include verification steps
    - Be assignable to one person or agent
+   - Have no unresolved ambiguity (if unclear, it goes back to Phase 1)
 
 3. **Identify dependencies** — within and across phases:
    - What must be done first? (Blocking dependencies)
@@ -111,7 +119,8 @@ If any of these are missing, go back to the appropriate framework before proceed
    - Is everything from the current wave done and verified?
    - Are there any new dependencies or blockers for the next wave?
    - Has anything changed that affects the plan?
-   - Update STATE.md with progress and any new decisions
+   - Update the risk register — close resolved risks, add newly identified ones
+   - Update STATE.md with progress, new decisions, and risk changes
 
 4. **Cross-functional sync** — at each wave transition, check in with partner functions:
    - **Design:** Is the UX validated for the next wave's scope?
@@ -234,6 +243,26 @@ Throughout execution, keep these documents current:
 - [ ] STATE.md updated
 - [ ] ROADMAP.md updated
 ```
+
+## Vocabulary Cross-References
+
+Key terms used in this framework — see `knowledge/vocabulary.md` for full definitions:
+
+- **Wave / Sprint** — a timeboxed grouping of work. Waves are logical; sprints are fixed-length. Both create natural checkpoints.
+- **Checkpoint / Milestone** — a decision point between waves. Not a status meeting — a moment to assess and adjust.
+- **Definition of Ready** — criteria a work item must meet before a team pulls it. Prevents starting work that isn't sufficiently understood.
+- **Definition of Done** — clear, testable exit criteria. If you can't verify it's done, it's not a definition.
+- **Acceptance Criteria** — testable conditions from the user's perspective. Each criterion is independently verifiable.
+
+## Flow Health (Optional)
+
+For larger or longer-running initiatives, monitor flow health at wave checkpoints using these metrics (Daniel Vacanti's *Actionable Agile Metrics*):
+
+- **WIP (Work in Progress)** — how many tasks are active right now? If WIP is growing, you're starting more than you're finishing.
+- **Lead time** — how long from task start to task done? If it's increasing, investigate bottlenecks.
+- **Throughput** — how many tasks completed per wave? Declining throughput signals a problem before deadlines do.
+
+Don't track these for small, 1-2 week initiatives. They're most valuable when execution spans 4+ weeks or involves multiple people.
 
 ## Quality Checklist
 
