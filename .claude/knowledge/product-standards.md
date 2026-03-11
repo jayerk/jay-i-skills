@@ -1,82 +1,152 @@
-# Product Standards: 8 Dimensions Across 3 Pillars
+# Product Standards: 9 Dimensions Across 3 Pillars
 
 A reference standard for what "good" looks like in product management practice.
-Organized into 3 pillars and 8 dimensions, each with a 5-level maturity scale
-using harvey balls. Designed to power self-assessment, coaching conversations,
-and gap analysis — not to be a compliance checklist.
+10 sub-practices organized into 3 pillars. Each sub-practice is documented across
+9 structural dimensions — 4 defining the standard, 4 defining how to implement it,
+plus a cross-cutting dependency map.
 
-This document defines the structure. The 4 frameworks (discovery, strategy,
-prioritization, execution) each declare which dimensions they serve in their
-Product Standard Alignment sections.
-
----
-
-## How to Use This Document
-
-**For self-assessment:** Score each dimension using the maturity rubric. Use the
-harvey ball scorecard to visualize where you are and where to focus.
-
-**For coaching:** Use dimensions as conversation anchors. "Where are you on
-Customer & Market Insights?" is a better question than "Are you doing discovery?"
-
-**For gap analysis:** Compare current scores to target scores by lifecycle stage.
-A Concept-stage product needs different dimension strengths than a Maturity-stage one.
-
-**For skill selection:** Each dimension maps to skills and frameworks in this repo.
-Low score on a dimension → load the corresponding skill.
+Designed to power self-assessment, coaching conversations, and gap analysis — not
+to be a compliance checklist.
 
 ---
 
-## The 3 Pillars
+## Product Definition
 
-| Pillar | What It Answers | Dimensions |
-|--------|----------------|------------|
-| **1. Customer-Centered Product Design** | Do we understand who we're building for and why? | Customer & Market Insights, Segmentation & Personas, Customer & Employee Journeys |
-| **2. Measurable Economic Value** | Can we observe and optimize the impact of what we build? | Product Economic Insights, Value-Based Sequencing, Value Guardrails & Realization |
-| **3. Enduring Lifecycle** | Can we sustain, adapt, and govern the product over time? | Measurable Outcomes & Roadmap, Adaptive Delivery & Routines |
+A product must meet the following criteria:
 
----
+- The customer (whether external or internal) and their needs can be clearly identified
+- It creates measurable economic value
+- Has an enduring lifecycle
 
-## Maturity Scale
-
-Every dimension uses the same 5-level scale. Levels describe observable behaviors,
-not aspirational qualities.
-
-| Level | Harvey Ball | What It Looks Like |
-|-------|------------|-------------------|
-| 1 — Emerging | ○ | Ad hoc or absent. No repeatable practice. Outcomes depend on individual heroics. |
-| 2 — Developing | ◔ | Some structure exists but applied inconsistently. Practices happen when someone remembers. |
-| 3 — Established | ◑ | Consistent practice with clear ownership. Teams do this reliably without being asked. |
-| 4 — Advanced | ◕ | Measuring effectiveness and optimizing. Practice produces data that informs decisions. |
-| 5 — Leading | ● | Setting the standard. Teaching others. Innovating on the practice itself. |
-
-**Calibration note:** Established (3) is genuinely good. Most teams should target
-3–4 across dimensions. A 5 in every dimension is neither realistic nor necessary —
-invest where it matters for your lifecycle stage.
+*A customer is the primary beneficiary, whether internal or external, of the product's
+value proposition — not just any stakeholder.*
 
 ---
 
-## Pillar 1: Customer-Centered Product Design
+## The 9 Structural Dimensions
+
+Every sub-practice is documented across these 9 dimensions, split into two layers.
+
+### Standard Layer — the "what"
+
+| Dimension | What It Defines |
+|-----------|----------------|
+| **1. Purpose & Value** | Why this sub-practice matters |
+| **2. Principles** | Guidelines to drive consistency and lead to better outcomes |
+| **3. Success Criteria** | What good (& bad) looks like, incl. examples, checklists, and 5-level maturity rubric (harvey balls) |
+| **4. Governance** | Who owns the standard and how it will be maintained |
+
+### How-To Layer — the "how"
+
+| Dimension | What It Defines | Jay's Refinement |
+|-----------|----------------|-----------------|
+| **5. Execution Guidance** | How to implement the practice | Minimum viable how-to with pointers to frameworks — not an implementation manual. Keep thin so teams adapt to context. |
+| **6. Applicability** | How this practice differs across contexts | Organized by lifecycle stage (Concept/Launch/Growth/Maturity/Sunset) AND product type (customer-facing, internal platform, regulatory) so teams can quickly find their row. |
+| **7. Measurement** | How adoption and effectiveness are tracked | Include leading indicators (are teams doing the practice?) alongside lagging indicators (is it producing outcomes?). Without leading indicators you only find out 6 months later that adoption stalled. |
+| **8. Adoption Path** | How teams get started and reach maturity | What getting started looks like → what good looks like at 6 months → what embedded looks like. Pragmatic on-ramp, not a heavy change management plan. |
+
+### Cross-Cutting
+
+| Dimension | What It Defines |
+|-----------|----------------|
+| **9. Dependencies** | Which other standards are prerequisites or companions. Prevents cherry-picking that produces incoherent adoption. |
+
+---
+
+## The 3 Pillars and 10 Sub-Practices
+
+### Pillar 1: Customer-Centered Product Design
 
 Practices to understand and address the needs, behaviors, and experiences of
 customers and employees throughout the product lifecycle.
 
-[Dimensions 1–3 to follow]
+#### 1. Customer & Market Insights
+
+- Research insights analysis & observability
+- Proactive monitoring of customer & employee signals
+- Iterative prototyping
+- Usability testing & feedback
+
+[9 dimensions to follow]
+
+#### 2. Segmentation & Personas
+
+- Enduring customer profiles reflecting behavioral, needs, or value-based segments
+- Consistent and proactive personalized engagement across channels
+
+[9 dimensions to follow]
+
+#### 3. Customer & Employee Journeys
+
+- Continuously map and refine enduring customer journeys to align experiences across the business
+- Maintain a centralized, accessible design system for consistent, human-centered experience
+
+[9 dimensions to follow]
 
 ---
 
-## Pillar 2: Measurable Economic Value
+### Pillar 2: Measurable Economic Value
 
-Practices to enable data-informed teams to observe and optimize the impact of
-a product.
+Practices to enable data-informed teams to observe and optimize the impact of a product.
 
-[Dimensions 4–6 to follow]
+#### 4. Product Economic Insights
+
+- Observability of key economic KPI driving the primary source of value of the product
+- Leading indicators of the product's performance
+
+[9 dimensions to follow]
+
+#### 5. Value-Based Sequencing
+
+- Prioritization using value, risk, and effort scoring
+- Work breakdown practices with understanding of readiness to support flow
+- Documented trade-offs and rationale for sequencing decisions
+
+[9 dimensions to follow]
+
+#### 6. Value Guardrails & Realization
+
+- Guardrails for customer experience, reliability, and strategic capacity allocation
+- Clear stop/pivot/kill criteria and cost allocation across run/grow/transform
+- Benefits forecasting and value hypothesis standards
+
+[9 dimensions to follow]
 
 ---
 
-## Pillar 3: Enduring Lifecycle
+### Pillar 3: Enduring Lifecycle
 
-Practices to sustain, adapt, and govern the product across its full lifecycle —
-from concept through sunset.
+Practices to enable product predictability, velocity, and adaptability from
+concept to sunset.
 
-[Dimensions 7–8 to follow]
+#### 7. Measurable Outcomes
+
+- Vision for the value that a product will deliver to a customer
+- KPIs for ongoing performance monitoring
+
+[9 dimensions to follow]
+
+#### 8. Strategy & Roadmap
+
+- Roadmap artifact to bring vision to life over multi-year planning horizon
+- Objectives & key results to align teams to the roadmap
+
+[9 dimensions to follow]
+
+#### 9. Adaptive Delivery Plans
+
+- Structured idea intake
+- Refined backlog for predictable value delivery
+- Proactive product risk management
+- Delivery at a sustainable pace
+
+[9 dimensions to follow]
+
+#### 10. Routines for Activation
+
+- Routines that support refinement and adjustment of roadmaps, backlogs, and plans
+- Strong communication and transparency across all stakeholders & teams
+  - Cross-functional touchpoints
+  - Launch enablement
+
+[9 dimensions to follow]
