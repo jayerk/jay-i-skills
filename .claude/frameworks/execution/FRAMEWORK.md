@@ -192,3 +192,36 @@ Throughout execution, keep these documents current:
 - **Skipping verification** — assuming it works because it's done. Verify against requirements explicitly.
 - **Invisible progress** — executing without updating state documents. If it's not in STATE.md, it didn't happen (for context continuity purposes).
 - **Heroic execution** — trying to do everything in one long session. Work in waves, checkpoint between them, maintain quality.
+
+## Product Standard Alignment
+
+This framework serves **Pillar 3: Enduring Lifecycle** (practices 3-4) —
+practices to enable product predictability, velocity, and adaptability.
+
+| Practice | Framework Coverage | Where |
+|----------|-------------------|-------|
+| **Adaptive Delivery Plans** | | |
+| — Structured idea intake | Not covered | Gap: idea intake is pre-execution (Discovery/Strategy) |
+| — Refined backlog for predictable delivery | Strong | Phase 2 (atomic tasks, waves, dependencies) |
+| — Proactive product risk management | Moderate | Phase 1 (gray areas), Phase 3 (blocker handling) |
+| — Delivery at sustainable pace | Phase 3 (wave-based execution, checkpoints) | |
+| **Routines for Activation** | | |
+| — Refinement & adjustment routines | Strong | Phase 3 (wave checkpoints, state management) |
+| — Communication & transparency | Moderate | Phase 3 (progress tracking, STATE.md updates) |
+| — Cross Functional Touchpoints | Phase 1 (organizational gray areas) | Gap: no explicit cross-team sync cadence |
+| — Launch Enablement | Phase 4 (verification, user validation) | Gap: no launch readiness checklist |
+
+### Identified Gaps
+
+1. **Idea intake** — Framework assumes prioritized work enters execution. The product
+   standard expects structured intake. This lives at the Strategy/Prioritization boundary,
+   not in Execution. Document the handoff explicitly.
+2. **Cross-functional touchpoints** — Framework references dependencies but doesn't
+   prescribe a sync cadence with partner teams (design, engineering, compliance, ops).
+   Consider adding a cross-team checkpoint to Phase 3 wave transitions.
+3. **Launch enablement** — Verification checks requirements but doesn't cover go-to-market
+   readiness (training, documentation, support enablement, rollout plan). Consider adding
+   a launch readiness checklist to Phase 4.
+4. **Risk management** — Gray areas in Phase 1 cover decision risk, but product risk
+   (market, technical, regulatory) is not tracked through execution. Consider adding a
+   risk register that updates at wave checkpoints.

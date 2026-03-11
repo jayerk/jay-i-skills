@@ -1,0 +1,6 @@
+# Local-only content (sensitive org context, not for version control)
+local/
+
+# OS files
+.DS_Store
+Thumbs.db

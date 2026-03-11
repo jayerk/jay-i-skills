@@ -152,3 +152,32 @@ Desired Outcome
 - **Confirmation bias** — hearing what you want to hear in interviews. Look for disconfirming evidence.
 - **Interview theater** — conducting interviews to check a box rather than to learn. If you're not surprised by anything, you're not asking the right questions.
 - **One-and-done discovery** — treating discovery as a phase rather than a continuous practice. Schedule weekly discovery activities.
+
+## Product Standard Alignment
+
+This framework serves **Pillar 1: Customer-Centered Product Design** — practices
+to understand and address the needs, behaviors, and experiences of customers and
+employees throughout the product lifecycle.
+
+| Practice | Framework Coverage | Where |
+|----------|-------------------|-------|
+| **Customer & Market Insights** | Strong | Phase 1 (assumption mapping, research design), Phase 2 (user engagement, synthesis) |
+| — Research insights & observability | Phase 2 interview synthesis, Phase 4 evidence tracking | |
+| — Proactive monitoring of signals | Phase 1 assumption confidence monitoring | Gap: no ongoing signal monitoring cadence |
+| — Iterative prototyping | Phase 3 experiments (prototype test, Wizard of Oz) | |
+| — Usability testing & feedback | Phase 4 test and learn cycle | |
+| **Segmentation & Personas** | Moderate | Phase 2 (interview targeting across roles/contexts) |
+| — Enduring customer profiles | Implicit in interview synthesis | Gap: no explicit persona creation step |
+| — Personalized engagement | Not covered | Gap: engagement strategy is post-discovery |
+| **Customer & Employee Journeys** | Moderate | Phase 2 (behavior observation, workarounds), Phase 3 (opportunity mapping) |
+| — Journey mapping | Implicit in opportunity identification | Gap: no explicit journey artifact |
+| — Design system | Not covered | Out of scope for discovery |
+
+### Identified Gaps
+
+1. **Persona artifact** — Discovery identifies segments through interviews but doesn't
+   produce an enduring persona document. Consider adding a persona template output to Phase 2.
+2. **Signal monitoring** — Discovery is sprint-oriented. The product standard expects
+   ongoing monitoring. Consider adding a "continuous signals" section for post-discovery cadence.
+3. **Journey mapping** — Opportunity Solution Trees capture needs but not the end-to-end
+   journey. Consider referencing a journey mapping exercise as an optional Phase 2 activity.

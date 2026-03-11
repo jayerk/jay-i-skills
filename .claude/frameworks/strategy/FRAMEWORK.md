@@ -199,3 +199,31 @@ A structured workflow for developing product strategy — from environmental ana
 - **Everything is a priority** — if the strategy has 10 themes, nothing is prioritized. Maximum 5 strategic themes.
 - **Analysis paralysis** — spending months on diagnosis without committing to a direction. Set a timebox for each phase.
 - **Ignoring constraints** — strategies that ignore regulatory, team capacity, or budget constraints aren't strategies — they're wishes.
+
+## Product Standard Alignment
+
+This framework serves **Pillar 3: Enduring Lifecycle** (practices 1-2) and
+**Pillar 2: Measurable Economic Value** (practice 1).
+
+| Practice | Framework Coverage | Where |
+|----------|-------------------|-------|
+| **Enduring Lifecycle** | | |
+| 1. Measurable Outcomes | Strong | Phase 3 (success metrics — leading, lagging, guardrail) |
+| — Vision for customer value | Phase 1 (current state, crux identification) | |
+| — KPIs for performance monitoring | Phase 3 (metrics per strategic theme) | |
+| 2. Strategy & Roadmap | Strong — core purpose of this framework | |
+| — Roadmap artifact (multi-year) | Phase 3 (Now/Next/Later horizons) | |
+| — OKRs to align teams | Phase 3 (themes with objectives and success criteria) | Gap: OKR format not explicit |
+| **Measurable Economic Value** | | |
+| 1. Product Economic Insights | Moderate | Phase 1 (lifecycle stage, maturity assessment) |
+| — Key economic KPI observability | Phase 3 (lagging indicators) | Gap: not tied to primary value driver |
+| — Leading indicators | Phase 3 (leading indicators per theme) | |
+
+### Identified Gaps
+
+1. **OKR format** — Framework produces strategic themes with success metrics but doesn't
+   explicitly use OKR structure. Consider adding an OKR translation step to Phase 3.
+2. **Economic KPI focus** — Metrics are theme-based, not anchored to the product's primary
+   economic value driver. Consider adding a "north star metric" step in Phase 3.
+3. **Multi-year horizon** — Roadmap covers 0-12 months. Product standard expects multi-year.
+   Consider adding a "Later+" horizon (12-36 months) for directional vision.

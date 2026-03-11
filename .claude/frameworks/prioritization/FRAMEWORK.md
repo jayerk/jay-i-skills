@@ -190,3 +190,34 @@ A structured workflow for making investment and sequencing decisions — what to
 - **Static priorities** — setting priorities once and never revisiting. The world changes. So should the list.
 - **Category gaming** — labeling everything "Transform" to make it sound strategic. Be honest about what's Run and Improve.
 - **Effort blindness** — ignoring effort in favor of impact. A high-impact, high-effort item may be less valuable than a medium-impact, low-effort item (gearing ratio).
+
+## Product Standard Alignment
+
+This framework serves **Pillar 2: Measurable Economic Value** — practices to
+enable data-informed teams to observe and optimize the impact of a product.
+
+| Practice | Framework Coverage | Where |
+|----------|-------------------|-------|
+| **Product Economic Insights** | Moderate | Phase 1 (revenue/cost impact criterion) |
+| — Key economic KPI observability | Phase 1 scoring dimension (revenue/cost) | Gap: assumes KPI exists, doesn't create it |
+| — Leading indicators | Not explicitly covered | Gap: scoring is point-in-time, not ongoing |
+| **Value-Based Sequencing** | Strong — core purpose of this framework | |
+| — Prioritization (value, risk, effort) | Phase 1 (criteria), Phase 2 (scoring) | |
+| — Work breakdown with flow readiness | Phase 2 (effort scoring, dependency criterion) | Gap: no explicit flow/readiness assessment |
+| — Documented trade-offs & rationale | Phase 4 (deferred items with rationale) | |
+| **Value Guardrails & Realization** | Strong | Phase 3 (Balanced Breakthrough allocation) |
+| — CX/reliability/capacity guardrails | Phase 3 (category allocation targets by lifecycle) | |
+| — Stop/pivot/kill criteria | Phase 3 (run/grow/transform classification) | Gap: no explicit kill criteria |
+| — Benefits forecasting & value hypotheses | Not covered | Gap: scoring measures expected value but doesn't forecast or track realization |
+
+### Identified Gaps
+
+1. **Benefits forecasting** — Framework scores items but doesn't forecast expected value
+   realization. Consider adding a "value hypothesis" column to the scoring matrix.
+2. **Kill criteria** — Balanced Breakthrough classifies work but doesn't define when to
+   stop/pivot/kill. Consider adding explicit sunset triggers to Phase 3.
+3. **Flow readiness** — Effort scoring captures investment size but not whether teams are
+   ready to absorb the work (WIP, dependencies in flight). Consider adding a readiness
+   check to Phase 2.
+4. **Value tracking** — Framework produces a prioritized list but doesn't close the loop
+   on whether realized value matched the score. Consider a retrospective step.
