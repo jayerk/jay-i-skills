@@ -10,9 +10,12 @@ The **public layer** ([jay-i-skills](../README.md)) provides skills, frameworks,
 
 ```
 private-repo/
+├── CLAUDE.md              # Pointers back to jay-i-skills (required)
 ├── README.md              # This file — repo overview and usage
+├── .gitignore             # Excludes credentials, OS files, editor files
 ├── context/               # Organizational context documents
 │   ├── README.md          # How to use the context directory
+│   ├── archive/           # Completed or abandoned initiatives
 │   └── [initiative-name]/ # One folder per active initiative
 │       ├── CONTEXT.md     # Context document (use CONTEXT-TEMPLATE.md)
 │       ├── PLAN.md        # Plan document (use PLAN-TEMPLATE.md)
@@ -22,6 +25,7 @@ private-repo/
 │   └── [initiative].md    # One stakeholder map per initiative
 └── initiatives/           # Active initiative tracking
     ├── README.md          # How to use initiative files
+    ├── archive/           # Completed initiatives
     └── [initiative].md    # One file per active initiative
 ```
 
