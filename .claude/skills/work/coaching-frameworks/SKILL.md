@@ -44,7 +44,9 @@ This is core **Encode Expertise** territory — embedding methodology into reusa
 - How often will it be administered? (One-time, quarterly, annually)
 
 ### Step 2: Identify Dimensions
-Select 5-8 dimensions that collectively describe the thing being assessed. Good dimension design:
+Select 5-8 dimensions that collectively describe the thing being assessed. For team or leadership assessments, start with the behavioral catalog in `knowledge/behaviors-mindsets.md` — it provides 16 team behaviors across 4 categories and 16 leadership behaviors across 5 categories, all written as observable actions. Select the dimensions most relevant to the assessment context rather than using all of them.
+
+Good dimension design:
 
 | Principle | Example |
 |-----------|---------|
@@ -66,7 +68,7 @@ For each dimension, define 4-5 levels with clear criteria:
 
 ### Step 4: Build the Scoring Rubric
 For each dimension at each level, write:
-- **Observable behaviors** — what someone at this level actually does
+- **Observable behaviors** — what someone at this level actually does (see `knowledge/behaviors-mindsets.md` for reference behaviors and their anti-patterns)
 - **Evidence** — what artifacts or outcomes demonstrate this level
 - **Growth actions** — specific steps to move from this level to the next
 

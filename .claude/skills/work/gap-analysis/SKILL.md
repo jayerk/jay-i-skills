@@ -24,7 +24,7 @@ Uses **Balanced Breakthrough**, **Force-Rank**, **Cost of Delay**, and **Harvey 
 
 ## When NOT to Use This Skill
 
-- **Building the assessment framework** — if you need to design the rubric, maturity model, or scoring dimensions, use `coaching-frameworks`. This skill *applies* frameworks; that skill *builds* them.
+- **Building the assessment framework** — if you need to design the rubric, maturity model, or scoring dimensions, use `coaching-frameworks`. This skill *applies* frameworks; that skill *builds* them. For a catalog of observable team and leadership behaviors to assess against, see `knowledge/behaviors-mindsets.md`.
 - **Setting strategic direction** — if you're defining vision, guiding policy, or strategic themes, use `product-strategy`. Gap analysis informs strategy but doesn't set it.
 - **Presenting results to leadership** — if the output is a deck or memo for executives, use `executive-storytelling` to frame the narrative. This skill produces the analysis; that skill communicates it.
 - **Writing requirements** — if you've prioritized and now need to define what to build, use `prd-writing`.
@@ -49,6 +49,7 @@ Uses **Balanced Breakthrough**, **Force-Rank**, **Cost of Delay**, and **Harvey 
 For each item being assessed:
 - **Maturity level** — where is it today? Use harvey balls or a 1-5 scale with defined levels.
 - **Health indicators** — what signals tell us how this is performing? (Usage, satisfaction, incidents, cost)
+- **Behavioral assessment** — what team and leadership behaviors are present or absent? Use `knowledge/behaviors-mindsets.md` as the behavioral catalog. Observable behaviors (not aspirational adjectives) reveal the real current state.
 - **Lifecycle stage** — is this in Concept, Launch, Growth, Maturity, or Sunset?
 - **Dependencies** — what does this depend on, and what depends on it?
 

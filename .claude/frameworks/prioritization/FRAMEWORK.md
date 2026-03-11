@@ -94,7 +94,7 @@ A structured workflow for making investment and sequencing decisions — what to
 5. **Check flow readiness** — before finalizing the rank, flag items where the team isn't ready to absorb the work:
    - **WIP conflict:** Is the team already at capacity? Will this displace something in flight?
    - **Dependency in flight:** Does this depend on another item that hasn't shipped yet?
-   - **Skill gap:** Does the team have the capability to execute this?
+   - **Skill gap:** Does the team have the capability to execute this? For behavioral capability gaps, assess against `knowledge/behaviors-mindsets.md` — e.g., a team that doesn't "test assumptions before building" isn't ready for a discovery-heavy initiative.
 
    Items that score high but have low readiness should be sequenced later, not dropped. Note the readiness blocker so it can be resolved.
 

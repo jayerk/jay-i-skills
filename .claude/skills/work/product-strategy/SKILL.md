@@ -57,7 +57,7 @@ Identify levers and ideas to achieve the stated aspiration. Informed by ideation
 Identify right to win, prioritize opportunities, and assess strategic choices.
 - Framework for evaluating ideas
 - Evaluation of capabilities needed to deliver high-value opportunities
-- Gap assessment of necessary capabilities vs. current state
+- Gap assessment of necessary capabilities vs. current state — for team and leadership capability gaps, assess against `knowledge/behaviors-mindsets.md`
 - Proposed method of attaining capabilities (build / buy / partner) for strategy execution
 
 ### D. Preparing for Execution
@@ -87,7 +87,7 @@ The default Now / Next / Later structure from the strategy framework applies at 
 # Product Vision: [Name]
 
 ## Current State
-[Where we are today — lifecycle stage, maturity, team structure]
+[Where we are today — lifecycle stage, maturity, team structure, team health (see knowledge/behaviors-mindsets.md)]
 
 ## Strategic Context
 [Business environment, constraints, opportunities]

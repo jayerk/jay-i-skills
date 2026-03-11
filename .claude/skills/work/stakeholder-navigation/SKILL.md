@@ -9,7 +9,7 @@ description: "Stakeholder navigation and influence — mapping organizational dy
 
 This skill covers the human side of product leadership — understanding organizational dynamics, building alignment across competing interests, influencing without authority, and navigating complex decision-making environments. In a large regulated organization, the ability to navigate stakeholders is as important as the ability to build products. The right solution with the wrong stakeholder strategy fails.
 
-Uses **Stakeholder Map**, **Engagement Sequence**, **Breadcrumb Trails**, and **Resistance Patterns** from `knowledge/vocabulary.md`. Once the stakeholder landscape is mapped and the strategy is set, hand off to `executive-storytelling` to build the artifact that presents to the audience.
+Uses **Stakeholder Map**, **Engagement Sequence**, **Breadcrumb Trails**, and **Resistance Patterns** from `knowledge/vocabulary.md`. Understanding which mindsets a stakeholder holds (see `knowledge/behaviors-mindsets.md` → Leadership Mindsets) helps predict their reactions and tailor engagement strategy. Once the stakeholder landscape is mapped and the strategy is set, hand off to `executive-storytelling` to build the artifact that presents to the audience.
 
 ## When to Use This Skill
 

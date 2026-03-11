@@ -128,7 +128,7 @@ If any of these are missing, go back to the appropriate framework before proceed
    - **Compliance/Risk:** Does anything in the next wave trigger review requirements?
    - **Operations/Support:** Is the ops team aware of what's coming and when?
 
-   Not every sync applies to every wave. Match the cadence to the complexity — a simple internal tool may only need an engineering check, while a regulated product needs all four.
+   Not every sync applies to every wave. Match the cadence to the complexity — a simple internal tool may only need an engineering check, while a regulated product needs all four. If cross-functional collaboration is weak, check team behaviors in `knowledge/behaviors-mindsets.md` → Collaboration & Communication — the root cause may be behavioral (sequential handoffs, context hoarding) rather than process.
 
 5. **Handle blockers:**
    - If blocked by a dependency: escalate or find an alternative path

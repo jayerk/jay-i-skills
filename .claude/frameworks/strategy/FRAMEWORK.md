@@ -38,6 +38,7 @@ A structured workflow for developing product strategy — from environmental ana
    - **Lifecycle stage:** Where is it? (Concept → Launch → Growth → Maturity → Sunset)
    - **Maturity:** Score key dimensions using harvey balls. Where are the largest gaps?
    - **Team structure:** What team type supports it? (Stream-aligned, platform, enabling)
+   - **Team health:** What behaviors are present or absent? Use `knowledge/behaviors-mindsets.md` to assess team and leadership behaviors. Gaps here often explain delivery problems better than missing features.
 
 2. **Map the environment** — scan four dimensions of external and internal context:
    - **Business pressures:** Regulatory changes, competitive dynamics, organizational shifts
@@ -140,7 +141,7 @@ A structured workflow for developing product strategy — from environmental ana
 2. **Check for coherence:**
    - Do the actions reinforce each other or create tension?
    - Does the investment allocation match the stated priorities?
-   - Can the existing team structure execute this strategy?
+   - Can the existing team structure execute this strategy? Check team behaviors against `knowledge/behaviors-mindsets.md` — a strategy requiring strong discovery practice will fail if the team doesn't "talk to users regularly."
    - Does this strategy survive contact with the regulatory environment?
 
 3. **Validate with stakeholders** (see `skills/stakeholder-navigation/SKILL.md`):
