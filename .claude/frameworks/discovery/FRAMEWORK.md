@@ -80,7 +80,24 @@ A structured workflow for continuous product discovery — understanding custome
    - Surprises that challenge assumptions
    - New opportunities not previously considered
 
-**Output:** Interview synthesis with updated assumption confidence levels.
+5. **Create lightweight personas** — For each distinct user segment identified through interviews, capture:
+   - **Role and context** — who they are, what team/function, what they're responsible for
+   - **Goals** — what they're trying to accomplish in the problem domain
+   - **Pain points** — top 2-3 frustrations observed across interviews
+   - **Current workarounds** — how they solve the problem today
+   - **Quote** — one representative verbatim quote that captures their perspective
+
+   Keep personas to one page each. Update them as new interviews add or refine segments. These are living documents, not one-time deliverables.
+
+6. **Map the journey (optional)** — When the problem spans multiple steps, tools, or handoffs, sketch the end-to-end journey:
+   - **Steps** — what does the user do, in order?
+   - **Tools/systems** — what do they touch at each step?
+   - **Pain points** — where do things break down or slow down?
+   - **Emotional state** — where are they frustrated, confused, or satisfied?
+
+   This is most valuable when the opportunity involves cross-team or cross-system workflows. Skip it for single-tool, single-step problems.
+
+**Output:** Interview synthesis with updated assumption confidence levels, lightweight persona documents, and (optionally) journey map.
 
 ### Phase 3: Build the Opportunity Solution Tree
 
@@ -136,15 +153,28 @@ Desired Outcome
 
 **Output:** Go/no-go recommendation with supporting evidence.
 
+### Continuous Signals — Post-Discovery Monitoring
+
+Discovery doesn't end when a build decision is made. Maintain a lightweight signal monitoring practice:
+
+- **Monthly:** Review usage data, support tickets, and stakeholder feedback for the product area. Look for signals that assumptions have changed.
+- **Quarterly:** Revisit the Opportunity Solution Tree. Are the validated opportunities still the right ones? Have new opportunities emerged?
+- **Trigger-based:** When a significant event occurs (reorg, regulatory change, competitor move, user escalation), reassess the assumption map from Phase 1.
+
+Keep a running signal log — a simple list of date, signal, and implication. This feeds back into Strategy and Prioritization when it's time to re-evaluate direction.
+
 ## Quality Checklist
 
 - [ ] Desired outcome is specific and measurable
 - [ ] At least 5 user interviews conducted
 - [ ] Assumptions are explicitly listed with confidence levels
+- [ ] Lightweight personas created for each distinct user segment
+- [ ] Journey map created (if problem spans multiple steps/systems)
 - [ ] Opportunity Solution Tree connects outcome → opportunity → solution → experiment
 - [ ] At least 3 solutions generated per top opportunity
 - [ ] Experiments are designed before building anything
 - [ ] Evidence supports the recommendation, not just intuition
+- [ ] Signal monitoring cadence established for post-discovery
 
 ## Common Pitfalls
 
@@ -163,21 +193,21 @@ employees throughout the product lifecycle.
 |----------|-------------------|-------|
 | **Customer & Market Insights** | Strong | Phase 1 (assumption mapping, research design), Phase 2 (user engagement, synthesis) |
 | — Research insights & observability | Phase 2 interview synthesis, Phase 4 evidence tracking | |
-| — Proactive monitoring of signals | Phase 1 assumption confidence monitoring | Gap: no ongoing signal monitoring cadence |
+| — Proactive monitoring of signals | Phase 1 assumption confidence monitoring, Continuous Signals section (post-discovery cadence) | |
 | — Iterative prototyping | Phase 3 experiments (prototype test, Wizard of Oz) | |
 | — Usability testing & feedback | Phase 4 test and learn cycle | |
-| **Segmentation & Personas** | Moderate | Phase 2 (interview targeting across roles/contexts) |
-| — Enduring customer profiles | Implicit in interview synthesis | Gap: no explicit persona creation step |
-| — Personalized engagement | Not covered | Gap: engagement strategy is post-discovery |
-| **Customer & Employee Journeys** | Moderate | Phase 2 (behavior observation, workarounds), Phase 3 (opportunity mapping) |
-| — Journey mapping | Implicit in opportunity identification | Gap: no explicit journey artifact |
+| **Segmentation & Personas** | Strong | Phase 2 (interview targeting, persona creation) |
+| — Enduring customer profiles | Phase 2 step 5 (lightweight persona documents) | |
+| — Personalized engagement | Not covered | Out of scope: engagement strategy is post-discovery |
+| **Customer & Employee Journeys** | Strong | Phase 2 (behavior observation, journey mapping), Phase 3 (opportunity mapping) |
+| — Journey mapping | Phase 2 step 6 (optional journey mapping exercise) | |
 | — Design system | Not covered | Out of scope for discovery |
 
-### Identified Gaps
+### Previously Identified Gaps — Now Closed
 
-1. **Persona artifact** — Discovery identifies segments through interviews but doesn't
-   produce an enduring persona document. Consider adding a persona template output to Phase 2.
-2. **Signal monitoring** — Discovery is sprint-oriented. The product standard expects
-   ongoing monitoring. Consider adding a "continuous signals" section for post-discovery cadence.
-3. **Journey mapping** — Opportunity Solution Trees capture needs but not the end-to-end
-   journey. Consider referencing a journey mapping exercise as an optional Phase 2 activity.
+1. **Persona artifact** — ~~No explicit persona creation step.~~ Closed: Phase 2 step 5
+   produces lightweight persona documents updated as interviews progress.
+2. **Signal monitoring** — ~~Sprint-oriented, no ongoing cadence.~~ Closed: Continuous Signals
+   section adds monthly/quarterly/trigger-based monitoring post-discovery.
+3. **Journey mapping** — ~~No explicit journey artifact.~~ Closed: Phase 2 step 6 adds
+   optional journey mapping for multi-step/multi-system problems.

@@ -67,11 +67,13 @@ A structured workflow for making investment and sequencing decisions — what to
 
 2. **Build the scoring matrix:**
 
-   | Item | Strategic (3x) | User Impact (3x) | Effort (2x) | Risk (2x) | Dependencies (1x) | Weighted Total |
-   |------|:-:|:-:|:-:|:-:|:-:|:-:|
-   | Item A | 5 (15) | 4 (12) | 3 (6) | 4 (8) | 2 (2) | 43 |
-   | Item B | 3 (9) | 5 (15) | 4 (8) | 2 (4) | 5 (5) | 41 |
-   | Item C | 4 (12) | 3 (9) | 5 (10) | 3 (6) | 1 (1) | 38 |
+   | Item | Strategic (3x) | User Impact (3x) | Effort (2x) | Risk (2x) | Dependencies (1x) | Weighted Total | Value Hypothesis |
+   |------|:-:|:-:|:-:|:-:|:-:|:-:|---|
+   | Item A | 5 (15) | 4 (12) | 3 (6) | 4 (8) | 2 (2) | 43 | "Reduces cycle time by 40%" |
+   | Item B | 3 (9) | 5 (15) | 4 (8) | 2 (4) | 5 (5) | 41 | "Unblocks 3 downstream teams" |
+   | Item C | 4 (12) | 3 (9) | 5 (10) | 3 (6) | 1 (1) | 38 | "Eliminates manual step for 50 users" |
+
+   The **Value Hypothesis** column captures the expected benefit in plain language. This is not scored — it's a testable claim that you'll revisit after delivery (see Phase 5).
 
 3. **Discuss outliers** — where scores diverge significantly between raters, discuss:
    - What information is one rater using that another isn't?
@@ -80,7 +82,14 @@ A structured workflow for making investment and sequencing decisions — what to
 
 4. **Force-rank** — after scoring, create a strict rank order. No ties. If scores are close, use strategic alignment as the tiebreaker.
 
-**Output:** Scored, force-ranked priority list.
+5. **Check flow readiness** — before finalizing the rank, flag items where the team isn't ready to absorb the work:
+   - **WIP conflict:** Is the team already at capacity? Will this displace something in flight?
+   - **Dependency in flight:** Does this depend on another item that hasn't shipped yet?
+   - **Skill gap:** Does the team have the capability to execute this?
+
+   Items that score high but have low readiness should be sequenced later, not dropped. Note the readiness blocker so it can be resolved.
+
+**Output:** Scored, force-ranked priority list with value hypotheses and readiness flags.
 
 ### Phase 3: Allocate Using Balanced Breakthrough
 
@@ -111,7 +120,14 @@ A structured workflow for making investment and sequencing decisions — what to
    - Too much Transform → are we neglecting stability?
    - Adjust by moving borderline items or renegotiating scope
 
-**Output:** Investment allocation with category breakdown.
+5. **Set kill criteria** — for Transform and Improve items, define the conditions under which you'd stop or pivot:
+   - **Time trigger:** If not delivered within [timeframe], reassess viability
+   - **Adoption trigger:** If adoption is below [threshold] within [period] after launch, stop investing
+   - **Value trigger:** If the value hypothesis is disproven (see Phase 2), pivot or kill
+
+   Keep this simple — one or two sentences per item. The goal is to prevent zombie initiatives that consume resources without delivering value. Review kill criteria at each quarterly prioritization cycle.
+
+**Output:** Investment allocation with category breakdown and kill criteria for Transform/Improve items.
 
 ### Phase 4: Validate and Communicate
 
@@ -138,6 +154,25 @@ A structured workflow for making investment and sequencing decisions — what to
 
 **Output:** Prioritized plan with communication artifacts.
 
+### Phase 5: Track Value Realization
+
+**Goal:** Close the loop — did the prioritized items deliver the value we expected?
+
+**Steps:**
+1. **Revisit value hypotheses** — at the next quarterly review, check each delivered item against its value hypothesis from Phase 2:
+   - **Confirmed:** Value delivered as expected. Record the evidence.
+   - **Partially confirmed:** Some value delivered but less than expected. Note what differed.
+   - **Disproven:** Value hypothesis was wrong. Trigger kill criteria review if the item is ongoing.
+
+2. **Feed back into scoring** — use realization data to calibrate future scoring:
+   - Are we consistently overestimating certain types of impact?
+   - Are there categories where we underestimate value?
+   - Adjust criteria definitions or weights based on patterns.
+
+3. **Update the signal log** — feed findings into Discovery's Continuous Signals practice (if the product area has one active).
+
+**Output:** Value realization summary feeding into the next prioritization cycle.
+
 ## Output Format
 
 ```markdown
@@ -150,11 +185,11 @@ A structured workflow for making investment and sequencing decisions — what to
 
 ## Scored Priority List
 
-| Rank | Item | Run/Improve/Transform | Score | Key Rationale |
-|------|------|--------------------|-------|---------------|
-| 1 | [Item] | Transform | 43 | [Why it's #1] |
-| 2 | [Item] | Improve | 41 | [Why it's #2] |
-| 3 | [Item] | Run | 38 | [Why it's #3] |
+| Rank | Item | R/I/T | Score | Value Hypothesis | Readiness | Kill Criteria |
+|------|------|-------|-------|-----------------|-----------|---------------|
+| 1 | [Item] | Transform | 43 | [Expected benefit] | Ready | [Stop condition] |
+| 2 | [Item] | Improve | 41 | [Expected benefit] | Blocked: [reason] | [Stop condition] |
+| 3 | [Item] | Run | 38 | [Expected benefit] | Ready | N/A |
 
 ## Balanced Breakthrough Allocation
 | Category | Target | Actual | Items |
@@ -177,11 +212,15 @@ A structured workflow for making investment and sequencing decisions — what to
 
 - [ ] Criteria defined and weighted before scoring begins
 - [ ] Scoring calibrated with 2-3 example items
+- [ ] Value hypothesis captured for each item
+- [ ] Flow readiness checked — blockers flagged and sequenced
 - [ ] Items force-ranked (no ties)
 - [ ] Balanced Breakthrough allocation applied
+- [ ] Kill criteria defined for Transform and Improve items
 - [ ] Deferred items documented with rationale
 - [ ] Communication artifacts tailored to each audience
 - [ ] Review cadence established
+- [ ] Value realization reviewed at next quarterly cycle
 
 ## Common Pitfalls
 
@@ -203,21 +242,20 @@ enable data-informed teams to observe and optimize the impact of a product.
 | — Leading indicators | Not explicitly covered | Gap: scoring is point-in-time, not ongoing |
 | **Value-Based Sequencing** | Strong — core purpose of this framework | |
 | — Prioritization (value, risk, effort) | Phase 1 (criteria), Phase 2 (scoring) | |
-| — Work breakdown with flow readiness | Phase 2 (effort scoring, dependency criterion) | Gap: no explicit flow/readiness assessment |
+| — Work breakdown with flow readiness | Phase 2 step 5 (WIP, dependency, and skill readiness check) | |
 | — Documented trade-offs & rationale | Phase 4 (deferred items with rationale) | |
 | **Value Guardrails & Realization** | Strong | Phase 3 (Balanced Breakthrough allocation) |
 | — CX/reliability/capacity guardrails | Phase 3 (category allocation targets by lifecycle) | |
-| — Stop/pivot/kill criteria | Phase 3 (run/grow/transform classification) | Gap: no explicit kill criteria |
-| — Benefits forecasting & value hypotheses | Not covered | Gap: scoring measures expected value but doesn't forecast or track realization |
+| — Stop/pivot/kill criteria | Phase 3 step 5 (time, adoption, and value kill triggers) | |
+| — Benefits forecasting & value hypotheses | Phase 2 (value hypothesis column), Phase 5 (realization tracking) | |
 
-### Identified Gaps
+### Previously Identified Gaps — Now Closed
 
-1. **Benefits forecasting** — Framework scores items but doesn't forecast expected value
-   realization. Consider adding a "value hypothesis" column to the scoring matrix.
-2. **Kill criteria** — Balanced Breakthrough classifies work but doesn't define when to
-   stop/pivot/kill. Consider adding explicit sunset triggers to Phase 3.
-3. **Flow readiness** — Effort scoring captures investment size but not whether teams are
-   ready to absorb the work (WIP, dependencies in flight). Consider adding a readiness
-   check to Phase 2.
-4. **Value tracking** — Framework produces a prioritized list but doesn't close the loop
-   on whether realized value matched the score. Consider a retrospective step.
+1. **Benefits forecasting** — ~~Scores items but doesn't forecast value.~~ Closed: Phase 2
+   adds a value hypothesis column to every scored item.
+2. **Kill criteria** — ~~No explicit stop/pivot/kill triggers.~~ Closed: Phase 3 step 5
+   adds simple time, adoption, and value-based kill criteria for Transform/Improve items.
+3. **Flow readiness** — ~~Effort scoring ignores team readiness.~~ Closed: Phase 2 step 5
+   adds WIP, dependency, and skill gap readiness checks before finalizing rank.
+4. **Value tracking** — ~~No closed-loop value realization.~~ Closed: Phase 5 adds quarterly
+   value hypothesis review feeding back into scoring calibration.

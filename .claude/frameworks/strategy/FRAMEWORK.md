@@ -95,13 +95,27 @@ A structured workflow for developing product strategy — from environmental ana
    - **Now (0-3 months):** Concrete initiatives with clear owners and deliverables
    - **Next (3-6 months):** Planned initiatives with defined scope
    - **Later (6-12 months):** Directional commitments based on strategic themes
+   - **Vision (1-3 years):** Aspirational end-state — where does this product/capability need to be? Keep this to 2-3 bullet points. It's a compass, not a plan. Revisit annually.
 
-4. **Define success metrics** for each strategic theme:
+4. **Identify the north star metric** — the single economic or outcome KPI that best represents the product's primary value driver. This is the metric that, if it moves in the right direction, means the strategy is working. Examples:
+   - "Time to first portfolio review" (efficiency)
+   - "% of teams using standardized scoring" (adoption)
+   - "Cost per assessment cycle" (cost reduction)
+
+   All theme-level metrics should connect back to this north star.
+
+5. **Define success metrics** for each strategic theme:
    - Leading indicators (early signals of progress)
    - Lagging indicators (outcome measures)
    - Guardrail metrics (things that shouldn't get worse)
 
-**Output:** Strategic roadmap with themes, allocation, and metrics.
+6. **Translate to OKRs (optional)** — When the audience expects OKR format, translate each strategic theme into an Objective + 2-3 Key Results:
+   - **Objective:** Qualitative, aspirational, tied to the theme
+   - **Key Results:** Measurable, time-bound, tied to the metrics defined above
+
+   This is a formatting step, not a strategy step. The substance comes from the themes and metrics. Not every team uses OKRs yet — use this when it helps alignment, skip when it adds overhead.
+
+**Output:** Strategic roadmap with themes, allocation, north star metric, and success metrics (optionally formatted as OKRs).
 
 ### Phase 4: Stress-Test the Strategy
 
@@ -146,12 +160,16 @@ A structured workflow for developing product strategy — from environmental ana
 ## Guiding Policy
 [We will X because Y, which means we will Z and we will not W]
 
+## North Star Metric
+**[Metric name]:** [Definition and current baseline → target]
+
 ## Strategic Themes
 
 ### Theme 1: [Name]
 - **Objective:** [What this achieves]
 - **Key initiatives:** [What we'll do]
 - **Success metrics:** [How we'll know it's working]
+- **OKR (optional):** O: [Objective] / KR1: [Key Result] / KR2: [Key Result]
 
 ### Theme 2: [Name]
 ...
@@ -173,6 +191,10 @@ A structured workflow for developing product strategy — from environmental ana
 ### Later (6-12 months)
 - [Direction]: [Strategic theme it supports]
 
+### Vision (1-3 years)
+- [Aspirational end-state bullet 1]
+- [Aspirational end-state bullet 2]
+
 ## Risks and Mitigations
 | Risk | Likelihood | Impact | Mitigation |
 |------|-----------|--------|-----------|
@@ -189,7 +211,10 @@ A structured workflow for developing product strategy — from environmental ana
 - [ ] Guiding policy excludes things (says "no" to something)
 - [ ] Actions are coherent — they reinforce each other
 - [ ] Balanced Breakthrough allocation is explicit
+- [ ] North star metric identified and connected to theme metrics
 - [ ] Success metrics include leading and lagging indicators
+- [ ] OKRs provided when audience expects that format
+- [ ] Roadmap includes 1-3 year vision horizon
 - [ ] Risks are identified with mitigations
 - [ ] Strategy has been red-teamed
 
@@ -212,18 +237,18 @@ This framework serves **Pillar 3: Enduring Lifecycle** (practices 1-2) and
 | — Vision for customer value | Phase 1 (current state, crux identification) | |
 | — KPIs for performance monitoring | Phase 3 (metrics per strategic theme) | |
 | 2. Strategy & Roadmap | Strong — core purpose of this framework | |
-| — Roadmap artifact (multi-year) | Phase 3 (Now/Next/Later horizons) | |
-| — OKRs to align teams | Phase 3 (themes with objectives and success criteria) | Gap: OKR format not explicit |
+| — Roadmap artifact (multi-year) | Phase 3 (Now/Next/Later/Vision horizons, 0-36 months) | |
+| — OKRs to align teams | Phase 3 step 6 (optional OKR translation from themes) | |
 | **Measurable Economic Value** | | |
-| 1. Product Economic Insights | Moderate | Phase 1 (lifecycle stage, maturity assessment) |
-| — Key economic KPI observability | Phase 3 (lagging indicators) | Gap: not tied to primary value driver |
+| 1. Product Economic Insights | Strong | Phase 1 (lifecycle stage, maturity assessment) |
+| — Key economic KPI observability | Phase 3 step 4 (north star metric tied to primary value driver) | |
 | — Leading indicators | Phase 3 (leading indicators per theme) | |
 
-### Identified Gaps
+### Previously Identified Gaps — Now Closed
 
-1. **OKR format** — Framework produces strategic themes with success metrics but doesn't
-   explicitly use OKR structure. Consider adding an OKR translation step to Phase 3.
-2. **Economic KPI focus** — Metrics are theme-based, not anchored to the product's primary
-   economic value driver. Consider adding a "north star metric" step in Phase 3.
-3. **Multi-year horizon** — Roadmap covers 0-12 months. Product standard expects multi-year.
-   Consider adding a "Later+" horizon (12-36 months) for directional vision.
+1. **OKR format** — ~~Themes with metrics but no OKR structure.~~ Closed: Phase 3 step 6
+   adds optional OKR translation when the audience expects that format.
+2. **Economic KPI focus** — ~~Metrics not anchored to primary value driver.~~ Closed: Phase 3
+   step 4 adds north star metric identification before theme-level metrics.
+3. **Multi-year horizon** — ~~Roadmap only covers 0-12 months.~~ Closed: Vision horizon
+   (1-3 years) added to roadmap step and output template.

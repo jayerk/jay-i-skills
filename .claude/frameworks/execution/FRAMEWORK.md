@@ -15,9 +15,20 @@ A structured workflow for translating strategy and requirements into delivered, 
 ## Inputs
 
 - Strategic direction (from `frameworks/strategy/FRAMEWORK.md`)
+- Prioritized items with value hypotheses and kill criteria (from `frameworks/prioritization/FRAMEWORK.md`)
 - Requirements or PRD (from `skills/prd-writing/SKILL.md`)
 - Team capacity and constraints
 - Dependencies and integration points
+
+### Intake Handoff
+
+Execution assumes work has been through Discovery → Strategy → Prioritization. The handoff into Execution should include:
+
+1. **Prioritization output** — ranked item with score, value hypothesis, readiness status, and kill criteria
+2. **PRD or requirements** — scope, acceptance criteria, constraints
+3. **Strategic context** — which theme this supports and why it was prioritized now
+
+If any of these are missing, go back to the appropriate framework before proceeding. Execution without prioritized, scoped work creates churn.
 
 ## Workflow
 
@@ -42,7 +53,15 @@ A structured workflow for translating strategy and requirements into delivered, 
 
 3. **Document decisions** — capture each decision with context and rationale. These become constraints for planning.
 
-**Output:** Decision log — what was decided, what was deferred, what was excluded.
+4. **Initialize the risk register** — identify product risks that need tracking through execution:
+
+   | Risk | Type | Likelihood | Impact | Mitigation | Owner | Status |
+   |------|------|-----------|--------|-----------|-------|--------|
+   | [Risk] | Market/Tech/Regulatory/Org | H/M/L | H/M/L | [Action] | [Who] | Open |
+
+   Update this register at every wave checkpoint (Phase 3). Close resolved risks, add new ones as they emerge. This is a living document, not a one-time exercise.
+
+**Output:** Decision log and risk register — what was decided, what was deferred, what risks are tracked.
 
 ### Phase 2: Plan — Break Work Into Atomic Tasks
 
@@ -94,6 +113,14 @@ A structured workflow for translating strategy and requirements into delivered, 
    - Has anything changed that affects the plan?
    - Update STATE.md with progress and any new decisions
 
+4. **Cross-functional sync** — at each wave transition, check in with partner functions:
+   - **Design:** Is the UX validated for the next wave's scope?
+   - **Engineering:** Are there technical blockers or architecture concerns?
+   - **Compliance/Risk:** Does anything in the next wave trigger review requirements?
+   - **Operations/Support:** Is the ops team aware of what's coming and when?
+
+   Not every sync applies to every wave. Match the cadence to the complexity — a simple internal tool may only need an engineering check, while a regulated product needs all four.
+
 4. **Handle blockers:**
    - If blocked by a dependency: escalate or find an alternative path
    - If blocked by ambiguity: go back to Discuss (Phase 1) for the specific question
@@ -121,12 +148,34 @@ A structured workflow for translating strategy and requirements into delivered, 
    - Is it visually clean and professionally presented?
    - Is it documented or self-explanatory?
 
-4. **Decide:**
-   - **Ship** — requirements met, quality bar cleared. Deploy or deliver.
+4. **Launch readiness check** — before shipping, assess readiness based on the product's risk and visibility tier:
+
+   **Tier 1 — Low risk / internal tool / small audience:**
+   - [ ] Documentation updated or created
+   - [ ] Key users notified of the change
+   - [ ] Rollback plan identified (if applicable)
+
+   **Tier 2 — Moderate risk / cross-team impact:**
+   - [ ] All Tier 1 items
+   - [ ] Training or walkthrough provided to affected teams
+   - [ ] Support team briefed on expected questions
+   - [ ] Comms sent to stakeholders with summary of changes
+
+   **Tier 3 — High risk / regulated / executive visibility:**
+   - [ ] All Tier 1 and Tier 2 items
+   - [ ] Compliance/risk review completed and approved
+   - [ ] Rollout plan with phased deployment (pilot → broader release)
+   - [ ] Success criteria defined for go/no-go on broader release
+   - [ ] Executive sponsor sign-off obtained
+
+   Select the tier that matches the initiative. When in doubt, go one tier higher.
+
+5. **Decide:**
+   - **Ship** — requirements met, quality bar cleared, launch readiness confirmed. Deploy or deliver.
    - **Fix** — specific issues identified. Create fix tasks and re-execute.
    - **Iterate** — fundamentally works but needs improvement. Plan next iteration.
 
-**Output:** Verification report with ship/fix/iterate decision.
+**Output:** Verification report with launch readiness assessment and ship/fix/iterate decision.
 
 ## State Management
 
@@ -154,6 +203,11 @@ Throughout execution, keep these documents current:
 |----------|-------------------|--------|-----------|------|
 | [Decision] | [Options] | [Choice] | [Why] | [When] |
 
+## Risk Register
+| Risk | Type | Likelihood | Impact | Mitigation | Owner | Status |
+|------|------|-----------|--------|-----------|-------|--------|
+| [Risk] | [Type] | [H/M/L] | [H/M/L] | [Action] | [Who] | [Open/Closed] |
+
 ## Phase 1: [Name]
 **Entry criteria:** [What must be true before starting]
 **Exit criteria:** [What must be true to consider this phase done]
@@ -168,21 +222,30 @@ Throughout execution, keep these documents current:
 ## Phase 2: [Name]
 ...
 
+## Launch Readiness (Tier: [1/2/3])
+- [ ] [Tier-appropriate checklist items]
+
 ## Verification Checklist
 - [ ] All acceptance criteria from PRD met
 - [ ] User validation conducted
 - [ ] Quality bar from relevant skill cleared
+- [ ] Launch readiness checklist completed for selected tier
+- [ ] Risk register reviewed — all open risks mitigated or accepted
 - [ ] STATE.md updated
 - [ ] ROADMAP.md updated
 ```
 
 ## Quality Checklist
 
+- [ ] Intake handoff verified (prioritization output, PRD, strategic context)
 - [ ] All gray areas resolved before planning
+- [ ] Risk register initialized with known risks
 - [ ] Tasks are atomic (2-4 hours each)
 - [ ] Dependencies are mapped and sequenced
 - [ ] Each task has a clear definition of done
+- [ ] Cross-functional syncs scheduled at wave transitions (as appropriate)
 - [ ] Verification steps are defined before execution begins
+- [ ] Launch readiness tier selected and checklist completed
 - [ ] State documents are updated throughout
 
 ## Common Pitfalls
@@ -201,27 +264,25 @@ practices to enable product predictability, velocity, and adaptability.
 | Practice | Framework Coverage | Where |
 |----------|-------------------|-------|
 | **Adaptive Delivery Plans** | | |
-| — Structured idea intake | Not covered | Gap: idea intake is pre-execution (Discovery/Strategy) |
+| — Structured idea intake | Inputs section (intake handoff with required artifacts from upstream frameworks) | |
 | — Refined backlog for predictable delivery | Strong | Phase 2 (atomic tasks, waves, dependencies) |
-| — Proactive product risk management | Moderate | Phase 1 (gray areas), Phase 3 (blocker handling) |
+| — Proactive product risk management | Strong | Phase 1 step 4 (risk register), Phase 3 (updated at wave checkpoints) |
 | — Delivery at sustainable pace | Phase 3 (wave-based execution, checkpoints) | |
 | **Routines for Activation** | | |
 | — Refinement & adjustment routines | Strong | Phase 3 (wave checkpoints, state management) |
-| — Communication & transparency | Moderate | Phase 3 (progress tracking, STATE.md updates) |
-| — Cross Functional Touchpoints | Phase 1 (organizational gray areas) | Gap: no explicit cross-team sync cadence |
-| — Launch Enablement | Phase 4 (verification, user validation) | Gap: no launch readiness checklist |
+| — Communication & transparency | Strong | Phase 3 (progress tracking, cross-functional sync, STATE.md updates) |
+| — Cross Functional Touchpoints | Phase 3 step 4 (cross-functional sync at wave transitions) | |
+| — Launch Enablement | Phase 4 step 4 (tiered launch readiness checklist) | |
 
-### Identified Gaps
+### Previously Identified Gaps — Now Closed
 
-1. **Idea intake** — Framework assumes prioritized work enters execution. The product
-   standard expects structured intake. This lives at the Strategy/Prioritization boundary,
-   not in Execution. Document the handoff explicitly.
-2. **Cross-functional touchpoints** — Framework references dependencies but doesn't
-   prescribe a sync cadence with partner teams (design, engineering, compliance, ops).
-   Consider adding a cross-team checkpoint to Phase 3 wave transitions.
-3. **Launch enablement** — Verification checks requirements but doesn't cover go-to-market
-   readiness (training, documentation, support enablement, rollout plan). Consider adding
-   a launch readiness checklist to Phase 4.
-4. **Risk management** — Gray areas in Phase 1 cover decision risk, but product risk
-   (market, technical, regulatory) is not tracked through execution. Consider adding a
-   risk register that updates at wave checkpoints.
+1. **Idea intake** — ~~No structured intake documented.~~ Closed: Inputs section defines
+   the handoff from upstream frameworks with required artifacts (prioritization output, PRD,
+   strategic context).
+2. **Cross-functional touchpoints** — ~~No explicit cross-team sync cadence.~~ Closed:
+   Phase 3 step 4 adds cross-functional sync at wave transitions (design, engineering,
+   compliance, ops) scaled to initiative complexity.
+3. **Launch enablement** — ~~No launch readiness checklist.~~ Closed: Phase 4 step 4 adds
+   a three-tier launch readiness checklist scaled by risk and visibility.
+4. **Risk management** — ~~Product risk not tracked through execution.~~ Closed: Phase 1
+   step 4 initializes a risk register updated at every wave checkpoint in Phase 3.
