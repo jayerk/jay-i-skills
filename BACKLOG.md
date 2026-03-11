@@ -57,8 +57,8 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
-| 17 | `todo` | Review `knowledge/principles.md` | Validate 10 principles against full profile. Check gaps: iterative building, showing over telling, encoding expertise, craft-is-not-optional. Each principle needs enough depth to guide behavior. |
-| 18 | `todo` | Review `knowledge/vocabulary.md` | Validate completeness: Team Topologies, lifecycle stages, Balanced Breakthrough, harvey balls, gearing ratio, health models, Opportunity Solution Tree, context engineering. Add missing terms from 8 work modes. |
+| 17 | `done` | Review `knowledge/principles.md` | Validated 10 principles against full profile. Added "In practice" sections to all. Strengthened #1 (systems/boundaries), #6 (teams as product), #9 (discovery ↔ system boundaries). |
+| 18 | `in-progress` | Review `knowledge/vocabulary.md` | Validate completeness: Team Topologies, lifecycle stages, Balanced Breakthrough, harvey balls, gearing ratio, health models, Opportunity Solution Tree, context engineering. Add missing terms from 8 work modes. |
 | 19 | `todo` | Review `knowledge/references.md` | Validate: Teresa Torres, Marty Cagan, Team Topologies, GSD, Superpowers, PM Skills, Rumelt, Reinertsen. Ensure format supports looking up the right framework for the right situation. |
 
 ### Phase 3 — Skills Review (P1)
@@ -112,6 +112,7 @@ Items not part of the phased buildout but still tracked.
 |---|----------|--------|-------|-------------|
 | 6b | P1 | `todo` | Create `repo-init` meta skill | Generate downstream CLAUDE.md with pointer section pre-filled |
 | 6c | P1 | `todo` | Create soup-feast CLAUDE.md | Downstream pointer section per the pattern documented in CLAUDE.md |
+| 37 | P2 | `todo` | Create team & leadership behaviors/mindsets reference | Markdown file defining team behaviors and mindsets + leadership behaviors and mindsets. Lives in private repo (sensitive org context). Add to private-template scaffold as a placeholder. |
 
 ---
 
