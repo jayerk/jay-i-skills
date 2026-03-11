@@ -114,5 +114,5 @@
 | | | |
 
 ### Carry-Forward Items
-- [Item that needs attention in the next phase]
-- [Item discovered during execution that wasn't in the original plan]
+- [Item that needs attention in the next phase] — **Owner:** [Who] — **By:** [Date]
+- [Item discovered during execution] — **Owner:** [Who] — **By:** [Date]

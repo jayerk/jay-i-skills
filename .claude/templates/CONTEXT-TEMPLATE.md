@@ -6,6 +6,10 @@
 > Produces: Pre-planning context for `frameworks/execution/FRAMEWORK.md` Phase 1 (Discuss)
 > Consumes: Discovery insights, strategy direction, prioritization output
 
+## TL;DR
+
+[2-3 sentences: the problem, who it affects, and what we're proposing to do about it. Write this last.]
+
 ## Problem and Strategic Context
 
 **Problem:** [What problem does this initiative address? State it from the user's perspective — who is affected, what the impact is, and how they cope today.]
