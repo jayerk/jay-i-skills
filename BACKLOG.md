@@ -58,7 +58,7 @@ and [PM Skills](https://github.com/phuryn/pm-skills) (structured frameworks, dis
 | # | Status | Title | Description |
 |---|--------|-------|-------------|
 | 17 | `done` | Review `knowledge/principles.md` | Validated 10 principles against full profile. Added "In practice" sections to all. Strengthened #1 (systems/boundaries), #6 (teams as product), #9 (discovery ↔ system boundaries). |
-| 18 | `in-progress` | Review `knowledge/vocabulary.md` | Validate completeness: Team Topologies, lifecycle stages, Balanced Breakthrough, harvey balls, gearing ratio, health models, Opportunity Solution Tree, context engineering. Add missing terms from 8 work modes. |
+| 18 | `done` | Review `knowledge/vocabulary.md` | Validated and restructured. Added interaction modes, updated lifecycle stages (Concept→Launch→Growth→Maturity→Sunset), split Epic into Portfolio/Solution, restructured Agile at Scale into three subsections (Org Levels, Ceremonies, Governance), added Definition of Ready, removed HiPPO/Feature Factory/IP Iteration/Architectural Runway. |
 | 19 | `todo` | Review `knowledge/references.md` | Validate: Teresa Torres, Marty Cagan, Team Topologies, GSD, Superpowers, PM Skills, Rumelt, Reinertsen. Ensure format supports looking up the right framework for the right situation. |
 
 ### Phase 3 — Skills Review (P1)
