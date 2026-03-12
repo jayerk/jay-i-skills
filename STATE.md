@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** Phase 5 — Templates & Private Template Review (P2) complete. V1 buildout phases all done.
-**Focus:** V1 complete. Standalone items (#6b, #6c, #37, #38) and on-hold items remain.
+**Phase:** Phase 6 product standards complete through Wave 3. Wave 4 (cross-cutting) and Wave 5-6 (research) in progress.
+**Focus:** Copilot research prompt tooling complete. Ready to run prompts against internal sites and enterprise processes.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -23,16 +23,17 @@ to understand where things stand right now.
 - 4 frameworks — discovery, strategy, prioritization, execution (all reviewed)
 - 4 templates — plan, phase, context, summary (all reviewed)
 - 4 knowledge files — principles, vocabulary, references, behaviors-mindsets (all reviewed)
+- 5 research prompt files — copilot-prompts (39), sdlc-lookup-prompts (51), spm-lookup-prompts (41), i2i-lookup-prompts (47), overlap-dependency-mapping-prompt (1) = **178 total prompts + 1 Mermaid mapping prompt**
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
 - 1 slash command — `/repo-brief`
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template, community-content
 - Personal skills — soup-feast app design + process flow
 
-**What's next (Standalone items):**
-- #6b — Create `repo-init` meta skill
-- #6c — Create soup-feast CLAUDE.md
-- #37 — Create team & leadership behaviors/mindsets reference
-- #38 — Template branding and consistency pass
+**What's next:**
+- Wave 4 cross-cutting items (#63–#67) — dependencies map, applicability matrices, scorecard template, universal adoption path, sub-practice-to-repo map
+- Wave 5 (#68–#106) — run 39 internal artifact inventory prompts via Copilot
+- Wave 6 (#107–#110) — run SDLC/SPM/I2I prompts, generate overlap dependency map
+- Standalone: #6c (soup-feast CLAUDE.md), #38 (template branding)
 
 ---
 
@@ -46,6 +47,9 @@ to understand where things stand right now.
 | Phase 3 skills review | Complete. #20–#27 all done. | — |
 | Phase 4 frameworks review | Complete. #28–#31 all done. | — |
 | Phase 5 templates review | Complete. #32–#36 all done. | Standalone items remain |
+| Phase 6 product standards | Waves 1-3 complete (#39-#62). Wave 4 cross-cutting todo (#63-#67). | Wave 4 items |
+| Wave 5 internal artifact inventory | Prompt tooling complete (copilot-prompts.md). Items #68-#106 ready to run. | Run prompts in Copilot, fill summary table |
+| Wave 6 cross-process alignment | Prompt tooling complete (SDLC, SPM, I2I, overlap mapping). Items #107-#110 ready to run. | Run prompts against enterprise SharePoint sites |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
 
 ---
@@ -54,6 +58,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-12 | Copilot research prompt tooling complete. Created 5 prompt files (178 prompts + 1 Mermaid mapping prompt) across 4 research dimensions: internal artifacts (39 prompts in copilot-prompts.md), SDLC alignment (51 prompts in sdlc-lookup-prompts.md), SPM alignment (41 prompts in spm-lookup-prompts.md including assessment overlay), I2I alignment (47 prompts in i2i-lookup-prompts.md), and cross-process overlap dependency mapping (overlap-dependency-mapping-prompt.md). All use SharePoint site placeholders. Added Wave 6 (#107-#110) to BACKLOG.md. | Creates tooling for Waves 5-6 |
 | 2026-03-11 | Phase 5 Templates & Private Template Review complete. All 4 templates benchmarked against external best practices (Amazon PRFAQ, RFC patterns, sprint planning best practices). Consistent fix: added upstream artifact connections (strategic theme, value hypothesis, kill criteria), framework cross-references (Produces/Consumes), problem statement sections. Plan: added Problem, strategic fields, Current→Target State, Stakeholders. Phase: added risk carry-forward, team/capacity. Context: added Problem/Strategic Context, Success Criteria, Timeline. Summary: added Problem Recap, Value Hypothesis Check, Investment comparison. Private scaffold: added CLAUDE.md (required by downstream pattern), .gitignore, archive stubs. Created 6 Copilot prompts for internal vetting. Added #38 (template branding) to backlog. V1 buildout phases all complete. | Completes #32–#36, completes Phase 5 |
 | 2026-03-11 | Phase 4 Frameworks Review complete. All 4 frameworks reviewed against PM Skills walkthrough depth. Two-pass approach: first closed 14 product standard alignment gaps (personas, journey mapping, signal monitoring, OKR translation, north star metric, multi-year horizon, value hypotheses, kill criteria, flow readiness, value tracking, intake handoff, cross-functional sync, launch enablement, risk register). Then reviewed each framework: added When NOT to Use sections, vocabulary cross-references, author attributions, output format templates, fixed lifecycle stages to 5-stage model, made steps imperative. Discovery: added Portigal interview craft, Hall research method selection, actionable Phase 4. Strategy: added Helmer 7 Powers, S/M/W scoring guidance. Execution: added flow health monitoring, Definition of Ready. Prioritization: added D/F/V lens mapping, Cost of Delay reference. | Completes #28–#31, completes Phase 4 |
 | 2026-03-11 | Phase 3 Skills Review complete. All 8 work-mode skills reviewed: added vocabulary callouts, When NOT to Use sections, cross-references between skills, framework pointers. Fixed Balanced Breakthrough (D/F/V prioritization vs R/I/T capitalization) across all skills. Fixed lifecycle stages to 5-stage model. community-content split into work and pmi-buffalo contexts. Added organizational strategy playbook (A-D phases) to product-strategy. Added work hierarchy grain tables. | Completes #20–#27, completes Phase 3 |

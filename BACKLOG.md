@@ -204,6 +204,8 @@ Fleshes out the "how" for each sub-practice. Each item produces all 4 How-To dim
 
 Copilot-assisted validation of each Level 3 (Established) standard against existing internal artifacts (Confluence, SharePoint, Teams wikis). One prompt per standard. Purpose: inventory what already exists before creating anything new. Results feed into a heat map of coverage (what exists) x confidence (how complete the search was).
 
+**Prompt files created (2026-03-12):** All 39 research prompts written to `knowledge/copilot-prompts.md`. Ready to run in M365 Copilot. Summary table at the bottom of the file awaits results.
+
 **Pillar 1 — Customer-Centered Product Design**
 
 *Sub-practice 1: Customer & Market Insights*
@@ -298,6 +300,23 @@ Copilot-assisted validation of each Level 3 (Established) standard against exist
 | 104 | `todo` | Regular routines with clear purpose: refinement, roadmap review, stakeholder updates, retros | Meeting standards, routine calendar templates, meeting governance docs |
 | 105 | `todo` | Launch has a checklist — support, training, ops, and compliance are engaged before go-live | Launch checklists, release readiness templates, go-live process docs |
 | 106 | `todo` | Cross-functional syncs happen at key milestones | Cross-functional coordination processes, milestone review templates |
+
+#### Wave 6 — Cross-Process Alignment Research
+
+Copilot-assisted validation of each Level 3 standard against three enterprise processes: SDLC, SPM (Strategic Portfolio Management), and I2I (Idea to Implementation). Purpose: determine where product standards are already embedded in, conflict with, or fill gaps in existing enterprise processes. Results feed into a Mermaid dependency diagram for stakeholder conversations.
+
+**Prompt files created (2026-03-12):**
+- `knowledge/sdlc-lookup-prompts.md` — 51 prompts (39 standards × SDLC + 12 phase gate prompts)
+- `knowledge/spm-lookup-prompts.md` — 41 prompts (39 standards × SPM + assessment overlay + process inventory)
+- `knowledge/i2i-lookup-prompts.md` — 47 prompts (39 standards × I2I + 8 phase prompts)
+- `knowledge/overlap-dependency-mapping-prompt.md` — Mermaid diagram prompt (run after results collected)
+
+| # | Status | Title | Description |
+|---|--------|-------|-------------|
+| 107 | `todo` | Run SDLC lookup prompts | Execute 51 prompts against SDLC SharePoint site. Fill in summary tables. |
+| 108 | `todo` | Run SPM lookup prompts | Execute 41 prompts against SPM SharePoint site. Fill in summary tables including assessment overlay. |
+| 109 | `todo` | Run I2I lookup prompts | Execute 47 prompts against I2I SharePoint site. Fill in summary tables. |
+| 110 | `todo` | Generate overlap dependency map | Run Mermaid prompt with completed results from all four research sets. Produce stakeholder conversation artifact. |
 
 ---
 
