@@ -1009,4 +1009,11 @@ Two dependency maps document these relationships:
   when coaching teams on specific gaps — trace which prerequisites are missing
   and which downstream standards will suffer.
 
-Both maps were built using `frameworks/dependency-mapping/FRAMEWORK.md`.
+- **Applicability matrix** — `knowledge/product-standards-applicability.md`
+  Target maturity levels per standard, per lifecycle stage and product type.
+  Includes a "find your row" lookup and companion Mermaid views by lifecycle
+  stage (`product-standards-applicability-lifecycle.md`) and by pillar
+  (`product-standards-applicability-pillar.md`). Use this to determine which
+  standards to prioritize based on where your product is today.
+
+Both dependency maps were built using `frameworks/dependency-mapping/FRAMEWORK.md`.
