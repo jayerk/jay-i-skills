@@ -12,7 +12,7 @@ Companion to `product-standards-dependencies-adoption.md` (sub-practice level).
 ## How to Read This Map
 
 - **Nodes** are individual Level 3 standards, grouped by sub-practice and pillar
-- **Arrows** show cross-sub-practice dependencies only (within-sub-practice dependencies are implied by the rubric)
+- **Arrows** show cross-sub-practice dependencies only (within-sub-practice dependencies are in the Appendix — include that layer when coaching on where to start *within* a sub-practice)
 - **Line style** shows dependency type: solid = Knowledge, dashed = Artifact, dotted = Capability
 - **Edge labels** are abbreviated — full rationale in the relationship table below
 - This diagram is intentionally dense. It's a reference tool, not a presentation slide.
@@ -359,3 +359,81 @@ graph TD
 CEJ-c (design system in use) has no strong cross-sub-practice dependencies. It supports journey consistency and UI quality but operates independently of the dependency chain. Teams can adopt it at any wave without prerequisite concerns.
 
 ADP-e (sustainable pace monitoring) has no strong incoming cross-sub-practice dependencies. It's internally driven — the team monitors its own capacity regardless of other practices.
+
+---
+
+## Appendix: Within-Sub-Practice Dependencies
+
+> **Filter layer.** These relationships show the internal progression within each
+> sub-practice. The main reference view omits them because the maturity rubric
+> already implies the sequence. Include this layer when coaching a team on
+> *where to start within a sub-practice* — skip it when mapping cross-practice
+> dependencies.
+
+### Within-Sub-Practice Relationship Table
+
+| # | Source | Target | Rationale |
+|---|--------|--------|-----------|
+| **Customer & Market Insights** | | | |
+| W1 | CMI-a | CMI-b | You need regular conversations before a research repository makes sense. No interviews = nothing to store. |
+| W2 | CMI-a | CMI-d | Prototype feedback requires customer access. Teams without a regular conversation cadence struggle to recruit for prototype testing. |
+| W3 | CMI-d | CMI-c | Prototype feedback (before build) is a lighter-weight precursor to usability testing (before launch). Teams that validate prototypes first do sharper usability tests. |
+| **Segmentation & Personas** | | | |
+| W4 | SP-a | SP-c | You need behavior-based segments before you can reference them in decisions. Segments must exist before they can be used. |
+| W5 | SP-a | SP-b | Annual persona reviews require personas to review. Segment definition precedes the review cycle. |
+| **Customer & Employee Journeys** | | | |
+| W6 | CEJ-a | CEJ-b | Pain points tagged with journey context require journey maps to exist first. The map provides the context for tagging. |
+| W7 | — | CEJ-c | Design system operates independently. No internal prerequisite within CEJ. |
+| **Product Economic Insights** | | | |
+| W8 | PEI-d | PEI-a | The north star metric scopes which KPIs matter. Without it, teams track too many metrics or the wrong ones. |
+| W9 | PEI-a | PEI-b | Monthly KPI review reveals which cost and value drivers need deeper understanding. KPI awareness prompts unit economics investigation. |
+| W10 | PEI-a | PEI-c | You need to know your lagging KPIs before you can identify leading indicators that predict them. |
+| **Value-Based Sequencing** | | | |
+| W11 | VBS-a | VBS-b | Scoring on value/risk/effort creates the vocabulary for writing value hypotheses. Teams that score first write sharper hypotheses. |
+| W12 | VBS-a | VBS-c | Scoring produces the ranking. You can't have a ranked backlog without a scoring mechanism. |
+| W13 | VBS-c | VBS-d | Readiness checks happen on ranked items. You check readiness on things you've already decided to do next. |
+| W14 | VBS-c | VBS-e | Trade-off documentation happens when ranked items get deprioritized. Ranking creates the context for trade-off conversations. |
+| **Value Guardrails & Realization** | | | |
+| W15 | VGR-a | VGR-b | Guardrails on a dashboard provide the data for R/I/T allocation decisions. Without visibility, allocation is guesswork. |
+| W16 | VGR-b | VGR-c | R/I/T allocation creates the budget reality that makes kill criteria enforceable. "We can't afford this" requires knowing allocation. |
+| W17 | VGR-a | VGR-d | Post-launch value checks compare results against the dashboard. Guardrails define what "good" looks like; realization checks whether you got there. |
+| **Measurable Outcomes** | | | |
+| W18 | MO-a | MO-b | KPI targets derive from the falsifiable vision. "We'll know we've succeeded when [metric] hits [target]" requires the vision first. |
+| W19 | MO-a | MO-c | Connecting builds to outcomes requires stated outcomes. The vision provides the "what we expect to achieve" that planning connects to. |
+| W20 | MO-b | MO-d | Leading indicators are identified by asking "what predicts our lagging KPIs?" — which requires having defined KPIs with targets. |
+| **Strategy & Roadmap** | | | |
+| W21 | SR-a | SR-b | OKRs align to the strategic themes on the roadmap. Without a roadmap, OKRs lack strategic anchoring. |
+| W22 | SR-a | SR-c | Quarterly roadmap reviews require a roadmap to review. |
+| W23 | SR-b | SR-d | Teams explain strategy connection by pointing to OKRs. "Our work connects because it advances [OKR]." |
+| **Adaptive Delivery Plans** | | | |
+| W24 | ADP-a | ADP-b | Intake feeds refinement. Items enter through intake, then get refined. Intake defines what enters the system. |
+| W25 | ADP-b | ADP-c | Refined items are what sprints/waves pull from. Cadence without refinement means pulling unready work. |
+| W26 | ADP-c | ADP-d | Risk registers get reviewed at cadence checkpoints (wave boundaries, sprint reviews). Cadence creates the review moments. |
+| W27 | — | ADP-e | Sustainable pace monitoring operates independently. It's an internal health check, not sequenced by other ADP standards. |
+| **Routines for Activation** | | | |
+| W28 | RfA-a | RfA-b | Launch checklists are a specialized routine. The general "routines with clear purpose" practice provides the discipline that makes launch checklists stick. |
+| W29 | RfA-a | RfA-c | Cross-functional syncs are a specialized routine. General routine discipline precedes milestone-specific coordination. |
+
+### Internal Progression Summary
+
+Most sub-practices follow a **define → use → refine** arc:
+
+| Sub-Practice | Starting Standard | Why It's First |
+|---|---|---|
+| CMI | CMI-a (regular conversations) | Everything else requires customer access |
+| S&P | SP-a (behavior-based segments) | Can't reference or review what doesn't exist |
+| CEJ | CEJ-a (journey maps for key flows) | Pain point tagging needs a map to tag against |
+| PEI | PEI-d (north star metric) | Scopes which KPIs and economics matter |
+| VBS | VBS-a (score on value/risk/effort) | Scoring produces rankings, hypotheses, and trade-offs |
+| VGR | VGR-a (guardrails on dashboard) | Visibility enables allocation and kill decisions |
+| MO | MO-a (falsifiable vision) | Everything connects back to what you're trying to achieve |
+| S&R | SR-a (outcome roadmap) | OKRs, reviews, and team understanding anchor to the roadmap |
+| ADP | ADP-a (intake with eval criteria) | Work enters through intake, then flows through the system |
+| RfA | RfA-a (purposeful routines) | General routine discipline enables specialized routines |
+
+### Truly Independent Standards
+
+These standards have no within-sub-practice prerequisites. They can be adopted at any point:
+
+- **CEJ-c** (design system in use) — supports UI consistency but isn't sequenced by journey mapping
+- **ADP-e** (sustainable pace monitoring) — internal health metric, not dependent on delivery machinery
