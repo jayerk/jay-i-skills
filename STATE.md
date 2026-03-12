@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** Phase 6 — Product Standards (P1) in progress. Wave 4 #63 (dependencies map), #64 (applicability matrices), and #65 (scorecard template) complete. Wave 5-6 research prompt tooling complete.
-**Focus:** Wave 4 remaining (#66–#67). Copilot prompts ready to run against internal sites and enterprise processes. Standalone items (#6c, #38) remain.
+**Phase:** Phase 6 — Product Standards (P1) in progress. Wave 4 #63 (dependencies map), #64 (applicability matrices), #65 (scorecard template), and #66 (universal adoption path) complete. Wave 5-6 research prompt tooling complete.
+**Focus:** Wave 4 remaining (#67 sub-practice-to-repo map). Copilot prompts ready to run against internal sites and enterprise processes. Standalone items (#6c, #38) remain.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -25,6 +25,7 @@ to understand where things stand right now.
 - 4 knowledge files — principles, vocabulary, references, behaviors-mindsets (all reviewed)
 - 2 dependency maps — adoption view (sub-practice level) + reference view (standard level, with within-sub-practice appendix)
 - 3 applicability matrices — main (lookup + matrices + heatmap Mermaid), lifecycle view (5 stage diagrams), pillar view (3 progression diagrams)
+- 1 universal adoption path — team-type-aware, assessment-driven onboarding guide with 4-wave sequencing
 - 5 research prompt files — copilot-prompts (39), sdlc-lookup-prompts (51), spm-lookup-prompts (41), i2i-lookup-prompts (47), overlap-dependency-mapping-prompt (1) = **178 total prompts + 1 Mermaid mapping prompt**
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
 - 1 slash command — `/repo-brief`
@@ -32,7 +33,7 @@ to understand where things stand right now.
 - Personal skills — soup-feast app design + process flow
 
 **What's next:**
-- Wave 4 remaining: #66 (universal adoption path), #67 (sub-practice-to-repo map)
+- Wave 4 remaining: #67 (sub-practice-to-repo map)
 - Wave 5 (#68–#106) — run 39 internal artifact inventory prompts via Copilot
 - Wave 6 (#107–#110) — run SDLC/SPM/I2I prompts, generate overlap dependency map
 - Standalone: #6c (soup-feast CLAUDE.md), #38 (template branding)
@@ -49,7 +50,7 @@ to understand where things stand right now.
 | Phase 3 skills review | Complete. #20–#27 all done. | — |
 | Phase 4 frameworks review | Complete. #28–#31 all done. | — |
 | Phase 5 templates review | Complete. #32–#36 all done. | — |
-| Phase 6 Wave 4 cross-cutting | In progress. #63, #64, #65 done. #66–#67 remain. | #66 universal adoption path next |
+| Phase 6 Wave 4 cross-cutting | In progress. #63, #64, #65, #66 done. #67 remains. | #67 sub-practice-to-repo map next |
 | Wave 5 internal artifact inventory | Prompt tooling complete (copilot-prompts.md). Items #68-#106 ready to run. | Run prompts in Copilot, fill summary table |
 | Wave 6 cross-process alignment | Prompt tooling complete (SDLC, SPM, I2I, overlap mapping). Items #107-#110 ready to run. | Run prompts against enterprise SharePoint sites |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
@@ -60,6 +61,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-12 | Phase 6 Wave 4 #66 Universal adoption path complete. Created `knowledge/product-standards-adoption.md` — team-type-aware, assessment-driven adoption guide. Team Type × Domain matrix (4 TT types × 3 domains) shapes sub-practice emphasis per team context. Capacity sizing table (constrained/moderate/full) determines how many standards per cycle. 4-wave onboarding splits each wave into starting standards (10 entry points) and expansion standards (remaining 29), with per-team-type entry point recommendations within each wave. Three horizons (Month 1-2, 6 months, embedded) with specific milestones drawn from per-sub-practice adoption paths. Stall signals at each horizon with root cause diagnosis (most trace to Wave 1 gaps). System-level embedded state describes feedback loops, self-governance, and cross-team spread. 10-row quick reference table. Cross-references to scorecard, applicability, and dependency files. |  Completes #66, advances Phase 6 Wave 4 |
 | 2026-03-12 | Phase 6 Wave 4 #65 Scorecard template complete. Created `templates/SCORECARD-TEMPLATE.md` — two-level assessment template with 10-row sub-practice summary and 39-row standard-level detail section. Follows existing template conventions (blockquote metadata, TL;DR, Produces/Consumes). Includes embedded 10×5 target reference table, 5-step self-assessment instructions, scoring guide with gap interpretation and adoption wave prioritization logic, and cross-references to all product standards artifacts (rubrics, applicability matrix, dependency maps). Template is the 5th in the templates directory. | Completes #65, advances Phase 6 Wave 4 |
 | 2026-03-12 | Phase 6 Wave 4 #64 Applicability master matrices complete. Created 3 files: `product-standards-applicability.md` (main — "find your row" lookup table, sub-practice qualitative matrices, standard-level target maturity matrix for 39 standards × 5 lifecycle stages × 3 product types, 3 inline heatmap Mermaid diagrams per pillar), `product-standards-applicability-lifecycle.md` (5 Mermaid diagrams showing expected vs. stretch standards per lifecycle stage), `product-standards-applicability-pillar.md` (3 Mermaid diagrams showing lifecycle progression per pillar with arc pattern analysis). Target levels derived from existing qualitative Applicability descriptions, cross-validated against maturity rubrics and adoption wave sequence. Cross-referenced from `product-standards.md` Dependencies section. | Completes #64, advances Phase 6 Wave 4 |
 | 2026-03-12 | Copilot research prompt tooling complete. Created 5 prompt files (178 prompts + 1 Mermaid mapping prompt) across 4 research dimensions: internal artifacts (39 prompts in copilot-prompts.md), SDLC alignment (51 prompts in sdlc-lookup-prompts.md), SPM alignment (41 prompts in spm-lookup-prompts.md including assessment overlay), I2I alignment (47 prompts in i2i-lookup-prompts.md), and cross-process overlap dependency mapping (overlap-dependency-mapping-prompt.md). All use SharePoint site placeholders. Added Wave 6 (#107-#110) to BACKLOG.md. | Creates tooling for Waves 5-6 |
