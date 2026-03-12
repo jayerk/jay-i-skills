@@ -988,3 +988,25 @@ Routines make coordination reliable instead of accidental. Use `execution/FRAMEW
 - **Getting started (Month 1-2):** Define purpose for each existing meeting. Add a launch checklist (even a simple one). Start tracking retro action items.
 - **Good at 6 months:** Routine calendar with clear ownership. Launch tiers defined and applied. Cross-functional syncs at milestones. Retro actions consistently closed.
 - **Embedded (12+ months):** Team evolves routines based on what's working — adds, drops, changes cadence with documented rationale. Launch process trusted by stakeholders. Routines produce decisions, not just discussions.
+
+---
+
+## Cross-Cutting: Dependencies Between Sub-Practices
+
+The 10 sub-practices are not independent — they form a dependency network where
+skipping prerequisites creates dependency debt (surface-level compliance without
+real capability).
+
+Two dependency maps document these relationships:
+
+- **Adoption view** — `knowledge/product-standards-dependencies-adoption.md`
+  10 sub-practice nodes grouped by pillar. Shows dependency types and strengths.
+  Includes a 4-wave recommended adoption sequence. Use this to decide where teams
+  should start and what to sequence next.
+
+- **Reference view** — `knowledge/product-standards-dependencies-reference.md`
+  ~39 Level 3 standard nodes with all cross-sub-practice dependencies. Use this
+  when coaching teams on specific gaps — trace which prerequisites are missing
+  and which downstream standards will suffer.
+
+Both maps were built using `frameworks/dependency-mapping/FRAMEWORK.md`.

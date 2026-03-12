@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** Phase 5 — Templates & Private Template Review (P2) complete. V1 buildout phases all done.
-**Focus:** V1 complete. Standalone items (#6b, #6c, #37, #38) and on-hold items remain.
+**Phase:** Phase 6 — Product Standards (P1) in progress. Wave 4 item #63 (dependencies map) complete.
+**Focus:** Phase 6 Wave 4 cross-cutting items (#64–#67). Standalone items (#6c, #38) remain.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -20,18 +20,21 @@ to understand where things stand right now.
 - SKILL-CATALOG.md — full skill inventory extracted from CLAUDE.md
 - 3 personas — work, pmi-buffalo, personal (all have `_persona.md`)
 - 8 work-mode skills — all reviewed, validated, cross-referenced
-- 4 frameworks — discovery, strategy, prioritization, execution (all reviewed)
+- 5 frameworks — discovery, strategy, prioritization, execution, dependency-mapping (all reviewed)
 - 4 templates — plan, phase, context, summary (all reviewed)
 - 4 knowledge files — principles, vocabulary, references, behaviors-mindsets (all reviewed)
+- 2 dependency maps — adoption view (sub-practice level) + reference view (standard level)
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
 - 1 slash command — `/repo-brief`
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template, community-content
 - Personal skills — soup-feast app design + process flow
 
-**What's next (Standalone items):**
-- #6b — Create `repo-init` meta skill
+**What's next (Phase 6 Wave 4 remaining + Standalone):**
+- #64 — Applicability master matrices
+- #65 — Scorecard template
+- #66 — Universal adoption path
+- #67 — Sub-practice-to-repo map
 - #6c — Create soup-feast CLAUDE.md
-- #37 — Create team & leadership behaviors/mindsets reference
 - #38 — Template branding and consistency pass
 
 ---
@@ -45,7 +48,8 @@ to understand where things stand right now.
 | Phase 2 knowledge base review | Complete. #17–#19 done. | — |
 | Phase 3 skills review | Complete. #20–#27 all done. | — |
 | Phase 4 frameworks review | Complete. #28–#31 all done. | — |
-| Phase 5 templates review | Complete. #32–#36 all done. | Standalone items remain |
+| Phase 5 templates review | Complete. #32–#36 all done. | — |
+| Phase 6 Wave 4 cross-cutting | In progress. #63 done. #64–#67 remain. | #64 applicability matrices next |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
 
 ---
@@ -54,6 +58,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-12 | Phase 6 Wave 4 #63 Dependencies map complete. Created `frameworks/dependency-mapping/FRAMEWORK.md` as the 5th reusable framework — structured methodology for identifying, classifying, and visualizing dependencies with a 4+1 type taxonomy (Knowledge, Artifact, Capability, Complementary, Sequencing), 3-level strength scale (Strong/Moderate/Light), and dependency debt concept. Applied the framework to product standards: produced adoption-view map (23 sub-practice relationships, 4-wave adoption sequence) and reference-view map (38 standard-level cross-references with coaching guide). Updated vocabulary with 5 new terms (Dependency Debt, Knowledge/Artifact/Capability/Complementary Dependency). Updated CLAUDE.md frameworks table (4→5). Added Dependencies cross-reference section to product-standards.md. | Completes #63, advances Phase 6 Wave 4 |
 | 2026-03-11 | Phase 5 Templates & Private Template Review complete. All 4 templates benchmarked against external best practices (Amazon PRFAQ, RFC patterns, sprint planning best practices). Consistent fix: added upstream artifact connections (strategic theme, value hypothesis, kill criteria), framework cross-references (Produces/Consumes), problem statement sections. Plan: added Problem, strategic fields, Current→Target State, Stakeholders. Phase: added risk carry-forward, team/capacity. Context: added Problem/Strategic Context, Success Criteria, Timeline. Summary: added Problem Recap, Value Hypothesis Check, Investment comparison. Private scaffold: added CLAUDE.md (required by downstream pattern), .gitignore, archive stubs. Created 6 Copilot prompts for internal vetting. Added #38 (template branding) to backlog. V1 buildout phases all complete. | Completes #32–#36, completes Phase 5 |
 | 2026-03-11 | Phase 4 Frameworks Review complete. All 4 frameworks reviewed against PM Skills walkthrough depth. Two-pass approach: first closed 14 product standard alignment gaps (personas, journey mapping, signal monitoring, OKR translation, north star metric, multi-year horizon, value hypotheses, kill criteria, flow readiness, value tracking, intake handoff, cross-functional sync, launch enablement, risk register). Then reviewed each framework: added When NOT to Use sections, vocabulary cross-references, author attributions, output format templates, fixed lifecycle stages to 5-stage model, made steps imperative. Discovery: added Portigal interview craft, Hall research method selection, actionable Phase 4. Strategy: added Helmer 7 Powers, S/M/W scoring guidance. Execution: added flow health monitoring, Definition of Ready. Prioritization: added D/F/V lens mapping, Cost of Delay reference. | Completes #28–#31, completes Phase 4 |
 | 2026-03-11 | Phase 3 Skills Review complete. All 8 work-mode skills reviewed: added vocabulary callouts, When NOT to Use sections, cross-references between skills, framework pointers. Fixed Balanced Breakthrough (D/F/V prioritization vs R/I/T capitalization) across all skills. Fixed lifecycle stages to 5-stage model. community-content split into work and pmi-buffalo contexts. Added organizational strategy playbook (A-D phases) to product-strategy. Added work hierarchy grain tables. | Completes #20–#27, completes Phase 3 |

@@ -39,6 +39,11 @@
 | **Scoring Rubric** | A structured matrix that defines what "good" looks like across multiple dimensions, with explicit criteria for each score level. Turns subjective assessment into consistent, transparent evaluation. |
 | **Assessment Dimensions** | The specific axes along which a product, team, or capability is evaluated. Examples: customer value, technical quality, strategic alignment, operational efficiency. Dimensions should be orthogonal — each measures something distinct. |
 | **Maturity Model** | A leveled progression (typically 1–5) that describes capability stages from ad hoc to optimized. Each level has observable behaviors, not aspirational adjectives. Used to diagnose current state and define growth targets. |
+| **Dependency Debt** | When teams skip prerequisite practices and build on shaky foundations. The target practice produces theater — surface-level compliance without real capability. Accumulates silently; surfaces when teams try to advance maturity and discover missing foundations. Parallels technical debt: easy to accrue, expensive to pay down, invisible until it isn't. |
+| **Knowledge Dependency** | A relationship where understanding from one practice is required before another practice makes sense. Without the mental model the source provides, the target is followed mechanically. |
+| **Artifact Dependency** | A relationship where output from one practice feeds directly into another. The target needs the source's deliverable as an input. |
+| **Capability Dependency** | A relationship where the organizational muscle built by practicing one thing is needed before another is feasible. Not about deliverables — about the team's ability. |
+| **Complementary Dependency** | A bidirectional relationship where two practices amplify each other with no strict ordering. Doing either one well makes the other more effective. |
 | **Force-Rank** | Creating a strict priority order with no ties. When scores are close, use a tiebreaker — usually strategic alignment. Prevents the "everything is P1" trap. |
 
 ## Strategy
