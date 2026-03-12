@@ -7,8 +7,8 @@ to understand where things stand right now.
 
 ## Current Position
 
-**Phase:** Phase 6 — Product Standards (P1) in progress. Wave 4 #63 (dependencies map) and #64 (applicability matrices) complete. Wave 5-6 research prompt tooling complete.
-**Focus:** Wave 4 remaining (#65–#67). Copilot prompts ready to run against internal sites and enterprise processes. Standalone items (#6c, #38) remain.
+**Phase:** Phase 6 — Product Standards (P1) in progress. Wave 4 #63 (dependencies map), #64 (applicability matrices), and #65 (scorecard template) complete. Wave 5-6 research prompt tooling complete.
+**Focus:** Wave 4 remaining (#66–#67). Copilot prompts ready to run against internal sites and enterprise processes. Standalone items (#6c, #38) remain.
 
 **What exists today:**
 - PROJECT.md — vision, identity, design principles, upstream influences
@@ -21,7 +21,7 @@ to understand where things stand right now.
 - 3 personas — work, pmi-buffalo, personal (all have `_persona.md`)
 - 8 work-mode skills — all reviewed, validated, cross-referenced
 - 5 frameworks — discovery, strategy, prioritization, execution, dependency-mapping (all reviewed)
-- 4 templates — plan, phase, context, summary (all reviewed)
+- 5 templates — plan, phase, context, summary, scorecard (all reviewed)
 - 4 knowledge files — principles, vocabulary, references, behaviors-mindsets (all reviewed)
 - 2 dependency maps — adoption view (sub-practice level) + reference view (standard level, with within-sub-practice appendix)
 - 3 applicability matrices — main (lookup + matrices + heatmap Mermaid), lifecycle view (5 stage diagrams), pillar view (3 progression diagrams)
@@ -32,7 +32,7 @@ to understand where things stand right now.
 - Personal skills — soup-feast app design + process flow
 
 **What's next:**
-- Wave 4 remaining: #65 (scorecard template), #66 (universal adoption path), #67 (sub-practice-to-repo map)
+- Wave 4 remaining: #66 (universal adoption path), #67 (sub-practice-to-repo map)
 - Wave 5 (#68–#106) — run 39 internal artifact inventory prompts via Copilot
 - Wave 6 (#107–#110) — run SDLC/SPM/I2I prompts, generate overlap dependency map
 - Standalone: #6c (soup-feast CLAUDE.md), #38 (template branding)
@@ -49,7 +49,7 @@ to understand where things stand right now.
 | Phase 3 skills review | Complete. #20–#27 all done. | — |
 | Phase 4 frameworks review | Complete. #28–#31 all done. | — |
 | Phase 5 templates review | Complete. #32–#36 all done. | — |
-| Phase 6 Wave 4 cross-cutting | In progress. #63, #64 done. #65–#67 remain. | #65 scorecard template next |
+| Phase 6 Wave 4 cross-cutting | In progress. #63, #64, #65 done. #66–#67 remain. | #66 universal adoption path next |
 | Wave 5 internal artifact inventory | Prompt tooling complete (copilot-prompts.md). Items #68-#106 ready to run. | Run prompts in Copilot, fill summary table |
 | Wave 6 cross-process alignment | Prompt tooling complete (SDLC, SPM, I2I, overlap mapping). Items #107-#110 ready to run. | Run prompts against enterprise SharePoint sites |
 | Original backlog reconciliation | Complete. #1–#8 resolved. #6b, #6c kept as standalone todos. | — |
@@ -60,6 +60,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-12 | Phase 6 Wave 4 #65 Scorecard template complete. Created `templates/SCORECARD-TEMPLATE.md` — two-level assessment template with 10-row sub-practice summary and 39-row standard-level detail section. Follows existing template conventions (blockquote metadata, TL;DR, Produces/Consumes). Includes embedded 10×5 target reference table, 5-step self-assessment instructions, scoring guide with gap interpretation and adoption wave prioritization logic, and cross-references to all product standards artifacts (rubrics, applicability matrix, dependency maps). Template is the 5th in the templates directory. | Completes #65, advances Phase 6 Wave 4 |
 | 2026-03-12 | Phase 6 Wave 4 #64 Applicability master matrices complete. Created 3 files: `product-standards-applicability.md` (main — "find your row" lookup table, sub-practice qualitative matrices, standard-level target maturity matrix for 39 standards × 5 lifecycle stages × 3 product types, 3 inline heatmap Mermaid diagrams per pillar), `product-standards-applicability-lifecycle.md` (5 Mermaid diagrams showing expected vs. stretch standards per lifecycle stage), `product-standards-applicability-pillar.md` (3 Mermaid diagrams showing lifecycle progression per pillar with arc pattern analysis). Target levels derived from existing qualitative Applicability descriptions, cross-validated against maturity rubrics and adoption wave sequence. Cross-referenced from `product-standards.md` Dependencies section. | Completes #64, advances Phase 6 Wave 4 |
 | 2026-03-12 | Copilot research prompt tooling complete. Created 5 prompt files (178 prompts + 1 Mermaid mapping prompt) across 4 research dimensions: internal artifacts (39 prompts in copilot-prompts.md), SDLC alignment (51 prompts in sdlc-lookup-prompts.md), SPM alignment (41 prompts in spm-lookup-prompts.md including assessment overlay), I2I alignment (47 prompts in i2i-lookup-prompts.md), and cross-process overlap dependency mapping (overlap-dependency-mapping-prompt.md). All use SharePoint site placeholders. Added Wave 6 (#107-#110) to BACKLOG.md. | Creates tooling for Waves 5-6 |
 | 2026-03-12 | Phase 6 Wave 4 #63 Dependencies map complete. Created `frameworks/dependency-mapping/FRAMEWORK.md` as the 5th reusable framework — structured methodology for identifying, classifying, and visualizing dependencies with a 4+1 type taxonomy (Knowledge, Artifact, Capability, Complementary, Sequencing), 3-level strength scale (Strong/Moderate/Light), and dependency debt concept. Applied the framework to product standards: produced adoption-view map (23 sub-practice relationships, 4-wave adoption sequence) and reference-view map (38 standard-level cross-references with coaching guide). Reference view includes within-sub-practice dependency appendix (29 internal progressions, LR Mermaid diagram, starting-standard summary table, 2 isolated standards). Updated vocabulary with 5 new terms (Dependency Debt, Knowledge/Artifact/Capability/Complementary Dependency). Updated CLAUDE.md frameworks table (4→5). Added Dependencies cross-reference section to product-standards.md. | Completes #63, advances Phase 6 Wave 4 |
