@@ -36,7 +36,7 @@ to understand where things stand right now.
 **What's next:**
 - Wave 5 (#68–#106) — run 39 internal artifact inventory prompts via Copilot
 - Wave 6 (#107–#110) — run SDLC/SPM/I2I prompts, generate overlap dependency map
-- Standalone: #6c (soup-feast CLAUDE.md), #38 (template branding)
+- Standalone: #38 (template branding)
 
 ---
 
@@ -61,6 +61,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-12 | Standalone #6c soup-feast CLAUDE.md complete. Created `.claude/skills/personal/soup-feast/CLAUDE.md` — downstream pointer with personal context persona, both design docs (app-design + process-flow), internal-tooling skill cross-reference, tech stack summary (React/Vite, Supabase, Twilio, Vercel), and key design decisions (no-login tokens, ranked-choice voting, campaign system, mobile-first). Ready to copy into soup-feast repo root when cloned. | Completes #6c |
 | 2026-03-12 | Phase 6 Wave 4 #67 Sub-practice-to-repo map complete. Created `knowledge/product-standards-repo-map.md` — 10-row routing table mapping each sub-practice to its primary framework, primary skill, key knowledge files, and per-level coaching guidance (Level 1–2 entry point, Level 3 next step). Secondary skill cross-reference table covers work-mode handoffs (PRD writing for Pillar 1, executive storytelling for Pillar 2, stakeholder navigation for Pillar 3 strategy, internal tooling for Pillar 3 delivery). Cross-referenced from `product-standards.md` Dependencies section and `SCORECARD-TEMPLATE.md` Cross-References table. Completes Wave 4 — all 5 cross-cutting items done. | Completes #67, completes Phase 6 Wave 4 |
 | 2026-03-12 | Phase 6 Wave 4 #66 Universal adoption path complete. Created `knowledge/product-standards-adoption.md` — team-type-aware, assessment-driven adoption guide. Team Type × Domain matrix (4 TT types × 3 domains) shapes sub-practice emphasis per team context. Capacity sizing table (constrained/moderate/full) determines how many standards per cycle. 4-wave onboarding splits each wave into starting standards (10 entry points) and expansion standards (remaining 29), with per-team-type entry point recommendations within each wave. Three horizons (Month 1-2, 6 months, embedded) with specific milestones drawn from per-sub-practice adoption paths. Stall signals at each horizon with root cause diagnosis (most trace to Wave 1 gaps). System-level embedded state describes feedback loops, self-governance, and cross-team spread. 10-row quick reference table. Cross-references to scorecard, applicability, and dependency files. |  Completes #66, advances Phase 6 Wave 4 |
 | 2026-03-12 | Phase 6 Wave 4 #65 Scorecard template complete. Created `templates/SCORECARD-TEMPLATE.md` — two-level assessment template with 10-row sub-practice summary and 39-row standard-level detail section. Follows existing template conventions (blockquote metadata, TL;DR, Produces/Consumes). Includes embedded 10×5 target reference table, 5-step self-assessment instructions, scoring guide with gap interpretation and adoption wave prioritization logic, and cross-references to all product standards artifacts (rubrics, applicability matrix, dependency maps). Template is the 5th in the templates directory. | Completes #65, advances Phase 6 Wave 4 |

@@ -327,7 +327,7 @@ Items not part of the phased buildout but still tracked.
 | # | Priority | Status | Title | Description |
 |---|----------|--------|-------|-------------|
 | 6b | P1 | `done` | Create `repo-init` meta skill | Generate downstream CLAUDE.md with pointer section pre-filled |
-| 6c | P1 | `todo` | Create soup-feast CLAUDE.md | Downstream pointer section per the pattern documented in CLAUDE.md |
+| 6c | P1 | `done` | Create soup-feast CLAUDE.md | Created `.claude/skills/personal/soup-feast/CLAUDE.md` — downstream pointer with personal context persona, both design docs, internal-tooling skill reference, tech stack summary, and key design decisions. Ready to copy into the soup-feast repo root. |
 | 37 | P2 | `done` | Create team & leadership behaviors/mindsets reference | Created as `knowledge/behaviors-mindsets.md` in the public repo (nothing proprietary). Four sections: team behaviors (4 categories, 16 behaviors), team mindsets (8 mindset/anti-pattern pairs), leadership behaviors (4 categories, 16 behaviors), leadership mindsets (8 mindset/anti-pattern pairs). Cross-referenced to coaching-frameworks, gap-analysis, stakeholder-navigation skills. |
 | 38 | P2 | `todo` | Template branding and consistency pass | Establish consistent visual branding across all templates: header format, metadata fields, section naming conventions, table formatting, status markers. Ensures templates feel like a unified system, not independent documents. |
 
