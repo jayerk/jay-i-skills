@@ -109,7 +109,7 @@ Full catalog with planned skills: `.claude/SKILL-CATALOG.md`
 
 ### Frameworks
 
-Four reusable methodology walkthroughs. Context-neutral, persona-independent.
+Five reusable methodology walkthroughs. Context-neutral, persona-independent.
 Skills reference these when structured thinking is needed.
 
 | Framework | Path | When to Use |
@@ -118,6 +118,7 @@ Skills reference these when structured thinking is needed.
 | Strategy | `frameworks/strategy/FRAMEWORK.md` | Diagnosing situations, setting direction, making coherent choices |
 | Prioritization | `frameworks/prioritization/FRAMEWORK.md` | Scoring options, allocating effort (Run/Improve/Transform) |
 | Execution | `frameworks/execution/FRAMEWORK.md` | Discuss → Plan → Execute → Verify |
+| Dependency Mapping | `frameworks/dependency-mapping/FRAMEWORK.md` | Identifying, classifying, and visualizing dependencies between practices, capabilities, or work items |
 
 ### Knowledge
 
