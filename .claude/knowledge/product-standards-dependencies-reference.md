@@ -414,6 +414,112 @@ ADP-e (sustainable pace monitoring) has no strong incoming cross-sub-practice de
 | W28 | RfA-a | RfA-b | Launch checklists are a specialized routine. The general "routines with clear purpose" practice provides the discipline that makes launch checklists stick. |
 | W29 | RfA-a | RfA-c | Cross-functional syncs are a specialized routine. General routine discipline precedes milestone-specific coordination. |
 
+### Within-Sub-Practice Diagram
+
+Each sub-practice is a self-contained cluster. Arrows show internal progression.
+Standalone nodes (CEJ-c, ADP-e) float without incoming edges. Compare this to
+the main reference view above — no cross-sub-practice edges appear here.
+
+```mermaid
+graph LR
+    %% Styling
+    classDef cmi fill:#4A90D9,color:#fff,stroke:#2E5C8A,font-size:11px
+    classDef sp fill:#5B9BD5,color:#fff,stroke:#3A6E9A,font-size:11px
+    classDef cej fill:#6CAED8,color:#fff,stroke:#4A7FA0,font-size:11px
+    classDef pei fill:#D4A843,color:#fff,stroke:#8A6E2A,font-size:11px
+    classDef vbs fill:#C9963B,color:#fff,stroke:#7A5E20,font-size:11px
+    classDef vgr fill:#BE8433,color:#fff,stroke:#6A4E16,font-size:11px
+    classDef mo fill:#5BA55B,color:#fff,stroke:#3A6E3A,font-size:11px
+    classDef sr fill:#4E944E,color:#fff,stroke:#2E6E2E,font-size:11px
+    classDef adp fill:#418341,color:#fff,stroke:#226222,font-size:11px
+    classDef rfa fill:#347234,color:#fff,stroke:#165616,font-size:11px
+    classDef isolated fill:#888,color:#fff,stroke:#555,font-size:11px,stroke-dasharray: 5 5
+
+    subgraph CMI_sub["1. Customer & Market Insights"]
+        CMI_a["CMI-a<br/>Regular customer<br/>conversations"] --> CMI_b["CMI-b<br/>Stored &<br/>findable insights"]
+        CMI_a --> CMI_d["CMI-d<br/>Prototype feedback<br/>before building"]
+        CMI_d --> CMI_c["CMI-c<br/>Usability testing<br/>before launch"]
+    end
+
+    subgraph SP_sub["2. Segmentation & Personas"]
+        SP_a["SP-a<br/>Behavior/needs-<br/>based segments"] --> SP_c["SP-c<br/>Segments referenced<br/>in decisions"]
+        SP_a --> SP_b["SP-b<br/>Personas reviewed<br/>yearly"]
+    end
+
+    subgraph CEJ_sub["3. Customer & Employee Journeys"]
+        CEJ_a["CEJ-a<br/>Journey maps<br/>for key flows"] --> CEJ_b["CEJ-b<br/>Pain points in<br/>backlog w/ context"]
+        CEJ_c["CEJ-c<br/>Design system<br/>in use"]
+    end
+
+    subgraph PEI_sub["4. Product Economic Insights"]
+        PEI_d["PEI-d<br/>North star metric<br/>stated"] --> PEI_a["PEI-a<br/>Key KPIs<br/>reviewed monthly"]
+        PEI_a --> PEI_b["PEI-b<br/>Unit economics<br/>documented"]
+        PEI_a --> PEI_c["PEI-c<br/>Leading + lagging<br/>indicators"]
+    end
+
+    subgraph VBS_sub["5. Value-Based Sequencing"]
+        VBS_a["VBS-a<br/>Score on value/<br/>risk/effort"] --> VBS_b["VBS-b<br/>Value hypothesis<br/>per item"]
+        VBS_a --> VBS_c["VBS-c<br/>Ranked backlog<br/>no ties"]
+        VBS_c --> VBS_d["VBS-d<br/>Readiness check<br/>before commit"]
+        VBS_c --> VBS_e["VBS-e<br/>Trade-offs<br/>documented"]
+    end
+
+    subgraph VGR_sub["6. Value Guardrails & Realization"]
+        VGR_a["VGR-a<br/>Guardrails on<br/>dashboard"] --> VGR_b["VGR-b<br/>R/I/T reviewed<br/>quarterly"]
+        VGR_b --> VGR_c["VGR-c<br/>Kill criteria<br/>enforced"]
+        VGR_a --> VGR_d["VGR-d<br/>Post-launch<br/>value check"]
+    end
+
+    subgraph MO_sub["7. Measurable Outcomes"]
+        MO_a["MO-a<br/>Falsifiable<br/>vision"] --> MO_b["MO-b<br/>KPIs w/ targets<br/>reviewed monthly"]
+        MO_a --> MO_c["MO-c<br/>Builds connected<br/>to outcomes"]
+        MO_b --> MO_d["MO-d<br/>Leading + lagging<br/>tracked"]
+    end
+
+    subgraph SR_sub["8. Strategy & Roadmap"]
+        SR_a["SR-a<br/>Now/Next/Later<br/>outcome roadmap"] --> SR_b["SR-b<br/>OKRs aligned<br/>to themes"]
+        SR_a --> SR_c["SR-c<br/>Quarterly<br/>roadmap review"]
+        SR_b --> SR_d["SR-d<br/>Team explains<br/>strategy link"]
+    end
+
+    subgraph ADP_sub["9. Adaptive Delivery Plans"]
+        ADP_a["ADP-a<br/>Intake w/<br/>eval criteria"] --> ADP_b["ADP-b<br/>Regular<br/>refinement"]
+        ADP_b --> ADP_c["ADP-c<br/>Wave/sprint<br/>cadence"]
+        ADP_c --> ADP_d["ADP-d<br/>Risk register<br/>at checkpoints"]
+        ADP_e["ADP-e<br/>Sustainable<br/>pace monitoring"]
+    end
+
+    subgraph RfA_sub["10. Routines for Activation"]
+        RfA_a["RfA-a<br/>Purposeful<br/>routines"] --> RfA_b["RfA-b<br/>Launch<br/>checklist"]
+        RfA_a --> RfA_c["RfA-c<br/>Cross-functional<br/>milestone syncs"]
+    end
+
+    %% Apply classes
+    class CMI_a,CMI_b,CMI_c,CMI_d cmi
+    class SP_a,SP_b,SP_c sp
+    class CEJ_a,CEJ_b cej
+    class CEJ_c isolated
+    class PEI_a,PEI_b,PEI_c,PEI_d pei
+    class VBS_a,VBS_b,VBS_c,VBS_d,VBS_e vbs
+    class VGR_a,VGR_b,VGR_c,VGR_d vgr
+    class MO_a,MO_b,MO_c,MO_d mo
+    class SR_a,SR_b,SR_c,SR_d sr
+    class ADP_a,ADP_b,ADP_c,ADP_d adp
+    class ADP_e isolated
+    class RfA_a,RfA_b,RfA_c rfa
+```
+
+### Legend (Within-Sub-Practice Diagram)
+
+| Visual | Meaning |
+|--------|---------|
+| `→` arrow | Internal progression (do source before target) |
+| Colored node | Active standard, part of the internal sequence |
+| Grey dashed-border node | Independent — no internal prerequisite |
+| Left-to-right flow | Reading order matches progression order |
+
+---
+
 ### Internal Progression Summary
 
 Most sub-practices follow a **define → use → refine** arc:
