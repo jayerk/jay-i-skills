@@ -1,6 +1,7 @@
 # Plan: [Initiative Name]
 
-> Created: [Date]
+> **jay-i-skills template** · Plan
+> Date: [YYYY-MM-DD]
 > Author: [Name]
 > Status: Draft | In Review | Approved | Executing | Complete
 > Produces: Execution artifact for `frameworks/execution/FRAMEWORK.md` Phase 2

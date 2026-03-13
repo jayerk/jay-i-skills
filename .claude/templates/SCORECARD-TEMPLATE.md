@@ -1,7 +1,8 @@
 # Scorecard: [Product Name]
 
-> Assessed by: [Name]
-> Date: [Date]
+> **jay-i-skills template** · Scorecard
+> Date: [YYYY-MM-DD]
+> Author: [Name]
 > Lifecycle stage: Concept | Launch | Growth | Maturity | Sunset
 > Product type: Customer-Facing | Internal Platform | Regulatory
 > Status: Draft | Baseline | Reassessment

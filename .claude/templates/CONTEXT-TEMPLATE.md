@@ -1,7 +1,9 @@
 # Context: [Initiative or Phase Name]
 
-> Created: [Date]
-> Purpose: Capture implementation decisions and constraints before planning begins.
+> **jay-i-skills template** · Context
+> Date: [YYYY-MM-DD]
+> Author: [Name]
+> Status: Draft | Ready | Superseded
 > Related plan: [Link to plan document]
 > Produces: Pre-planning context for `frameworks/execution/FRAMEWORK.md` Phase 1 (Discuss)
 > Consumes: Discovery insights, strategy direction, prioritization output

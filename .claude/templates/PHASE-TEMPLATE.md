@@ -1,9 +1,11 @@
 # Phase [N]: [Phase Name]
 
+> **jay-i-skills template** · Phase
 > Part of: [Parent Plan Name]
 > Status: Not Started | In Progress | Complete
-> Started: [Date]
-> Completed: [Date]
+> Date started: [YYYY-MM-DD]
+> Date completed: [YYYY-MM-DD]
+> Author: [Name]
 > Produces: Phase-level execution artifact for `frameworks/execution/FRAMEWORK.md` Phase 3
 
 ## Objective
