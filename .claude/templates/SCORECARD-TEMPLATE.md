@@ -262,3 +262,4 @@ the lowest wave come first.
 | Applicability by lifecycle stage (expected vs. stretch) | `knowledge/product-standards-applicability-lifecycle.md` | Understanding which standards are expected now vs. stretch |
 | Dependency map — adoption sequence | `knowledge/product-standards-dependencies-adoption.md` | Prioritization — which sub-practices to fix first |
 | Dependency map — standard-level | `knowledge/product-standards-dependencies-reference.md` | Coaching — tracing root causes when a standard is weak |
+| Sub-practice to repo map | `knowledge/product-standards-repo-map.md` | Action routing — which framework, skill, and knowledge file to load per gap |

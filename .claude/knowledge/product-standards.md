@@ -1016,4 +1016,9 @@ Two dependency maps document these relationships:
   (`product-standards-applicability-pillar.md`). Use this to determine which
   standards to prioritize based on where your product is today.
 
+- **Sub-practice to repo map** — `knowledge/product-standards-repo-map.md`
+  For each sub-practice, the primary framework, primary skill, and key knowledge
+  files to load when a team scores low. Includes coaching guidance per maturity
+  level and secondary skill cross-references.
+
 Both dependency maps were built using `frameworks/dependency-mapping/FRAMEWORK.md`.
