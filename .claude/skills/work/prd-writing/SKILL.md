@@ -87,6 +87,10 @@ For each requirement:
 - Is the scope achievable given known constraints?
 - Does the PRD connect back to the strategic context?
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Format
 
 ```markdown

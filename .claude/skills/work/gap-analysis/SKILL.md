@@ -96,6 +96,10 @@ The gap analysis should produce:
 3. **Investment allocation** — Balanced Breakthrough breakdown with justification
 4. **Action plan** — top 5-10 items with proposed next steps and owners
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Format
 
 ```markdown

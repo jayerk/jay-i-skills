@@ -80,6 +80,10 @@ Roadmap time horizons depend on the level you're operating at. Match the grain t
 
 The default Now / Next / Later structure from the strategy framework applies at any level — just scale the time windows to match.
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Formats
 
 ### Vision Document

@@ -116,6 +116,10 @@ For workshops:
 [Specific action the reader can take]
 ```
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ### Anti-Patterns
 
 - **Theory without practice** — presenting concepts without showing how to apply them. Always include a "try this" element.

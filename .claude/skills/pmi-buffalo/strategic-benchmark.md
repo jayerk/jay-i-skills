@@ -306,6 +306,10 @@ synthesis is the single highest-priority output of the entire analysis.
 
 ---
 
+## Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Pre-Delivery Review Checklist
 
 Before sharing output with the board or any stakeholder, the human reviewer confirms each item:

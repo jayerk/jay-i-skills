@@ -11,6 +11,7 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 |---|---|---|---|
 | `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task | Given a BACKLOG.md in any repo, produces a focused session brief for the next prioritized task | Implemented |
 | `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section pre-filled | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Implemented |
+| `writing-triage` | Post-generation quality gate — scans output for AI writing signals and corrects before delivery | Given any skill output, detects AI writing patterns and rewrites to correct them before delivery | Implemented |
 
 ## PMI Buffalo
 
@@ -19,7 +20,6 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 | `strategic-benchmark` | Compare chapter metrics vs. peer chapters — 5-agent + Chief of Staff synthesis | Given a chapter name or dataset, produces multi-perspective benchmark report with synthesis | Implemented |
 | `site-audit` | External public website crawl — flags stale content, PII, cert content, DE&I issues | Given chapter URL, produces dated audit log of content issues | Implemented |
 | `monthly-bite-writer` | Write monthly newsletter content | Given topic and context, produces newsletter-ready content in PMI Buffalo voice | Implemented |
-| `ai-writing-triage` | Triage and route AI-related writing requests | Given writing request, classifies and routes to appropriate skill | Implemented |
 | `board-report` | Draft monthly/quarterly board update | Given recent chapter activity, produces board-ready update | Planned |
 | `meeting-minutes` | Extract decisions & action items from board notes | Given raw board meeting notes, produces decisions and action items with owners and due dates | Planned |
 | `annual-report-draft` | Compile end-of-year chapter summary for PMI Global | Given full-year chapter data, produces PMI Global-formatted annual summary | Planned |

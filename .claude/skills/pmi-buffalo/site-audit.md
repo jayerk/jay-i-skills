@@ -221,6 +221,10 @@ is shared with the board or used to drive site changes.
 
 ---
 
+## Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Format
 
 Deliver all five sections in order. The Issue Log (Section 2) is the

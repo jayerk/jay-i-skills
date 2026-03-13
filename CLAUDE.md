@@ -103,7 +103,11 @@ Three types of skills in this repo:
 
 1. **Work-mode skills** — 8 SKILL.md files under `.claude/skills/work/`, one per work mode
 2. **Context skills** — PMI Buffalo and personal skills under their respective directories
-3. **Meta skills** — cross-context tools like `repo-brief`
+3. **Meta skills** — cross-context tools like `repo-brief` and `writing-triage`
+
+`writing-triage` is a post-generation quality gate referenced by all output-producing skills.
+Before delivering written output, run a self-check against `.claude/skills/writing-triage.md`
+and correct any AI writing signals.
 
 Full catalog with planned skills: `.claude/SKILL-CATALOG.md`
 
