@@ -32,7 +32,7 @@ to understand where things stand right now.
 - 2 slash commands — `/repo-brief`, `/writing-triage`
 - 3 meta skills — repo-brief, repo-init, writing-triage (cross-context quality gate for all output-producing skills)
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, coupon-template, community-content
-- Personal skills — soup-feast app design + process flow
+- Personal skills — soup-feast app design + process flow, feed PRD (email → reMarkable magazine)
 
 **What's next:**
 - Wave 5 (#68–#106) — run 39 internal artifact inventory prompts via Copilot
@@ -45,6 +45,7 @@ to understand where things stand right now.
 
 | Thread | Status | Next Step |
 |--------|--------|-----------|
+| Feed (email → reMarkable magazine) | PRD complete. `.claude/skills/personal/feed/feed-prd.md` | Build Phase 1: Gmail API connection + OAuth2 setup |
 | Phase 0 foundation docs | Complete. #11–#14 all done. | — |
 | Phase 1 core documents | Complete. #15–#16 done. | — |
 | Phase 2 knowledge base review | Complete. #17–#19 done. | — |
@@ -62,6 +63,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-13 | Feed PRD created. `.claude/skills/personal/feed/feed-prd.md` — automated pipeline: Gmail (label-based filtering) → content extraction → PDF magazine → reMarkable email delivery. Python stack, local cron, weekly cadence. v1 scope is aggressively minimal: label filter, link extraction, readability fetch, basic PDF, email send. AI curation, recipe parsing, dedup all deferred to v2. | New personal project |
 | 2026-03-13 | Standalone #38 template branding complete. Normalized 5 base templates (unified header block, ISO dates, consistent Author field, added Status to Context, fixed Summary's ROADMAP.md→BACKLOG.md). Created `_branding.md` for work context (section naming table, table rules, formatting conventions, employer-specific adaptation guidance) and PMI Buffalo context (chapter identity, board minutes format, report format, sponsor/volunteer conventions). Personal branding added as #111. | Completes #38, creates #111 |
 | 2026-03-13 | Standalone #6c soup-feast CLAUDE.md complete. Created `.claude/skills/personal/soup-feast/CLAUDE.md` — downstream pointer with personal context persona, both design docs (app-design + process-flow), internal-tooling skill cross-reference, tech stack summary (React/Vite, Supabase, Twilio, Vercel), and key design decisions (no-login tokens, ranked-choice voting, campaign system, mobile-first). Ready to copy into soup-feast repo root when cloned. | Completes #6c |
 | 2026-03-12 | Phase 6 Wave 4 #67 Sub-practice-to-repo map complete. Created `knowledge/product-standards-repo-map.md` — 10-row routing table mapping each sub-practice to its primary framework, primary skill, key knowledge files, and per-level coaching guidance (Level 1–2 entry point, Level 3 next step). Secondary skill cross-reference table covers work-mode handoffs (PRD writing for Pillar 1, executive storytelling for Pillar 2, stakeholder navigation for Pillar 3 strategy, internal tooling for Pillar 3 delivery). Cross-referenced from `product-standards.md` Dependencies section and `SCORECARD-TEMPLATE.md` Cross-References table. Completes Wave 4 — all 5 cross-cutting items done. | Completes #67, completes Phase 6 Wave 4 |
