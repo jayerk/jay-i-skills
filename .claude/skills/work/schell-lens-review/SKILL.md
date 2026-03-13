@@ -1,17 +1,24 @@
-# SKILL: Schell Lens Review
+---
+name: schell-lens-review
+description: "Structured design review using Schell's 116 lenses — evaluate any framework, product standard, or product. Use this skill when the user wants to run a lens-based design review, generate design improvement backlogs, or evaluate a body of work through design lenses."
+---
+
+# Schell Lens Review
+
 **Source:** The Art of Game Design: A Book of Lenses, 3rd Edition — Jesse Schell
+
 **Purpose:** Apply Schell's 116 lenses as a structured design review protocol against any framework, product standard, or product. Produces recommended lens set, collaborative lens walkthrough, and a prioritized backlog of changes.
 
 ---
 
-## LENS QUESTIONS REFERENCE — PRIVATE FILE
+## LENS QUESTIONS REFERENCE
 
 **Before running this skill, load the lens questions from:**
 ```
-/mnt/skills/private/schell-lens-review/LENSES.md
+.claude/skills/work/schell-lens-review/LENSES.md
 ```
 
-This file contains the authoritative question set transcribed directly from the book. It is private, not tracked in version control, and must be present locally for this skill to function correctly. Do not proceed without reading it first.
+This file contains the authoritative question set transcribed directly from the book. Do not proceed without reading it first.
 
 ---
 
