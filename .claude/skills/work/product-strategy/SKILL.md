@@ -60,6 +60,12 @@ Identify right to win, prioritize opportunities, and assess strategic choices.
 - Gap assessment of necessary capabilities vs. current state — for team and leadership capability gaps, assess against `knowledge/behaviors-mindsets.md`
 - Proposed method of attaining capabilities (build / buy / partner) for strategy execution
 
+### C½. Design Review (Schell Lenses)
+
+Before moving to execution planning, run the prioritized strategic choices through a lens review using `schell-lens-review`. Strategy defines *where to play and how to win* — the lenses evaluate whether the strategic direction will create a compelling experience for users and stakeholders. Key lenses for strategy review typically include Problem Statement (#14), Eight Filters (#15), Risk Mitigation (#16), Unification (#11), and the Client (#107), but the lens recommendation step will select the right set based on the specific strategy and personas.
+
+The lens review surfaces design risks and experience gaps in the strategy before committing to an execution roadmap. Critical findings should reshape strategic choices; important findings become constraints or considerations in Phase D.
+
 ### D. Preparing for Execution
 Develop an execution roadmap to deliver the strategy in the short and long term.
 - Execution roadmap with progress metrics, targets, timelines, ownership, and governance

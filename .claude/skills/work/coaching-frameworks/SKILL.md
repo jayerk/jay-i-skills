@@ -79,7 +79,11 @@ The assessment should produce:
 - **Priority recommendations** — the 2-3 highest-impact improvement areas
 - **Comparison view** — if assessing multiple entities, a side-by-side visual
 
-### Step 6: Validate the Framework
+### Step 6: Design Review (Optional)
+
+Consider running the framework through a lens review using `schell-lens-review`. Frameworks are design artifacts — lenses like Elegance (#49), Simplicity/Complexity (#48), Accessibility (#54), and Feedback (#63) can reveal whether the framework will be intuitive to use, appropriately complex, and actionable for assessors.
+
+### Step 7: Validate the Framework
 - Pilot with 3-5 real assessments before broadly deploying
 - Check for dimensions that always cluster (merge them)
 - Check for levels that nobody hits (calibration problem)

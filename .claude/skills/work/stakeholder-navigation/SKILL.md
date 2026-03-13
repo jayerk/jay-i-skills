@@ -88,7 +88,11 @@ Common resistance patterns and responses:
 | "Show me the data" | Credibility gap | Lead with evidence. Offer a pilot with measurable outcomes. |
 | "This will break compliance" | Regulatory fear | Engage risk/compliance early. Show you've addressed their concerns. |
 
-### Step 5: Execute and Adapt
+### Step 5: Design Review (Optional)
+
+For complex influence strategies with multiple stakeholders, consider running the engagement design through a lens review using `schell-lens-review`. Lenses like the Player (#19), Motivation (#23), Cooperation (#44), and Indirect Control (#81) can reveal whether the influence strategy accounts for how stakeholders actually think, decide, and collaborate.
+
+### Step 6: Execute and Adapt
 
 - Track stakeholder positions over time — are they moving toward support?
 - Adjust tactics based on feedback — if a framing isn't landing, reframe
