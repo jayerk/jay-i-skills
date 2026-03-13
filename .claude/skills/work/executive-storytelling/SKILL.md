@@ -88,6 +88,10 @@ If a stakeholder map exists (from `stakeholder-navigation`), use it here — aud
 - Would a skeptic find the logic chain compelling?
 - Are you showing, not just telling? (Working demos > descriptions of demos)
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Formats
 
 ### Deck Outline

@@ -37,4 +37,10 @@ PMI Buffalo
 
 ---
 
+### Writing Quality Check
+
+Before sending, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity. The email should read as personally written, not machine-generated.
+
+---
+
 *Notes for sender: Personalize the greeting and sign-off. If a specific Bite of the Month is currently featured, mention it by name. Keep the coupon code confidential — do not forward this to distribution lists or post publicly.*

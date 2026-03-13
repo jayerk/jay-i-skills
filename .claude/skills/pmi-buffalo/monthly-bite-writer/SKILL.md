@@ -170,6 +170,10 @@ Example: "Project Bites | April 2026 — Making an Ordinary Team Extraordinary"
 - Don't forget the PDU angle — it's a key motivator for members
 - Don't skip the article research — the real-world tie-in is what makes each Bite feel timely
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Format
 
 When generating a monthly Bite, produce all content pieces in this structure:

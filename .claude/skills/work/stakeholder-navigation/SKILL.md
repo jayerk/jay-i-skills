@@ -96,6 +96,10 @@ Common resistance patterns and responses:
 - Create win-win structures — "this helps you because..." not just "support this because it's right"
 - Document commitments — after alignment conversations, send a brief summary of what was agreed
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Formats
 
 ### Stakeholder Map

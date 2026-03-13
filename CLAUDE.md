@@ -103,7 +103,11 @@ Three types of skills in this repo:
 
 1. **Work-mode skills** — 8 SKILL.md files under `.claude/skills/work/`, one per work mode
 2. **Context skills** — PMI Buffalo and personal skills under their respective directories
-3. **Meta skills** — cross-context tools like `repo-brief`
+3. **Meta skills** — cross-context tools like `repo-brief` and `writing-triage`
+
+`writing-triage` is a post-generation quality gate referenced by all output-producing skills.
+Before delivering written output, run a self-check against `.claude/skills/writing-triage.md`
+and correct any AI writing signals.
 
 Full catalog with planned skills: `.claude/SKILL-CATALOG.md`
 
@@ -185,6 +189,7 @@ description: When to trigger this skill
 4. **Never cross context boundaries.** If asked to do a PMI Buffalo task in a work context, stop and clarify.
 5. **One skill, one purpose.** Don't combine unrelated workflows.
 6. **Simplify relentlessly.** Jay understands depth. Your job is to help translate it into executive-ready language. If it needs a decoder ring, compress it until a VP can act on it in 30 seconds.
+7. **Writing triage on all output.** Every skill that produces written output must include a Writing Quality Check step referencing `.claude/skills/writing-triage.md`. No exceptions. If a new skill produces prose, it gets the reference.
 
 ### Development Workflow
 
@@ -193,8 +198,9 @@ description: When to trigger this skill
 2. Read that context's `_persona.md`
 3. Create a branch (see naming below)
 4. Add the skill file
-5. Test via slash command
-6. Commit, push, open PR to `main`
+5. If the skill produces written output, add a Writing Quality Check step referencing `.claude/skills/writing-triage.md`
+6. Test via slash command
+7. Commit, push, open PR to `main`
 
 **Branch naming:**
 

@@ -78,6 +78,10 @@ For visual conventions in talks, follow the quality bar from `executive-storytel
 - Is it employer-agnostic?
 - Does it connect to the vocabulary and frameworks in this repo?
 
+### Writing Quality Check
+
+Before delivering final output, run a self-check against `.claude/skills/writing-triage.md`. Correct any flagged AI writing signals — structural repetition, vague generalities, voice uniformity, missing experiential detail. The output should read as practitioner-written, not machine-generated.
+
 ## Output Formats
 
 ### Practice Post

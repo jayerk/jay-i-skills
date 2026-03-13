@@ -29,8 +29,9 @@ to understand where things stand right now.
 - 1 sub-practice-to-repo map — routing table from scorecard gaps to frameworks, skills, and knowledge files
 - 5 research prompt files — copilot-prompts (39), sdlc-lookup-prompts (51), spm-lookup-prompts (41), i2i-lookup-prompts (47), overlap-dependency-mapping-prompt (1) = **178 total prompts + 1 Mermaid mapping prompt**
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
-- 1 slash command — `/repo-brief`
-- PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, ai-writing-triage, coupon-template, community-content
+- 2 slash commands — `/repo-brief`, `/writing-triage`
+- 3 meta skills — repo-brief, repo-init, writing-triage (cross-context quality gate for all output-producing skills)
+- PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, coupon-template, community-content
 - Personal skills — soup-feast app design + process flow
 
 **What's next:**
