@@ -1,6 +1,7 @@
 # Summary: [Phase or Initiative Name]
 
-> Completed: [Date]
+> **jay-i-skills template** · Summary
+> Date completed: [YYYY-MM-DD]
 > Duration: [Start → End]
 > Author: [Name]
 > Produces: Completion narrative for `frameworks/execution/FRAMEWORK.md` Phase 4 (Verify)
@@ -82,7 +83,7 @@
 > After completing this summary, update the following:
 
 - [ ] STATE.md — update active threads and recent decisions
-- [ ] ROADMAP.md — mark completed items
+- [ ] BACKLOG.md — mark completed items
 - [ ] Relevant SKILL.md — update if process improvements were identified
 - [ ] knowledge/ files — add new terms, principles, or references discovered
 
