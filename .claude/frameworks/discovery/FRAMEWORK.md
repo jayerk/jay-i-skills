@@ -155,7 +155,11 @@ Desired Outcome
    - Medium-effort options (internal tool, workflow change)
    - High-effort options (platform capability, system integration)
 
-3. **Design experiments** — for each promising solution, define how to test it:
+3. **Evaluate solutions through design lenses** — before committing to experiments, run promising solutions through a lens review using `schell-lens-review`. The lenses evaluate whether each solution will deliver a good experience for the personas identified in Phase 2. Key lenses for discovery typically include Essential Experience (#2), Problem Solving (#8), Needs (#22), Accessibility (#54), and Visible Progress (#55), but the lens recommendation step will select the right set based on the specific opportunities and personas.
+
+   Use the lens review backlog to refine solutions before experimenting. Solutions that fail critical lenses may not be worth testing. Solutions that surface design improvements get stronger before reaching users.
+
+4. **Design experiments** — for each promising solution, define how to test it:
    - **Prototype test** — show a mockup or demo, gather feedback
    - **Concierge test** — manually deliver the solution, measure value
    - **Wizard of Oz** — fake the backend, test the user experience

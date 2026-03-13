@@ -81,7 +81,11 @@ If a stakeholder map exists (from `stakeholder-navigation`), use it here — aud
 - **Scored matrices** for multi-dimensional assessments
 - **Screenshots/demos** for "here's what it actually looks like" credibility
 
-### Step 5: Stress-Test the Narrative
+### Step 5: Design Review (Optional)
+
+For high-stakes presentations — board-level, investment asks, or transformation narratives — consider running the narrative design through a lens review using `schell-lens-review`. Lenses like the Pitch (#108), the Client (#107), Interest Curve (#69), and Emotion (#1) can reveal whether the narrative will land with the specific audience.
+
+### Step 6: Stress-Test the Narrative
 - Read only the slide titles in sequence — do they tell the complete story?
 - Can the deck survive without a presenter? (It should.)
 - Is the ask clear and specific? (Not "thoughts?" but "approve $X for Y")

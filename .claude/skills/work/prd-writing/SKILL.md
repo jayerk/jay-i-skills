@@ -80,7 +80,13 @@ For each requirement:
 - **Integration points** — what systems does this touch?
 - **Non-functional requirements** — performance, security, accessibility, compliance
 
-### Step 6: Review and Validate
+### Step 6: Design Review (Schell Lenses)
+
+Before finalizing, run the product design through a lens review using `schell-lens-review`. The PRD defines *what* to build — the lenses evaluate whether the design will deliver a good *experience*. Key lenses for PRD review typically include Emotion (#1), Essential Experience (#2), Flow (#21), Accessibility (#54), Feedback (#63), and Meaningful Choices (#39), but the lens recommendation step will select the right set based on the specific product and personas.
+
+The lens review produces a prioritized backlog of design improvements. Incorporate critical findings into the PRD requirements before moving to validation. Important findings become deferred items or open questions.
+
+### Step 7: Review and Validate
 - Can engineering estimate this without a follow-up meeting?
 - Are there ambiguous requirements that could be interpreted multiple ways?
 - Do the acceptance criteria cover the happy path and key edge cases?

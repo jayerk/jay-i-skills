@@ -88,7 +88,11 @@ The right ratio depends on lifecycle stage:
 - **Maturity:** Heavier on Run (50%+)
 - **Sunset:** Primarily Run with migration investment
 
-### Step 6: Produce the Output
+### Step 6: Design Review (Optional)
+
+For high-stakes investment decisions, consider running the top-priority items through a lens review using `schell-lens-review` before finalizing the output. Lenses like Meaningful Choices (#39), Balance (#53), and Risk Mitigation (#16) can stress-test whether the prioritization will produce the right outcomes for users.
+
+### Step 7: Produce the Output
 
 The gap analysis should produce:
 1. **Heat map** — visual overview of all items, color-coded by gap severity

@@ -70,7 +70,11 @@ Before writing, check `knowledge/references.md` for the relevant practice sectio
 
 For visual conventions in talks, follow the quality bar from `executive-storytelling` — one idea per slide, data not adjectives, narrative arc.
 
-### Step 4: Review Against the Standard
+### Step 4: Design Review (Optional)
+
+For high-impact content like conference talks or flagship practice posts, consider running the content design through a lens review using `schell-lens-review`. Lenses like Interest Curve (#69), Inherent Interest (#70), the Hook (via Surprise #4), and Resonance (#12) can sharpen how the content captures and holds audience attention.
+
+### Step 5: Review Against the Standard
 
 - Does the content advance a specific product practice?
 - Is the actionable element clear and concrete?
