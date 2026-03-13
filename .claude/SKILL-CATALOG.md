@@ -12,6 +12,7 @@ For the full backlog with phased priorities, see [BACKLOG.md](../../BACKLOG.md).
 | `repo-brief` | Read BACKLOG.md files across repos and produce a focused working session brief for the next task | Given a BACKLOG.md in any repo, produces a focused session brief for the next prioritized task | Implemented |
 | `repo-init` | Generate a downstream repo's CLAUDE.md with the correct pointer section pre-filled | Given a new repo path and context name, produces a CLAUDE.md with correct pointer section pre-filled | Implemented |
 | `writing-triage` | Post-generation quality gate — scans output for AI writing signals and corrects before delivery | Given any skill output, detects AI writing patterns and rewrites to correct them before delivery | Implemented |
+| `codex-review` | Verification layer — hands off Claude's output to Codex CLI for independent review (Claude builds, Codex reviews) | Given code or structured output from Claude, produces scoped Codex CLI invocation command and processes review feedback | Implemented |
 
 ## PMI Buffalo
 

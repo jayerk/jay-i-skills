@@ -103,11 +103,15 @@ Three types of skills in this repo:
 
 1. **Work-mode skills** — 8 SKILL.md files under `.claude/skills/work/`, one per work mode
 2. **Context skills** — PMI Buffalo and personal skills under their respective directories
-3. **Meta skills** — cross-context tools like `repo-brief` and `writing-triage`
+3. **Meta skills** — cross-context tools like `repo-brief`, `writing-triage`, and `codex-review`
 
 `writing-triage` is a post-generation quality gate referenced by all output-producing skills.
 Before delivering written output, run a self-check against `.claude/skills/writing-triage.md`
 and correct any AI writing signals.
+
+`codex-review` implements the **Claude builds, Codex reviews** pattern. After Claude
+writes code or structured output, hand off to OpenAI Codex CLI for independent
+verification. See `.claude/skills/codex-review.md` for the full workflow.
 
 Full catalog with planned skills: `.claude/SKILL-CATALOG.md`
 
@@ -141,6 +145,7 @@ Skills reference these when structured thinking is needed.
 | Phase | `templates/PHASE-TEMPLATE.md` | Wave-based execution |
 | Context | `templates/CONTEXT-TEMPLATE.md` | Scope and stakeholder capture |
 | Summary | `templates/SUMMARY-TEMPLATE.md` | Completion narratives |
+| AGENTS | `templates/AGENTS-TEMPLATE.md` | Codex CLI review instructions for downstream repos |
 
 ---
 
@@ -221,11 +226,15 @@ description: When to trigger this skill
 Project repos don't duplicate skills or personas. Each downstream repo's
 `CLAUDE.md` includes a pointer back to this repo.
 
-### What Every Downstream CLAUDE.md Must Include
+### What Every Downstream Repo Must Include
 
-1. **Skills repo location** — absolute path to the local clone of `jay-i-skills`
-2. **Context and persona pointer** — which context applies, instruction to read `_persona.md`
-3. **Relevant skill and design doc paths** — specific files, not the whole repo
+1. **CLAUDE.md** with:
+   - **Skills repo location** — absolute path to the local clone of `jay-i-skills`
+   - **Context and persona pointer** — which context applies, instruction to read `_persona.md`
+   - **Relevant skill and design doc paths** — specific files, not the whole repo
+2. **AGENTS.md** (for repos with code) — Codex CLI review instructions generated
+   by `repo-init`. Tells Codex its role (reviewer), build/test commands, review
+   focus areas, and what to ignore. See `.claude/templates/AGENTS-TEMPLATE.md`.
 
 ### Example: soup-feast
 
@@ -264,11 +273,12 @@ jay-i-skills/
     ├── SKILL-CATALOG.md    # Full skill inventory (implemented + planned)
     ├── skills/
     │   ├── repo-brief.md   # Meta-skill: session briefs from BACKLOG.md
+    │   ├── codex-review.md # Meta-skill: Claude builds, Codex reviews
     │   ├── work/           # 8 work-mode skills + _persona.md
     │   ├── pmi-buffalo/    # Chapter skills + _persona.md
     │   └── personal/       # Personal skills + _persona.md
-    ├── frameworks/         # 4 methodology walkthroughs
+    ├── frameworks/         # 5 methodology walkthroughs
     ├── knowledge/          # Principles, vocabulary, references
-    ├── templates/          # 4 document starting points
+    ├── templates/          # 6 document starting points (incl. AGENTS-TEMPLATE)
     └── private-template/   # Scaffold for private companion repo
 ```
