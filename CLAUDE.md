@@ -267,6 +267,7 @@ jay-i-skills/
 ├── STATE.md                # Current position, active threads, decisions
 ├── BACKLOG.md              # Phased work plan
 ├── CLAUDE.md               # This file
+├── AGENTS.md               # Codex CLI review instructions for this repo
 ├── README.md               # Human-facing repo overview
 └── .claude/
     ├── commands/           # Slash commands (/repo-brief)
