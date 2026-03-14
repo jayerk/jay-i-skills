@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Feed — {{ issue_date.strftime('%B %d, %Y') }}</title>
+<style>
+  @page {
+    size: A4;
+    margin: 2cm 2.5cm;
+
+    @bottom-center {
+      content: counter(page);
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 9pt;
+      color: #888;
+    }
+  }
+
+  /* Force page breaks between articles */
+  .article { page-break-before: always; }
+  .article:first-of-type { page-break-before: avoid; }
+  .cover { page-break-after: always; }
+  .toc { page-break-after: always; }
+
+  /* Base typography — optimized for e-ink */
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 11pt;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+  }
+
+  /* ─── Cover Page ─── */
+  .cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    text-align: center;
+  }
+
+  .cover-title {
+    font-size: 48pt;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 0.3em;
+    border-bottom: 3px solid #1a1a1a;
+  }
+
+  .cover-subtitle {
+    font-size: 14pt;
+    font-style: italic;
+    color: #555;
+    margin-top: 0.8em;
+  }
+
+  .cover-date {
+    font-size: 12pt;
+    margin-top: 2em;
+    color: #888;
+  }
+
+  .cover-issue {
+    font-size: 10pt;
+    color: #aaa;
+    margin-top: 0.5em;
+  }
+
+  .cover-count {
+    font-size: 10pt;
+    color: #aaa;
+    margin-top: 1.5em;
+    padding: 0.3em 1em;
+    border: 1px solid #ddd;
+  }
+
+  /* ─── Table of Contents ─── */
+  .toc h2 {
+    font-size: 20pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 0.3em;
+    margin-bottom: 1.5em;
+  }
+
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6em 0;
+    border-bottom: 1px dotted #ccc;
+  }
+
+  .toc-title {
+    font-size: 12pt;
+    font-weight: bold;
+    flex: 1;
+    padding-right: 1em;
+  }
+
+  .toc-source {
+    font-size: 9pt;
+    color: #888;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+  .toc-number {
+    font-size: 10pt;
+    color: #888;
+    white-space: nowrap;
+    min-width: 2em;
+    text-align: right;
+  }
+
+  /* ─── Article Layout ─── */
+  .article-header {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .article-number {
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #888;
+    margin-bottom: 0.5em;
+  }
+
+  .article-title {
+    font-size: 22pt;
+    line-height: 1.2;
+    margin: 0 0 0.5em 0;
+  }
+
+  .article-meta {
+    font-size: 9pt;
+    color: #888;
+    font-style: italic;
+  }
+
+  .article-meta span + span::before {
+    content: " · ";
+  }
+
+  .article-body {
+    font-size: 11pt;
+    line-height: 1.7;
+    text-align: justify;
+    hyphens: auto;
+  }
+
+  .article-body p {
+    margin: 0 0 0.8em 0;
+    text-indent: 1.5em;
+  }
+
+  .article-body p:first-of-type {
+    text-indent: 0;
+  }
+
+  .article-body p:first-of-type::first-letter {
+    font-size: 2.2em;
+    float: left;
+    line-height: 1;
+    padding-right: 0.08em;
+    font-weight: bold;
+  }
+
+  .article-source {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    font-size: 8pt;
+    color: #aaa;
+  }
+
+  /* ─── Back Page ─── */
+  .back-page {
+    page-break-before: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    text-align: center;
+  }
+
+  .back-page p {
+    font-size: 10pt;
+    color: #aaa;
+    font-style: italic;
+  }
+</style>
+</head>
+<body>
+
+<!-- Cover Page -->
+<div class="cover">
+  <h1 class="cover-title">Feed</h1>
+  <p class="cover-subtitle">A curated food magazine from your inbox</p>
+  <p class="cover-date">{{ issue_date.strftime('%B %d, %Y') }}</p>
+  <p class="cover-issue">{{ issue_number }}</p>
+  <p class="cover-count">{{ article_count }} article{{ 's' if article_count != 1 else '' }}</p>
+</div>
+
+<!-- Table of Contents -->
+<div class="toc">
+  <h2>Contents</h2>
+  {% for article in articles %}
+  <div class="toc-item">
+    <span class="toc-title">{{ article.title }}</span>
+    <span class="toc-source">{{ article.source_sender | truncate(30) }}</span>
+    <span class="toc-number">{{ loop.index }}</span>
+  </div>
+  {% endfor %}
+</div>
+
+<!-- Articles -->
+{% for article in articles %}
+<div class="article">
+  <div class="article-header">
+    <div class="article-number">Article {{ loop.index }} of {{ articles | length }}</div>
+    <h1 class="article-title">{{ article.title }}</h1>
+    <div class="article-meta">
+      {% if article.author %}<span>{{ article.author }}</span>{% endif %}
+      <span>via {{ article.source_sender | truncate(40) }}</span>
+    </div>
+  </div>
+  <div class="article-body">
+    {% for paragraph in article.text.split('\n\n') %}
+      {% if paragraph.strip() %}
+      <p>{{ paragraph.strip() }}</p>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="article-source">
+    Source: {{ article.url }}
+  </div>
+</div>
+{% endfor %}
+
+<!-- Back Page -->
+<div class="back-page">
+  <p>Generated by Feed</p>
+  <p>{{ issue_date.strftime('%B %Y') }}</p>
+</div>
+
+</body>
+</html>
