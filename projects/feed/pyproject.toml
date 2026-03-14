@@ -1,0 +1,26 @@
+[project]
+name = "feed"
+version = "0.1.0"
+description = "Scan Gmail for food content, format as a magazine PDF, deliver to reMarkable"
+requires-python = ">=3.10"
+dependencies = [
+    "google-api-python-client",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "beautifulsoup4",
+    "lxml",
+    "trafilatura",
+    "weasyprint",
+    "pyyaml",
+    "jinja2",
+]
+
+[project.scripts]
+feed = "feed.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[tool.setuptools.packages.find]
+where = ["src"]

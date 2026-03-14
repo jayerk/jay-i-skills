@@ -1,0 +1,25 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# OAuth credentials — never commit
+credentials.json
+token.json
+
+# Config with secrets
+config.yaml
+
+# Output
+*.pdf
+feed-output/
+
+# State
+state.json
+
+# IDE
+.vscode/
+.idea/
