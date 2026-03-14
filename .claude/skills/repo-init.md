@@ -45,9 +45,18 @@ If the repo already has design docs or skill-specific files in jay-i-skills
 Ask the user:
 - **What does this repo contain?** (tech stack, architecture, local dev notes)
 - **Any repo-specific instructions?** (build commands, test commands, conventions)
+- **Codex review enabled?** (yes/no — defaults to yes for repos with code)
 
 These go into the "Repo-Specific Context" section of the generated CLAUDE.md.
 If the user doesn't have these yet, generate placeholder sections with `[TODO]` markers.
+
+If Codex review is enabled, also collect:
+- **Build command** — how to build the project (e.g., `npm run build`)
+- **Test command** — how to run tests (e.g., `npm test`)
+- **Lint command** — how to lint (e.g., `npm run lint`)
+- **Review focus** — any repo-specific quality concerns beyond the defaults
+  (e.g., accessibility, API contract stability, performance)
+- **Ignore patterns** — generated/vendored directories to skip during review
 
 ### Step 4 — Generate the CLAUDE.md
 
@@ -75,29 +84,102 @@ the public repo.
 
 ---
 
+## Codex Review
+
+This repo uses the **Claude builds, Codex reviews** pattern.
+See `AGENTS.md` in this repo root for Codex review instructions.
+See `codex-review.md` in jay-i-skills for the full workflow.
+
+---
+
 ## Repo-Specific Context
 
 [Tech stack, architecture, local dev, build/test commands — whatever
 the user provided, or TODO placeholders.]
 ```
 
+If Codex review is not enabled, omit the "Codex Review" section.
+
+### Step 4b — Generate the AGENTS.md
+
+If Codex review is enabled, also generate an `AGENTS.md` using the template
+at `.claude/templates/AGENTS-TEMPLATE.md`. Fill in:
+
+- **Repo name** — from Step 1
+- **One-sentence description** — what the repo is
+- **Build & test commands** — from Step 3
+- **Review focus** — defaults (correctness, edge cases, security, test coverage)
+  plus any repo-specific concerns from Step 3
+- **Ignore patterns** — from Step 3, or sensible defaults for the tech stack
+- **Repo-specific instructions** — tech stack summary, auth patterns, etc.
+
+```markdown
+# AGENTS.md — [Repo Name]
+
+[One sentence describing what this repo is and what Codex should know about it.]
+
+---
+
+## Role
+
+You are a **reviewer**, not a builder. Your job is to verify, test, and
+catch issues in code written by Claude Code. Do not rewrite or refactor
+unless a specific defect requires it.
+
+---
+
+## Build & Test
+
+[Filled from Step 3 — exact commands]
+
+---
+
+## Review Focus
+
+[Defaults + repo-specific concerns]
+
+---
+
+## What to Ignore
+
+[Filled from Step 3 — generated/vendored dirs]
+
+---
+
+## Repo-Specific Instructions
+
+[Tech stack, auth patterns, architecture notes]
+
+---
+
+## Conventions
+
+- Report findings as a list: file, line, issue, severity (error/warning/info)
+- Always run the full test suite before reporting "clean"
+- If you find a defect, describe the fix but do not apply it — Claude will fix
+- Flag assumptions in the code with "ASSUMPTION:" prefix
+```
+
 ### Step 5 — Confirm before writing
 
-Show the generated CLAUDE.md to the user and ask:
-"Does this look right? I'll write it to `[repo-path]/CLAUDE.md` when you confirm."
+Show the generated CLAUDE.md (and AGENTS.md if Codex is enabled) to the user and ask:
+"Does this look right? I'll write these to `[repo-path]/` when you confirm."
 
-Do NOT write the file without confirmation. The pointer section is the contract
+Do NOT write files without confirmation. The pointer section is the contract
 between repos — get it right.
 
 ### Step 6 — Write and verify
 
-Write the file to the downstream repo's root as `CLAUDE.md`.
+Write `CLAUDE.md` to the downstream repo's root.
+If Codex review is enabled, also write `AGENTS.md` to the downstream repo's root.
 
 After writing, confirm:
-- The file exists at the correct path
+- The files exist at the correct paths
 - The skills repo path is an absolute path (not relative)
 - The persona path matches the declared context
 - No skill or persona content was duplicated into the downstream repo
+- If AGENTS.md was generated: build/test commands are filled in (not placeholders),
+  and the Review Focus section includes repo-specific concerns
 
 ---
 
@@ -111,6 +193,11 @@ After writing, confirm:
   when repos move.
 - **Minimal by default** — include only the skills and frameworks the user
   confirms are relevant. Don't dump every skill path into the file.
+- **AGENTS.md completeness** — if Codex review is enabled, the AGENTS.md must
+  have real build/test commands (not placeholders) and at least one
+  repo-specific review concern beyond the defaults. If the user can't
+  provide commands yet, use `[TODO]` markers but warn that Codex review
+  won't work until they're filled in.
 
 ---
 

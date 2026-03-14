@@ -30,7 +30,8 @@ to understand where things stand right now.
 - 5 research prompt files — copilot-prompts (39), sdlc-lookup-prompts (51), spm-lookup-prompts (41), i2i-lookup-prompts (47), overlap-dependency-mapping-prompt (1) = **178 total prompts + 1 Mermaid mapping prompt**
 - Private-template scaffold — 7-file starter for companion repo (reviewed, includes CLAUDE.md and vetting prompts)
 - 2 slash commands — `/repo-brief`, `/writing-triage`
-- 3 meta skills — repo-brief, repo-init, writing-triage (cross-context quality gate for all output-producing skills)
+- 4 meta skills — repo-brief, repo-init, writing-triage, codex-review (Claude builds, Codex reviews pattern)
+- 1 AGENTS.md template — downstream repo scaffold for Codex CLI review instructions
 - PMI Buffalo skills — strategic-benchmark, site-audit, monthly-bite-writer, coupon-template, community-content
 - Personal skills — soup-feast app design + process flow
 
@@ -62,6 +63,7 @@ to understand where things stand right now.
 
 | Date | Decision | Context |
 |------|----------|---------|
+| 2026-03-13 | Codex integration — "Claude builds, Codex reviews" pattern. Created `codex-review` meta-skill (4 review types: code review, test verification, assumption check, integration check). Created AGENTS-TEMPLATE.md (6th template). Updated `repo-init` to generate AGENTS.md alongside CLAUDE.md for downstream repos — Codex review enabled by default for code repos. AGENTS.md is the Codex equivalent of CLAUDE.md: tells the agent its role (reviewer), build/test commands, review focus, and ignore patterns. | Adds independent verification layer to the build workflow |
 | 2026-03-13 | Standalone #38 template branding complete. Normalized 5 base templates (unified header block, ISO dates, consistent Author field, added Status to Context, fixed Summary's ROADMAP.md→BACKLOG.md). Created `_branding.md` for work context (section naming table, table rules, formatting conventions, employer-specific adaptation guidance) and PMI Buffalo context (chapter identity, board minutes format, report format, sponsor/volunteer conventions). Personal branding added as #111. | Completes #38, creates #111 |
 | 2026-03-13 | Standalone #6c soup-feast CLAUDE.md complete. Created `.claude/skills/personal/soup-feast/CLAUDE.md` — downstream pointer with personal context persona, both design docs (app-design + process-flow), internal-tooling skill cross-reference, tech stack summary (React/Vite, Supabase, Twilio, Vercel), and key design decisions (no-login tokens, ranked-choice voting, campaign system, mobile-first). Ready to copy into soup-feast repo root when cloned. | Completes #6c |
 | 2026-03-12 | Phase 6 Wave 4 #67 Sub-practice-to-repo map complete. Created `knowledge/product-standards-repo-map.md` — 10-row routing table mapping each sub-practice to its primary framework, primary skill, key knowledge files, and per-level coaching guidance (Level 1–2 entry point, Level 3 next step). Secondary skill cross-reference table covers work-mode handoffs (PRD writing for Pillar 1, executive storytelling for Pillar 2, stakeholder navigation for Pillar 3 strategy, internal tooling for Pillar 3 delivery). Cross-referenced from `product-standards.md` Dependencies section and `SCORECARD-TEMPLATE.md` Cross-References table. Completes Wave 4 — all 5 cross-cutting items done. | Completes #67, completes Phase 6 Wave 4 |
