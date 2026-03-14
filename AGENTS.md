@@ -16,17 +16,20 @@ cross-references. Do not rewrite content or add new skills.
 
 ## Build & Test
 
-```bash
-# No build step — this is a structured markdown repo
+No build step — this is a structured markdown repo.
 
-# Validate markdown structure (if available)
-# npx markdownlint-cli2 "**/*.md"
-
-# Verify no broken internal references
-grep -r '\.claude/skills/' CLAUDE.md STATE.md .claude/SKILL-CATALOG.md
-grep -r '\.claude/templates/' CLAUDE.md .claude/skills/repo-init.md
-grep -r '\.claude/frameworks/' CLAUDE.md .claude/skills/work/
+**Validate markdown structure** (if available):
 ```
+npx markdownlint-cli2 "**/*.md"
+```
+
+**Verify internal references** — search these files for `.claude/` paths
+and confirm each target exists:
+- `CLAUDE.md`, `STATE.md`, `.claude/SKILL-CATALOG.md` → skill paths
+- `CLAUDE.md`, `.claude/skills/repo-init.md` → template paths
+- `.claude/skills/work/` → framework paths
+
+Use your built-in file search — do not rely on shell-specific commands.
 
 ---
 
@@ -38,9 +41,11 @@ When reviewing changes in this repo, prioritize:
    SKILL-CATALOG.md, STATE.md, or skill files must point to a file that
    actually exists. Flag broken references immediately.
 
-2. **Skill format compliance** — Work-mode skills must have YAML frontmatter
-   (`name`, `description`). Standalone skills (meta, pmi-buffalo, personal)
-   must have `TRIGGER when:` and `DO NOT TRIGGER when:` sections.
+2. **Skill format compliance** — Context skills (work, pmi-buffalo, personal)
+   use directory-based `SKILL.md` files with YAML frontmatter (`name`,
+   `description`). Meta skills (repo-level, in `.claude/skills/` directly)
+   use standalone format with `TRIGGER when:` and `DO NOT TRIGGER when:`
+   sections.
 
 3. **Writing-triage reference** — Every skill that produces written output
    must include a Writing Quality Check step referencing
@@ -60,12 +65,14 @@ When reviewing changes in this repo, prioritize:
    Flag templates missing the header or using inconsistent fields.
 
 7. **Vocabulary alignment** — Domain terms used in skills and frameworks
-   should match definitions in `knowledge/vocabulary.md`. Flag undefined
+   should match definitions in `.claude/knowledge/vocabulary.md`. Flag undefined
    terms or inconsistent usage.
 
 8. **BACKLOG ↔ implementation sync** — Items marked `done` in BACKLOG.md
-   should have corresponding files. Items marked `todo` should not have
-   implementations yet. Flag mismatches.
+   should have corresponding files. For `todo` items, verify that any
+   referenced artifacts (prompt files, templates, etc.) are consistent with
+   the item's described scope. Flag missing files for done items and
+   broken references in todo items.
 
 ---
 
@@ -89,8 +96,10 @@ This repo has three contexts with strict separation:
 - **personal** (`.claude/skills/personal/`) — personal life assistant
 
 Key structural rules:
-- Skills live in `.claude/skills/<context>/<skill-name>/SKILL.md` (work) or
-  `.claude/skills/<context>/<skill-name>.md` (standalone)
+- Context skills live in `.claude/skills/<context>/<skill-name>/SKILL.md`
+  (directory-based with YAML frontmatter, used by work, pmi-buffalo, personal)
+- Meta skills live directly in `.claude/skills/<skill-name>.md`
+  (standalone format with TRIGGER/DO NOT TRIGGER)
 - Frameworks live in `.claude/frameworks/<name>/FRAMEWORK.md`
 - Knowledge lives in `.claude/knowledge/<name>.md`
 - Templates live in `.claude/templates/<NAME>-TEMPLATE.md`

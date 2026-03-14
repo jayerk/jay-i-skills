@@ -145,6 +145,7 @@ Skills reference these when structured thinking is needed.
 | Phase | `templates/PHASE-TEMPLATE.md` | Wave-based execution |
 | Context | `templates/CONTEXT-TEMPLATE.md` | Scope and stakeholder capture |
 | Summary | `templates/SUMMARY-TEMPLATE.md` | Completion narratives |
+| Scorecard | `templates/SCORECARD-TEMPLATE.md` | Assessment and scoring artifacts |
 | AGENTS | `templates/AGENTS-TEMPLATE.md` | Codex CLI review instructions for downstream repos |
 
 ---
@@ -153,7 +154,7 @@ Skills reference these when structured thinking is needed.
 
 Two formats coexist. Use the format that matches the directory structure.
 
-### Standalone Skills (pmi-buffalo, personal, meta)
+### Standalone Skills (meta skills only)
 
 ```markdown
 # skill-name
@@ -168,7 +169,7 @@ DO NOT TRIGGER when: [exclusions]
 [Step-by-step. Actionable, not descriptive.]
 ```
 
-### Work-Mode Skills (Superpowers format)
+### Context Skills (work, pmi-buffalo, personal)
 
 YAML frontmatter with `name` and `description`, followed by substantive
 instructions. Each skill lives in its own directory as `SKILL.md`.
