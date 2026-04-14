@@ -1,4 +1,4 @@
-"""Generate a magazine-style PDF from extracted articles."""
+"""Generate a magazine-style PDF from extracted recipes and articles."""
 
 import logging
 from datetime import date
@@ -7,7 +7,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from weasyprint import HTML
 
-from feed.fetcher import Article
+from feed.fetcher import ContentItem, Recipe, Article
 
 logger = logging.getLogger(__name__)
 
@@ -15,11 +15,11 @@ TEMPLATE_DIR = Path(__file__).parent.parent.parent / "templates"
 
 
 def generate_magazine(
-    articles: list[Article],
+    items: list[ContentItem],
     output_dir: Path,
     issue_date: date | None = None,
 ) -> Path:
-    """Render articles into a magazine PDF.
+    """Render content items into a magazine PDF.
 
     Returns the path to the generated PDF.
     """
@@ -29,19 +29,25 @@ def generate_magazine(
     filename = f"feed-{issue_date.isoformat()}.pdf"
     pdf_path = output_dir / filename
 
-    # Render HTML from Jinja2 template
+    recipe_count = sum(1 for i in items if isinstance(i, Recipe))
+    article_count = sum(1 for i in items if isinstance(i, Article))
+
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     template = env.get_template("magazine.html")
 
     html_content = template.render(
-        articles=articles,
+        items=items,
         issue_date=issue_date,
         issue_number=_issue_number(issue_date),
-        article_count=len(articles),
+        item_count=len(items),
+        recipe_count=recipe_count,
+        article_count=article_count,
     )
 
-    # Convert HTML to PDF
-    logger.info("Generating PDF: %s (%d articles)", pdf_path, len(articles))
+    logger.info(
+        "Generating PDF: %s (%d recipes, %d articles)",
+        pdf_path, recipe_count, article_count,
+    )
     HTML(string=html_content).write_pdf(str(pdf_path))
 
     size_kb = pdf_path.stat().st_size / 1024

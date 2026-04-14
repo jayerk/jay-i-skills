@@ -6,7 +6,7 @@ from datetime import datetime
 from feed.config import Config
 from feed.gmail import authenticate, get_service, fetch_emails
 from feed.parser import extract_all_links
-from feed.fetcher import fetch_all_articles
+from feed.fetcher import fetch_all_content
 from feed.magazine import generate_magazine
 from feed.delivery import send_to_remarkable
 from feed.state import load_state, save_state, get_last_run_datetime
@@ -73,19 +73,19 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
         _update_state(state, emails, config)
         return
 
-    # Stage 4: Fetch articles
-    logger.info("Stage 4: Fetching article content (%d links)", len(links))
-    articles = fetch_all_articles(links, max_articles=config.magazine.max_articles)
+    # Stage 4: Fetch content (recipes + articles)
+    logger.info("Stage 4: Fetching content (%d links)", len(links))
+    items = fetch_all_content(links, max_items=config.magazine.max_articles)
 
-    if not articles:
-        logger.info("No articles could be extracted. Done.")
+    if not items:
+        logger.info("No content could be extracted. Done.")
         _update_state(state, emails, config)
         return
 
     # Stage 5: Generate PDF
     logger.info("Stage 5: Generating magazine PDF")
     pdf_path = generate_magazine(
-        articles,
+        items,
         output_dir=config.magazine.output_path,
     )
 
@@ -106,7 +106,7 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
     state.total_issues_generated += 1
     save_state(state, config.state_path)
 
-    logger.info("=== Feed %s complete — %d articles in issue ===", mode, len(articles))
+    logger.info("=== Feed %s complete — %d items in issue ===", mode, len(items))
 
 
 def _update_state(state, emails, config):

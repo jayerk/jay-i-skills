@@ -16,9 +16,9 @@
     }
   }
 
-  /* Force page breaks between articles */
-  .article { page-break-before: always; }
-  .article:first-of-type { page-break-before: avoid; }
+  /* Force page breaks */
+  .item { page-break-before: always; }
+  .item:first-of-type { page-break-before: avoid; }
   .cover { page-break-after: always; }
   .toc { page-break-after: always; }
 
@@ -103,6 +103,16 @@
     padding-right: 1em;
   }
 
+  .toc-badge {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.15em 0.5em;
+    border: 1px solid #888;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+
   .toc-source {
     font-size: 9pt;
     color: #888;
@@ -118,14 +128,14 @@
     text-align: right;
   }
 
-  /* ─── Article Layout ─── */
-  .article-header {
+  /* ─── Shared Item Header ─── */
+  .item-header {
     margin-bottom: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid #ddd;
   }
 
-  .article-number {
+  .item-number {
     font-size: 9pt;
     text-transform: uppercase;
     letter-spacing: 0.15em;
@@ -133,22 +143,42 @@
     margin-bottom: 0.5em;
   }
 
-  .article-title {
+  .item-type-badge {
+    display: inline-block;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.15em 0.6em;
+    border: 1px solid #555;
+    margin-left: 0.8em;
+    vertical-align: middle;
+  }
+
+  .item-title {
     font-size: 22pt;
     line-height: 1.2;
     margin: 0 0 0.5em 0;
   }
 
-  .article-meta {
+  .item-meta {
     font-size: 9pt;
     color: #888;
     font-style: italic;
   }
 
-  .article-meta span + span::before {
+  .item-meta span + span::before {
     content: " · ";
   }
 
+  .item-source {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    font-size: 8pt;
+    color: #aaa;
+  }
+
+  /* ─── Article Layout ─── */
   .article-body {
     font-size: 11pt;
     line-height: 1.7;
@@ -173,12 +203,109 @@
     font-weight: bold;
   }
 
-  .article-source {
-    margin-top: 2em;
-    padding-top: 1em;
-    border-top: 1px solid #eee;
-    font-size: 8pt;
-    color: #aaa;
+  /* ─── Recipe Layout ─── */
+  .recipe-description {
+    font-size: 11pt;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+  }
+
+  .recipe-details {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+    margin-bottom: 2em;
+    padding: 0.8em 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .recipe-detail {
+    text-align: center;
+  }
+
+  .recipe-detail-label {
+    font-size: 7pt;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #888;
+    display: block;
+    margin-bottom: 0.2em;
+  }
+
+  .recipe-detail-value {
+    font-size: 11pt;
+    font-weight: bold;
+  }
+
+  .recipe-section-title {
+    font-size: 13pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 1.5em 0 0.8em 0;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eee;
+  }
+
+  .recipe-ingredients {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5em 0;
+  }
+
+  .recipe-ingredients li {
+    padding: 0.35em 0;
+    border-bottom: 1px dotted #eee;
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  .recipe-ingredients li:last-child {
+    border-bottom: none;
+  }
+
+  .recipe-instructions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: step-counter;
+  }
+
+  .recipe-instructions li {
+    counter-increment: step-counter;
+    padding: 0.6em 0 0.6em 2.5em;
+    position: relative;
+    font-size: 11pt;
+    line-height: 1.6;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .recipe-instructions li:last-child {
+    border-bottom: none;
+  }
+
+  .recipe-instructions li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #888;
+    width: 1.8em;
+    text-align: center;
+  }
+
+  .recipe-section-header {
+    font-size: 11pt;
+    font-weight: bold;
+    font-style: italic;
+    color: #555;
+    margin: 1em 0 0.3em 0;
+    padding: 0;
   }
 
   /* ─── Back Page ─── */
@@ -207,41 +334,113 @@
   <p class="cover-subtitle">A curated food magazine from your inbox</p>
   <p class="cover-date">{{ issue_date.strftime('%B %d, %Y') }}</p>
   <p class="cover-issue">{{ issue_number }}</p>
-  <p class="cover-count">{{ article_count }} article{{ 's' if article_count != 1 else '' }}</p>
+  <p class="cover-count">{{ item_count }} item{{ 's' if item_count != 1 else '' }} — {{ recipe_count }} recipe{{ 's' if recipe_count != 1 else '' }}, {{ article_count }} article{{ 's' if article_count != 1 else '' }}</p>
 </div>
 
 <!-- Table of Contents -->
 <div class="toc">
   <h2>Contents</h2>
-  {% for article in articles %}
+  {% for item in items %}
   <div class="toc-item">
-    <span class="toc-title">{{ article.title }}</span>
-    <span class="toc-source">{{ article.source_sender | truncate(30) }}</span>
+    <span class="toc-title">
+      {{ item.title }}
+      <span class="toc-badge">{{ item.content_type }}</span>
+    </span>
+    <span class="toc-source">{{ item.source_sender | truncate(30) }}</span>
     <span class="toc-number">{{ loop.index }}</span>
   </div>
   {% endfor %}
 </div>
 
-<!-- Articles -->
-{% for article in articles %}
-<div class="article">
-  <div class="article-header">
-    <div class="article-number">Article {{ loop.index }} of {{ articles | length }}</div>
-    <h1 class="article-title">{{ article.title }}</h1>
-    <div class="article-meta">
-      {% if article.author %}<span>{{ article.author }}</span>{% endif %}
-      <span>via {{ article.source_sender | truncate(40) }}</span>
+<!-- Content Items -->
+{% for item in items %}
+<div class="item">
+  <div class="item-header">
+    <div class="item-number">
+      {{ loop.index }} of {{ items | length }}
+      <span class="item-type-badge">{{ item.content_type }}</span>
+    </div>
+    <h1 class="item-title">{{ item.title }}</h1>
+    <div class="item-meta">
+      {% if item.author %}<span>{{ item.author }}</span>{% endif %}
+      <span>via {{ item.source_sender | truncate(40) }}</span>
     </div>
   </div>
+
+  {% if item.content_type == 'recipe' %}
+  <!-- ═══ Recipe Layout ═══ -->
+
+  {% if item.description %}
+  <p class="recipe-description">{{ item.description }}</p>
+  {% endif %}
+
+  {% if item.prep_time or item.cook_time or item.total_time or item.servings %}
+  <div class="recipe-details">
+    {% if item.prep_time %}
+    <div class="recipe-detail">
+      <span class="recipe-detail-label">Prep</span>
+      <span class="recipe-detail-value">{{ item.prep_time }}</span>
+    </div>
+    {% endif %}
+    {% if item.cook_time %}
+    <div class="recipe-detail">
+      <span class="recipe-detail-label">Cook</span>
+      <span class="recipe-detail-value">{{ item.cook_time }}</span>
+    </div>
+    {% endif %}
+    {% if item.total_time %}
+    <div class="recipe-detail">
+      <span class="recipe-detail-label">Total</span>
+      <span class="recipe-detail-value">{{ item.total_time }}</span>
+    </div>
+    {% endif %}
+    {% if item.servings %}
+    <div class="recipe-detail">
+      <span class="recipe-detail-label">Serves</span>
+      <span class="recipe-detail-value">{{ item.servings }}</span>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if item.ingredients %}
+  <h3 class="recipe-section-title">Ingredients</h3>
+  <ul class="recipe-ingredients">
+    {% for ingredient in item.ingredients %}
+    <li>{{ ingredient }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if item.instructions %}
+  <h3 class="recipe-section-title">Instructions</h3>
+  <ol class="recipe-instructions">
+    {% for step in item.instructions %}
+      {% if step.startswith('—') and step.endswith('—') %}
+      <li style="list-style: none; counter-increment: none; padding-left: 0;">
+        <div class="recipe-section-header">{{ step | replace('—', '') | trim }}</div>
+      </li>
+      {% else %}
+      <li>{{ step }}</li>
+      {% endif %}
+    {% endfor %}
+  </ol>
+  {% endif %}
+
+  {% else %}
+  <!-- ═══ Article Layout ═══ -->
+
   <div class="article-body">
-    {% for paragraph in article.text.split('\n\n') %}
+    {% for paragraph in item.text.split('\n\n') %}
       {% if paragraph.strip() %}
       <p>{{ paragraph.strip() }}</p>
       {% endif %}
     {% endfor %}
   </div>
-  <div class="article-source">
-    Source: {{ article.url }}
+  {% endif %}
+
+  <div class="item-source">
+    Source: {{ item.url }}
   </div>
 </div>
 {% endfor %}
