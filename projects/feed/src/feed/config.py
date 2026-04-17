@@ -2,7 +2,6 @@
 
 from dataclasses import dataclass, field
 from pathlib import Path
-import os
 import yaml
 
 
@@ -18,7 +17,7 @@ class GmailConfig:
 
 @dataclass
 class RemarkableConfig:
-    email: str = ""
+    folder: str = "/Feed"
 
 
 @dataclass
@@ -33,17 +32,10 @@ class MagazineConfig:
 
 
 @dataclass
-class SmtpConfig:
-    sender: str = ""
-    app_password: str = ""
-
-
-@dataclass
 class Config:
     gmail: GmailConfig = field(default_factory=GmailConfig)
     remarkable: RemarkableConfig = field(default_factory=RemarkableConfig)
     magazine: MagazineConfig = field(default_factory=MagazineConfig)
-    smtp: SmtpConfig = field(default_factory=SmtpConfig)
     log_level: str = "info"
     credentials_path: Path = field(default_factory=lambda: CONFIG_DIR / "credentials.json")
     token_path: Path = field(default_factory=lambda: CONFIG_DIR / "token.json")
@@ -65,20 +57,17 @@ def load_config(path: Path | None = None) -> Config:
 
     config = Config()
 
-    # Gmail settings
     gmail_raw = raw.get("gmail", {})
     config.gmail = GmailConfig(
         label=gmail_raw.get("label", "FOOD"),
         max_emails_per_run=gmail_raw.get("max_emails_per_run", 20),
     )
 
-    # reMarkable settings
     rm_raw = raw.get("remarkable", {})
     config.remarkable = RemarkableConfig(
-        email=rm_raw.get("email", ""),
+        folder=rm_raw.get("folder", "/Feed"),
     )
 
-    # Magazine settings
     mag_raw = raw.get("magazine", {})
     config.magazine = MagazineConfig(
         max_articles=mag_raw.get("max_articles", 15),
@@ -86,17 +75,6 @@ def load_config(path: Path | None = None) -> Config:
         output_dir=mag_raw.get("output_dir", "~/feed-output"),
     )
 
-    # SMTP settings
-    smtp_raw = raw.get("smtp", {})
-    config.smtp = SmtpConfig(
-        sender=smtp_raw.get("sender", ""),
-        app_password=os.environ.get(
-            "FEED_GMAIL_APP_PASSWORD",
-            smtp_raw.get("app_password", ""),
-        ),
-    )
-
-    # Logging
     config.log_level = raw.get("logging", {}).get("level", "info")
 
     _validate(config)
@@ -109,18 +87,6 @@ def _validate(config: Config) -> None:
 
     if not config.gmail.label:
         errors.append("gmail.label is required")
-
-    if not config.remarkable.email:
-        errors.append("remarkable.email is required (find it in reMarkable settings)")
-
-    if not config.smtp.sender:
-        errors.append("smtp.sender is required (your Gmail address)")
-
-    if not config.smtp.app_password:
-        errors.append(
-            "Gmail app password is required. Set FEED_GMAIL_APP_PASSWORD env var "
-            "or smtp.app_password in config."
-        )
 
     if errors:
         raise ValueError("Config validation failed:\n  - " + "\n  - ".join(errors))

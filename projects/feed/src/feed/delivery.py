@@ -1,56 +1,75 @@
-"""Send the magazine PDF to reMarkable via email."""
+"""Deliver the magazine PDF to reMarkable via rmapi.
+
+Uses ddvk/rmapi (https://github.com/ddvk/rmapi) — a Go CLI that talks
+to the reMarkable cloud. Requires one-time setup: `rmapi` prompts for
+a code from my.remarkable.com on first run.
+"""
 
 import logging
-import smtplib
-from email import encoders
-from email.mime.base import MIMEBase
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
+import shutil
+import subprocess
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-GMAIL_SMTP_HOST = "smtp.gmail.com"
-GMAIL_SMTP_PORT = 587
+
+def check_rmapi() -> bool:
+    """Verify rmapi is installed and accessible."""
+    return shutil.which("rmapi") is not None
 
 
-def send_to_remarkable(
-    pdf_path: Path,
-    sender: str,
-    app_password: str,
-    remarkable_email: str,
-) -> None:
-    """Send a PDF as an email attachment to the reMarkable tablet."""
-    logger.info(
-        "Sending '%s' from %s to %s",
-        pdf_path.name, sender, remarkable_email,
+def ensure_folder(folder: str) -> None:
+    """Create the target folder on reMarkable if it doesn't exist.
+
+    rmapi mkdir is idempotent-ish — it errors if the folder exists,
+    but we just ignore that.
+    """
+    try:
+        subprocess.run(
+            ["rmapi", "mkdir", folder],
+            capture_output=True,
+            text=True,
+            timeout=30,
+        )
+    except subprocess.TimeoutExpired:
+        logger.warning("rmapi mkdir timed out for folder '%s'", folder)
+
+
+def send_to_remarkable(pdf_path: Path, folder: str = "/Feed") -> None:
+    """Upload a PDF to reMarkable via rmapi.
+
+    Args:
+        pdf_path: Local path to the PDF file.
+        folder: Destination folder on reMarkable (created if missing).
+    """
+    if not check_rmapi():
+        raise RuntimeError(
+            "rmapi not found. Install it from https://github.com/ddvk/rmapi\n"
+            "  go install github.com/ddvk/rmapi@latest\n"
+            "Then run 'rmapi' once to authenticate with my.remarkable.com."
+        )
+
+    logger.info("Uploading '%s' to reMarkable folder '%s'", pdf_path.name, folder)
+
+    ensure_folder(folder)
+
+    result = subprocess.run(
+        ["rmapi", "put", str(pdf_path), folder],
+        capture_output=True,
+        text=True,
+        timeout=120,
     )
 
-    msg = MIMEMultipart()
-    msg["From"] = sender
-    msg["To"] = remarkable_email
-    msg["Subject"] = f"Feed — {pdf_path.stem}"
+    if result.returncode != 0:
+        stderr = result.stderr.strip()
+        logger.error("rmapi put failed (exit %d): %s", result.returncode, stderr)
 
-    body = "Your latest Feed magazine is attached."
-    msg.attach(MIMEText(body, "plain"))
+        if "not authenticated" in stderr.lower() or "unauthorized" in stderr.lower():
+            raise RuntimeError(
+                "rmapi is not authenticated. Run 'rmapi' interactively to log in "
+                "with a code from my.remarkable.com."
+            )
 
-    # Attach the PDF
-    with open(pdf_path, "rb") as f:
-        part = MIMEBase("application", "pdf")
-        part.set_payload(f.read())
-    encoders.encode_base64(part)
-    part.add_header(
-        "Content-Disposition",
-        f"attachment; filename={pdf_path.name}",
-    )
-    msg.attach(part)
+        raise RuntimeError(f"rmapi put failed: {stderr}")
 
-    # Send via Gmail SMTP
-    with smtplib.SMTP(GMAIL_SMTP_HOST, GMAIL_SMTP_PORT) as server:
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
-        server.login(sender, app_password)
-        server.send_message(msg)
-
-    logger.info("Email sent successfully")
+    logger.info("Uploaded successfully: %s → %s", pdf_path.name, folder)

@@ -1,5 +1,5 @@
 # Feed configuration
-# Copy to ~/.config/feed/config.yaml and fill in your values.
+# Copy to ~/.config/feed/config.yaml
 
 gmail:
   # Gmail label to scan for food emails. Create this label in Gmail
@@ -10,27 +10,19 @@ gmail:
   max_emails_per_run: 20
 
 remarkable:
-  # Your reMarkable's email address. Found in:
-  # reMarkable app → Settings → Account → Send by email
-  email: "your-address@remarkable.com"
+  # Folder on reMarkable where magazines are uploaded.
+  # Created automatically if it doesn't exist.
+  folder: "/Feed"
 
 magazine:
-  # Maximum articles to include per issue.
+  # Maximum articles/recipes to include per issue.
   max_articles: 15
 
   # Maximum content links to extract per email.
   max_links_per_email: 3
 
-  # Where to save generated PDFs locally.
+  # Where to save generated PDFs locally (also serves as a backup).
   output_dir: "~/feed-output"
-
-# Email sending (for delivery to reMarkable).
-# Uses Gmail SMTP with an app password.
-# Generate one at: Google Account → Security → 2-Step Verification → App passwords
-# Or set the FEED_GMAIL_APP_PASSWORD environment variable instead.
-smtp:
-  sender: "your-email@gmail.com"
-  # app_password: "xxxx xxxx xxxx xxxx"  # Prefer env var FEED_GMAIL_APP_PASSWORD
 
 logging:
   # debug | info | warning | error

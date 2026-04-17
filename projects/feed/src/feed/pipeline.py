@@ -89,16 +89,14 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
         output_dir=config.magazine.output_path,
     )
 
-    # Stage 6: Send to reMarkable
+    # Stage 6: Upload to reMarkable via rmapi
     if dry_run:
         logger.info("Stage 6: SKIPPED (dry run) — PDF saved to %s", pdf_path)
     else:
-        logger.info("Stage 6: Sending to reMarkable")
+        logger.info("Stage 6: Uploading to reMarkable")
         send_to_remarkable(
             pdf_path=pdf_path,
-            sender=config.smtp.sender,
-            app_password=config.smtp.app_password,
-            remarkable_email=config.remarkable.email,
+            folder=config.remarkable.folder,
         )
 
     # Stage 7: Update state

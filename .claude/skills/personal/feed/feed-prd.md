@@ -50,9 +50,9 @@ The smallest thing that delivers the outcome: emails in, magazine out.
 - **Content acquisition** — follow extracted links, pull the article/recipe content using a readability extractor. Handle failures gracefully (timeouts, 404s, paywalls).
 - **Email body fallback** — some newsletters (especially Substacks) contain the full article in the email body. When the email body has substantial content and no meaningful outbound link, use the email body directly.
 - **PDF generation** — format extracted content into a single multi-article PDF with a cover page, table of contents, and clean article layouts. Optimized for reMarkable's 10.3" e-ink display.
-- **Delivery via email** — send the generated PDF to the reMarkable's email address (the simplest delivery path)
+- **Delivery via rmapi** — upload the generated PDF directly to reMarkable cloud using [rmapi](https://github.com/ddvk/rmapi). Go binary, one-time auth via my.remarkable.com code. `rmapi put file.pdf /Feed/` — zero-effort after setup.
 - **Local cron schedule** — runs weekly (default: Sunday morning), configurable
-- **Config file** — YAML or TOML. Settings: Gmail label name, reMarkable email address, schedule, output preferences, content limits.
+- **Config file** — YAML. Settings: Gmail label name, reMarkable folder, output preferences, content limits.
 - **Logging** — enough detail to debug "why didn't that recipe show up?" without being noisy
 
 ### Deferred (v2+)
@@ -60,10 +60,8 @@ The smallest thing that delivers the outcome: emails in, magazine out.
 Valuable but not needed to prove the concept works.
 
 - **AI-based content ranking** — use an LLM to score/rank articles by relevance, novelty, or estimated interest. v1 just includes everything labeled `FOOD`.
-- **Structured recipe extraction** — parse recipes into ingredients, steps, cook time, servings. v1 treats recipes as articles.
 - **Content deduplication** — detect when the same recipe appears in multiple newsletters. v1 might include duplicates; that's fine for now.
 - **Web config UI** — v1 uses a config file. A web dashboard for managing sources and previewing issues is a v2 luxury.
-- **rmapi delivery** — direct push via reMarkable cloud API. More reliable than email but more complex to set up. Fallback if email delivery proves unreliable.
 - **Historical archive** — browse past issues. v1 just keeps PDFs in a local output directory.
 - **ePub format option** — ePub reflows better but PDF is the v1 choice for layout control on reMarkable.
 - **Multiple Gmail labels** — v1 uses one label (`FOOD`). Could support multiple labels with per-label formatting in v2.
@@ -159,21 +157,22 @@ Organized by pipeline stage — Feed is fundamentally a data pipeline, so requir
 - Article with very long content (>5000 words): include full content, don't truncate. Long reads are the point.
 - Article extraction fails (garbled output): skip the article, note it in the log, include remaining articles
 
-### 5.5 Delivery (reMarkable Email)
+### 5.5 Delivery (rmapi → reMarkable Cloud)
 
 **User Story:** As Reader Jay, I need the magazine to show up on my reMarkable automatically, so I can pick it up and start reading without any transfer steps.
 
 **Acceptance Criteria:**
-- [ ] Send the generated PDF as an email attachment to the configured reMarkable email address
-- [ ] Email subject line: "Feed — Mar 7–13, 2026" (matches the cover page)
-- [ ] Send from a configured email address (can be the same Gmail account, or a dedicated sender)
-- [ ] Log delivery confirmation (email sent successfully)
-- [ ] If email send fails, retry once after 60 seconds. If still fails, save the PDF locally and log the error.
+- [ ] Upload the generated PDF to reMarkable cloud via [rmapi](https://github.com/ddvk/rmapi)
+- [ ] Place the PDF in a configurable folder on the device (default: `/Feed`)
+- [ ] Create the folder automatically if it doesn't exist
+- [ ] Log delivery confirmation (upload succeeded)
+- [ ] If rmapi is not installed, show a clear error with install instructions
+- [ ] If rmapi is not authenticated, show a clear error directing to my.remarkable.com
 
 **Edge Cases:**
-- PDF exceeds 50MB: compress images and regenerate. If still over limit, split into two parts.
-- reMarkable email address is misconfigured: clear error in logs ("Delivery failed — check your reMarkable email address in config")
-- SMTP auth failure: log the error, don't retry indefinitely
+- rmapi not installed: clear error with install command (`go install github.com/ddvk/rmapi@latest`)
+- rmapi auth expired: clear error directing to run `rmapi` interactively to re-authenticate
+- Upload timeout: fail gracefully, PDF is preserved locally in the output directory
 
 ### 5.6 Scheduling (Cron)
 
@@ -271,11 +270,11 @@ Each stage is independent and testable. If content fetching fails for one articl
 |---|---|---|
 | **Gmail API** | Reading emails by label | Requires a Google Cloud project with Gmail API enabled. Free tier is more than sufficient. |
 | **Google OAuth2 credentials** | Authentication | `credentials.json` from Google Cloud Console. One-time setup. |
-| **reMarkable email address** | Delivery | Found in reMarkable settings → "Send by email." Each device has a unique address. |
+| **rmapi** | Delivery to reMarkable | Go binary. `go install github.com/ddvk/rmapi@latest`. One-time auth via my.remarkable.com. |
 | **Python 3.10+** | Runtime | Best ecosystem for HTML parsing, content extraction, PDF generation. |
-| **Content extraction library** | Pulling article text from web pages | Options: `trafilatura` (Python, best accuracy for article extraction), `newspaper3k`, `readability-lxml`. Evaluate during build. |
-| **PDF generation library** | Building the magazine | Options: `weasyprint` (HTML/CSS → PDF, good typography control), `reportlab` (lower-level), `fpdf2` (lightweight). `weasyprint` is the likely pick for magazine-quality output. |
-| **SMTP or email API** | Sending the PDF | Can use Gmail's own SMTP (already authenticated), or a service like Resend/SendGrid for cleaner separation. |
+| **trafilatura** | Article text extraction | Best-in-class boilerplate removal and main content detection. |
+| **BeautifulSoup4** | Email HTML parsing + schema.org JSON-LD extraction | Handles the messy HTML that newsletters produce. |
+| **weasyprint** | PDF generation | HTML/CSS to PDF. Full typography control, handles images. Magazine-quality output. |
 
 ---
 
@@ -288,10 +287,9 @@ Each stage is independent and testable. If content fetching fails for one articl
 | **Email parsing** | `beautifulsoup4` + `lxml` | Robust HTML parsing for extracting links from email bodies |
 | **Content extraction** | `trafilatura` | Best-in-class article extraction. Handles boilerplate removal, main content detection, metadata extraction. Better accuracy than newspaper3k for modern web pages. |
 | **PDF generation** | `weasyprint` | HTML/CSS to PDF. Full typography control, supports custom fonts, handles images. The right tool for magazine-quality output. |
-| **Email sending** | `smtplib` (stdlib) | Gmail SMTP with app password or OAuth2. No external dependency needed. |
-| **Config** | `pyyaml` or `tomli` | YAML or TOML config parsing |
+| **Delivery** | `rmapi` (Go binary, called via subprocess) | Direct push to reMarkable cloud. One-time setup. |
+| **Config** | `pyyaml` | YAML config parsing |
 | **Scheduling** | System cron / systemd timer | No Python scheduler needed — use the OS |
-| **Token storage** | `keyring` | Cross-platform secure credential storage (OS keychain) |
 
 ---
 
@@ -316,15 +314,17 @@ Decisions to make during build, not before.
 First-time setup (one-time, ~15 minutes):
 
 1. Clone the repo
-2. `pip install -r requirements.txt`
-3. Create a Google Cloud project, enable Gmail API, download `credentials.json`
-4. Run `feed --setup` → opens browser for OAuth2 consent → stores tokens securely
-5. Create the `FOOD` label in Gmail (if it doesn't exist)
-6. Set up Gmail filters to auto-label food newsletters with `FOOD` (or label manually)
-7. Copy `config.example.yaml` → `config.yaml`, set reMarkable email address
-8. Run `feed --dry-run` → shows what would be included without sending
-9. Run `feed` → generates and sends first issue
-10. Set up cron: `crontab -e` → add the weekly schedule
+2. `pip install -e .`
+3. Install rmapi: `go install github.com/ddvk/rmapi@latest`
+4. Run `rmapi` once → enter the code from my.remarkable.com to authenticate
+5. Create a Google Cloud project, enable Gmail API, download `credentials.json`
+6. Run `feed --setup` → opens browser for OAuth2 consent → stores tokens securely
+7. Create the `FOOD` label in Gmail (if it doesn't exist)
+8. Set up Gmail filters to auto-label food newsletters with `FOOD` (or label manually)
+9. Copy `config.example.yaml` → `~/.config/feed/config.yaml`
+10. Run `feed --dry-run` → shows what would be included, generates PDF locally
+11. Run `feed` → generates PDF and uploads to reMarkable
+12. Set up cron: `crontab -e` → add the weekly schedule
 
 After setup, it just runs. The only maintenance is labeling new food email subscriptions in Gmail.
 
