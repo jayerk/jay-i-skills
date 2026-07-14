@@ -100,9 +100,8 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
         )
 
     # Stage 7: Update state
-    _update_state(state, emails, config)
     state.total_issues_generated += 1
-    save_state(state, config.state_path)
+    _update_state(state, emails, config)
 
     logger.info("=== Feed %s complete — %d items in issue ===", mode, len(items))
 

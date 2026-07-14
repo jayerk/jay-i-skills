@@ -34,9 +34,13 @@ def authenticate(credentials_path: Path, token_path: Path) -> Credentials:
         creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
 
     if creds and creds.expired and creds.refresh_token:
-        logger.info("Refreshing expired OAuth token")
-        creds.refresh(Request())
-        token_path.write_text(creds.to_json())
+        try:
+            logger.info("Refreshing expired OAuth token")
+            creds.refresh(Request())
+            token_path.write_text(creds.to_json())
+        except Exception:
+            logger.warning("Token refresh failed — will re-authenticate")
+            creds = None
 
     if not creds or not creds.valid:
         if not credentials_path.exists():

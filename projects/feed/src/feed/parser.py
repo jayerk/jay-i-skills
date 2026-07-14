@@ -83,7 +83,7 @@ def _should_skip(url: str, anchor_text: str, domain: str) -> bool:
     if not url.startswith(("http://", "https://")):
         return True
 
-    if any(skip in domain for skip in SKIP_DOMAINS):
+    if any(domain == skip or domain.endswith("." + skip) for skip in SKIP_DOMAINS):
         return True
 
     if any(pat.search(url) for pat in SKIP_URL_PATTERNS):

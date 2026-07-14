@@ -240,16 +240,15 @@ def _build_article_fallback(html: str, url: str, link: dict) -> Article | None:
         logger.warning("Insufficient content extracted from: %s", url)
         return None
 
-    # Try metadata
     title = link.get("anchor_text", "Untitled")
     author = None
     try:
-        meta = trafilatura.extract_metadata(html)
+        meta = trafilatura.bare_extraction(html)
         if meta:
-            if meta.title:
-                title = meta.title
-            if meta.author:
-                author = meta.author
+            if meta.get("title"):
+                title = meta["title"]
+            if meta.get("author"):
+                author = meta["author"]
     except Exception:
         pass
 
