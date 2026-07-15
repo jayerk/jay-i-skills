@@ -9,7 +9,7 @@ from feed.parser import extract_all_links
 from feed.fetcher import fetch_all_content
 from feed.magazine import generate_magazine
 from feed.delivery import send_to_remarkable
-from feed.state import load_state, save_state, get_last_run_datetime
+from feed.state import load_state, save_state
 
 logger = logging.getLogger(__name__)
 
@@ -24,18 +24,17 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
         4. Fetch and extract article content
         5. Generate magazine PDF
         6. Send to reMarkable (unless dry_run)
-        7. Update state
+        7. Update state (unless dry_run — dry runs never consume emails)
     """
     mode = "DRY RUN" if dry_run else "FULL RUN"
     logger.info("=== Feed %s starting ===", mode)
 
     # Load state for idempotency
     state = load_state(config.state_path)
-    last_run = get_last_run_datetime(state)
     exclude_ids = set(state.processed_message_ids)
 
-    if last_run:
-        logger.info("Last run: %s — fetching new emails only", last_run.isoformat())
+    if state.last_run:
+        logger.info("Last run: %s — previously processed emails are skipped", state.last_run)
     else:
         logger.info("First run — fetching all labeled emails")
 
@@ -49,7 +48,6 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
     emails = fetch_emails(
         service,
         label_name=config.gmail.label,
-        after=last_run,
         max_results=config.gmail.max_emails_per_run,
         exclude_ids=exclude_ids,
     )
@@ -69,8 +67,9 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
 
     if not links:
         logger.info("No content links found in emails. Done.")
-        # Still mark emails as processed
-        _update_state(state, emails, config)
+        # Still mark emails as processed (real runs only)
+        if not dry_run:
+            _update_state(state, emails, config)
         return
 
     # Stage 4: Fetch content (recipes + articles)
@@ -79,7 +78,8 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
 
     if not items:
         logger.info("No content could be extracted. Done.")
-        _update_state(state, emails, config)
+        if not dry_run:
+            _update_state(state, emails, config)
         return
 
     # Stage 5: Generate PDF
@@ -100,8 +100,11 @@ def run_pipeline(config: Config, dry_run: bool = False) -> None:
         )
 
     # Stage 7: Update state
-    state.total_issues_generated += 1
-    _update_state(state, emails, config)
+    if dry_run:
+        logger.info("DRY RUN — state not updated; these emails will be picked up again on a real run")
+    else:
+        state.total_issues_generated += 1
+        _update_state(state, emails, config)
 
     logger.info("=== Feed %s complete — %d items in issue ===", mode, len(items))
 

@@ -44,7 +44,7 @@ wires them together. Each stage can be tested independently.
 | `src/feed/delivery.py` | Upload to reMarkable via rmapi |
 | `src/feed/state.py` | Last-run tracking for idempotency |
 | `src/feed/config.py` | YAML config loading + validation |
-| `templates/magazine.html` | Jinja2 HTML template for the PDF |
+| `src/feed/templates/magazine.html` | Jinja2 HTML template for the PDF |
 
 ## Config
 

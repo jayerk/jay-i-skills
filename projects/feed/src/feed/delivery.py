@@ -53,12 +53,17 @@ def send_to_remarkable(pdf_path: Path, folder: str = "/Feed") -> None:
 
     ensure_folder(folder)
 
-    result = subprocess.run(
-        ["rmapi", "put", str(pdf_path), folder],
-        capture_output=True,
-        text=True,
-        timeout=120,
-    )
+    try:
+        result = subprocess.run(
+            ["rmapi", "put", str(pdf_path), folder],
+            capture_output=True,
+            text=True,
+            timeout=120,
+        )
+    except subprocess.TimeoutExpired:
+        raise RuntimeError(
+            f"rmapi put timed out after 120s — the PDF is still saved locally at {pdf_path}"
+        )
 
     if result.returncode != 0:
         stderr = result.stderr.strip()

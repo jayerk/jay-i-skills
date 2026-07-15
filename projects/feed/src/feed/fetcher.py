@@ -4,6 +4,7 @@ Prioritizes structured recipe extraction (schema.org JSON-LD) over
 plain text. Falls back to trafilatura for non-recipe content.
 """
 
+import html as _html
 import json
 import logging
 import re
@@ -17,6 +18,18 @@ logger = logging.getLogger(__name__)
 
 FETCH_TIMEOUT = 30
 USER_AGENT = "Feed/1.0 (personal magazine pipeline)"
+
+_TAG_RE = re.compile(r"<[^>]+>")
+_WS_RE = re.compile(r"\s+")
+_SPACE_BEFORE_PUNCT_RE = re.compile(r"\s+([.,;:!?])")
+
+
+def _clean_text(text: str) -> str:
+    """Strip stray HTML tags/entities that recipe sites embed in JSON-LD strings."""
+    text = _TAG_RE.sub(" ", text)
+    text = _html.unescape(text)
+    text = _WS_RE.sub(" ", text)
+    return _SPACE_BEFORE_PUNCT_RE.sub(r"\1", text).strip()
 
 
 @dataclass
@@ -95,38 +108,39 @@ def _parse_iso_duration(duration: str | None) -> str | None:
     return " ".join(parts) if parts else duration
 
 
+def _is_recipe(obj: dict) -> bool:
+    """Check @type for Recipe — handles both string and list types."""
+    type_val = obj.get("@type")
+    if type_val == "Recipe":
+        return True
+    return isinstance(type_val, list) and "Recipe" in type_val
+
+
 def _extract_recipe_jsonld(html: str) -> dict | None:
     """Find schema.org/Recipe JSON-LD in the page HTML.
 
-    Handles both top-level Recipe objects and Recipe nested inside
-    @graph arrays (common on WordPress recipe plugins).
+    Handles top-level Recipe objects, arrays of objects, Recipe nested
+    inside @graph arrays (WordPress pattern), and list-valued @type
+    like ["Recipe", "NewsArticle"] (Yoast pattern).
     """
     soup = BeautifulSoup(html, "lxml")
 
     for script_tag in soup.find_all("script", type="application/ld+json"):
         try:
-            data = json.loads(script_tag.string)
+            data = json.loads(script_tag.get_text())
         except (json.JSONDecodeError, TypeError):
             continue
 
-        # Direct Recipe object
         if isinstance(data, dict):
-            if data.get("@type") == "Recipe":
+            if _is_recipe(data):
                 return data
-            # Check @graph array (WordPress pattern)
-            if "@graph" in data:
-                for item in data["@graph"]:
-                    if isinstance(item, dict) and item.get("@type") == "Recipe":
-                        return item
-            # Some sites wrap in a list type like ["Recipe", "HowTo"]
-            type_val = data.get("@type")
-            if isinstance(type_val, list) and "Recipe" in type_val:
-                return data
+            for item in data.get("@graph", []):
+                if isinstance(item, dict) and _is_recipe(item):
+                    return item
 
-        # Array of JSON-LD objects
         if isinstance(data, list):
             for item in data:
-                if isinstance(item, dict) and item.get("@type") == "Recipe":
+                if isinstance(item, dict) and _is_recipe(item):
                     return item
 
     return None
@@ -147,35 +161,35 @@ def _parse_instructions(raw_instructions) -> list[str]:
     # Plain string — split on newlines or numbered steps
     if isinstance(raw_instructions, str):
         lines = re.split(r"\n+|\.\s+(?=\d)", raw_instructions)
-        return [line.strip() for line in lines if line.strip()]
+        return [c for c in (_clean_text(line) for line in lines) if c]
 
     if not isinstance(raw_instructions, list):
-        return [str(raw_instructions)]
+        return [_clean_text(str(raw_instructions))]
 
     steps = []
     for item in raw_instructions:
         if isinstance(item, str):
-            steps.append(item.strip())
+            steps.append(item)
         elif isinstance(item, dict):
             # HowToStep
             if item.get("@type") == "HowToStep":
                 text = item.get("text", "")
                 if text:
-                    steps.append(text.strip())
+                    steps.append(text)
             # HowToSection — has itemListElement with nested steps
             elif item.get("@type") == "HowToSection":
-                section_name = item.get("name", "")
+                section_name = _clean_text(item.get("name", ""))
                 if section_name:
                     steps.append(f"— {section_name} —")
                 for sub in item.get("itemListElement", []):
                     if isinstance(sub, dict):
                         text = sub.get("text", "")
                         if text:
-                            steps.append(text.strip())
+                            steps.append(text)
                     elif isinstance(sub, str):
-                        steps.append(sub.strip())
+                        steps.append(sub)
 
-    return [s for s in steps if s]
+    return [c for c in (_clean_text(s) for s in steps) if c]
 
 
 def _parse_ingredients(raw_ingredients) -> list[str]:
@@ -183,10 +197,12 @@ def _parse_ingredients(raw_ingredients) -> list[str]:
     if not raw_ingredients:
         return []
     if isinstance(raw_ingredients, str):
-        return [line.strip() for line in raw_ingredients.split("\n") if line.strip()]
-    if isinstance(raw_ingredients, list):
-        return [str(item).strip() for item in raw_ingredients if str(item).strip()]
-    return []
+        lines = raw_ingredients.split("\n")
+    elif isinstance(raw_ingredients, list):
+        lines = [str(item) for item in raw_ingredients]
+    else:
+        return []
+    return [c for c in (_clean_text(line) for line in lines) if c]
 
 
 def _get_string(data: dict, key: str) -> str | None:
@@ -194,14 +210,14 @@ def _get_string(data: dict, key: str) -> str | None:
     val = data.get(key)
     if val is None:
         return None
-    if isinstance(val, str):
-        return val
     if isinstance(val, dict):
-        return val.get("name") or val.get("text") or str(val)
+        val = val.get("name") or val.get("text")
+        if val is None:
+            return None
     if isinstance(val, list):
         names = [v.get("name") if isinstance(v, dict) else str(v) for v in val]
-        return ", ".join(n for n in names if n)
-    return str(val)
+        val = ", ".join(n for n in names if n)
+    return _clean_text(str(val)) or None
 
 
 def _build_recipe(jsonld: dict, url: str, link: dict) -> Recipe:
@@ -240,26 +256,42 @@ def _build_article_fallback(html: str, url: str, link: dict) -> Article | None:
         logger.warning("Insufficient content extracted from: %s", url)
         return None
 
-    title = link.get("anchor_text", "Untitled")
+    title = link.get("anchor_text") or "Untitled"
     author = None
     try:
-        meta = trafilatura.bare_extraction(html)
-        if meta:
-            if meta.get("title"):
-                title = meta["title"]
-            if meta.get("author"):
-                author = meta["author"]
+        meta = trafilatura.extract_metadata(html)
     except Exception:
-        pass
+        meta = None
+    if meta:
+        title = _meta_field(meta, "title") or title
+        author = _meta_field(meta, "author")
+
+    # Normalize paragraphs: trafilatura's txt output separates blocks with
+    # single newlines; the magazine template expects blank-line paragraphs.
+    paragraphs = [line.strip() for line in result.splitlines() if line.strip()]
+    # Drop a leading paragraph that just repeats the title
+    if paragraphs and paragraphs[0].strip() == (title or "").strip():
+        paragraphs = paragraphs[1:]
+    if not paragraphs:
+        return None
 
     return Article(
         url=url,
         title=title,
         author=author,
-        text=result.strip(),
+        text="\n\n".join(paragraphs),
         source_email_subject=link.get("source_email_subject", ""),
         source_sender=link.get("source_sender", ""),
     )
+
+
+def _meta_field(meta, name: str) -> str | None:
+    """Read a metadata field across trafilatura versions (Document object or dict)."""
+    if isinstance(meta, dict):
+        val = meta.get(name)
+    else:
+        val = getattr(meta, name, None)
+    return val if isinstance(val, str) and val.strip() else None
 
 
 def fetch_content(link: dict) -> ContentItem | None:

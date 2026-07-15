@@ -1,17 +1,17 @@
 """Generate a magazine-style PDF from extracted recipes and articles."""
 
 import logging
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from weasyprint import HTML
 
 from feed.fetcher import ContentItem, Recipe, Article
 
 logger = logging.getLogger(__name__)
 
-TEMPLATE_DIR = Path(__file__).parent.parent.parent / "templates"
+TEMPLATE_DIR = Path(__file__).parent / "templates"
 
 
 def generate_magazine(
@@ -26,13 +26,18 @@ def generate_magazine(
     issue_date = issue_date or date.today()
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    filename = f"feed-{issue_date.isoformat()}.pdf"
-    pdf_path = output_dir / filename
+    # Timestamped filename — same-day re-runs must not collide, because
+    # rmapi refuses to upload over an existing document of the same name.
+    stamp = datetime.now().strftime("%Y-%m-%d-%H%M")
+    pdf_path = output_dir / f"feed-{stamp}.pdf"
 
     recipe_count = sum(1 for i in items if isinstance(i, Recipe))
     article_count = sum(1 for i in items if isinstance(i, Article))
 
-    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    env = Environment(
+        loader=FileSystemLoader(str(TEMPLATE_DIR)),
+        autoescape=select_autoescape(),
+    )
     template = env.get_template("magazine.html")
 
     html_content = template.render(

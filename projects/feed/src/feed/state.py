@@ -3,7 +3,6 @@
 import json
 import logging
 from dataclasses import dataclass, field, asdict
-from datetime import datetime
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -47,13 +46,3 @@ def save_state(state: PipelineState, state_path: Path) -> None:
     with open(state_path, "w") as f:
         json.dump(asdict(state), f, indent=2)
     logger.debug("State saved to %s", state_path)
-
-
-def get_last_run_datetime(state: PipelineState) -> datetime | None:
-    """Parse last_run timestamp, or None if never run."""
-    if not state.last_run:
-        return None
-    try:
-        return datetime.fromisoformat(state.last_run)
-    except ValueError:
-        return None

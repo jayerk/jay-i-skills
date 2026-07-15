@@ -195,14 +195,6 @@
     text-indent: 0;
   }
 
-  .article-body p:first-of-type::first-letter {
-    font-size: 2.2em;
-    float: left;
-    line-height: 1;
-    padding-right: 0.08em;
-    font-weight: bold;
-  }
-
   /* ─── Recipe Layout ─── */
   .recipe-description {
     font-size: 11pt;
@@ -297,6 +289,16 @@
     color: #888;
     width: 1.8em;
     text-align: center;
+  }
+
+  .recipe-instructions li.section-break {
+    counter-increment: none;
+    padding-left: 0;
+    border-bottom: none;
+  }
+
+  .recipe-instructions li.section-break::before {
+    content: none;
   }
 
   .recipe-section-header {
@@ -417,7 +419,7 @@
   <ol class="recipe-instructions">
     {% for step in item.instructions %}
       {% if step.startswith('—') and step.endswith('—') %}
-      <li style="list-style: none; counter-increment: none; padding-left: 0;">
+      <li class="section-break">
         <div class="recipe-section-header">{{ step | replace('—', '') | trim }}</div>
       </li>
       {% else %}
